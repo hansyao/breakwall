@@ -33,7 +33,7 @@ passwall_enable=false         #启用passwall: true; 不启用:false
 clash_enable=true             #启用clash: true; 不启用:false
 serverresults=serverresults.csv
 passwall_results=passwall_results.txt
-$passwall_config_nodes=passwall_config_nodes.txt        #passwall节点清单
+passwall_config_nodes=passwall_config_nodes.txt        #passwall节点清单
 
 /etc/init.d/haproxy stop
 /etc/init.d/passwall stop
