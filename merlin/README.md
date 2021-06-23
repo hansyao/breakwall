@@ -6,12 +6,18 @@
 
 >**原理：** 优选100次ping时延最低且丢包率为零的IP。  
 
+<br>
+
 ## 配置需求
 
 1. 梅林386固件 - （华硕RT-AC5300测试通过，理论上版本相差不大的都能兼容，其他版本由于cat命令版本问题可能需要修改代码162行的IP解析命令，可自行研究）。
 2. 安装了merlin clash插件
 
+<br>
+
 ## 使用手册
+
+<br>
 
 ### 步骤一： 下载源码
 
@@ -20,6 +26,7 @@ git clone https://github.com/hansyao/breakwall
 cd breakwall/merlin
 ```
 文件夹里的三个文件都能用到： **cf-merlin-clash.sh**, **clash_header.yaml**, **clash_rules** 。
+
 <br>
 
 ### 步骤二: 修改你配置文件
@@ -57,8 +64,9 @@ clashconfig=/jffs/.koolshare/merlinclash/clashconfig.sh
 speedtest=n
 
 ```
+<br>
 
-### 步骤四： 将脚本上传路由器
+### 步骤三： 将脚本上传路由器
 
 先在路由器上开启**ssh**登录，然后进行以下的操作
 ```bash
@@ -77,6 +85,10 @@ cd /jffs/cf-auto                        #进入脚本目录
 sh ./clashconfig.sh                     #执行脚本
 ```
 这时可以等待几分钟，提示优选IP已经生成，并自动加载。然后进入路由器clash管理界面，选择刚生成的配置文件`clash`然后点击快速重启，进入clash **RAZARD-clash**或者**YACD-Clash**面板检查下刚才生成的IP是否生效。
+
+<br>
+
+### 步骤四 创建自动任务
 
 如果生效没有问题，可以创建自动任务如下:
 
