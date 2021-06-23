@@ -45,8 +45,6 @@ WSPATH=/PrAsDITT                                   #ws-path
 HOST=quiet-test-test.test.workers.dev              #cloudflare worker
 
 
-source $clashconfig
-
 # 以下配置无需修改
 
 serverresults=serverresults.csv #自动生成的优选IP列表，无需修改
@@ -55,6 +53,8 @@ speedtest=n                     #无需测试速度，无需修改
 
 nodes_line=1
 if [ -e $serverresults ]; then rm -rf $serverresults; fi
+
+source $clashconfig
 
 #stop_config
 
