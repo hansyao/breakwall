@@ -6,7 +6,7 @@
 >1. 多节点支持
 >2. passwall支持
 >3. clash支持
-
+>4. 梅林路由器clash支持, 参见[这里](merlin/README.md)
 <br>
 
 # 使用手册

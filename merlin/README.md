@@ -76,7 +76,7 @@ ssh yourname@192.168.50.1 -p 22         #登录路由器
 cd /jffs/cf-auto                        #进入脚本目录
 sh ./clashconfig.sh                     #执行脚本
 ```
-这时可以等待几分钟，提示优选IP已经生成，并自动加载。然后进入路由器clash管理界面，选择刚生成的配置文件`clash`然后点击快速重启，进入clash RAZARD-clash或者YACD-Clash面板检查下刚才生成的IP是否生效。
+这时可以等待几分钟，提示优选IP已经生成，并自动加载。然后进入路由器clash管理界面，选择刚生成的配置文件`clash`然后点击快速重启，进入clash **RAZARD-clash**或者**YACD-Clash**面板检查下刚才生成的IP是否生效。
 
 如果生效没有问题，可以创建自动任务如下:
 
