@@ -1,0 +1,119 @@
+port: 3333
+socks-port: 23456
+redir-port: 23457
+tproxy-port: 23458
+allow-lan: true
+tproxy: true
+mode: Rule
+log-level: error
+external-controller: 192.168.50.1:9990   #改成路由器地址
+experimental:
+  ignore-resolve-fail: true
+external-ui: dashboard
+secret: "clash"
+profile:
+  store-selected: true
+
+hosts:
+  router.asus.com: 192.168.50.1       #改成路由器地址
+  services.googleapis.cn: 58.63.233.98
+
+dns:
+  enable: true
+  ipv6: false
+  listen: :23453
+  enhanced-mode: redir-host 
+  nameserver:
+    - https://223.5.5.5/dns-query
+    - tls://101.101.101.101:853
+    - https://doh.pub/dns-query
+  fallback:
+    - https://doh.dns.sb/dns-query
+    - tcp://208.67.222.222:443
+    - tls://dns.google
+  fallback-filter:
+    geoip: true
+    ipcidr:
+      - 240.0.0.0/4
+    domain:
+      #amazon
+      - '+.amazonaws.com'
+      - '+.amazon'
+      #astrill
+      - '+.astrill.com'
+      - '+.asn247.net'
+      - '+.astrill.org'
+      #fb
+      - '+.facebook.com'
+      - '+.cdninstagram.com'
+      - '+.fb.com'
+      - '+.fb.me'
+      - '+.fbaddins.com'
+      - '+.fbcdn.net'
+      - '+.fbsbx.com'
+      - '+.fbworkmail.com'
+      - '+.instagram.com'
+      - '+.m.me'
+      - '+.messenger.com'
+      - '+.oculus.com'
+      - '+.oculuscdn.com'
+      - '+.rocksdb.org'
+      - '+.whatsapp.com'
+      - '+.whatsapp.net'
+      #github
+      - '+.gitbook.io'
+      - '+.gitbook.com'
+      - '+.github.io'
+      - '+.github.com'
+      - '+.githubusercontent.com'
+      - '+.githubassets.com'
+      - '+.githubapp.com'
+    #google
+      - '+.ampproject.org'
+      - '+.appspot.com'
+      - '+.blogger.com'
+      - '+.google.com'
+      - '+.google.cn'
+      - '+.googleusercontent.com'
+      - '+.googleapis.com'
+      - '+.googleapis.cn'
+      - '+.gstatic.com'
+      - '+.ggpht.com'
+      - '+.gmail.com'
+      - '+.gvt1.com'
+      - '+.gvt2.com'
+      - '+.youtu.be'
+      - '+.yt.be'
+      - '+.ytimg.com'
+      - '+.googlevideo.com'
+      - '+.youtube.com'
+      #mega
+      - '+.mega.co.nz'
+      - '+.mega.nz'
+      #protonmail
+      - '+.protonmail.ch'
+      - '+.protonmail.com'
+      - '+.protonstatus.com'
+      - '+.recruitee.com'
+      - '+.w.org'
+      #rfa
+      - '+.rfa.org'
+      #twitter
+      - '+.twitter.com'
+      - '+.pscp.tv'
+      - '+.periscope.tv'
+      - '+.t.co'
+      - '+.twimg.co'
+      - '+.twimg.com'
+      - '+.twitpic.com'
+      - '+.vine.co'
+      #whoer
+      - '+.whoer.net'
+      - '+.whrq.net'
+      #wiki
+      - '+.wikimapia.org'
+      - '+.wikimedia.org'
+      - '+.wikipedia.org'
+      - '+.wikiquote.org'
+      - '+.wikiwand.com'
+ipv6: false
