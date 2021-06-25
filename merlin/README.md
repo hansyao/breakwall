@@ -36,7 +36,7 @@ cd breakwall/merlin
 2. **clash_rules.yaml**
 clash规则，可自定义。不懂可直接用这个无需修改
 3. **cf-merlin-clash.sh**
-需要修改部门已经在代码中注明:
+需要修改部门已经在代码中[注明](cf-merlin-clash.sh#L29-L52):
 
 ```bash
 #按需修改部分：
