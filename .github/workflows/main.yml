@@ -43,8 +43,8 @@ jobs:
       run: |                 
          git config --local user.email "hansyow@gmail.com"
          git config --local user.name "hansyao"
-         git add VmessActions/subscribe/
-         git add VmessActions/log.txt
+         git add -f VmessActions/subscribe/
+         git add -f VmessActions/log.txt
          git commit -m "更新订阅链接"
     - name: 推送更改
       uses:  ad-m/github-push-action@master
