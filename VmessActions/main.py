@@ -21,7 +21,7 @@ urllib3.disable_warnings()
 
 def main(event, context):
     # 初始化日志文件
-    utils.initLog('log.txt')
+    utils.initLog('VmessActions/log.txt')
     utils.clearLog()
     # config = utils.readJsonFile('config.json')
     # artUrl = getArticle()
@@ -66,7 +66,7 @@ def getSubscribeUrl():
         "GET", clashList[len(clashList)-1].replace('amp;',''), verify=False)
     print(v2rayList)
     print(clashList)
-    dirs = './subscribe'
+    dirs = './VmessActions/subscribe'
     if not os.path.exists(dirs):
         os.makedirs(dirs)
     with open(dirs + '/v2ray.txt', 'w') as f:
