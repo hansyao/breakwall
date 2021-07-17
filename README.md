@@ -9,6 +9,10 @@
 >4. 梅林路由器clash支持, 参见[这里](merlin/README.md)
 <br>
 
+**福利：** 免费clash节点订阅 -- 每6小时自动更新一次
+
+[https://raw.githubusercontent.com/hansyao/breakwall/master/VmessActions/subscribe/clash.yaml](https://raw.githubusercontent.com/hansyao/breakwall/master/VmessActions/subscribe/clash.yaml)
+
 # 使用手册
 
 ## 准备工作：
