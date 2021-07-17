@@ -32,20 +32,20 @@ jobs:
       run: sudo timedatectl set-timezone 'Asia/Shanghai'
     - name: 安装依赖
       run: |
-        pip install -r requirements.txt
+        pip install -r VmessActions/requirements.txt
     - name: 执行任务
       # env:
       #   CONFIG: ${{ secrets.CONFIG }}
       run: |
-        python main.py
-       staticSrcPath: subscribe
+        python VmessActions/main.py
+       staticSrcPath: VmessActions/subscribe
           
     - name: 提交更改
       run: |                 
          git config --local user.email "hansyow@gmail.com"
          git config --local user.name "hansyao"
-         git add subscribe/v2ray.txt
-         git add subscribe/clash.yml
+         git add VmessActions/subscribe/v2ray.txt
+         git add VmessActions/subscribe/clash.yml
          git commit -m "更新订阅链接"
     - name: 推送更改
       uses:  ad-m/github-push-action@master
