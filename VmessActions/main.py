@@ -70,7 +70,7 @@ def getSubscribeUrl():
     if not os.path.exists(dirs):
         os.makedirs(dirs)
     with open(dirs + '/v2ray.txt', 'w') as f:
-        f.write(v2rayTxt.text)
+        f.write(v2rayTxt.text.replace('https://www.mattkaydiary.com','Hans'))
     day = time.strftime('%Y.%m.%d',time.localtime(time.time()))
     with open(dirs + '/clash.yaml', 'w') as f:
         f.write(clashTxt.text.replace('https://www.mattkaydiary.com',day))
