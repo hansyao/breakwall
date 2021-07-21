@@ -25,7 +25,7 @@ if [ $i -lt 500 ]; then
         curl -s http://127.0.0.1:25500/sub\?target\=clash\&emoji\=true\&url\=VmessActions%2Fsubscribe%2Fpool.yaml -o $CLASH
         sed -i s/'proxies: ~'//g $CLASH
         cat $TEMP >> $CLASH
-        cat VmessActions/subscribe/clash_pool.yaml | grep -v 'type\":\"ss' > $V2RAY
+        cat $TEMP | grep -v 'type\":\"ss' > $V2RAY
         echo -e "clash规则转化完成"
 else
         echo -e "爬取失败!"
