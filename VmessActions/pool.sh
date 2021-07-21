@@ -21,7 +21,7 @@ done
 if [ $i -lt 500 ]; then
         echo -e "第 $i 次爬取成功 获得节点信息 >> $TEMP"
         echo -e "开始规则转换"
-        curl -s http://127.0.0.1:25500/sub\?target\=clash\&emoji\=true\&url\=https%3A%2F%2Fraw.githubusercontent.com%2Fhansyao%2Fbreakwall%2Fmaster%2FVmessActions%2Fsubscribe%2Fpool.yaml > $CLASH
+        curl -s http://127.0.0.1:25500/sub\?target\=clash\&emoji\=true\&path\=VmessActions%2Fsubscribe%2Fpool.yaml > $CLASH
 else
         echo -e "爬取失败!"
 fi
