@@ -15,7 +15,7 @@
 
 [https://raw.githubusercontent.com/hansyao/breakwall/master/VmessActions/subscribe/clash.yaml](https://raw.githubusercontent.com/hansyao/breakwall/master/VmessActions/subscribe/clash.yaml)
 
-***clash代理池*** - 7000以上 （包括ss, ssr, trojan, vmess）, 无规则，最好订阅转换。 （代理池节点太多，测速耗资源，建议电脑使用，或者按需选择节点）
+***clash代理池*** - 7000个节点以上 （包括ss, ssr, trojan, vmess）, 无规则，最好订阅转换。 （代理池节点太多，测速耗资源，建议电脑使用，或者按需选择节点）
 
 [https://raw.githubusercontent.com/hansyao/breakwall/master/VmessActions/subscribe/pool.yaml](https://raw.githubusercontent.com/hansyao/breakwall/master/VmessActions/subscribe/pool.yaml)
 
