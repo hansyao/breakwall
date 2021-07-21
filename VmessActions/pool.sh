@@ -22,6 +22,8 @@ if [ $i -lt 500 ]; then
         echo -e "第 $i 次爬取成功 获得节点信息 >> $TEMP"
         echo -e "开始规则转换"
         curl -s http://127.0.0.1:25500/sub\?target\=clash\&emoji\=true\&url\=VmessActions%2Fsubscribe%2Fpool.yaml -o $CLASH
+        sed -i s/'proxies: ~'//g $CLASH
+        cat $TEMP >> $CLASH
         echo -e "clash规则转化完成"
 else
         echo -e "爬取失败!"
