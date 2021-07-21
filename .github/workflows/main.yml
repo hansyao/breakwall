@@ -38,7 +38,9 @@ jobs:
       #   CONFIG: ${{ secrets.CONFIG }}
       run: |
         python VmessActions/main.py
-          
+      run: |
+        bash VmessActions/pool.sh
+        
     - name: 提交更改
       run: |                 
          git config --local user.email "hansyow@gmail.com"
