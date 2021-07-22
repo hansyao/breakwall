@@ -3,8 +3,8 @@
 URL=https://proxy.yugogo.xyz/clash/proxies
 TEMP=VmessActions/subscribe/pool.yaml
 POOL=VmessActions/subscribe/pool_no_cn.yaml
-CN=VmessActions/subscribe/pool_cn.yaml
-CLASH=VmessActions/subscribe/clash_pool.yaml
+CN=VmessActions/subscribe/clash_cn.yaml
+CLASH=VmessActions/subscribe/clash_no_cn.yaml
 V2RAY=VmessActions/subscribe/ray_pool.yaml
 
 rm -f $TEMP
