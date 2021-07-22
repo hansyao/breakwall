@@ -36,8 +36,10 @@ if [ $i -lt 500 ]; then
 
         echo -e "转换CHINA节点"
         echo "proxies:" > $CN
-        cat $TEMP | grep '"country":"🇨🇳CN"' >> $CN
-        curl -s http://127.0.0.1:25500/sub\?target\=clash\&emoji\=true\&url\=../$CN -o $CN
+        if [[ $(cat $TEMP | grep '"country":"🇨🇳CN"') ]]; then
+                cat $TEMP | grep '"country":"🇨🇳CN"' >> $CN
+                curl -s http://127.0.0.1:25500/sub\?target\=clash\&emoji\=true\&url\=../$CN -o $CN
+        fi
 
         echo -e "clash规则转化完成"
 else
