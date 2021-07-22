@@ -9,34 +9,6 @@
 >4. 梅林路由器clash支持, 参见[这里](merlin/README.md)
 <br>
 
-**福利：** 免费clash节点订阅 -- 每6小时自动更新一次
-
-***clash专用订阅*** -- 100个节点左右
-
-[https://raw.githubusercontent.com/hansyao/breakwall/master/VmessActions/subscribe/clash.yaml](https://raw.githubusercontent.com/hansyao/breakwall/master/VmessActions/subscribe/clash.yaml)
-
-***clash代理池*** - 7000个节点以上 （包括ss, ssr, trojan, vmess）, 无规则，最好订阅转换。 （代理池节点太多，测速耗资源，建议电脑使用，或者按需选择节点）
-
-[https://raw.githubusercontent.com/hansyao/breakwall/master/VmessActions/subscribe/pool.yaml](https://raw.githubusercontent.com/hansyao/breakwall/master/VmessActions/subscribe/pool.yaml)
-
-订阅转换后链接 - clash
-
-[https://subcon.dlj.tf/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhansyao%2Fbreakwall%2Fmaster%2FVmessActions%2Fsubscribe%2Fpool.yaml](https://subcon.dlj.tf/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhansyao%2Fbreakwall%2Fmaster%2FVmessActions%2Fsubscribe%2Fpool.yaml)
-
-
-***clash优选代理池*** -- 500节点左右， 仅限trojan, vmess协议，不包含ss和ssr
-
-[https://raw.githubusercontent.com/hansyao/breakwall/master/VmessActions/subscribe/ray_pool.yaml](https://raw.githubusercontent.com/hansyao/breakwall/master/VmessActions/subscribe/ray_pool.yaml)
-
-订阅转换后链接 - clash
-
-[https://subcon.dlj.tf/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhansyao%2Fbreakwall%2Fmaster%2FVmessActions%2Fsubscribe%2Fray_pool.yaml](https://subcon.dlj.tf/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhansyao%2Fbreakwall%2Fmaster%2FVmessActions%2Fsubscribe%2Fray_pool.yaml)
-
-
-其他协议订阅转换可参见工具：[https://subcon.dlj.tf/](https://subcon.dlj.tf/)
-
-<br>
-
 # 使用手册
 
 ## 准备工作：
