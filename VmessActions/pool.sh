@@ -12,7 +12,7 @@ i=1
 while [[ $(cat $TEMP | sed -n '1p' | sed s/\ //g) != "proxies:" ]]
 do
 	if [ $i -ge 500 ]; then
-                break
+                exit 0
         fi
 
         sleep 1
