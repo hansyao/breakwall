@@ -33,9 +33,9 @@ jobs:
     - name: 安装依赖
       run: |
         pip install -r VmessActions/requirements.txt
-    - name: 部署容器-规则转换
+    - name: 部署规则转换服务
       run: |
-        docker run -d --restart=always -p 25500:25500 tindy2013/subconverter:latest
+        VmessActions/convert.sh
     - name: 执行任务
       # env:
       #   CONFIG: ${{ secrets.CONFIG }}
