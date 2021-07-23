@@ -14,7 +14,7 @@ i=0
 while [[ $(cat $TEMP | sed -n '1p' | sed s/\ //g) != "proxies:" ]]
 do
 	if [ $i -ge 500 ]; then
-                echo "爬取失败!"
+                echo "爬取失败超过500次，终止爬取"
                 exit 0
         fi
 
