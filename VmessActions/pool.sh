@@ -10,7 +10,7 @@ CLASH2=VmessActions/subscribe/clash.yaml
 V2RAY=VmessActions/subscribe/ray_pool.yaml
 
 rm -f $TEMP
-i=1
+i=0
 while [[ $(cat $TEMP | sed -n '1p' | sed s/\ //g) != "proxies:" ]]
 do
 	if [ $i -ge 500 ]; then
@@ -19,7 +19,9 @@ do
         fi
 
         sleep 1
-	echo -e 第 $i 次爬取失败
+        if [ $i != 0 ]; then
+	        echo -e 第 $i 次爬取失败
+        fi
 	rm -f $TEMP
 	curl -s $URL > $TEMP
 	let i++
