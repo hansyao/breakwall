@@ -1,7 +1,8 @@
 #!/bin/bash
 
 URL=https://proxy.yugogo.xyz/clash/proxies
-TEMP=VmessActions/subscribe/pool.yaml
+TEMP=VmessActions/subscribe/temp_pool.yaml
+ALLPOOL=VmessActions/subscribe/pool.yaml
 POOL=VmessActions/subscribe/pool_no_cn.yaml
 CN=VmessActions/subscribe/clash_cn.yaml
 CLASH=VmessActions/subscribe/clash_no_cn.yaml
@@ -25,6 +26,15 @@ do
 done
 
 echo -e "第 $i 次爬取成功 获得节点信息 >> $TEMP"
+
+# check whether it's same
+if [[ $(md5sum $TEMP | awk -F" " '{print $1}') == $(md5sum $ALLPOOL | awk -F" " '{print $1}') ]]; then
+        echo "代理池没变化退出流程"
+        rm -f $TEMP
+        exit 0
+fi
+cp -f $TEMP $ALLPOOL
+
 echo -e "开始规则转换"
 echo -e "排除CHINA节点"
 
@@ -45,6 +55,7 @@ if [[ $(cat $TEMP | grep '"country":"🇨🇳CN"') ]]; then
 fi
 
 echo -e "clash规则转化完成"
+rm -f $TEMP
 
 exit 0
 
