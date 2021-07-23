@@ -5,6 +5,7 @@ TEMP=VmessActions/subscribe/pool.yaml
 POOL=VmessActions/subscribe/pool_no_cn.yaml
 CN=VmessActions/subscribe/clash_cn.yaml
 CLASH=VmessActions/subscribe/clash_no_cn.yaml
+CLASH2=VmessActions/subscribe/clash.yaml
 V2RAY=VmessActions/subscribe/ray_pool.yaml
 
 rm -f $TEMP
@@ -34,6 +35,7 @@ curl -s http://127.0.0.1:25500/sub\?target\=clash\&emoji\=true\&url\=../$POOL -o
 echo -e "转换非SS节点"
 cat $POOL | grep -v 'type\":\"ss' > $V2RAY
 curl -s http://127.0.0.1:25500/sub\?target\=clash\&emoji\=true\&url\=../$V2RAY -o $V2RAY
+cp -f $V2RAY $CLASH2
 
 echo -e "转换CHINA节点"
 echo "proxies:" > $CN
