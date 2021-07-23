@@ -26,7 +26,6 @@ jobs:
          git config --local user.name "hansyao"
          rm -rf subconverter
          git add -f VmessActions/subscribe/
-         git status
          if [[ $(git status | grep 'Changes to be committed') ]]; then git commit -m "更新订阅链接"; else echo '代理池没有变化'; fi
     - name: 推送更改
       uses:  ad-m/github-push-action@master
