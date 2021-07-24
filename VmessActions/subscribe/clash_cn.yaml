@@ -5,251 +5,263 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇨🇳 CN_2006, server: music.desperadoj.com, port: 30003, type: ss, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_d39m}
-  - {name: 🇨🇳 CN_2007, server: 101.132.192.212, port: 30003, type: ss, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_d39m}
-  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2008, server: gz3.q88q.gq, port: 30011, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 623:ugxrw29ogq, obfs-param: 4bfb0623.baidu.com}
-  - {name: 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2009, server: n17.boom.party, port: 25000, type: ssr, cipher: aes-256-cfb, password: Uk92CS, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 143073:Cz8aOi, obfs-param: download.windowsupdate.com}
-  - {name: 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2010, server: n96.boom.party, port: 18000, type: ssr, cipher: aes-256-cfb, password: Uk92CS, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 278018:GcJkq2, obfs-param: download.windowsupdate.com}
-  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2011, server: p7.22332e.com, port: 8333, type: ssr, cipher: rc4-md5, password: passfw2xs4e!, protocol: origin, obfs: plain, protocol-param: "", obfs-param: ""}
-  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2012, server: 42.157.195.238, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
-  - {name: 🇷🇺 Relay_🇨🇳CN-🇷🇺RU_2013, server: dog.gkd.world, port: 10692, type: ssr, cipher: aes-256-cfb, password: TuXJdt, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 10522:SiJIyH, obfs-param: .microsoft.com}
-  - {name: 🇨🇳 Relay_🇨🇳CN-🇬🇧GB_2014, server: agahk.q88q.ml, port: 20001, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 623:ugxrw29ogq, obfs-param: 4bfb0623.baidu.com}
-  - {name: 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2015, server: p3.twfast789.com, port: 8333, type: ssr, cipher: rc4-md5, password: passfw2xs4e!, protocol: origin, obfs: plain, protocol-param: "", obfs-param: ""}
-  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2016, server: 42.157.195.237, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
-  - {name: 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2017, server: relayneko.q88q.ml, port: 25163, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 623:ugxrw29ogq, obfs-param: 4bfb0623.baidu.com}
-  - {name: 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2018, server: ntemp06.boom.party, port: 15000, type: ssr, cipher: aes-256-cfb, password: Uk92CS, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 143073:Cz8aOi, obfs-param: download.windowsupdate.com}
-  - {name: 🇩🇪 Relay_🇨🇳CN-🇩🇪DE_2019, server: agahk.q88q.ml, port: 20023, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 623:ugxrw29ogq, obfs-param: 4bfb0623.baidu.com}
-  - {name: 🇨🇳 Relay_🇨🇳CN-🏁ZZ_2020, server: agahk.q88q.ml, port: 20019, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 623:ugxrw29ogq, obfs-param: 4bfb0623.baidu.com}
-  - {name: 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2021, server: p3.22332e.com, port: 8333, type: ssr, cipher: rc4-md5, password: passfw2xs4e!, protocol: origin, obfs: plain, protocol-param: "", obfs-param: ""}
-  - {name: 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2022, server: 117.28.243.246, port: 8333, type: ssr, cipher: rc4-md5, password: passfw2xs4e!, protocol: origin, obfs: plain, protocol-param: "", obfs-param: ""}
-  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2023, server: p8.22332e.com, port: 8333, type: ssr, cipher: rc4-md5, password: passfw2xs4e!, protocol: origin, obfs: plain, protocol-param: "", obfs-param: ""}
-  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2024, server: 42.157.195.234, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
-  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2025, server: 42.157.195.233, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
-  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2026, server: gz.q88q.gq, port: 12168, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 623:ugxrw29ogq, obfs-param: 4bfb0623.baidu.com}
-  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2027, server: 14.152.92.74, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
-  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2028, server: ntemp16.boom.party, port: 21000, type: ssr, cipher: aes-256-cfb, password: Uk92CS, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 143073:Cz8aOi, obfs-param: download.windowsupdate.com}
-  - {name: 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2029, server: n37.boom.party, port: 33300, type: ssr, cipher: aes-256-cfb, password: Uk92CS, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 143073:Cz8aOi, obfs-param: download.windowsupdate.com}
-  - {name: 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2030, server: n57.boom.party, port: 25000, type: ssr, cipher: aes-256-cfb, password: Uk92CS, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 143073:Cz8aOi, obfs-param: download.windowsupdate.com}
-  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2031, server: 42.157.195.242, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
-  - {name: 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2032, server: 14.152.92.75, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
-  - {name: 🇵🇭 Relay_🇨🇳CN-🇵🇭PH_2033, server: gz3.q88q.gq, port: 30012, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 623:ugxrw29ogq, obfs-param: 4bfb0623.baidu.com}
-  - {name: 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2034, server: ntemp19.boom.party, port: 24000, type: ssr, cipher: aes-256-cfb, password: Uk92CS, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 143073:Cz8aOi, obfs-param: download.windowsupdate.com}
-  - {name: 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2035, server: 14.152.92.81, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
-  - {name: 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2036, server: 42.157.195.243, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
-  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2037, server: 42.157.195.236, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
-  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2038, server: 42.157.195.230, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
-  - {name: 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2039, server: n60.boom.party, port: 24000, type: ssr, cipher: aes-256-cfb, password: Uk92CS, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 143073:Cz8aOi, obfs-param: download.windowsupdate.com}
-  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2040, server: 42.157.195.232, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
-  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2041, server: 42.157.195.231, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
-  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2042, server: 42.157.195.239, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
-  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2043, server: 14.152.92.70, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
-  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2044, server: 42.157.195.241, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
-  - {name: 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2045, server: 42.157.195.246, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
-  - {name: 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2046, server: 14.152.92.80, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
-  - {name: 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2047, server: 14.152.92.79, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
-  - {name: 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2048, server: 14.152.92.78, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
-  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2049, server: 14.152.92.72, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
-  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2050, server: 42.157.195.235, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
-  - {name: 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2051, server: 42.157.195.244, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
-  - {name: 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2052, server: 14.152.92.76, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
-  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2053, server: 14.152.92.71, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
-  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2054, server: 42.157.195.228, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
-  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2055, server: 42.157.195.240, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
-  - {name: 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2056, server: 42.157.195.245, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
-  - {name: 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2057, server: 14.152.92.77, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
-  - {name: 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2058, server: 14.152.92.82, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
-  - {name: 🇩🇪 Relay_🇨🇳CN-🇩🇪DE_2059, server: cush1.racernet.link, port: 11443, type: vmess, uuid: 01e26b00-df20-3574-9b2d-54162975c909, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /cu/sh1/de1, ws-headers: {Host: cush1.racernet.link}}
-  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2060, server: xbz1145141919810.xn--9kq12xdq7a.com, port: 1454, type: vmess, uuid: 3e546191-0784-4c44-8849-01f06f942a5f, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2061, server: ngzyd-1.okex-tradebot.xyz, port: 30006, type: vmess, uuid: 84893ab7-21da-4a10-8f89-28e66f7de9a8, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: ngzyd-1.okex-tradebot.xyz}}
-  - {name: 🇨🇳 CN_2062, server: silver-hk07.straycloud.xyz, port: 206, type: trojan, password: 0ac65136-5962-49d6-91f0-138957f6dec9, skip-cert-verify: true, udp: true}
+  - {name: 🇨🇳 CN_1988, server: 101.132.192.212, port: 30003, type: ss, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_d39m}
+  - {name: 🇨🇳 CN_1989, server: music.desperadoj.com, port: 30003, type: ss, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_d39m}
+  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1990, server: 42.157.195.241, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
+  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1991, server: 42.157.195.231, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
+  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1992, server: 42.157.195.232, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
+  - {name: 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_1993, server: 14.152.92.82, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
+  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1994, server: 42.157.195.230, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
+  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1995, server: 42.157.195.236, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
+  - {name: 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_1996, server: 42.157.195.243, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
+  - {name: 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_1997, server: 14.152.92.81, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
+  - {name: 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_1998, server: 42.157.195.246, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
+  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1999, server: 42.157.195.233, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
+  - {name: 🇵🇭 Relay_🇨🇳CN-🇵🇭PH_2000, server: gz3.q88q.gq, port: 30012, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 623:ugxrw29ogq, obfs-param: 4bfb0623.baidu.com}
+  - {name: 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2001, server: 14.152.92.75, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
+  - {name: 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2002, server: 14.152.92.80, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
+  - {name: 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2003, server: n17.boom.party, port: 25000, type: ssr, cipher: aes-256-cfb, password: Uk92CS, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 143073:Cz8aOi, obfs-param: download.windowsupdate.com}
+  - {name: 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2004, server: ntemp06.boom.party, port: 15000, type: ssr, cipher: aes-256-cfb, password: Uk92CS, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 143073:Cz8aOi, obfs-param: download.windowsupdate.com}
+  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2005, server: ntemp16.boom.party, port: 21000, type: ssr, cipher: aes-256-cfb, password: Uk92CS, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 143073:Cz8aOi, obfs-param: download.windowsupdate.com}
+  - {name: 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2006, server: n60.boom.party, port: 24000, type: ssr, cipher: aes-256-cfb, password: Uk92CS, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 143073:Cz8aOi, obfs-param: download.windowsupdate.com}
+  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2007, server: 42.157.195.242, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
+  - {name: 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2008, server: n57.boom.party, port: 25000, type: ssr, cipher: aes-256-cfb, password: Uk92CS, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 143073:Cz8aOi, obfs-param: download.windowsupdate.com}
+  - {name: 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2009, server: n37.boom.party, port: 33300, type: ssr, cipher: aes-256-cfb, password: Uk92CS, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 143073:Cz8aOi, obfs-param: download.windowsupdate.com}
+  - {name: 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2010, server: 14.152.92.79, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
+  - {name: 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2011, server: 14.152.92.78, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
+  - {name: 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2012, server: 14.152.92.77, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
+  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2013, server: 42.157.195.237, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
+  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2014, server: p7.22332e.com, port: 8333, type: ssr, cipher: rc4-md5, password: passfw2xs4e!, protocol: origin, obfs: plain, protocol-param: "", obfs-param: ""}
+  - {name: 🇨🇳 Relay_🇨🇳CN-🏁ZZ_2015, server: relayneko.q88q.ml, port: 25162, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 623:ugxrw29ogq, obfs-param: 4bfb0623.baidu.com}
+  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2016, server: 42.157.195.240, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
+  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2017, server: 42.157.195.238, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
+  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2018, server: 42.157.195.235, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
+  - {name: 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2019, server: 42.157.195.244, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
+  - {name: 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2020, server: 14.152.92.76, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
+  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2021, server: 42.157.195.228, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
+  - {name: 🇨🇳 Relay_🇨🇳CN-🏁ZZ_2022, server: agahk.q88q.ml, port: 20019, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 623:ugxrw29ogq, obfs-param: 4bfb0623.baidu.com}
+  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2023, server: 14.152.92.73, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
+  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2024, server: gz3.q88q.gq, port: 30011, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 623:ugxrw29ogq, obfs-param: 4bfb0623.baidu.com}
+  - {name: 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2025, server: p3.twfast789.com, port: 8333, type: ssr, cipher: rc4-md5, password: passfw2xs4e!, protocol: origin, obfs: plain, protocol-param: "", obfs-param: ""}
+  - {name: 🇨🇳 Relay_🇨🇳CN-🇬🇧GB_2026, server: agahk.q88q.ml, port: 20001, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 623:ugxrw29ogq, obfs-param: 4bfb0623.baidu.com}
+  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2027, server: 42.157.195.239, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
+  - {name: 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2028, server: 117.28.243.246, port: 8333, type: ssr, cipher: rc4-md5, password: passfw2xs4e!, protocol: origin, obfs: plain, protocol-param: "", obfs-param: ""}
+  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2029, server: 14.152.92.74, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
+  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2030, server: 42.157.195.234, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
+  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2031, server: 42.157.195.229, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
+  - {name: 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2032, server: n96.boom.party, port: 18000, type: ssr, cipher: aes-256-cfb, password: Uk92CS, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 278018:GcJkq2, obfs-param: download.windowsupdate.com}
+  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2033, server: p8.22332e.com, port: 8333, type: ssr, cipher: rc4-md5, password: passfw2xs4e!, protocol: origin, obfs: plain, protocol-param: "", obfs-param: ""}
+  - {name: 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2034, server: p3.22332e.com, port: 8333, type: ssr, cipher: rc4-md5, password: passfw2xs4e!, protocol: origin, obfs: plain, protocol-param: "", obfs-param: ""}
+  - {name: 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2035, server: 117.28.243.169, port: 8333, type: ssr, cipher: rc4-md5, password: passfw2xs4e!, protocol: origin, obfs: plain, protocol-param: "", obfs-param: ""}
+  - {name: 🇩🇪 Relay_🇨🇳CN-🇩🇪DE_2036, server: agahk.q88q.ml, port: 20023, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 623:ugxrw29ogq, obfs-param: 4bfb0623.baidu.com}
+  - {name: 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2037, server: relayneko.q88q.ml, port: 25163, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 623:ugxrw29ogq, obfs-param: 4bfb0623.baidu.com}
+  - {name: 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2038, server: 42.157.195.245, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 600777:154T8b, obfs-param: 0f099600777.v23f7nM0}
+  - {name: 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2039, server: ntemp19.boom.party, port: 24000, type: ssr, cipher: aes-256-cfb, password: Uk92CS, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 143073:Cz8aOi, obfs-param: download.windowsupdate.com}
+  - {name: 🇲🇾 Relay_🇨🇳CN-🇲🇾MY_2040, server: ngzyd-1.okex-tradebot.xyz, port: 30014, type: vmess, uuid: 84893ab7-21da-4a10-8f89-28e66f7de9a8, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: ngzyd-1.okex-tradebot.xyz}}
+  - {name: 🇨🇳 CN_2041, server: 42.236.94.1, port: 80, type: vmess, uuid: 6a02ba2e-226e-4227-8276-ffb7198ace92, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 42.236.94.1}}
+  - {name: 🇨🇳 CN_2042, server: 113.207.102.1, port: 80, type: vmess, uuid: 6a02ba2e-226e-4227-8276-ffb7198ace92, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 113.207.102.1}}
+  - {name: 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2043, server: ngzyd-1.okex-tradebot.xyz, port: 30006, type: vmess, uuid: 84893ab7-21da-4a10-8f89-28e66f7de9a8, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: ngzyd-1.okex-tradebot.xyz}}
+  - {name: 🇨🇳 CN_2044, server: nanoportsb.1145141919810.xn--9kq12xdq7a.com, port: 8123, type: vmess, uuid: 3e546191-0784-4c44-8849-01f06f942a5f, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: nanoportsb.1145141919810.xn--9kq12xdq7a.com}}
+  - {name: 🇩🇪 Relay_🇨🇳CN-🇩🇪DE_2045, server: 117.34.14.1, port: 80, type: vmess, uuid: e5c04139-0d1b-4d09-8718-78feeeaaa057, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 117.34.14.1}}
+  - {name: 🇨🇳 CN_2046, server: silver-jp01.straycloud.xyz, port: 210, type: trojan, password: 0ac65136-5962-49d6-91f0-138957f6dec9, skip-cert-verify: true, udp: true}
+  - {name: 🇨🇳 CN_2047, server: silver-hk07.straycloud.xyz, port: 206, type: trojan, password: 0ac65136-5962-49d6-91f0-138957f6dec9, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇨🇳 CN_2006
-      - 🇨🇳 CN_2007
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2008
-      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2009
-      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2010
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2011
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2012
-      - 🇷🇺 Relay_🇨🇳CN-🇷🇺RU_2013
-      - 🇨🇳 Relay_🇨🇳CN-🇬🇧GB_2014
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2015
+      - 🇨🇳 CN_1988
+      - 🇨🇳 CN_1989
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1990
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1991
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1992
+      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_1993
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1994
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1995
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_1996
+      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_1997
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_1998
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1999
+      - 🇵🇭 Relay_🇨🇳CN-🇵🇭PH_2000
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2001
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2002
+      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2003
+      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2004
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2005
+      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2006
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2007
+      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2008
+      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2009
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2010
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2011
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2012
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2013
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2014
+      - 🇨🇳 Relay_🇨🇳CN-🏁ZZ_2015
       - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2016
-      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2017
-      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2018
-      - 🇩🇪 Relay_🇨🇳CN-🇩🇪DE_2019
-      - 🇨🇳 Relay_🇨🇳CN-🏁ZZ_2020
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2021
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2022
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2017
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2018
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2019
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2020
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2021
+      - 🇨🇳 Relay_🇨🇳CN-🏁ZZ_2022
       - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2023
       - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2024
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2025
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2026
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2025
+      - 🇨🇳 Relay_🇨🇳CN-🇬🇧GB_2026
       - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2027
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2028
-      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2029
-      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2030
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2028
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2029
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2030
       - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2031
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2032
-      - 🇵🇭 Relay_🇨🇳CN-🇵🇭PH_2033
-      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2034
-      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2035
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2036
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2037
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2038
+      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2032
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2033
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2034
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2035
+      - 🇩🇪 Relay_🇨🇳CN-🇩🇪DE_2036
+      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2037
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2038
       - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2039
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2040
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2041
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2042
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2043
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2044
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2045
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2046
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2047
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2048
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2049
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2050
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2051
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2052
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2053
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2054
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2055
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2056
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2057
-      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2058
-      - 🇩🇪 Relay_🇨🇳CN-🇩🇪DE_2059
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2060
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2061
-      - 🇨🇳 CN_2062
+      - 🇲🇾 Relay_🇨🇳CN-🇲🇾MY_2040
+      - 🇨🇳 CN_2041
+      - 🇨🇳 CN_2042
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2043
+      - 🇨🇳 CN_2044
+      - 🇩🇪 Relay_🇨🇳CN-🇩🇪DE_2045
+      - 🇨🇳 CN_2046
+      - 🇨🇳 CN_2047
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇨🇳 CN_2006
-      - 🇨🇳 CN_2007
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2008
-      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2009
-      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2010
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2011
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2012
-      - 🇷🇺 Relay_🇨🇳CN-🇷🇺RU_2013
-      - 🇨🇳 Relay_🇨🇳CN-🇬🇧GB_2014
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2015
+      - 🇨🇳 CN_1988
+      - 🇨🇳 CN_1989
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1990
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1991
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1992
+      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_1993
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1994
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1995
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_1996
+      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_1997
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_1998
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1999
+      - 🇵🇭 Relay_🇨🇳CN-🇵🇭PH_2000
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2001
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2002
+      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2003
+      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2004
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2005
+      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2006
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2007
+      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2008
+      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2009
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2010
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2011
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2012
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2013
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2014
+      - 🇨🇳 Relay_🇨🇳CN-🏁ZZ_2015
       - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2016
-      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2017
-      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2018
-      - 🇩🇪 Relay_🇨🇳CN-🇩🇪DE_2019
-      - 🇨🇳 Relay_🇨🇳CN-🏁ZZ_2020
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2021
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2022
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2017
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2018
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2019
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2020
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2021
+      - 🇨🇳 Relay_🇨🇳CN-🏁ZZ_2022
       - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2023
       - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2024
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2025
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2026
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2025
+      - 🇨🇳 Relay_🇨🇳CN-🇬🇧GB_2026
       - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2027
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2028
-      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2029
-      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2030
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2028
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2029
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2030
       - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2031
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2032
-      - 🇵🇭 Relay_🇨🇳CN-🇵🇭PH_2033
-      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2034
-      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2035
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2036
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2037
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2038
+      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2032
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2033
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2034
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2035
+      - 🇩🇪 Relay_🇨🇳CN-🇩🇪DE_2036
+      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2037
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2038
       - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2039
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2040
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2041
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2042
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2043
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2044
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2045
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2046
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2047
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2048
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2049
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2050
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2051
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2052
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2053
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2054
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2055
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2056
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2057
-      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2058
-      - 🇩🇪 Relay_🇨🇳CN-🇩🇪DE_2059
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2060
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2061
-      - 🇨🇳 CN_2062
+      - 🇲🇾 Relay_🇨🇳CN-🇲🇾MY_2040
+      - 🇨🇳 CN_2041
+      - 🇨🇳 CN_2042
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2043
+      - 🇨🇳 CN_2044
+      - 🇩🇪 Relay_🇨🇳CN-🇩🇪DE_2045
+      - 🇨🇳 CN_2046
+      - 🇨🇳 CN_2047
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇨🇳 CN_2006
-      - 🇨🇳 CN_2007
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2008
-      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2009
-      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2010
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2011
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2012
-      - 🇷🇺 Relay_🇨🇳CN-🇷🇺RU_2013
-      - 🇨🇳 Relay_🇨🇳CN-🇬🇧GB_2014
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2015
+      - 🇨🇳 CN_1988
+      - 🇨🇳 CN_1989
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1990
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1991
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1992
+      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_1993
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1994
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1995
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_1996
+      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_1997
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_1998
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1999
+      - 🇵🇭 Relay_🇨🇳CN-🇵🇭PH_2000
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2001
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2002
+      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2003
+      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2004
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2005
+      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2006
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2007
+      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2008
+      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2009
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2010
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2011
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2012
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2013
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2014
+      - 🇨🇳 Relay_🇨🇳CN-🏁ZZ_2015
       - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2016
-      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2017
-      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2018
-      - 🇩🇪 Relay_🇨🇳CN-🇩🇪DE_2019
-      - 🇨🇳 Relay_🇨🇳CN-🏁ZZ_2020
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2021
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2022
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2017
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2018
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2019
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2020
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2021
+      - 🇨🇳 Relay_🇨🇳CN-🏁ZZ_2022
       - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2023
       - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2024
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2025
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2026
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2025
+      - 🇨🇳 Relay_🇨🇳CN-🇬🇧GB_2026
       - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2027
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2028
-      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2029
-      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2030
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2028
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2029
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2030
       - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2031
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2032
-      - 🇵🇭 Relay_🇨🇳CN-🇵🇭PH_2033
-      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2034
-      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2035
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2036
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2037
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2038
+      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2032
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2033
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2034
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2035
+      - 🇩🇪 Relay_🇨🇳CN-🇩🇪DE_2036
+      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2037
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2038
       - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2039
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2040
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2041
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2042
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2043
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2044
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2045
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2046
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2047
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2048
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2049
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2050
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2051
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2052
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2053
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2054
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2055
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2056
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2057
-      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2058
-      - 🇩🇪 Relay_🇨🇳CN-🇩🇪DE_2059
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2060
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2061
-      - 🇨🇳 CN_2062
+      - 🇲🇾 Relay_🇨🇳CN-🇲🇾MY_2040
+      - 🇨🇳 CN_2041
+      - 🇨🇳 CN_2042
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2043
+      - 🇨🇳 CN_2044
+      - 🇩🇪 Relay_🇨🇳CN-🇩🇪DE_2045
+      - 🇨🇳 CN_2046
+      - 🇨🇳 CN_2047
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -260,188 +272,197 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 🇨🇳 CN_2006
-      - 🇨🇳 CN_2007
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2008
-      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2009
-      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2010
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2011
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2012
-      - 🇷🇺 Relay_🇨🇳CN-🇷🇺RU_2013
-      - 🇨🇳 Relay_🇨🇳CN-🇬🇧GB_2014
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2015
+      - 🇨🇳 CN_1988
+      - 🇨🇳 CN_1989
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1990
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1991
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1992
+      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_1993
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1994
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1995
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_1996
+      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_1997
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_1998
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1999
+      - 🇵🇭 Relay_🇨🇳CN-🇵🇭PH_2000
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2001
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2002
+      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2003
+      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2004
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2005
+      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2006
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2007
+      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2008
+      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2009
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2010
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2011
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2012
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2013
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2014
+      - 🇨🇳 Relay_🇨🇳CN-🏁ZZ_2015
       - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2016
-      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2017
-      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2018
-      - 🇩🇪 Relay_🇨🇳CN-🇩🇪DE_2019
-      - 🇨🇳 Relay_🇨🇳CN-🏁ZZ_2020
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2021
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2022
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2017
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2018
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2019
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2020
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2021
+      - 🇨🇳 Relay_🇨🇳CN-🏁ZZ_2022
       - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2023
       - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2024
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2025
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2026
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2025
+      - 🇨🇳 Relay_🇨🇳CN-🇬🇧GB_2026
       - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2027
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2028
-      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2029
-      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2030
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2028
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2029
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2030
       - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2031
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2032
-      - 🇵🇭 Relay_🇨🇳CN-🇵🇭PH_2033
-      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2034
-      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2035
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2036
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2037
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2038
+      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2032
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2033
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2034
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2035
+      - 🇩🇪 Relay_🇨🇳CN-🇩🇪DE_2036
+      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2037
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2038
       - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2039
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2040
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2041
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2042
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2043
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2044
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2045
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2046
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2047
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2048
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2049
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2050
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2051
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2052
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2053
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2054
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2055
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2056
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2057
-      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2058
-      - 🇩🇪 Relay_🇨🇳CN-🇩🇪DE_2059
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2060
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2061
-      - 🇨🇳 CN_2062
+      - 🇲🇾 Relay_🇨🇳CN-🇲🇾MY_2040
+      - 🇨🇳 CN_2041
+      - 🇨🇳 CN_2042
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2043
+      - 🇨🇳 CN_2044
+      - 🇩🇪 Relay_🇨🇳CN-🇩🇪DE_2045
+      - 🇨🇳 CN_2046
+      - 🇨🇳 CN_2047
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 🇨🇳 CN_2006
-      - 🇨🇳 CN_2007
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2008
-      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2009
-      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2010
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2011
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2012
-      - 🇷🇺 Relay_🇨🇳CN-🇷🇺RU_2013
-      - 🇨🇳 Relay_🇨🇳CN-🇬🇧GB_2014
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2015
+      - 🇨🇳 CN_1988
+      - 🇨🇳 CN_1989
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1990
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1991
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1992
+      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_1993
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1994
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1995
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_1996
+      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_1997
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_1998
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1999
+      - 🇵🇭 Relay_🇨🇳CN-🇵🇭PH_2000
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2001
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2002
+      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2003
+      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2004
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2005
+      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2006
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2007
+      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2008
+      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2009
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2010
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2011
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2012
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2013
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2014
+      - 🇨🇳 Relay_🇨🇳CN-🏁ZZ_2015
       - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2016
-      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2017
-      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2018
-      - 🇩🇪 Relay_🇨🇳CN-🇩🇪DE_2019
-      - 🇨🇳 Relay_🇨🇳CN-🏁ZZ_2020
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2021
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2022
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2017
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2018
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2019
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2020
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2021
+      - 🇨🇳 Relay_🇨🇳CN-🏁ZZ_2022
       - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2023
       - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2024
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2025
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2026
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2025
+      - 🇨🇳 Relay_🇨🇳CN-🇬🇧GB_2026
       - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2027
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2028
-      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2029
-      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2030
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2028
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2029
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2030
       - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2031
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2032
-      - 🇵🇭 Relay_🇨🇳CN-🇵🇭PH_2033
-      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2034
-      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2035
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2036
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2037
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2038
+      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2032
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2033
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2034
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2035
+      - 🇩🇪 Relay_🇨🇳CN-🇩🇪DE_2036
+      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2037
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2038
       - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2039
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2040
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2041
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2042
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2043
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2044
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2045
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2046
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2047
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2048
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2049
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2050
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2051
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2052
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2053
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2054
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2055
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2056
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2057
-      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2058
-      - 🇩🇪 Relay_🇨🇳CN-🇩🇪DE_2059
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2060
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2061
-      - 🇨🇳 CN_2062
+      - 🇲🇾 Relay_🇨🇳CN-🇲🇾MY_2040
+      - 🇨🇳 CN_2041
+      - 🇨🇳 CN_2042
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2043
+      - 🇨🇳 CN_2044
+      - 🇩🇪 Relay_🇨🇳CN-🇩🇪DE_2045
+      - 🇨🇳 CN_2046
+      - 🇨🇳 CN_2047
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇨🇳 CN_2006
-      - 🇨🇳 CN_2007
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2008
-      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2009
-      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2010
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2011
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2012
-      - 🇷🇺 Relay_🇨🇳CN-🇷🇺RU_2013
-      - 🇨🇳 Relay_🇨🇳CN-🇬🇧GB_2014
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2015
+      - 🇨🇳 CN_1988
+      - 🇨🇳 CN_1989
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1990
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1991
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1992
+      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_1993
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1994
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1995
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_1996
+      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_1997
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_1998
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1999
+      - 🇵🇭 Relay_🇨🇳CN-🇵🇭PH_2000
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2001
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2002
+      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2003
+      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2004
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2005
+      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2006
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2007
+      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2008
+      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2009
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2010
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2011
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2012
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2013
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2014
+      - 🇨🇳 Relay_🇨🇳CN-🏁ZZ_2015
       - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2016
-      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2017
-      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2018
-      - 🇩🇪 Relay_🇨🇳CN-🇩🇪DE_2019
-      - 🇨🇳 Relay_🇨🇳CN-🏁ZZ_2020
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2021
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2022
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2017
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2018
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2019
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2020
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2021
+      - 🇨🇳 Relay_🇨🇳CN-🏁ZZ_2022
       - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2023
       - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2024
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2025
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2026
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2025
+      - 🇨🇳 Relay_🇨🇳CN-🇬🇧GB_2026
       - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2027
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2028
-      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2029
-      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2030
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2028
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2029
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2030
       - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2031
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2032
-      - 🇵🇭 Relay_🇨🇳CN-🇵🇭PH_2033
-      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2034
-      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2035
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2036
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2037
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2038
+      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2032
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2033
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2034
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2035
+      - 🇩🇪 Relay_🇨🇳CN-🇩🇪DE_2036
+      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2037
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2038
       - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2039
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2040
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2041
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2042
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2043
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2044
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2045
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2046
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2047
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2048
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2049
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2050
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2051
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2052
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2053
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2054
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2055
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2056
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2057
-      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2058
-      - 🇩🇪 Relay_🇨🇳CN-🇩🇪DE_2059
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2060
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2061
-      - 🇨🇳 CN_2062
+      - 🇲🇾 Relay_🇨🇳CN-🇲🇾MY_2040
+      - 🇨🇳 CN_2041
+      - 🇨🇳 CN_2042
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2043
+      - 🇨🇳 CN_2044
+      - 🇩🇪 Relay_🇨🇳CN-🇩🇪DE_2045
+      - 🇨🇳 CN_2046
+      - 🇨🇳 CN_2047
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -457,63 +478,66 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇨🇳 CN_2006
-      - 🇨🇳 CN_2007
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2008
-      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2009
-      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2010
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2011
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2012
-      - 🇷🇺 Relay_🇨🇳CN-🇷🇺RU_2013
-      - 🇨🇳 Relay_🇨🇳CN-🇬🇧GB_2014
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2015
+      - 🇨🇳 CN_1988
+      - 🇨🇳 CN_1989
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1990
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1991
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1992
+      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_1993
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1994
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1995
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_1996
+      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_1997
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_1998
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_1999
+      - 🇵🇭 Relay_🇨🇳CN-🇵🇭PH_2000
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2001
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2002
+      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2003
+      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2004
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2005
+      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2006
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2007
+      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2008
+      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2009
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2010
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2011
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2012
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2013
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2014
+      - 🇨🇳 Relay_🇨🇳CN-🏁ZZ_2015
       - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2016
-      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2017
-      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2018
-      - 🇩🇪 Relay_🇨🇳CN-🇩🇪DE_2019
-      - 🇨🇳 Relay_🇨🇳CN-🏁ZZ_2020
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2021
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2022
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2017
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2018
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2019
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2020
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2021
+      - 🇨🇳 Relay_🇨🇳CN-🏁ZZ_2022
       - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2023
       - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2024
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2025
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2026
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2025
+      - 🇨🇳 Relay_🇨🇳CN-🇬🇧GB_2026
       - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2027
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2028
-      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2029
-      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2030
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2028
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2029
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2030
       - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2031
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2032
-      - 🇵🇭 Relay_🇨🇳CN-🇵🇭PH_2033
-      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2034
-      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2035
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2036
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2037
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2038
+      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2032
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2033
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2034
+      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2035
+      - 🇩🇪 Relay_🇨🇳CN-🇩🇪DE_2036
+      - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2037
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2038
       - 🇭🇰 Relay_🇨🇳CN-🇭🇰HK_2039
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2040
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2041
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2042
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2043
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2044
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2045
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2046
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2047
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2048
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2049
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2050
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2051
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2052
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2053
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2054
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2055
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2056
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2057
-      - 🇸🇬 Relay_🇨🇳CN-🇸🇬SG_2058
-      - 🇩🇪 Relay_🇨🇳CN-🇩🇪DE_2059
-      - 🇺🇸 Relay_🇨🇳CN-🇺🇸US_2060
-      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2061
-      - 🇨🇳 CN_2062
+      - 🇲🇾 Relay_🇨🇳CN-🇲🇾MY_2040
+      - 🇨🇳 CN_2041
+      - 🇨🇳 CN_2042
+      - 🇯🇵 Relay_🇨🇳CN-🇯🇵JP_2043
+      - 🇨🇳 CN_2044
+      - 🇩🇪 Relay_🇨🇳CN-🇩🇪DE_2045
+      - 🇨🇳 CN_2046
+      - 🇨🇳 CN_2047
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
