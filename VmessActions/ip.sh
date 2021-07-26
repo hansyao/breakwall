@@ -314,13 +314,8 @@ function patch_location() {
 	# DATABASE=$(php $PHPFILE $IP1) 
 	DATABASE=$(./VmessActions/search -d VmessActions/ip2region.db -i $IP1)
 	if [[ ${DATABASE} != '0|0|0|内网IP|内网IP' && ${DATABASE} ]]; then
-		COUNTRY=$(echo ${DATABASE}|awk -F"|" '{print $1}')
-		EMOJI=$(search_emoji $COUNTRY)
-		if [[ ! ${EMOJI} ]]; then EMOJI='🏁'; fi
-		if [[ $COUNTRY == "中国" && $(echo ${DATABASE} | grep 台湾) ]]; then EMOJI='🇹🇼'; fi
-		if [[ $COUNTRY == "中国" && $(echo ${DATABASE} | grep 香港) ]]; then EMOJI='🇭🇰'; fi
-		if [[ $COUNTRY == "中国" && $(echo ${DATABASE} | grep 澳门) ]]; then EMOJI='🇲🇴'; fi
-		echo -e $1\|${EMOJI}${DATABASE}
+		# COUNTRY=$(echo ${DATABASE}|awk -F"|" '{print $1}')
+		echo -e $1\|${DATABASE}
 	else
 		JSON=$(curl -s --connect-timeout 1 -m 5 -X GET $URL$IP1\?lang\=zh-CN)
 		COUNTRY=$(echo $JSON | awk -F"\"country\":" '{print $2}' | awk -F"," '{print $1}' | sed 's/\"//g')
@@ -328,13 +323,13 @@ function patch_location() {
 		REGIONNAME=$(echo $JSON | awk -F"\"regionName\":" '{print $2}' | awk -F"," '{print $1}' | sed 's/\"//g')
 		CITY=$(echo $JSON | awk -F"\"city\":" '{print $2}' | awk -F"," '{print $1}' | sed 's/\"//g')
 		ISP=$(echo $JSON | awk -F"\"isp\":" '{print $2}' | awk -F"," '{print $1}' | sed 's/\"//g')
-		EMOJI=$(search_emoji $COUNTRY)
+		# EMOJI=$(search_emoji $COUNTRY)
 
-		if [[ ! ${EMOJI} ]]; then EMOJI='🏁'; fi
-		if [[ $COUNTRY == "中国" && $(echo ${DATABASE} | grep 台湾) ]]; then EMOJI='🇹🇼'; fi
-		if [[ $COUNTRY == "中国" && $(echo ${DATABASE} | grep 香港) ]]; then EMOJI='🇭🇰'; fi
-		if [[ $COUNTRY == "中国" && $(echo ${DATABASE} | grep 澳门) ]]; then EMOJI='🇲🇴'; fi
-		echo -e $1\|$EMOJI$COUNTRY\|$REGION\|$REGIONNAME\|$CITY\|$ISP
+		# if [[ ! ${EMOJI} ]]; then EMOJI='🏁'; fi
+		# if [[ $COUNTRY == "中国" && $(echo ${DATABASE} | grep 台湾) ]]; then EMOJI='🇹🇼'; fi
+		# if [[ $COUNTRY == "中国" && $(echo ${DATABASE} | grep 香港) ]]; then EMOJI='🇭🇰'; fi
+		# if [[ $COUNTRY == "中国" && $(echo ${DATABASE} | grep 澳门) ]]; then EMOJI='🇲🇴'; fi
+		echo -e $1\|$COUNTRY\|$REGION\|$REGIONNAME\|$CITY\|$ISP
 	fi
 }
 
