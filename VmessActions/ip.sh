@@ -8,8 +8,6 @@ EMOJI_LIST=VmessActions/emoji_list.txt
 # PHPFILE=ip.php
 URL=http://ip-api.com/json/
 
-CUT=./VmessActions/cut
-
 # URL=https://whois.pconline.com.cn/ipJson.jsp\?callback=testJson\&ip\=
 # curl -s --connect-timeout 2 -m 5 -X GET $URL$IP | iconv -fgb2312 -t utf-8 | sed -n "6p" >>$IPJSON_FILE
 
@@ -42,7 +40,7 @@ function patch_location() {
 	DATABASE=$(./VmessActions/search -d VmessActions/ip2region.db -i $IP1)
 	if [[ ${DATABASE} != '0|0|0|内网IP|内网IP' && ${DATABASE} ]]; then
 		COUNTRY=$(echo ${DATABASE}|awk -F"|" '{print $1}')
-		EMOJI=$(cat $EMOJI_LIST | sed -n "$(cat $EMOJI_LIST | $CUT -c 3- | grep -x -n $COUNTRY | $CUT -d ":" -f 1)p" | $CUT -c 1-2)
+		EMOJI=$(cat $EMOJI_LIST | sed -n "$(cat $EMOJI_LIST | cut -c 3- | grep -x -n $COUNTRY | cut -d ":" -f 1)p" | cut -c 1-2)
 		if [[ ${#EMOJI} != 2 ]]; then EMOJI='🏁'; fi
 		if [[ $COUNTRY == "中国" && $(echo ${DATABASE} | grep 台湾) ]]; then EMOJI='🇹🇼'; fi
 		if [[ $COUNTRY == "中国" && $(echo ${DATABASE} | grep 香港) ]]; then EMOJI='🇭🇰'; fi
@@ -55,7 +53,7 @@ function patch_location() {
 		REGIONNAME=$(echo $JSON | awk -F"\"regionName\":" '{print $2}' | awk -F"," '{print $1}' | sed 's/\"//g')
 		CITY=$(echo $JSON | awk -F"\"city\":" '{print $2}' | awk -F"," '{print $1}' | sed 's/\"//g')
 		ISP=$(echo $JSON | awk -F"\"isp\":" '{print $2}' | awk -F"," '{print $1}' | sed 's/\"//g')
-		EMOJI=$(cat $EMOJI_LIST | sed -n "$(cat $EMOJI_LIST | $CUT -c 3- | grep -x -n $COUNTRY | $CUT -d ":" -f 1)p" | $CUT -c 1-2)
+		EMOJI=$(cat $EMOJI_LIST | sed -n "$(cat $EMOJI_LIST | cut -c 3- | grep -x -n $COUNTRY | cut -d ":" -f 1)p" | cut -c 1-2)
 
 		if [[ ${#EMOJI} != 2 ]]; then EMOJI='🏁'; fi
 		if [[ $COUNTRY == "中国" && $(echo ${DATABASE} | grep 台湾) ]]; then EMOJI='🇹🇼'; fi
@@ -90,7 +88,7 @@ i=1
 TOTAL=$(cat $LOCATION | wc -l)
 while [[ $i -le $TOTAL ]]
 do
-	EMOJI=$(cat $LOCATION | sed -n "$[i]p" | awk -F"|" '{print $2}' | $CUT -c 1-2)
+	EMOJI=$(cat $LOCATION | sed -n "$[i]p" | awk -F"|" '{print $2}' | cut -c 1-2)
 
 	if [[ $EMOJI == "🏁" ]]; then
 		IP=$(cat $LOCATION | sed -n "$[i]p" | awk -F"|" '{print $1}')
@@ -108,7 +106,7 @@ do
 	IP=$(cat $POOL | sed -n "$[i]p"| awk -F"\"server\":" '{print $2}' | awk -F"," '{print $1}' | sed s/\"//g)
 	NODE[i]=$(cat $POOL | sed -n "$[i]p")
 	if [[ $IP ]]; then
-		NEW_NAME=$(cat $LOCATION | sed -n "$(cat $LOCATION | awk -F"|" '{print $1}' | grep -x -n $IP | $CUT -d ":" -f 1)p")
+		NEW_NAME=$(cat $LOCATION | sed -n "$(cat $LOCATION | awk -F"|" '{print $1}' | grep -x -n $IP | cut -d ":" -f 1)p")
 		NEW_NAME=$(echo $NEW_NAME | awk -F"|" '{print $2,$3,$4,$5,$6}' | sed s/\0//g | sed s/\ //g) 
 		
 		OLD_NODE=$(cat $POOL | sed -n "$[i]p")
