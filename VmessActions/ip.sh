@@ -33,7 +33,7 @@ function patch_location() {
 
 	IP1=$1
 	if [[ $(check_ip $1) != "IP $1 available." ]]; then
-		IP1=$(nslookup $1 | sed '/^$/d' | tail -n 1 | awk -F" " '{print $2}')
+		IP1=$(nslookup $1 114.114.114.114 | sed '/^$/d' | tail -n 1 | awk -F" " '{print $2}')
 	fi
 
 	# DATABASE=$(php $PHPFILE $IP1) 
