@@ -275,11 +275,12 @@ EM[259]='🇿🇦南非'
 EM[260]='🇿🇲赞比亚'
 EM[261]='🇿🇼津巴布韦'
 
+
 function search_emoji() {
-	for ((i=1; i<=261; i++))
+	for emoji in ${EM[@]}
 	do
-		if [[ $(echo ${EM[i]} | cut -c 3-) == $1 ]]; then
-			echo ${EM[i]} | cut -c 1-2
+		if [[ $(echo ${emoji} | cut -c 3-) == $1 ]]; then
+			echo ${emoji} | cut -c 1-2
 			break
 		fi
 	done
