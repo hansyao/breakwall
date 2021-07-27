@@ -27,5 +27,7 @@ rm -f $FILE
 
 echo -e "设置权限 chmod 755 `pwd`/$APP/$APP"
 chmod 755 $APP/$APP
+echo -e "扩充EMOJI库"
+cp -f VmessActions/emoji.txt subconverter/snippets/emoji.txt
 echo -e "运行规则转换工具"
 $APP/$APP >/dev/null 2>&1 &
