@@ -1,10 +1,10 @@
 #!/bin/bash
 
-#POOL=VmessActions/subscribe/latest_pool.yaml
-#FINAL_POOL=VmessActions/subscribe/pool.yaml
+POOL=VmessActions/subscribe/latest_pool.yaml
+FINAL_POOL=VmessActions/subscribe/pool.yaml
 
-POOL=$1
-FINAL_POOL=$2
+#POOL=$1
+#FINAL_POOL=$2
 LOCATION=VmessActions/location.txt
 
 
@@ -30,7 +30,7 @@ check_ip() {
 # 根据国家和地区名获取地域代码
 countrycode() {
 	CODE=VmessActions/code.csv
-	echo -e $(cat $CODE | grep -P $"\t$1$" | awk -F"\t" '{print $1}')
+	echo -e $(cat $CODE | grep -P "\t$1\t" | awk -F"\t" '{print $1}')
 }
 
 # 远程获取单IP地域信息
