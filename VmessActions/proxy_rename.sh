@@ -1,10 +1,10 @@
 #!/bin/bash
 
-POOL=VmessActions/subscribe/latest_pool.yaml
-FINAL_POOL=VmessActions/subscribe/pool.yaml
+#POOL=VmessActions/subscribe/latest_pool.yaml
+#FINAL_POOL=VmessActions/subscribe/pool.yaml
 
-#POOL=$1
-#FINAL_POOL=$2
+POOL=$1
+FINAL_POOL=$2
 LOCATION=VmessActions/location.txt
 
 
