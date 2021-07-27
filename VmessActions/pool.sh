@@ -47,12 +47,12 @@ cp -f $TEMP $LPOOL
 rm -f $ALLPOOL
 
 echo -e "开始地域查询与转换 $(timestamp)"
-./VmessActions/ip.sh $TEMP $ALLPOOL
+./VmessActions/proxy_rename.sh $TEMP $ALLPOOL
 
 echo -e "开始规则转换 $(timestamp)"
 
 echo -e "排除CHINA节点 $(timestamp)"
-cat $ALLPOOL | grep -v '\"country\":\"🇨🇳' > $POOL
+cat $ALLPOOL | grep -v '\"country\":\"CN' > $POOL
 echo -e "转换非CHINA节点 $(timestamp)"
 curl -s http://127.0.0.1:25500/sub\?target\=clash\&emoji\=true\&url\=../$POOL -o $CLASH
 
@@ -63,8 +63,8 @@ cp -f $V2RAY $CLASH2
 
 echo -e "转换CHINA节点 $(timestamp)"
 echo "proxies:" > $CN
-if [[ $(cat $ALLPOOL | grep '\"country\":\"🇨🇳') ]]; then
-        cat $ALLPOOL | grep '\"country\":\"🇨🇳' >> $CN
+if [[ $(cat $ALLPOOL | grep '\"country\":\"CN') ]]; then
+        cat $ALLPOOL | grep '\"country\":\"CN' >> $CN
         curl -s http://127.0.0.1:25500/sub\?target\=clash\&emoji\=true\&url\=../$CN -o $CN
 fi
 
