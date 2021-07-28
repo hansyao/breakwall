@@ -62,6 +62,7 @@ echo -e "转换非SS节点 $(timestamp)"
 cat $POOL | grep -v 'type\":\"ss' > $V2RAY
 curl -s http://127.0.0.1:25500/sub\?target\=clash\&emoji\=true\&url\=../$V2RAY -o $V2RAY
 
+echo -e '转换亚太区(台湾|日本|韩国|香港)为缺省配置'
 curl -s http://127.0.0.1:25500/sub\?target\=clash\&emoji\=true\&include=$INCL\&url\=../$POOL  -o $CLASH2
 
 echo -e "转换CHINA节点 $(timestamp)"
