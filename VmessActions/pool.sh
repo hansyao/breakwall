@@ -64,8 +64,6 @@ curl -s http://127.0.0.1:25500/sub\?target\=clash\&emoji\=true\&url\=../$V2RAY -
 
 curl -s http://127.0.0.1:25500/sub\?target\=clash\&emoji\=true\&include=$INCL\&url\=../$POOL  -o $CLASH2
 
-cp -f $V2RAY $CLASH2
-
 echo -e "转换CHINA节点 $(timestamp)"
 echo "proxies:" > $CN
 if [[ $(cat $ALLPOOL | grep '\"country\":\"CN') ]]; then
