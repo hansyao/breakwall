@@ -10,6 +10,8 @@ CLASH=VmessActions/subscribe/clash_no_cn.yaml
 CLASH2=VmessActions/subscribe/clash.yaml
 V2RAY=VmessActions/subscribe/ray_pool.yaml
 
+INCL=\(HK\|香港\|TW\|台湾\|JP\|日本\|KR\|韩国\)
+
 function timestamp() {
   date +"%Y-%m-%d %H:%M:%S" # current time
 }
@@ -59,6 +61,9 @@ curl -s http://127.0.0.1:25500/sub\?target\=clash\&emoji\=true\&url\=../$POOL -o
 echo -e "转换非SS节点 $(timestamp)"
 cat $POOL | grep -v 'type\":\"ss' > $V2RAY
 curl -s http://127.0.0.1:25500/sub\?target\=clash\&emoji\=true\&url\=../$V2RAY -o $V2RAY
+
+curl -s http://127.0.0.1:25500/sub\?target\=clash\&emoji\=true\&include=$INCL\&url\=../$POOL  -o $CLASH2
+
 cp -f $V2RAY $CLASH2
 
 echo -e "转换CHINA节点 $(timestamp)"
