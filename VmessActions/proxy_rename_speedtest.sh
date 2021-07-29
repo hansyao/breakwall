@@ -275,7 +275,7 @@ multi_pool_rename_fd() {
 # location $POOL $LOCATION
 
 # 代理池按照地域改名
-for ((x=21; x<40; x++))
+for ((x=20; x<40; x++))
 do
 	n=$[(($[x] * 100 + 100))]
 	echo -e "参数 $[n] $(multi_pool_rename_pid $FINAL_POOL $[n])"
