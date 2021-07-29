@@ -105,31 +105,25 @@ location() {
 	rm -f $2 && touch $2
 	pool $1 | while read line || [[ -n ${line} ]]
 	do
-		{
-		if [[ ! $(cat $2 | grep -P "\|${line}\|") ]];then
-			IPDATA=$(patch_location ${line})
-			COUNTRY=$(echo $IPDATA | awk -F"|" '{print $2}')
-			CODE=$(countrycode $COUNTRY)
+		IPDATA=$(patch_location ${line})
+		COUNTRY=$(echo $IPDATA | awk -F"|" '{print $2}')
+		CODE=$(countrycode $COUNTRY)
 
-			if [[ $CODE == "CN" && $(echo $IPDATA | grep 台湾) ]]
-			then
-				CODE='TW'
-			fi
-			if [[ $CODE == "CN" && $(echo $IPDATA | grep 香港) ]]
-			then
-				CODE='HK'
-			fi
-			if [[ $CODE == "CN" && $(echo $IPDATA | grep 澳门) ]]
-			then
-				CODE='MO'
-			fi
-
-			echo -e $CODE\|$IPDATA >>$2
+		if [[ $CODE == "CN" && $(echo $IPDATA | grep 台湾) ]]
+		then
+			CODE='TW'
 		fi
-		
-		}&
+		if [[ $CODE == "CN" && $(echo $IPDATA | grep 香港) ]]
+		then
+			CODE='HK'
+		fi
+		if [[ $CODE == "CN" && $(echo $IPDATA | grep 澳门) ]]
+		then
+			CODE='MO'
+		fi
+
+		echo -e $CODE\|$IPDATA >>$2
 	done
-	wait
 }
 
 # 单行重命名
@@ -300,7 +294,7 @@ echo -e "查询IP地域总耗时: `expr $[STOP_TIME] - $[START_TIME]` 秒"
 
 # rename_speed_test 1 0 1
 
-multi_pool_rename_pid $FINAL_POOL 1600
+multi_pool_rename_pid $FINAL_POOL 500
 #multi_pool_rename_fd $POOL $FINAL_POOL 30
 
 exit 0

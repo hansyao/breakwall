@@ -109,32 +109,24 @@ location() {
 	rm -f $2 && touch $2
 	pool $1 | while read line || [[ -n ${line} ]]
 	do
-		{
-		if [[ ! $(cat $2 | grep -P "\|${line}\|") ]]; then
-			IPDATA=$(patch_location ${line})
-			COUNTRY=$(echo $IPDATA | awk -F"|" '{print $2}')
-			CODE=$(countrycode $COUNTRY)
+		IPDATA=$(patch_location ${line})
+		COUNTRY=$(echo $IPDATA | awk -F"|" '{print $2}')
+		CODE=$(countrycode $COUNTRY)
 
-			if [[ $CODE == "CN" && $(echo $IPDATA | grep 台湾) ]]
-			then
-				CODE='TW'
-			fi
+		if [[ $CODE == "CN" && $(echo $IPDATA | grep 台湾) ]]; then
+			CODE='TW'
+		fi
 
-			if [[ $CODE == "CN" && $(echo $IPDATA | grep 香港) ]]
-			then
-				CODE='HK'
-			fi
+		if [[ $CODE == "CN" && $(echo $IPDATA | grep 香港) ]]; then
+			CODE='HK'
+		fi
 
-			if [[ $CODE == "CN" && $(echo $IPDATA | grep 澳门) ]]
-			then
-				CODE='MO'
-			fi
+		if [[ $CODE == "CN" && $(echo $IPDATA | grep 澳门) ]]; then
+			CODE='MO'
 		fi
 
 		echo -e $CODE\|$IPDATA >>$2
-		}&
 	done
-	wait
 }
 
 # 单行重命名
