@@ -272,7 +272,7 @@ multi_pool_rename_fd() {
 
 
 # 得到IP地域文件
-# location $POOL $LOCATION
+location $POOL $LOCATION
 
 # 代理池按照地域改名
 for ((x=20; x<40; x++))
