@@ -1,0 +1,15 @@
+name: 自动采集
+on:
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: 迁出代码
+      uses: actions/checkout@v2
+    - name: 设置时区
+      run: sudo timedatectl set-timezone 'Asia/Shanghai'
+     - name: 速度测试
+      run: |
+        bash VmessActions/proxy_rename_speedtest.sh
+ 

@@ -56,14 +56,14 @@ echo -e "开始规则转换 $(timestamp)"
 echo -e "排除CHINA节点 $(timestamp)"
 cat $ALLPOOL | grep -v '\"country\":\"CN' > $POOL
 echo -e "转换非CHINA节点 $(timestamp)"
-curl -s http://127.0.0.1:25500/sub\?target\=clash\&emoji\=true\&url\=../$POOL -o $CLASH
+curl -s http://127.0.0.1:25500/sub\?target\=clash\&emoji\=true\&url\=../$POOL -o $CLASH >/dev/null 2>&1 &
 
 echo -e "转换非SS节点 $(timestamp)"
 cat $POOL | grep -v 'type\":\"ss' > $V2RAY
-curl -s http://127.0.0.1:25500/sub\?target\=clash\&emoji\=true\&url\=../$V2RAY -o $V2RAY
+curl -s http://127.0.0.1:25500/sub\?target\=clash\&emoji\=true\&url\=../$V2RAY -o $V2RAY >/dev/null 2>&1 &
 
 echo -e '转换亚太区(台湾|日本|韩国|香港)为缺省配置'
-curl -s http://127.0.0.1:25500/sub\?target\=clash\&emoji\=true\&include=$INCL\&url\=../$POOL  -o $CLASH2
+curl -s http://127.0.0.1:25500/sub\?target\=clash\&emoji\=true\&include=$INCL\&url\=../$POOL  -o $CLASH2 >/dev/null 2>&1 &
 
 echo -e "转换CHINA节点 $(timestamp)"
 echo "proxies:" > $CN
@@ -71,6 +71,8 @@ if [[ $(cat $ALLPOOL | grep '\"country\":\"CN') ]]; then
         cat $ALLPOOL | grep '\"country\":\"CN' >> $CN
         curl -s http://127.0.0.1:25500/sub\?target\=clash\&emoji\=true\&url\=../$CN -o $CN
 fi
+
+wait
 
 echo -e "clash规则转化完成 $(timestamp)"
 rm -f $TEMP

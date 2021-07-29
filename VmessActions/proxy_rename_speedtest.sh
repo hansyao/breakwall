@@ -1,10 +1,10 @@
 #!/bin/bash
 
-#POOL=VmessActions/subscribe/latest_pool.yaml
-#FINAL_POOL=VmessActions/subscribe/pool.yaml
+POOL=VmessActions/subscribe/latest_pool.yaml
+FINAL_POOL=VmessActions/subscribe/pool.yaml
 
-POOL=$1
-FINAL_POOL=$2
+#POOL=$1
+#FINAL_POOL=$2
 LOCATION=VmessActions/location.txt
 
 
@@ -283,10 +283,14 @@ multi_pool_rename_fd() {
 
 
 # 得到IP地域文件
-location $POOL $LOCATION
+#location $POOL $LOCATION
 
 # 代理池按照地域改名
-multi_pool_rename_pid $FINAL_POOL 500
-
-# multi_pool_rename_fd $POOL $FINAL_POOL 30 
+for ((x=0; x<20; x++))
+do
+	n=$[(($[x] * 100 + 100))]
+	echo -e "参数 $[n] $(multi_pool_rename_pid $FINAL_POOL $[n])"
+done
+#multi_pool_rename_pid $FINAL_POOL 500
+#multi_pool_rename_fd $POOL $FINAL_POOL 30 
 exit 0
