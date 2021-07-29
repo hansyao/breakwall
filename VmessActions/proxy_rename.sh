@@ -102,8 +102,7 @@ pool() {
 # $1 - 代理节点列表 $2 - LOCATION文件
 location() {
 	if [ ! -r $1 ]; then echo $1 不存在; return; fi
-	#if [ ! -s $2 ]; then touch $2; fi
-	rm -f $2
+	rm -f $2 && touch $2
 	pool $1 | while read line || [[ -n ${line} ]]
 	do
 		{

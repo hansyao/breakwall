@@ -106,7 +106,7 @@ pool() {
 location() {
 	if [ ! -r $1 ]; then echo $1 不存在; return; fi
 	#if [ ! -s $2 ]; then touch $2; fi
-	rm -f $2
+	rm -f $2 && touch $2
 	pool $1 | while read line || [[ -n ${line} ]]
 	do
 		{
@@ -305,7 +305,7 @@ echo -e "查询IP地域总耗时: `expr $[STOP_TIME] - $[START_TIME]` 秒"
 
 #rename_speed_test 1 0 1
 
-#multi_pool_rename_pid $FINAL_POOL 1600
+multi_pool_rename_pid $FINAL_POOL 500
 #multi_pool_rename_fd $POOL $FINAL_POOL 30
 
 exit 0
