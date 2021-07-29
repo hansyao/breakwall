@@ -109,6 +109,7 @@ location() {
 	rm -f $2 && touch $2
 	pool $1 | while read line || [[ -n ${line} ]]
 	do
+		{
 		IPDATA=$(patch_location ${line})
 		COUNTRY=$(echo $IPDATA | awk -F"|" '{print $2}')
 		CODE=$(countrycode $COUNTRY)
@@ -126,7 +127,9 @@ location() {
 		fi
 
 		echo -e $CODE\|$IPDATA >>$2
+		}&
 	done
+	wait
 }
 
 # 单行重命名
