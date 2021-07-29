@@ -297,7 +297,7 @@ echo -e "查询IP地域总耗时: `expr $[STOP_TIME] - $[START_TIME]` 秒"
 
 # rename_speed_test 1 0 1
 
-multi_pool_rename_pid $FINAL_POOL 500
+multi_pool_rename_pid $FINAL_POOL 900
 #multi_pool_rename_fd $POOL $FINAL_POOL 30
 
 exit 0
