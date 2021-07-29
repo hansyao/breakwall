@@ -8,7 +8,9 @@ jobs:
     steps:
     - name: 迁出代码
       uses: actions/checkout@v2
-     - name: 速度测试
+    - name: 设置时区
+      run: sudo timedatectl set-timezone 'Asia/Shanghai'
+    - name: 速度测试
       run: |
         bash VmessActions/proxy_rename_speedtest.sh
   
