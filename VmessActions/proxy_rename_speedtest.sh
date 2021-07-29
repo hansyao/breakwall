@@ -105,13 +105,11 @@ pool() {
 # $1 - 代理节点列表 $2 - LOCATION文件
 location() {
 	if [ ! -r $1 ]; then echo $1 不存在; return; fi
-	if [ ! -s $2 ]; then touch $2; fi
+	#if [ ! -s $2 ]; then touch $2; fi
+	rm -f $2
 	pool $1 | while read line || [[ -n ${line} ]]
 	do
-		if [[ $(cat $2 | grep -P "\|${line}\|") ]]; then
-			continue
-		fi
-
+		{	
 		IPDATA=$(patch_location ${line})
 		COUNTRY=$(echo $IPDATA | awk -F"|" '{print $2}')
 		CODE=$(countrycode $COUNTRY)
@@ -126,9 +124,10 @@ location() {
 			CODE='MO'
 		fi
 
-
 		echo -e $CODE\|$IPDATA >>$2
-	done 
+		}&
+	done
+	wait
 }
 
 # 单行重命名
@@ -225,7 +224,7 @@ multi_pool_rename_pid() {
 	rm -rf $TEMP
 	
 	STOP_TIME=$(date +%s)
-	echo -e "总耗时: `expr $[STOP_TIME] - $[START_TIME]` 秒"
+	echo -e "节点重命名总耗时: `expr $[STOP_TIME] - $[START_TIME]` 秒"
 
 }
 
@@ -254,7 +253,8 @@ multi_pool_rename_fd() {
 			NAME=$(echo $LINE | awk -F"\"name\":" '{print $2}' \
 				| awk -F"," '{print $1}'| sed 's/\"//g')
 			NEW_LINE=$(echo $LINE \
-			| sed "s/\"name\":\"${NAME}/\"name\":\"${NAME}\|$i\|/g")
+				| sed "s/\"name\":\"${NAME}/\"name\":\
+				\"${NAME}\|$i\|/g")
 
 			echo ${NEW_LINE} >> $2
 
@@ -270,17 +270,35 @@ multi_pool_rename_fd() {
 	exec 3>&-
 }
 
+# 节点重命名速度测试
+rename_speed_test() {
+	for ((x=$2; x<$3; x++))
+	do
+		if [ $1 == 1 ]; then
+			n=$[(($[x] * 100 + 100))]
+			echo -e "重命名算法一:参数 $[n]"
+			echo -e "$(multi_pool_rename_pid $FINAL_POOL $[n])"
+		elif [ $1 == 2 ]; then
+			n=$[(($[x] * 10 + 10))]
+			echo -e "重命名算法二:参数 $[n]"
+			echo -e "$(multi_pool_rename_fd $POOL $FINAL_POOL $[n])"
+		else
+			echo -e "参数 $[$1] 错误"
+			break
+		fi
+	done
+}
+
 
 # 得到IP地域文件
+START_TIME=$(date +%s)
 location $POOL $LOCATION
+STOP_TIME=$(date +%s)
+echo -e "查询IP地域总耗时: `expr $[STOP_TIME] - $[START_TIME]` 秒"
 
-# 代理池按照地域改名
-for ((x=20; x<40; x++))
-do
-	n=$[(($[x] * 100 + 100))]
-	echo -e "参数 $[n] $(multi_pool_rename_pid $FINAL_POOL $[n])"
-done
-#multi_pool_rename_pid $FINAL_POOL 500
+#rename_speed_test 1 0 1
+
+#multi_pool_rename_pid $FINAL_POOL 1600
 #multi_pool_rename_fd $POOL $FINAL_POOL 30
 
 exit 0
