@@ -131,18 +131,14 @@ location() {
 	done 
 }
 
-# 根据地域为节点服务器重命名
-pool_rename() {
-	i=0
-	cat $1 | while read line || [[ -n ${line} ]]
-	do
-		LINE=$(echo ${line} | sed -e 's/^[ ]*//g' | sed -e 's/[ ]*$//g')
+# 单行重命名
+pool_rename_line() {
 
-		if [ $(echo $LINE | awk -F" " '{print $1}') != '-' ]; then
-			NEW_LINE=$LINE
-			continue
-		fi
+	LINE=$(echo $* | sed -e 's/^[ ]*//g' | sed -e 's/[ ]*$//g')
 
+	if [ $(echo $LINE | awk -F" " '{print $1}') != '-' ]; then
+		NEW_LINE=$LINE
+	else
 		SERVER=$(echo $LINE | awk -F"\"server\":" '{print $2}' \
 			| awk -F"," '{print $1}'| sed 's/\"//g')
 		COUNTRY=$(echo $LINE | awk -F"\"country\":" '{print $2}' \
@@ -163,10 +159,27 @@ pool_rename() {
 			LINE=$(echo $LINE | sed "s/\"country\":\"${COUNTRY}/\
 				\"country\":\"${CODE}/g")
 		fi
-		
+		NEW_LINE=$(echo $LINE \
+		  | sed "s/\"name\":\"${NAME}/\"name\":\"${NEW_NAME}/g")
+	fi
+	
+	echo ${NEW_LINE}
+}
+
+
+# 根据地域批量节点服务器重命名
+pool_rename() {
+	i=0
+	cat $1 | while read line || [[ -n ${line} ]]
+	do
+		LINE=$(pool_rename_line ${line})
+
+		NAME=$(echo $LINE | awk -F"\"name\":" '{print $2}' \
+			| awk -F"," '{print $1}'| sed 's/\"//g')
+	
 		let i++
 		NEW_LINE=$(echo $LINE \
-		  | sed "s/\"name\":\"${NAME}/\"name\":\"${NEW_NAME}\|$i\|/g")
+		  | sed "s/\"name\":\"${NAME}/\"name\":\"${NAME}\|$i\|/g")
 
 		echo ${NEW_LINE} >> $2
 	done
@@ -237,35 +250,11 @@ multi_pool_rename_fd() {
 		read -u 3
 		let i++
 		{
-			LINE=$(echo ${line} | sed -e 's/^[ ]*//g' | sed -e 's/[ ]*$//g')
-
-			if [ $(echo $LINE | awk -F" " '{print $1}') != '-' ]; then
-				NEW_LINE=$LINE
-			else
-				SERVER=$(echo $LINE | awk -F"\"server\":" '{print $2}' \
-					| awk -F"," '{print $1}'| sed 's/\"//g')
-				COUNTRY=$(echo $LINE | awk -F"\"country\":" '{print $2}' \
-					| awk -F"," '{print $1}'| sed 's/\"//g')
-				NAME=$(echo $LINE | awk -F"\"name\":" '{print $2}' \
-					| awk -F"," '{print $1}'| sed 's/\"//g')
-
-				NEW_NAME=$(cat $LOCATION | grep -e "|${SERVER}|" \
-					| cut -d "|" -f1,3- | sed "s/\0|//g" | sed "s/|0//g")
-
-				# 修正国家代码
-				CODE=$(cat ${LOCATION} | grep -e "|${SERVER}|" | cut -d "|" -f1)
-
-				if [[ -z $(echo $LINE | grep "\"country\":") ]]; then
-					LINE=$(echo $LINE \
-						| sed -e "s/.$/,\"country\":\"$CODE\"\}/g")
-				else
-					LINE=$(echo $LINE | sed "s/\"country\":\"${COUNTRY}/\
-						\"country\":\"${CODE}/g")
-				fi
-				
-				NEW_LINE=$(echo $LINE \
-				  | sed "s/\"name\":\"${NAME}/\"name\":\"${NEW_NAME}\|$[i]\|/g")
-			fi
+			LINE=$(pool_rename_line ${line})
+			NAME=$(echo $LINE | awk -F"\"name\":" '{print $2}' \
+				| awk -F"," '{print $1}'| sed 's/\"//g')
+			NEW_LINE=$(echo $LINE \
+			| sed "s/\"name\":\"${NAME}/\"name\":\"${NAME}\|$i\|/g")
 
 			echo ${NEW_LINE} >> $2
 
@@ -283,14 +272,15 @@ multi_pool_rename_fd() {
 
 
 # 得到IP地域文件
-location $POOL $LOCATION
+# location $POOL $LOCATION
 
 # 代理池按照地域改名
-for ((x=0; x<20; x++))
+for ((x=21; x<40; x++))
 do
 	n=$[(($[x] * 100 + 100))]
 	echo -e "参数 $[n] $(multi_pool_rename_pid $FINAL_POOL $[n])"
 done
 #multi_pool_rename_pid $FINAL_POOL 500
-#multi_pool_rename_fd $POOL $FINAL_POOL 30 
+#multi_pool_rename_fd $POOL $FINAL_POOL 30
+
 exit 0
