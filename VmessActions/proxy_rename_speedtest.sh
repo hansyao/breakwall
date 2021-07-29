@@ -221,7 +221,7 @@ multi_pool_rename_pid() {
 	wait
 
 	i=1
-	echo "proxies:" > $1 
+	#echo "proxies:" > $1 
 	while [ $i -le $n ]
 	do
 		cat $TEMP/FINAL-$i.yaml >> $1
