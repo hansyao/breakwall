@@ -153,7 +153,7 @@ pool_validate_fd() {
 	START_TIME=$(date +%s)
 	rm -rf ${FINAL_POOL}
 	rm -rf $TEMP && mkdir $TEMP
-	echo 'proxies:' >>${FINAL_POOL}
+	echo 'proxies:' >${FINAL_POOL}
 
 	[ -e /tmp/fd1 ] || mkfifo /tmp/fd1
 	exec 3<>/tmp/fd1
@@ -207,7 +207,7 @@ pool_validate_pid() {
 
 	rm -rf $TEMP && mkdir $TEMP
 	rm -rf ${FINAL_POOL}
-	echo 'proxies:' >>${FINAL_POOL}
+	echo 'proxies:' >${FINAL_POOL}
 
 
 	for (( i=1; i<=$z; i++))
