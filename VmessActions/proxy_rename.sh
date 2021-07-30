@@ -70,6 +70,10 @@ patch_location() {
 	IP1=$1
 	if [[ $(check_ip $1 $DOMAIN) != "IP $1 available." ]]; then
 		IP1=$(nslookup $1 |egrep 'Address:'|awk '{if(NR==2) print $NF}')
+		if [ -z ${IP1} ]; then
+			echo -e "$1\|未知\|"
+			return 
+		fi
 	fi
 
 	#从本地IP数据库拉取

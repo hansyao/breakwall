@@ -3,6 +3,7 @@
 URL=https://proxy.yugogo.xyz/clash/proxies
 TEMP=VmessActions/subscribe/temp_pool.yaml
 ALLPOOL=VmessActions/subscribe/pool.yaml
+VALID_POOL=VmessActions/subscribe/valid_pool.yaml
 LPOOL=VmessActions/subscribe/latest_pool.yaml
 POOL=VmessActions/subscribe/pool_no_cn.yaml
 CN=VmessActions/subscribe/clash_cn.yaml
@@ -48,8 +49,13 @@ echo -e "代理池检查完成 $(timestamp)"
 cp -f $TEMP $LPOOL
 rm -f $ALLPOOL
 
+echo -e "排除不可用节点"
+./VmessActions/connection_test.sh ${TEMP} ${VALID_POOL}
+
 echo -e "开始地域查询与转换 $(timestamp)"
-./VmessActions/proxy_rename.sh $TEMP $ALLPOOL
+./VmessActions/proxy_rename.sh ${VALID_POOL} ${ALLPOOL}
+
+rm -f ${VALID_POOL}
 
 echo -e "开始规则转换 $(timestamp)"
 

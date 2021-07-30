@@ -1,7 +1,10 @@
 #!/bin/bash
 
-POOL=VmessActions/subscribe/latest_pool.yaml
-FINAL_POOL=VmessActions/subscribe/valid_pool.yaml
+POOL=$1
+FINAL_POOL=$2
+
+#POOL=VmessActions/subscribe/latest_pool.yaml
+#FINAL_POOL=VmessActions/subscribe/valid_pool.yaml
 CLASH=${HOME}/go/bin/clash
 TEMP=tmp
 
@@ -18,9 +21,9 @@ get_clash() {
 
 clash_help() {
 	echo "how to manage clash:"
-	echo "clash start"
-	echo "clash restart"
-	echo "clash stop"
+	echo "clash start config pid"
+	echo "clash restart config pid"
+	echo "clash stop config pid"
 }
 
 clash() {
@@ -189,7 +192,7 @@ pool_validate_fd() {
 	#rm -rf $TEMP
 
 	STOP_TIME=$(date +%s)
-	echo -e "总耗时: `expr $[STOP_TIME] - $[START_TIME]` 秒"
+	echo -e "可用节点检测总耗时: `expr $[STOP_TIME] - $[START_TIME]` 秒"
 	exec 3<&-
 	exec 3>&-
 }
@@ -223,7 +226,7 @@ pool_validate_pid() {
 	#rm -rf $TEMP
 	
 	STOP_TIME=$(date +%s)
-	echo -e "节点检测总耗时: `expr $[STOP_TIME] - $[START_TIME]` 秒"
+	echo -e "可用节点检测总耗时: `expr $[STOP_TIME] - $[START_TIME]` 秒"
 }
 
 
