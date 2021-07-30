@@ -50,12 +50,10 @@ cp -f ${TEMP} $LPOOL
 rm -f ${ALLPOOL}
 
 echo -e "开始排除不可用节点 $(timestamp)"
-./VmessActions/connection_test.sh ${TEMP} ${VALID_POOL}
+./VmessActions/connection_test.sh "${TEMP}" "${VALID_POOL}"
 
 echo -e "开始地域查询与转换 $(timestamp)"
-./VmessActions/proxy_rename.sh ${VALID_POOL} ${ALLPOOL}
-
-rm -f ${VALID_POOL}
+./VmessActions/proxy_rename.sh "${VALID_POOL}" "${ALLPOOL}"
 
 echo -e "开始规则转换 $(timestamp)"
 

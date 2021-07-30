@@ -27,7 +27,7 @@ check_ip() {
 # 根据国家和地区名获取地域代码
 countrycode() {
 	CODE=VmessActions/code.csv
-	echo -e $(cat $CODE | grep -P "\t$1\t" | awk -F"\t" '{print $1}')
+	echo -e $(cat ${CODE} | grep -P "\t$1\t" | awk -F"\t" '{print $1}')
 }
 
 # 远程获取单IP地域信息
@@ -42,7 +42,7 @@ location_remote() {
 
 	JSON=$(curl -s --connect-timeout 1 -m 2 -X GET ${URL}/$1\?lang\=$LANG)
 	if [[ -z ${JSON} ]]; then
-		JSON=$(curl -s -X POST ${URL}2$1\&accessKey\=${KEY})
+		JSON=$(curl -s -X POST ${URL2}$1\&accessKey\=${KEY})
 		if [[ -z ${JSON} ]]; then
 			echo -e 未知\|\|\|\|
 			return
@@ -60,7 +60,7 @@ location_remote() {
 	ISP=$(echo ${JSON} | awk -F"\"isp\":" '{print $2}' \
 		| awk -F"," '{print $1}' | sed 's/\"//g')
 		
-	echo -e $COUNTRY\|$REGION\|$REGIONNAME\|$CITY\|$ISP
+	echo -e ${COUNTRY}\|${REGION}\|${REGIONNAME}\|${CITY}\|${ISP}
 }
 
 # 获取单个IP地域信息
@@ -70,21 +70,17 @@ patch_location() {
 	IP1=$1
 	if [[ $(check_ip $1 ${DOMAIN}) != "IP $1 available." ]]; then
 		IP1=$(nslookup $1 |egrep 'Address:'|awk '{if(NR==2) print $NF}')
-		if [ -z ${IP1} ]; then
-			echo -e "$1\|未知\|"
-			return 
-		fi
 	fi
 
 	#从本地IP数据库拉取
-	IPREGION=$(./VmessActions/search -d VmessActions/ip2region.db -i ${IP}1)
+	IPREGION=$(./VmessActions/search -d VmessActions/ip2region.db -i ${IP1})
 	if [[ ${IPREGION} != '0|0|0|内网IP|内网IP' && ${IPREGION} ]]; then
 		echo -e $1\|${IPREGION}
 		return
 	fi
 
 	#本地IP数据库不存在，从远程拉取
-	echo -e $1\|$(location_remote ${IP}1)
+	echo -e $1\|$(location_remote ${IP1})
 }
 
 # 获取缺失国家地区选项的代理节点清单
@@ -111,23 +107,23 @@ location() {
 	do
 		{
 		IPDATA=$(patch_location ${line})
-		COUNTRY=$(echo ${IP}DATA | awk -F"|" '{print $2}')
+		COUNTRY=$(echo $IPDATA | awk -F"|" '{print $2}')
 		CODE=$(countrycode $COUNTRY)
 
-		if [[ $CODE == "CN" && $(echo ${IP}DATA | grep 台湾) ]]
+		if [[ $CODE == "CN" && $(echo ${IPDATA} | grep 台湾) ]]
 		then
 			CODE='TW'
 		fi
-		if [[ $CODE == "CN" && $(echo ${IP}DATA | grep 香港) ]]
+		if [[ $CODE == "CN" && $(echo ${IPDATA} | grep 香港) ]]
 		then
 			CODE='HK'
 		fi
-		if [[ $CODE == "CN" && $(echo ${IP}DATA | grep 澳门) ]]
+		if [[ $CODE == "CN" && $(echo ${IPDATA} | grep 澳门) ]]
 		then
 			CODE='MO'
 		fi
 
-		echo -e $CODE\|${IP}DATA >>$2
+		echo -e $CODE\|${IPDATA} >>$2
 		}&
 	done
 	wait
@@ -138,14 +134,14 @@ pool_rename_line() {
 
 	LINE=$(echo $* | sed -e 's/^[ ]*//g' | sed -e 's/[ ]*$//g')
 
-	if [ $(echo $LINE | awk -F" " '{print $1}') != '-' ]; then
-		NEW_LINE=$LINE
+	if [ $(echo ${LINE} | awk -F" " '{print $1}') != '-' ]; then
+		NEW_LINE=${LINE}
 	else
-		SERVER=$(echo $LINE | awk -F"\"server\":" '{print $2}' \
+		SERVER=$(echo ${LINE} | awk -F"\"server\":" '{print $2}' \
 			| awk -F"," '{print $1}'| sed 's/\"//g')
-		COUNTRY=$(echo $LINE | awk -F"\"country\":" '{print $2}' \
+		COUNTRY=$(echo ${LINE} | awk -F"\"country\":" '{print $2}' \
 			| awk -F"," '{print $1}'| sed 's/\"//g')
-		NAME=$(echo $LINE | awk -F"\"name\":" '{print $2}' \
+		NAME=$(echo ${LINE} | awk -F"\"name\":" '{print $2}' \
 			| awk -F"," '{print $1}'| sed 's/\"//g')
 
 		NEW_NAME=$(cat ${LOCATION} | grep -e "|${SERVER}|" \
@@ -154,11 +150,11 @@ pool_rename_line() {
 		# 修正国家代码
 		CODE=$(cat ${LOCATION} | grep -e "|${SERVER}|" | cut -d "|" -f1)
 
-		if [[ -z $(echo $LINE | grep "\"country\":") ]]; then
-			LINE=$(echo $LINE \
-				| sed -e "s/.$/,\"country\":\"$CODE\"\}/g")
+		if [[ -z $(echo ${LINE} | grep "\"country\":") ]]; then
+			LINE=$(echo ${LINE} \
+				| sed -e "s/.$/,\"country\":\"${CODE}\"\}/g")
 		else
-			LINE=$(echo $LINE | sed "s/\"country\":\"${COUNTRY}/\
+			LINE=$(echo ${LINE} | sed "s/\"country\":\"${COUNTRY}/\
 				\"country\":\"${CODE}/g")
 		fi
 		NEW_LINE=$(echo $LINE \
@@ -176,11 +172,11 @@ pool_rename() {
 	do
 		LINE=$(pool_rename_line ${line})
 
-		NAME=$(echo $LINE | awk -F"\"name\":" '{print $2}' \
+		NAME=$(echo ${LINE} | awk -F"\"name\":" '{print $2}' \
 			| awk -F"," '{print $1}'| sed 's/\"//g')
 	
 		let i++
-		NEW_LINE=$(echo $LINE \
+		NEW_LINE=$(echo ${LINE} \
 		  | sed "s/\"name\":\"${NAME}/\"name\":\"${NAME}\|$i\|/g")
 
 		echo ${NEW_LINE} >> $2
@@ -193,7 +189,7 @@ pool_rename() {
 multi_pool_rename_pid() {
 	TOTAL=$(cat ${POOL} | wc -l)
 	m=$2
-	n=$(expr $TOTAL / $m + 1)
+	n=$(expr $[TOTAL] / $[m] + 1)
 
 	START_TIME=$(date +%s)
 
@@ -203,24 +199,24 @@ multi_pool_rename_pid() {
 	mkdir ${TEMP}
 	for (( i=1; i<=$n; i++))
 	do
-		begin=$(($i * $m - $m + 1))
+		begin=$(($[i] * $[m] - $[m] + 1))
 		if [ $i == $n ]; then
-			end=$TOTAL
+			end=$[TOTAL]
 		else
-			end=$(($i * $m))
+			end=$(($[i] * $[m]))
 		fi
 
 		cat ${POOL} | sed -n "$[begin],$[end]p" > ${TEMP}/$i.yaml
-		arry[$[i]]=$(pool_rename ${TEMP}/$i.yaml ${TEMP}/FINAL-$i.yaml) &
+		arry[$[i]]=$(pool_rename ${TEMP}/$[i].yaml ${TEMP}/FINAL-$[i].yaml) &
 	done
 
 	wait
 
 	i=1
 	#echo "proxies:" > $1 
-	while [ $i -le $n ]
+	while [ $[i] -le $[n] ]
 	do
-		cat ${TEMP}/FINAL-$i.yaml >> $1
+		cat ${TEMP}/FINAL-$[i].yaml >> $1
 		let i++
 	done
 
@@ -280,11 +276,11 @@ rename_speed_test() {
 		if [ $1 == 1 ]; then
 			n=$[(($[x] * 100 + 100))]
 			echo -e "重命名算法一:参数 $[n]"
-			echo -e "$(multi_pool_rename_pid ${FINAL_POOL} $[n])"
+			echo -e "$(multi_pool_rename_pid $FINAL_POOL $[n])"
 		elif [ $1 == 2 ]; then
 			n=$[(($[x] * 10 + 10))]
 			echo -e "重命名算法二:参数 $[n]"
-			echo -e "$(multi_pool_rename_fd ${POOL} ${FINAL_POOL} $[n])"
+			echo -e "$(multi_pool_rename_fd ${POOL} $FINAL_POOL $[n])"
 		else
 			echo -e "参数 $[$1] 错误"
 			break
