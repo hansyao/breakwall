@@ -10,8 +10,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: 迁出代码
-      uses: actions/checkout@v2
     - name: 设置时区
       run: sudo timedatectl set-timezone 'Asia/Shanghai'
     - name: GO环境部署
@@ -23,4 +21,4 @@ jobs:
         export GOROOT=`pwd`/go
         export PATH=$PATH:$GOROOT/bin
         ${GO} install github.com/Dreamacro/clash@latest
-        `pwd`/go/bin/clash -v
+        find ~/ -name clash
