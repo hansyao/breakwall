@@ -20,6 +20,5 @@ jobs:
         GO=`pwd`/go/bin/go
         curl -L -s https://golang.org/dl/go1.16.6.linux-amd64.tar.gz -o ${GO_TAR}
         tar -xvf ${GO_TAR} >/dev/null
-        ${GO} -v
         ${GO} install github.com/Dreamacro/clash@latest
         `pwd`/go/bin/clash -v
