@@ -1,0 +1,24 @@
+# This is a basic workflow to help you get started with Actions
+
+name: GO环境部署测试
+
+# Controls when the workflow will run
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: 迁出代码
+      uses: actions/checkout@v2
+    - name: 设置时区
+      run: sudo timedatectl set-timezone 'Asia/Shanghai'
+    - name: GO环境部署
+      run: |
+        GO_TAR=go.tar.gz
+        GO=`pwd`/go/bin/go
+        curl -L -s https://golang.org/dl/go1.16.6.linux-amd64.tar.gz -o go.tar.gz -o ${GO_TAR}
+        tar -xvf ${GO_TAR}
+        ${GO} install github.com/Dreamacro/clash@latest
+        $GO -v
