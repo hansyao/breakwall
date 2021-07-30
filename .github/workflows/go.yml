@@ -14,6 +14,8 @@ jobs:
       run: sudo timedatectl set-timezone 'Asia/Shanghai'
     - name: GO环境部署
       run: |
+        ulimit -SHn 65536
+        sudo echo 8061540 > /proc/sys/fs/file-max
         GO_TAR=go.tar.gz
         GO=`pwd`/go/bin/go
         curl -L -s https://golang.org/dl/go1.16.6.linux-amd64.tar.gz -o ${GO_TAR}
