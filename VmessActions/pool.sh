@@ -19,9 +19,9 @@ function timestamp() {
 
 echo -e "开始爬取 $(timestamp)"
 
-rm -f $TEMP
+rm -f ${TEMP}
 i=0
-while [[ $(cat $TEMP | sed -n '1p' | sed s/\ //g) != "proxies:" ]]
+while [[ $(cat ${TEMP} | sed -n '1p' | sed s/\ //g) != "proxies:" ]]
 do
 	if [ $i -ge 500 ]; then
                 echo "爬取失败超过500次，终止爬取"
@@ -32,24 +32,24 @@ do
         if [ $i != 0 ]; then
 	        echo -e 第 $i 次爬取失败
         fi
-	rm -f $TEMP
-	curl -s $URL > $TEMP
+	rm -f ${TEMP}
+	curl -s ${URL} > ${TEMP}
 	let i++
 done
 
-echo -e "第 $i 次爬取成功 获得节点信息 >> $TEMP $(timestamp)"
+echo -e "第 $i 次爬取成功 获得节点信息 >> ${TEMP} $(timestamp)"
 
 echo -e "检查代理池是否有变化"
-if [[ $(md5sum $TEMP | awk -F" " '{print $1}') == $(md5sum $LPOOL | awk -F" " '{print $1}') ]]; then
+if [[ $(md5sum ${TEMP} | awk -F" " '{print $1}') == $(md5sum $LPOOL | awk -F" " '{print $1}') ]]; then
         echo -e "代理池没变化退出流程 $(timestamp)"
-        rm -f $TEMP
+        rm -f ${TEMP}
         exit 0
 fi
 echo -e "代理池检查完成 $(timestamp)"
-cp -f $TEMP $LPOOL
-rm -f $ALLPOOL
+cp -f ${TEMP} $LPOOL
+rm -f ${ALLPOOL}
 
-echo -e "排除不可用节点"
+echo -e "开始排除不可用节点 $(timestamp)"
 ./VmessActions/connection_test.sh ${TEMP} ${VALID_POOL}
 
 echo -e "开始地域查询与转换 $(timestamp)"
@@ -60,27 +60,27 @@ rm -f ${VALID_POOL}
 echo -e "开始规则转换 $(timestamp)"
 
 echo -e "排除CHINA节点 $(timestamp)"
-cat $ALLPOOL | grep -v '\"country\":\"CN' > $POOL
+cat ${ALLPOOL} | grep -v '\"country\":\"CN' > ${POOL}
 echo -e "转换非CHINA节点 $(timestamp)"
-curl -s http://127.0.0.1:25500/sub\?target\=clash\&emoji\=true\&url\=../$POOL -o $CLASH >/dev/null 2>&1 &
+curl -s http://127.0.0.1:25500/sub\?target\=clash\&emoji\=true\&url\=../${POOL} -o ${CLASH} >/dev/null 2>&1 &
 
 echo -e "转换非SS节点 $(timestamp)"
-cat $POOL | grep -v 'type\":\"ss' > $V2RAY
-curl -s http://127.0.0.1:25500/sub\?target\=clash\&emoji\=true\&url\=../$V2RAY -o $V2RAY >/dev/null 2>&1 &
+cat ${POOL} | grep -v 'type\":\"ss' > ${V2RAY}
+curl -s http://127.0.0.1:25500/sub\?target\=clash\&emoji\=true\&url\=../${V2RAY} -o ${V2RAY} >/dev/null 2>&1 &
 
 echo -e '转换亚太区(台湾|日本|韩国|香港)为缺省配置'
 curl -s http://127.0.0.1:25500/sub\?target\=clash\&emoji\=true\&include=$INCL\&url\=../$POOL  -o $CLASH2 >/dev/null 2>&1 &
 
 echo -e "转换CHINA节点 $(timestamp)"
-echo "proxies:" > $CN
-if [[ $(cat $ALLPOOL | grep '\"country\":\"CN') ]]; then
-        cat $ALLPOOL | grep '\"country\":\"CN' >> $CN
-        curl -s http://127.0.0.1:25500/sub\?target\=clash\&emoji\=true\&url\=../$CN -o $CN
+echo "proxies:" > ${CN}
+if [[ $(cat ${ALLPOOL} | grep '\"country\":\"CN') ]]; then
+        cat ${ALLPOOL} | grep '\"country\":\"CN' >> ${CN}
+        curl -s http://127.0.0.1:25500/sub\?target\=clash\&emoji\=true\&url\=../${CN} -o ${CN}
 fi
 
 wait
 
 echo -e "clash规则转化完成 $(timestamp)"
-rm -f $TEMP
+rm -f ${TEMP}
 
 exit 0
