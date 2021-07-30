@@ -21,4 +21,4 @@ jobs:
         export GOROOT=`pwd`/go
         export PATH=$PATH:$GOROOT/bin
         ${GO} install github.com/Dreamacro/clash@latest
-        find ~/ -name clash
+        ~/go/bin/clash -v
