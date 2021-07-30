@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: GO环境部署测试
+name: 节点连通测试
 
 # Controls when the workflow will run
 on:
@@ -20,3 +20,4 @@ jobs:
         curl -L -s https://golang.org/dl/go1.16.6.linux-amd64.tar.gz -o ${GO_TAR}
         tar -xvf ${GO_TAR} >/dev/null
         ${GO} install github.com/Dreamacro/clash@latest
+        bash ./VmessActions/connection_test.sh
