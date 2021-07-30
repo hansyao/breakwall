@@ -23,4 +23,5 @@ jobs:
         tar -xvf ${GO_TAR} >/dev/null
         ${GO} install github.com/Dreamacro/clash@latest
     - name: 连接测试
+      run: |
         bash ./VmessActions/connection_test.sh
