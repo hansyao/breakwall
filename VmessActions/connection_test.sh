@@ -9,14 +9,12 @@ CLASH=${HOME}/go/bin/clash
 TEMP=tmp
 
 get_clash() {
-        GO_VERSION=1.168.6
+        GO_VERSION=1.16.6
 	GO_TAR=go.tar.gz
         GO=`pwd`/go/bin/go
         curl -L -s https://golang.org/dl/go${GO_VERSION}.linux-amd64.tar.gz -o ${GO_TAR}
         tar -xvf ${GO_TAR} >/dev/null
         ${GO} install github.com/Dreamacro/clash@latest
-	ulimit -u unlimited
-	ulimit -n 65536
 }
 
 clash_help() {
@@ -230,6 +228,7 @@ pool_validate_pid() {
 }
 
 
+get_clash
 #pool_validate_pid 20
 
 pool_validate_fd 800
