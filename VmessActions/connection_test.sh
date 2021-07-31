@@ -7,25 +7,35 @@
 #FINAL_POOL=VmessActions/subscribe/valid_pool.yaml
 TEMP_DIR=tmp
 
+GITHUB='https/github.com'
+OS='linux-amd64'
+USER='Dreamacro'
+APP='clash'
+REPO=$USER/$APP
+FILE=$APP.gz
+PROXY_URL='https://lingering-math-d2ca.hansyow.workers.dev/'
+
+get_latest_release() {
+  curl --silent "${PROXY_URL}https/api.github.com/repos/$1/releases/latest" | # Get latest release from GitHub api
+    grep '"tag_name":' |                                            # Get tag line
+    sed -E 's/.*"([^"]+)".*/\1/'                                    # Pluck JSON value
+}
+VERSION=$(get_latest_release $REPO)
+
+
 get_clash() {
  
-	CLASH=${HOME}/go/bin/clash
+	CLASH=`pwd`/clash
 	if [ -e ${CLASH} ]; then
 		echo ${CLASH}
 		unset CLASH
 		return
 	fi
 
-        GO_VERSION=1.16.6
-	GO_TAR=go.tar.gz
-        GO=`pwd`/go/bin/go
-        curl -L -s https://golang.org/dl/go${GO_VERSION}.linux-amd64.tar.gz -o ${GO_TAR}
-        tar -xvf ${GO_TAR} >/dev/null
-        ${GO} install github.com/Dreamacro/clash@latest
+        curl -L -s ${PROXY_URL}${GITHUB}/${USER}/${APP}/releases/download/${VERSION}/${APP}-${OS}-${VERSION}.gz -o ${FILE}
+        gzip -d ${FILE}
+		chmod 755 clash
 
-	unset GO_VERSION
-	unset GO_TAR
-	unset GO
 	unset CLASH
 }
 
