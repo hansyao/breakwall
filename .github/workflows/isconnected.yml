@@ -24,6 +24,8 @@ jobs:
         ${GO} install github.com/Dreamacro/clash@latest
     - name: 连接测试
       run: |
+        source VmessActions/connection_test.sh
         A=VmessActions/subscribe/latest_pool.yaml
         B=VmessActions/subscribe/valid_pool.yaml
-        bash ./VmessActions/connection_test.sh "${A}" "${B}"
+        pool_validate_fd ${A} ${B} 1000
+

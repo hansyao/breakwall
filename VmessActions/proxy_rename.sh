@@ -1,8 +1,8 @@
 #!/bin/bash
 
-POOL=$1
-FINAL_POOL=$2
-LOCATION=VmessActions/location.txt
+#POOL=$1
+#FINAL_POOL=$2
+#LOCATION=VmessActions/location.txt
 
 
 # 验证IP是否非法
@@ -21,7 +21,11 @@ check_ip() {
 		fi
 	else
 		echo "IP format error!"	
-	fi	
+	fi
+	
+	unset IP
+	unset VALID_CHECK
+	unset RULE
 }
 
 # 根据国家和地区名获取地域代码
@@ -61,6 +65,17 @@ location_remote() {
 		| awk -F"," '{print $1}' | sed 's/\"//g')
 		
 	echo -e ${COUNTRY}\|${REGION}\|${REGIONNAME}\|${CITY}\|${ISP}
+
+	unset URL
+	unset LANG
+	unset URL2
+	unset KEY
+	unset JSON
+	unset COUNTRY
+	unset REGION
+	unset REGIONNAME
+	unset CITY
+	unset ISP
 }
 
 # 获取单个IP地域信息
@@ -81,11 +96,15 @@ patch_location() {
 
 	#本地IP数据库不存在，从远程拉取
 	echo -e $1\|$(location_remote ${IP1})
+
+	unset DOMAIN
+	unset IP1
+	unset IPREGION
 }
 
 # 获取缺失国家地区选项的代理节点清单
 missed_pool() {
-	cat ${POOL} | grep -v country | awk -F '\"server\":' '{print $2}' \
+	cat $1 | grep -v country | awk -F '\"server\":' '{print $2}' \
 		  | awk -F',' '{print $1}' | sed 's/\"//g' | sort | uniq \
 		  | sed -r '/^\s*$/d'
 }
@@ -127,6 +146,10 @@ location() {
 		}&
 	done
 	wait
+
+	unset IPDATA
+	unset COUNTRY
+	unset CODE
 }
 
 # 单行重命名
@@ -162,6 +185,14 @@ pool_rename_line() {
 	fi
 	
 	echo ${NEW_LINE}
+	
+	unset LINE
+	unset SERVER
+	unset COUNTRY
+	unset NAME
+	unset NEW_NAME
+	unset CODE
+	unset NEW_LINE
 }
 
 
@@ -181,14 +212,19 @@ pool_rename() {
 
 		echo ${NEW_LINE} >> $2
 	done
+
+	unset i
+	unset LINE
+	unset NAME
+	unset NEW_LINE
 }
 
 
 # 代理节点重命名 -- 多线程 -- 堵塞
 # $1 - 输出配置文件 $2 - 每个进程最大处理行数设定 
 multi_pool_rename_pid() {
-	TOTAL=$(cat ${POOL} | wc -l)
-	m=$2
+	TOTAL=$(cat $1 | wc -l)
+	m=$3
 	n=$(expr $[TOTAL] / $[m] + 1)
 
 	START_TIME=$(date +%s)
@@ -206,7 +242,7 @@ multi_pool_rename_pid() {
 			end=$(($[i] * $[m]))
 		fi
 
-		cat ${POOL} | sed -n "$[begin],$[end]p" > ${TEMP}/$i.yaml
+		cat $1 | sed -n "$[begin],$[end]p" > ${TEMP}/$i.yaml
 		arry[$[i]]=$(pool_rename ${TEMP}/$[i].yaml ${TEMP}/FINAL-$[i].yaml) &
 	done
 
@@ -216,7 +252,7 @@ multi_pool_rename_pid() {
 	#echo "proxies:" > $1 
 	while [ $[i] -le $[n] ]
 	do
-		cat ${TEMP}/FINAL-$[i].yaml >> $1
+		cat ${TEMP}/FINAL-$[i].yaml >> $2
 		let i++
 	done
 
@@ -225,6 +261,13 @@ multi_pool_rename_pid() {
 	STOP_TIME=$(date +%s)
 	echo -e "节点重命名总耗时: `expr $[STOP_TIME] - $[START_TIME]` 秒"
 
+	unset TOTAL
+	unset m
+	unset n
+	unset START_TIME
+	unset TEMP
+	unset i
+	unset STOP_TIME
 }
 
 
@@ -267,18 +310,27 @@ multi_pool_rename_fd() {
 	echo -e "总耗时: `expr $[STOP_TIME] - $[START_TIME]` 秒"
 	exec 3<&-
 	exec 3>&-
+	
+	unset m
+	unset START_TIME
+	unset i
+	unset LINE
+	unset NAME
+	unset NEW_LINE
+	unset STOP_TIME
+
 }
 
 # 节点重命名速度测试
 rename_speed_test() {
-	for ((x=$2; x<$3; x++))
+	for ((i=$2; i<$3; i++))
 	do
 		if [ $1 == 1 ]; then
-			n=$[(($[x] * 100 + 100))]
+			n=$[(($[i] * 100 + 100))]
 			echo -e "重命名算法一:参数 $[n]"
 			echo -e "$(multi_pool_rename_pid $FINAL_POOL $[n])"
 		elif [ $1 == 2 ]; then
-			n=$[(($[x] * 10 + 10))]
+			n=$[(($[i] * 10 + 10))]
 			echo -e "重命名算法二:参数 $[n]"
 			echo -e "$(multi_pool_rename_fd ${POOL} $FINAL_POOL $[n])"
 		else
@@ -286,18 +338,21 @@ rename_speed_test() {
 			break
 		fi
 	done
+
+	unset i
+	unset n
 }
 
 
 # 得到IP地域文件
-START_TIME=$(date +%s)
-location ${POOL} ${LOCATION}
-STOP_TIME=$(date +%s)
-echo -e "查询IP地域总耗时: `expr $[STOP_TIME] - $[START_TIME]` 秒"
+#START_TIME=$(date +%s)
+#location ${POOL} ${LOCATION}
+#STOP_TIME=$(date +%s)
+#echo -e "查询IP地域总耗时: `expr $[STOP_TIME] - $[START_TIME]` 秒"
 
 # rename_speed_test 1 0 1
 
-multi_pool_rename_pid ${FINAL_POOL} 900
+#multi_pool_rename_pid ${POOL} ${FINAL_POOL} 900
 #multi_pool_rename_fd ${POOL} ${FINAL_POOL} 30
 
-exit 0
+#exit 0

@@ -1,5 +1,6 @@
 #!/bin/bash
 
+TEMP_DIR=tmp
 URL=https://proxy.yugogo.xyz/clash/proxies
 TEMP=VmessActions/subscribe/temp_pool.yaml
 ALLPOOL=VmessActions/subscribe/pool.yaml
@@ -7,9 +8,11 @@ VALID_POOL=VmessActions/subscribe/valid_pool.yaml
 LPOOL=VmessActions/subscribe/latest_pool.yaml
 POOL=VmessActions/subscribe/pool_no_cn.yaml
 CN=VmessActions/subscribe/clash_cn.yaml
-CLASH=VmessActions/subscribe/clash_no_cn.yaml
+CLASH1=VmessActions/subscribe/clash_no_cn.yaml
 CLASH2=VmessActions/subscribe/clash.yaml
+CLASH=${HOME}/go/bin/clash
 V2RAY=VmessActions/subscribe/ray_pool.yaml
+LOCATION=VmessActions/location.txt
 
 INCL=\(HK\|香港\|TW\|台湾\|JP\|日本\|KR\|韩国\)
 
@@ -46,21 +49,35 @@ if [[ $(md5sum ${TEMP} | awk -F" " '{print $1}') == $(md5sum $LPOOL | awk -F" " 
         exit 0
 fi
 echo -e "代理池检查完成 $(timestamp)"
-cp -f ${TEMP} $LPOOL
+cp -f ${TEMP} ${LPOOL}
 rm -f ${ALLPOOL}
 
+source ./VmessActions/connection_test.sh
+
 echo -e "开始排除不可用节点 $(timestamp)"
-./VmessActions/connection_test.sh "${TEMP}" "${VALID_POOL}"
+# 算法一
+pool_validate_fd "${TEMP}" "${VALID_POOL}" 1000
+#算法二
+#pool_validate_pid "${TEMP}" "${VALID_POOL}" 10
+echo -e "排除不可用节点完成 $(timestamp)"
 
 echo -e "开始地域查询与转换 $(timestamp)"
-./VmessActions/proxy_rename.sh "${VALID_POOL}" "${ALLPOOL}"
+source ./VmessActions/proxy_rename.sh
+# 得到IP地域文件
+START_TIME=$(date +%s)
+location ${VALID_POOL} ${LOCATION}
+STOP_TIME=$(date +%s)
+echo -e "查询IP地域总耗时: `expr $[STOP_TIME] - $[START_TIME]` 秒"
+
+echo -e "开始节点重命名 $(timestamp)"
+multi_pool_rename_pid "${VALID_POOL}" "${ALLPOOL}" 900
 
 echo -e "开始规则转换 $(timestamp)"
 
 echo -e "排除CHINA节点 $(timestamp)"
 cat ${ALLPOOL} | grep -v '\"country\":\"CN' > ${POOL}
 echo -e "转换非CHINA节点 $(timestamp)"
-curl -s http://127.0.0.1:25500/sub\?target\=clash\&emoji\=true\&url\=../${POOL} -o ${CLASH} >/dev/null 2>&1 &
+curl -s http://127.0.0.1:25500/sub\?target\=clash\&emoji\=true\&url\=../${POOL} -o ${CLASH1} >/dev/null 2>&1 &
 
 echo -e "转换非SS节点 $(timestamp)"
 cat ${POOL} | grep -v 'type\":\"ss' > ${V2RAY}

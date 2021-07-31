@@ -1,20 +1,32 @@
 #!/bin/bash
 
-POOL=$1
-FINAL_POOL=$2
+#LPOOL=$1
+#FINAL_POOL=$2
 
-#POOL=VmessActions/subscribe/latest_pool.yaml
+#LPOOL=VmessActions/subscribe/latest_pool.yaml
 #FINAL_POOL=VmessActions/subscribe/valid_pool.yaml
-CLASH=${HOME}/go/bin/clash
-TEMP=tmp
+TEMP_DIR=tmp
 
 get_clash() {
+ 
+	CLASH=${HOME}/go/bin/clash
+	if [ -e ${CLASH} ]; then
+		echo ${CLASH}
+		unset CLASH
+		return
+	fi
+
         GO_VERSION=1.16.6
 	GO_TAR=go.tar.gz
         GO=`pwd`/go/bin/go
         curl -L -s https://golang.org/dl/go${GO_VERSION}.linux-amd64.tar.gz -o ${GO_TAR}
         tar -xvf ${GO_TAR} >/dev/null
         ${GO} install github.com/Dreamacro/clash@latest
+
+	unset GO_VERSION
+	unset GO_TAR
+	unset GO
+	unset CLASH
 }
 
 clash_help() {
@@ -25,39 +37,41 @@ clash_help() {
 }
 
 clash() {
-	CONFIG=$2
-	PID=$3
 	LOG=/dev/null
-	if [[ $1 == 'start' && $2 == ${CONFIG} ]]; then
-		nohup ${CLASH} -f ${CONFIG} > ${LOG} 2>&1 &
-		echo "$!" > ${PID}
-	elif [[ $1 == 'stop' && $2 == ${CONFIG} ]]; then
-		kill `cat ${PID}`
-	elif [[ $1 == 'restart' && $2 == ${CONFIG} ]]; then
-		kill `cat ${PID}`
-		nohup ${CLASH} -f ${CONFIG} > ${LOG} 2>&1 &
-		echo "$!" > ${PID}
+	CLASH=$(get_clash)
+	
+	if [[ $1 == 'start' && -n $2 && -n $3 ]]; then
+		nohup ${CLASH} -f $2 > ${LOG} 2>&1 &
+		echo "$!" > $3
+	elif [[ $1 == 'stop' && -n $2 && -n $3 ]]; then
+		kill `cat $3`
+	elif [[ $1 == 'restart' && -n $2 && -n $3 ]]; then
+		kill `cat $3`
+		nohup ${CLASH} -f $2 > ${LOG} 2>&1 &
+		echo "$!" > $3
 	else
 		clash_help
 	fi
+
+	unset CONFIG
+	unset PID
+	unset LOG
+	unset CLASH
 }
 
 # generate single config file
 # $1: PORT	$2: config line	$3: config file
 config() {
-	PORT=$1
-	LINE=$2
-	CONFIG=$3
 
-	NAME=$(echo ${LINE} | awk -F"\"name\":" '{print $2}' | awk -F"," '{print $1}'| sed 's/\"//g')
+	NAME=$(echo $2 | awk -F"\"name\":" '{print $2}' | awk -F"," '{print $1}'| sed 's/\"//g')
 
-	cat >${CONFIG} <<EOL
-socks-port: ${PORT}
+	cat >$3 <<EOL
+socks-port: $1
 allow-lan: true
 mode: Rule
 log-level: silent
 proxies:
-${LINE}
+$2
 proxy-groups:
   - name: 🐟 全局
     type: select
@@ -68,27 +82,32 @@ rules:
   - MATCH,🐟 全局
 EOL
 
+	unset NAME
 }
 
 check_port() {
-	CHECK=$(sudo lsof -i :$1 | awk '{print $1 " "  $2}')
+	CHECK=$(lsof -i :$1 | awk '{print $1 " "  $2}')
 	if [[ -z ${CHECK} ]]; then
 		echo -e "no"
 	else
 		echo -e "yes"
 	fi
+
+	unset CHECK
 }
 
 isconnected() {
 	PORT=$1
 	CONFIG=$2
+	PID=${TEMP_DIR}/${PORT}.pid
+
 	PROXY=socks5h://127.0.0.1:$[PORT]
 	GEN_204=https://www.gstatic.com/generate_204 
-	PID=${TEMP}/${PORT}.pid
-
+	
 	# check if port is available
-	if [ $(check_port $[PORT]) == 'no' ]; then	
+	if [ $(check_port $[PORT]) == 'no' ]; then
 		clash start ${CONFIG} ${PID}
+
 	else
 		echo -e "PORT $[PORT] is in use"
 		return
@@ -117,51 +136,67 @@ isconnected() {
 		echo -e "yes"
 	fi
 	
-	clash stop ${CONFIG} ${PID}
+	if [ ! -e ${TEMP_DIR}/${PORT}.pid ]; then 
+		kill -9 $(ps axu | grep "${TEMP_DIR}/${PORT}.pid" | grep -v exclude | awk '{print $2}')
+	else
+		clash stop "$2" "${TEMP_DIR}/${PORT}.pid"
+	fi
+	
+	unset PID
+	unset PORT
+	unset CONFIG
+	unset GEN_204
+	unset PID
+	unset n
+	unset CHECK
+	unset RESULT
 }
 
 pool_validate() {
-	POOL=$1
-	for ((k=$2; k<$3; k++))
+	for ((i=$3; i<$4; i++))
 	do
-		LINE=$(cat ${POOL} | sed -n "$[k]p")
+		LINE=$(cat $1 | sed -n "$[i]p")
 		if [[ -z $(echo ${LINE} | grep "\- {") ]]; then
 			continue
 		fi
 		{
 		# generate config file for each node
-		PORT=$[k]
-		PORT=$((8000 + $[k]))
-		CONFIG=${TEMP}/${PORT}.yaml
+		PORT=$[i]
+		PORT=$((8000 + $[i]))
+		CONFIG=${TEMP_DIR}/${PORT}.yaml
 		config "${PORT}" "${LINE}" "${CONFIG}"
 
 		# validate connection availabe status
 		if [[ $(isconnected "${PORT}" "${CONFIG}") == 'yes' ]]; then
-			echo ${LINE} >> ${FINAL_POOL}
+			echo ${LINE} >> $2
 		fi
 		}&
 	done
 	wait
+
+	unset LINE
+	unset i
+	unset PORT
+	unset CONFIG
+	unset PID
 }
 
 pool_validate_fd() {
 
-	m=$1
-
 	START_TIME=$(date +%s)
-	rm -rf ${FINAL_POOL}
-	rm -rf $TEMP && mkdir $TEMP
-	echo 'proxies:' >${FINAL_POOL}
+	rm -rf $2
+	rm -rf ${TEMP_DIR} && mkdir ${TEMP_DIR}
+	echo 'proxies:' >$2
 
 	[ -e /tmp/fd1 ] || mkfifo /tmp/fd1
 	exec 3<>/tmp/fd1
 	rm -rf /tmp/fd1
-	for ((i=1; i<=$m; i++))
+	for ((i=1; i<=$[$3]; i++))
 	do
 		echo >&3
 	done
 	i=1
-	cat ${POOL} | while read line || [[ -n ${line} ]]
+	cat $1 | while read line || [[ -n ${line} ]]
 	do
 		read -u 3
 
@@ -171,13 +206,13 @@ pool_validate_fd() {
 		{
 			# generate config file for each node
 			PORT=$((8000 + $[i]))
-			CONFIG=${TEMP}/${PORT}.yaml
+			CONFIG=${TEMP_DIR}/${PORT}.yaml
 			config "${PORT}" "${line}" "${CONFIG}"
 
 			# validate connection availabe status
 			if [[ $(isconnected "${PORT}" "${CONFIG}") == 'yes' ]];
 			then 
-				echo ${line} >> ${FINAL_POOL}
+				echo ${line} >> $2
 			fi
 			echo >&3
 		}&
@@ -187,26 +222,31 @@ pool_validate_fd() {
 
 	wait
 
-	#rm -rf $TEMP
+	#rm -rf ${TEMP_DIR}
 
 	STOP_TIME=$(date +%s)
 	echo -e "可用节点检测总耗时: `expr $[STOP_TIME] - $[START_TIME]` 秒"
 	exec 3<&-
 	exec 3>&-
+
+	unset START_TIME
+	unset STOP_TIME
+	unset i
+	unset PORT
+	unset CONFIG
 }
 
 pool_validate_pid() {
 
-	TOTAL=$(cat $POOL | wc -l)
-	m=$1
+	TOTAL=$(cat $1 | wc -l)
+	m=$3
 	z=$(expr $TOTAL / $m + 1)
 
 	START_TIME=$(date +%s)
 
-	rm -rf $TEMP && mkdir $TEMP
-	rm -rf ${FINAL_POOL}
-	echo 'proxies:' >${FINAL_POOL}
-
+	rm -rf ${TEMP_DIR} && mkdir ${TEMP_DIR}
+	rm -rf $2
+	echo 'proxies:' >$2
 
 	for (( i=1; i<=$z; i++))
 	do
@@ -216,19 +256,26 @@ pool_validate_pid() {
 		else
 			end=$(($i * $m))
 		fi
-		pool_validate ${POOL} $[begin] $[end]
+		pool_validate $1 $2 $[begin] $[end]
 	done
 
 	wait
 
-	#rm -rf $TEMP
+	#rm -rf ${TEMP_DIR}
 	
 	STOP_TIME=$(date +%s)
 	echo -e "可用节点检测总耗时: `expr $[STOP_TIME] - $[START_TIME]` 秒"
+	
+	unset begin
+	unset end
+	unset STOP_TIME
+	unset START_TIME
+	unset m
+	unset z
+	unset TOTAL
 }
 
 
-get_clash
-#pool_validate_pid 20
-
-pool_validate_fd 800
+#get_clash
+#pool_validate_pid $1 $2 20
+#pool_validate_fd $1 $2 800
