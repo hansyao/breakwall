@@ -14,6 +14,26 @@ jobs:
     - name: 系统设置
       run: |
         ulimit -SHn 65536
+        GITHUB='https/github.com'
+        OS='linux-amd64'
+        USER='Dreamacro'
+        APP='clash'
+        REPO=$USER/$APP
+        FILE=$APP.gz
+        PROXY_URL='https://lingering-math-d2ca.hansyow.workers.dev/'
+        get_latest_release() {
+          curl --silent "${PROXY_URL}https/api.github.com/repos/$1/releases/latest" | # Get latest release from GitHub api
+            grep '"tag_name":' |                                            # Get tag line
+            sed -E 's/.*"([^"]+)".*/\1/'                                    # Pluck JSON value
+        }
+        VERSION=$(get_latest_release $REPO)
+        get_clash() {
+                curl -L -s ${PROXY_URL}${GITHUB}/${USER}/${APP}/releases/download/${VERSION}/${APP}-${OS}-${VERSION}.gz -o ${FILE}
+                gzip -d ${FILE}
+                chmod 755 clash
+        }
+        get_clash
+        mv clash VmessActions/clash && chmod 755 VmessActions/clash 
     - name: 部署规则转换服务
       run: |
         bash VmessActions/convert.sh

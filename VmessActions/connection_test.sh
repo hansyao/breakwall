@@ -34,7 +34,7 @@ get_clash() {
 
         curl -L -s ${PROXY_URL}${GITHUB}/${USER}/${APP}/releases/download/${VERSION}/${APP}-${OS}-${VERSION}.gz -o ${FILE}
         gzip -d ${FILE}
-		chmod 755 clash
+	chmod 755 clash
 
 	unset CLASH
 }
@@ -48,7 +48,8 @@ clash_help() {
 
 clash() {
 	LOG=/dev/null
-	CLASH=$(get_clash)
+	#CLASH=$(get_clash)
+	CLASH='./VmessActions/clash'
 	
 	if [[ $1 == 'start' && -n $2 && -n $3 ]]; then
 		nohup ${CLASH} -f $2 > ${LOG} 2>&1 &
