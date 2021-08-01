@@ -7,16 +7,15 @@
 #FINAL_POOL=VmessActions/subscribe/valid_pool.yaml
 TEMP_DIR=tmp
 
-GITHUB='https/github.com'
+GITHUB='https://github.com'
 OS='linux-amd64'
 USER='Dreamacro'
 APP='clash'
 REPO=$USER/$APP
 FILE=$APP.gz
-PROXY_URL='https://lingering-math-d2ca.hansyow.workers.dev/'
 
 get_latest_release() {
-  curl --silent "${PROXY_URL}https/api.github.com/repos/$1/releases/latest" | # Get latest release from GitHub api
+  curl --silent "https://api.github.com/repos/$1/releases/latest" | # Get latest release from GitHub api
     grep '"tag_name":' |                                            # Get tag line
     sed -E 's/.*"([^"]+)".*/\1/'                                    # Pluck JSON value
 }
@@ -32,7 +31,7 @@ get_clash() {
 		return
 	fi
 
-        curl -L -s ${PROXY_URL}${GITHUB}/${USER}/${APP}/releases/download/${VERSION}/${APP}-${OS}-${VERSION}.gz -o ${FILE}
+        curl -L -s ${GITHUB}/${USER}/${APP}/releases/download/${VERSION}/${APP}-${OS}-${VERSION}.gz -o ${FILE}
         gzip -d ${FILE}
 	chmod 755 clash
 
