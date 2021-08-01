@@ -17,11 +17,26 @@ jobs:
     - name: CLASH环境部署
       run: |
         ulimit -SHn 65536
-        GO_TAR=go.tar.gz
-        GO=`pwd`/go/bin/go
-        curl -L -s https://golang.org/dl/go1.16.6.linux-amd64.tar.gz -o ${GO_TAR}
-        tar -xvf ${GO_TAR} >/dev/null
-        ${GO} install github.com/Dreamacro/clash@latest
+        GITHUB='https/github.com'
+        OS='linux-amd64'
+        USER='Dreamacro'
+        APP='clash'
+        REPO=$USER/$APP
+        FILE=$APP.gz
+        PROXY_URL='https://lingering-math-d2ca.hansyow.workers.dev/'
+        get_latest_release() {
+          curl --silent "${PROXY_URL}https/api.github.com/repos/$1/releases/latest" | # Get latest release from GitHub api
+            grep '"tag_name":' |                                            # Get tag line
+            sed -E 's/.*"([^"]+)".*/\1/'                                    # Pluck JSON value
+        }
+        VERSION=$(get_latest_release $REPO)
+        get_clash() {
+                curl -L -s ${PROXY_URL}${GITHUB}/${USER}/${APP}/releases/download/${VERSION}/${APP}-${OS}-${VERSION}.gz -o ${FILE}
+                gzip -d ${FILE}
+                chmod 755 clash
+        }
+        get_clash
+        mv clash VmessActions/clash && chmod 755 VmessActions/clash 
     - name: 连接测试
       run: |
         source VmessActions/connection_test.sh
