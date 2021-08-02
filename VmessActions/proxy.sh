@@ -51,8 +51,6 @@ firwall_set() {
 
 get_config() {
 
-  LIST=$(cat $1 | grep -v "\- {")
-
   cat >$2 <<EOL
 tproxy-port: 7893
 socks-port: 7891
@@ -62,8 +60,11 @@ log-level: info
 external-controller: :9090
 
 proxies:
-${LIST}
+EOL
 
+cat $1 | grep -v "\- {" >>$2
+  
+  cat >$2 <<EOL
 rules:
   - MATCH,🐟 全局
 
