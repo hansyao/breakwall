@@ -24,8 +24,6 @@ ip_foward() {
 }
 
 firwall_set() {
-  sudo modprobe xt_TPROXY
-  xt_TPROXY
   # ROUTE RULES
   sudo ip rule add fwmark 1 table 100
   sudo ip route add local 0.0.0.0/0 dev lo table 100
