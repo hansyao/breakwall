@@ -53,6 +53,7 @@ firwall_set() {
 get_config() {
 	cat $1 | sed '/全球直连/d' > $2
 	sed -i '1 i\tproxy-port: 7893' $2
+	sed -i "/mode:/c\mode: Global" $2
 }
 
 
