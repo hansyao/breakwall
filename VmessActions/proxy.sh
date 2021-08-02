@@ -64,7 +64,7 @@ EOL
 
 cat $1 | grep "\- {" >>$2
 
-cat >$2 <<EOL
+cat >>$2 <<EOL
   - name: 🐟 全局
     type: select
     proxies:
@@ -72,7 +72,7 @@ EOL
 
 cat $1 | grep "\- {" | awk -F":" '{print $2}' | cut -d "," -f1 >>$2
 
-  cat >$2 <<EOL
+  cat >>$2 <<EOL
 rules:
   - MATCH, 🐟 全局
 
