@@ -176,7 +176,7 @@ do
 
 	echo -e "公网IP信息： ${IP} ${CITY}, ${COUNTRY}"
 	echo -e "网卡信息"
-	ifconfig
+	#ifconfig
 
 	echo -e "${STATUS}"
 	cat ${CLASH_LOG}
