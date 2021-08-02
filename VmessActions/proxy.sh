@@ -70,7 +70,7 @@ cat >>$2 <<EOL
     proxies:
 EOL
 
-cat $1 | grep "\- {" | awk -F":" '{print $2}' | cut -d "," -f1 >>$2
+cat $1 | grep "\- {" | awk -F":" '{print $2}' | cut -d "," -f1 | sed "s/^/\\t\- /g" >>$2
 
   cat >>$2 <<EOL
 rules:
