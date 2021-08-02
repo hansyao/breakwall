@@ -17,10 +17,10 @@ get_latest_release() {
 VERSION=$(get_latest_release $REPO)
 
 ip_foward() {
-	echo "net.ipv4.ip_forward = 1" >> /etc/sysctl.conf && sysctl -p
-	echo "net.ipv6.conf.all.forwarding = 1" >> /etc/sysctl.conf && sysctl -p
+	sudo echo "net.ipv4.ip_forward = 1" >> /etc/sysctl.conf && sudo sysctl -p
+	sudo echo "net.ipv6.conf.all.forwarding = 1" >> /etc/sysctl.conf && sudo sysctl -p
 	
-	echo "当前ip_forward $(cat /proc/sys/net/ipv4/ip_forward)"
+	sudo echo "当前ip_forward $(cat /proc/sys/net/ipv4/ip_forward)"
 }
 
 firwall_set() {
