@@ -99,7 +99,7 @@ clash_help() {
 }
 
 clash() {
-	LOG=/dev/null
+	LOG=${CLASH_LOG}
 	#CLASH=$(get_clash)
 	CLASH='./VmessActions/clash'
 	
