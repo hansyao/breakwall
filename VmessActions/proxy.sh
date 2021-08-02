@@ -148,6 +148,7 @@ STATUS=$(curl -s -i https://connect.rom.miui.com/generate_204 | grep 204)
 if [ -z ${STATUS} ]; then
 	echo -e "网络连通测试失败"
 fi
-echo -e "${STATUS} \n"
+curl -s -i https://connect.rom.miui.com/generate_204 | grep 204
+echo -e "${STATUS}"
 tail ${CLASH_LOG}
 
