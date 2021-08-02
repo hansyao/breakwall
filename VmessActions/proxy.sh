@@ -144,7 +144,8 @@ IP=$(curl -s -L https://api.ipify.org)
 COUNTRY=$(curl -s -L https://ipapi.co/${IP}/country/)
 CITY=$(curl -s -L https://ipapi.co/${IP}/city/)
 
-echo -e "IP信息： ${IP} ${CITY}, ${COUNTRY}"
+echo -e "公网IP信息： ${IP} ${CITY}, ${COUNTRY}"
+echo -e "本地IP： $(ifconfig eth0|awk -F "[ :]+" 'NR==2 {print $4}')"
 
 echo -e "${STATUS}"
 cat ${CLASH_LOG}
