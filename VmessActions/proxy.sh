@@ -145,7 +145,8 @@ COUNTRY=$(curl -s -L https://ipapi.co/${IP}/country/)
 CITY=$(curl -s -L https://ipapi.co/${IP}/city/)
 
 echo -e "公网IP信息： ${IP} ${CITY}, ${COUNTRY}"
-echo -e "本地IP： $(ifconfig eth0|sed -rn 's#^.*dr:(.*) Bc.*$#\1#gp'"
+echo -e "网卡信息"
+ifconfig
 
 echo -e "${STATUS}"
 cat ${CLASH_LOG}
