@@ -70,9 +70,11 @@ cat >$2 <<EOL
     proxies:
 EOL
 
+cat $1 | grep "\- {" | awk -F":" '{print $2}' | cut -d "," -f1 >>$2
+
   cat >$2 <<EOL
 rules:
-  - MATCH,🐟 全局
+  - MATCH, 🐟 全局
 
 EOL
 
