@@ -32,12 +32,13 @@ firwall_set() {
   # RETURN LOCAL AND LANS
   sudo iptables -t mangle -A clash -d 0.0.0.0/8 -j RETURN
   sudo iptables -t mangle -A clash -d 10.0.0.0/8 -j RETURN
+  sudo iptables -t mangle -A clash -d 10.1.0.0/16 -j RETURN
   sudo iptables -t mangle -A clash -d 127.0.0.0/8 -j RETURN
   sudo iptables -t mangle -A clash -d 169.254.0.0/16 -j RETURN
   sudo iptables -t mangle -A clash -d 172.16.0.0/12 -j RETURN
   sudo iptables -t mangle -A clash -d 192.168.50.0/16 -j RETURN
   sudo iptables -t mangle -A clash -d 192.168.9.0/16 -j RETURN
-
+  
   sudo iptables -t mangle -A clash -d 224.0.0.0/4 -j RETURN
   sudo iptables -t mangle -A clash -d 240.0.0.0/4 -j RETURN
 
