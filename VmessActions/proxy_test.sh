@@ -116,15 +116,12 @@ clash() {
 }
 
 proxy_chain() {
-	SOCKS_PORT=$1
-	
 	git clone https://github.com/rofl0r/proxychains-ng.git
 	cd proxychains-ng
 	./configure --prefix=/usr --sysconfdir=/etc >/dev/null
 
-	make && sudo make install
-	sudo make install-config
-
+	make && sudo make install >/dev/null
+	sudo rm -rf /etc/proxychains.conf
 	cat > proxychains.conf <<EOL
 strict_chain
 proxy_dns
@@ -132,7 +129,7 @@ remote_dns_subnet 224
 tcp_read_time_out 15000
 tcp_connect_time_out 8000
 [ProxyList]
-socks5 	127.0.0.1 ${SOCKS_PORT}
+socks5 	127.0.0.1 7891
 EOL
 
 	sudo cp -f proxychains.conf /etc/proxychains.conf && rm proxychains.conf
@@ -162,7 +159,7 @@ echo -e "启动CLASH"
 clash start ${FINAL_CONFIG} ${CLASH_PID}
 
 echo -e "启动proxy_chain"
-proxy_chain 7891
+proxy_chain
 
 sleep 3
 
