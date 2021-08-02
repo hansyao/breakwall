@@ -47,6 +47,7 @@ firwall_set() {
 
   # REDIRECT
   sudo iptables -t mangle -A PREROUTING -j clash
+ 
 }
 
 get_config() {
@@ -83,6 +84,8 @@ clash() {
 	LOG=${CLASH_LOG}
 	#CLASH=$(get_clash)
 	CLASH='./VmessActions/clash'
+	
+	sudo setcap cap_net_bind_service,cap_net_admin+ep ${CLASH}
 	
 	if [[ $1 == 'start' && -n $2 && -n $3 ]]; then
 		nohup ${CLASH} -f $2 > ${LOG} 2>&1 &
