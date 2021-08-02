@@ -144,6 +144,10 @@ echo -e "启动CLASH"
 clash start ${FINAL_CONFIG} ${CLASH_PID}
 
 echo -e "测试网络连通性"
-curl -s -i https://connect.rom.miui.com/generate_204 | grep 204
+STATUS=$(curl -s -i https://connect.rom.miui.com/generate_204 | grep 204)
+if [ -z ${STATUS} ]; then
+	echo -e "网络连通测试失败"
+fi
+echo -e "${STATUS} \n"
 tail ${CLASH_LOG}
 
