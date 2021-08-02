@@ -133,7 +133,7 @@ echo -e "部署clash环境"
 get_clash
 
 echo -e "获取clash配置文件"
-if [ -z (cat ${CLASH_CONFIG} ]; then
+if [ ! -e ${CLASH_CONFIG} ]; then
   echo "配置文件不存在"
 }
 
