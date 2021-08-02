@@ -145,7 +145,7 @@ clash start ${FINAL_CONFIG} ${CLASH_PID}
 
 echo -e "测试网络连通性"
 STATUS=$(curl -s -i https://connect.rom.miui.com/generate_204 | grep 204)
-if [ -z ${STATUS} ]; then
+if [[ -z ${STATUS} ]]; then
 	echo -e "网络连通测试失败"
 fi
 curl -s -i https://connect.rom.miui.com/generate_204 | grep 204
