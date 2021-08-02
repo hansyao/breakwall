@@ -120,7 +120,7 @@ proxy_chain() {
 	cd proxychains-ng
 	./configure --prefix=/usr --sysconfdir=/etc >/dev/null
 
-	make && sudo make install >/dev/null
+	make >/dev/null && sudo make install >/dev/null
 	sudo rm -rf /etc/proxychains.conf
 	cat > proxychains.conf <<EOL
 strict_chain
