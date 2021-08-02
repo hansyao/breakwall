@@ -62,8 +62,14 @@ external-controller: :9090
 proxies:
 EOL
 
-cat $1 | grep -v "\- {" >>$2
-  
+cat $1 | grep "\- {" >>$2
+
+cat >$2 <<EOL
+  - name: 🐟 全局
+    type: select
+    proxies:
+EOL
+
   cat >$2 <<EOL
 rules:
   - MATCH,🐟 全局
