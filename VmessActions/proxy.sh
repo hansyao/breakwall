@@ -136,4 +136,5 @@ if [[ -z ${STATUS} ]]; then
 fi
 curl -s -i https://connect.rom.miui.com/generate_204 | grep 204
 echo -e "${STATUS}"
+cat ${CLASH_LOG}
 
