@@ -17,11 +17,14 @@ get_latest_release() {
 VERSION=$(get_latest_release $REPO)
 
 ip_foward() {
-  sudo echo net.ipv4.ip_forward=1 | sudo tee /etc/sysctl.conf > /dev/null
-  sudo sysctl -p
+	echo "net.ipv4.ip_forward = 1" >> /etc/sysctl.conf && sysctl -p
+	echo "net.ipv6.conf.all.forwarding = 1" >> /etc/sysctl.conf && sysctl -p
+	
+	echo "当前ip_forward $(cat /proc/sys/net/ipv4/ip_forward)"
 }
 
 firwall_set() {
+  sudo modprobe xt_TPROXY
   # ROUTE RULES
   sudo ip rule add fwmark 1 table 100
   sudo ip route add local 0.0.0.0/0 dev lo table 100
