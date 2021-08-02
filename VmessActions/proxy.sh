@@ -141,8 +141,8 @@ if [[ -z ${STATUS} ]]; then
 fi
 
 IP=$(curl -s -L https://api.ipify.org)
-COUNTRY=curl -s -L https://ipapi.co/${IP}/country/
-CITY==curl -s -L https://ipapi.co/${IP}/country/
+COUNTRY=$(curl -s -L https://ipapi.co/${IP}/country/)
+CITY==$(curl -s -L https://ipapi.co/${IP}/country/)
 
 echo -e "IP信息： ${IP} ${CITY}, ${COUNTRY}"
 
