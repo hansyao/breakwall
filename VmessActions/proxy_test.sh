@@ -17,10 +17,8 @@ get_latest_release() {
 VERSION=$(get_latest_release $REPO)
 
 ip_foward() {
-	sudo echo "net.ipv4.ip_forward = 1" >> /etc/sysctl.conf && sudo sysctl -p
-	sudo echo "net.ipv6.conf.all.forwarding = 1" >> /etc/sysctl.conf && sudo sysctl -p
-	
-	sudo echo "当前ip_forward $(cat /proc/sys/net/ipv4/ip_forward)"
+	sudo bash -c 'echo "net.ipv4.ip_forward = 1" >> /etc/sysctl.conf' && sudo sysctl -p
+	sudo bash -c 'echo "net.ipv6.conf.all.forwarding = 1" >> /etc/sysctl.conf' && sudo sysctl -p
 }
 
 firwall_set() {
@@ -171,11 +169,10 @@ do
 	fi
 
 	IP=$(proxychains4 curl -s -L https://api.ipify.org)
-	COUNTRY=$(proxychains4 curl -s -L https://ipapi.co/${IP}/country/)
-	CITY=$(proxychains4 curl -s -L https://ipapi.co/${IP}/city/)
-
-	echo -e "公网IP信息： ${IP} ${CITY}, ${COUNTRY}"
-	echo -e "网卡信息"
+	IPINFO=$(curl -s -X POST https://ip.taobao.com/outGetIpInfo\?ip\=${IP}\&accessKey\=alibaba-inc)
+	
+	echo -e "公网IP信息： ${IPINFO}"
+	#echo -e "网卡信息"
 	#ifconfig
 
 	echo -e "${STATUS}"
@@ -183,6 +180,11 @@ do
 	sleep 3
 	let i++
 done
+
+unset i
+unset STATUS
+unset IP
+
 
 
 
