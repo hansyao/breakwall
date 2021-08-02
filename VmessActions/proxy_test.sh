@@ -115,6 +115,22 @@ clash() {
 	unset CLASH
 }
 
+proxy_chain() {
+	SOCKS_PORT=$1
+	
+	git clone https://github.com/rofl0r/proxychains-ng.git
+	cd proxychains-ng
+	./configure --prefix=/usr --sysconfdir=/etc >/dev/null
+
+	make && sudo make install
+	sudo make install-config
+
+	cat /etc/proxychains.conf | grep -v "\#" | sed "/socks4/c\socks5 127.0.0.1 ${SOCKS_PORT}" > proxychains.conf
+	cp -f proxychains.conf /etc/proxychains.conf && rm proxychains.conf
+	cd ..
+	
+	unset SOCKS_PORT
+}
 
 echo -e "本地流量转发"
 ip_foward
@@ -136,20 +152,23 @@ get_config ${CLASH_CONFIG} ${FINAL_CONFIG}
 echo -e "启动CLASH"
 clash start ${FINAL_CONFIG} ${CLASH_PID}
 
+echo -e "启动proxy_chain"
+proxy_chain 7891
+
 sleep 3
 
 i=0
 while [[ $[i] -lt 5 ]]
 do
 	echo -e "测试网络连通性 ($[i])"
-	STATUS=$(curl -s -i https://connect.rom.miui.com/generate_204 | grep 204)
+	STATUS=$(proxychains4 curl -s -i https://connect.rom.miui.com/generate_204 | grep 204)
 	if [[ -z ${STATUS} ]]; then
 		echo -e "网络连通测试失败"
 	fi
 
-	IP=$(curl -s -L https://api.ipify.org)
-	COUNTRY=$(curl -s -L https://ipapi.co/${IP}/country/)
-	CITY=$(curl -s -L https://ipapi.co/${IP}/city/)
+	IP=$(proxychains4 curl -s -L https://api.ipify.org)
+	COUNTRY=$(proxychains4 curl -s -L https://ipapi.co/${IP}/country/)
+	CITY=$(proxychains4 curl -s -L https://ipapi.co/${IP}/city/)
 
 	echo -e "公网IP信息： ${IP} ${CITY}, ${COUNTRY}"
 	echo -e "网卡信息"
