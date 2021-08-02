@@ -136,7 +136,7 @@ echo -e "获取clash配置文件"
 if [ ! -e ${CLASH_CONFIG} ]; then
   echo "配置文件不存在"
   exit 0
-}
+fi
 
 get_config ${CLASH_CONFIG} ${FINAL_CONFIG}
 
