@@ -65,6 +65,7 @@ EOL
 cat $1 | grep "\- {" >>$2
 
 cat >>$2 <<EOL
+proxy-groups:
   - name: 🐟 全局
     type: select
     proxies:
