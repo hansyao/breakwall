@@ -36,6 +36,7 @@ firwall_set() {
   sudo iptables -t mangle -A clash -d 127.0.0.0/8 -j RETURN
   sudo iptables -t mangle -A clash -d 169.254.0.0/16 -j RETURN
   sudo iptables -t mangle -A clash -d 172.16.0.0/12 -j RETURN
+  sudo iptables -t mangle -A clash -d 172.17.0.0/24 -j RETURN  
   sudo iptables -t mangle -A clash -d 192.168.50.0/16 -j RETURN
   sudo iptables -t mangle -A clash -d 192.168.9.0/16 -j RETURN
   
