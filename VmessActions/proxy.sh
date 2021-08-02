@@ -85,7 +85,7 @@ EOL
 
 get_clash() {
  
-	CLASH=`pwd`/clash
+	CLASH=`pwd`/VmessActions/clash
 	if [ -e ${CLASH} ]; then
 		echo ${CLASH} 已经存在
 		unset CLASH
