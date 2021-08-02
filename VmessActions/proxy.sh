@@ -127,6 +127,8 @@ get_config ${CLASH_CONFIG} ${FINAL_CONFIG}
 echo -e "启动CLASH"
 clash start ${FINAL_CONFIG} ${CLASH_PID}
 
+sleep 3
+
 echo -e "测试网络连通性"
 STATUS=$(curl -s -i https://connect.rom.miui.com/generate_204 | grep 204)
 if [[ -z ${STATUS} ]]; then
@@ -134,5 +136,4 @@ if [[ -z ${STATUS} ]]; then
 fi
 curl -s -i https://connect.rom.miui.com/generate_204 | grep 204
 echo -e "${STATUS}"
-tail ${CLASH_LOG}
 
