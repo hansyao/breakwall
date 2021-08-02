@@ -139,7 +139,13 @@ STATUS=$(curl -s -i https://connect.rom.miui.com/generate_204 | grep 204)
 if [[ -z ${STATUS} ]]; then
 	echo -e "网络连通测试失败"
 fi
-curl -s -i https://connect.rom.miui.com/generate_204 | grep 204
+
+IP=$(curl -s -L https://api.ipify.org)
+COUNTRY=curl -s -L https://ipapi.co/${IP}/country/
+CITY==curl -s -L https://ipapi.co/${IP}/country/
+
+echo -e "IP信息： ${IP} ${CITY}, ${COUNTRY}"
+
 echo -e "${STATUS}"
 cat ${CLASH_LOG}
 
