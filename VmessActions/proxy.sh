@@ -50,37 +50,8 @@ firwall_set() {
 }
 
 get_config() {
-
-  cat >$2 <<EOL
-tproxy-port: 7893
-socks-port: 7891
-allow-lan: true
-mode: Rule
-log-level: info
-external-controller: :9090
-
-proxies:
-EOL
-
-cat $1 | grep "\- {" >>$2
-
-cat >>$2 <<EOL
-proxy-groups:
-  - name: 🐟 全局
-    type: select
-    proxies:
-EOL
-
-cat $1 | grep "\- {" | awk -F":" '{print $2}' | cut -d "," -f1 | sed "s/^/\\t\- /g" >>$2
-
-  cat >>$2 <<EOL
-rules:
-  - MATCH, 🐟 全局
-
-EOL
-
-  unset LIST
-
+	cat $1 | sed '/全球直连/d' > $2
+	sed -i '1 i\tproxy-port: 7893' $2
 }
 
 
