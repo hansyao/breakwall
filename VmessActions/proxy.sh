@@ -136,20 +136,28 @@ clash start ${FINAL_CONFIG} ${CLASH_PID}
 
 sleep 3
 
-echo -e "测试网络连通性"
-STATUS=$(curl -s -i https://connect.rom.miui.com/generate_204 | grep 204)
-if [[ -z ${STATUS} ]]; then
-	echo -e "网络连通测试失败"
-fi
+i=0
+while [[ i -gt 5 ]]
+do
+	echo -e "测试网络连通性 ($[i])"
+	STATUS=$(curl -s -i https://connect.rom.miui.com/generate_204 | grep 204)
+	if [[ -z ${STATUS} ]]; then
+		echo -e "网络连通测试失败"
+	fi
 
-IP=$(curl -s -L https://api.ipify.org)
-COUNTRY=$(curl -s -L https://ipapi.co/${IP}/country/)
-CITY=$(curl -s -L https://ipapi.co/${IP}/city/)
+	IP=$(curl -s -L https://api.ipify.org)
+	COUNTRY=$(curl -s -L https://ipapi.co/${IP}/country/)
+	CITY=$(curl -s -L https://ipapi.co/${IP}/city/)
 
-echo -e "公网IP信息： ${IP} ${CITY}, ${COUNTRY}"
-echo -e "网卡信息"
-ifconfig
+	echo -e "公网IP信息： ${IP} ${CITY}, ${COUNTRY}"
+	echo -e "网卡信息"
+	ifconfig
 
-echo -e "${STATUS}"
-cat ${CLASH_LOG}
+	echo -e "${STATUS}"
+	cat ${CLASH_LOG}
+	sleep 3
+	let i++
+done
+
+
 
