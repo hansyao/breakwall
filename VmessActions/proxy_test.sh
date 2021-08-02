@@ -125,8 +125,17 @@ proxy_chain() {
 	make && sudo make install
 	sudo make install-config
 
-	cat /etc/proxychains.conf | grep -v "\#" | sed "/socks4/c\socks5 127.0.0.1 ${SOCKS_PORT}" > proxychains.conf
-	cp -f proxychains.conf /etc/proxychains.conf && rm proxychains.conf
+	cat > proxychains.conf <<EOL
+strict_chain
+proxy_dns
+remote_dns_subnet 224
+tcp_read_time_out 15000
+tcp_connect_time_out 8000
+[ProxyList]
+socks5 	127.0.0.1 ${SOCKS_PORT}
+EOL
+
+	sudo cp -f proxychains.conf /etc/proxychains.conf && rm proxychains.conf
 	cd ..
 	
 	unset SOCKS_PORT
