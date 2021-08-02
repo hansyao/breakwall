@@ -38,4 +38,4 @@ jobs:
         mv clash VmessActions/clash && chmod 755 VmessActions/clash 
     - name: 代理测试
       run: |
-        source VmessActions/proxy.sh
+        ./VmessActions/proxy.sh
