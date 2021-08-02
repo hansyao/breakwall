@@ -137,7 +137,7 @@ clash start ${FINAL_CONFIG} ${CLASH_PID}
 sleep 3
 
 i=0
-while [[ i -gt 5 ]]
+while [[ $[i] -gt 5 ]]
 do
 	echo -e "测试网络连通性 ($[i])"
 	STATUS=$(curl -s -i https://connect.rom.miui.com/generate_204 | grep 204)
