@@ -116,19 +116,12 @@ clash() {
 proxy_chain() {
 	git clone https://github.com/rofl0r/proxychains-ng.git
 	cd proxychains-ng
-	./configure --prefix=/usr --sysconfdir=/etc >/dev/null &2>1 &
-	wait
-	
-	echo "开始编译proxychains"
-	make >/dev/null 2&>1 &
-	wait
-	
-	sudo make install >/dev/null 2&>1 &
-	wait
-	
+	echo "开始编译proxychains"	
+	./configure --prefix=/usr --sysconfdir=/etc >/dev/null
+	make >/dev/null
+	sudo make install >/dev/null
 	echo "编译并安装成功"
 	sudo rm -rf /etc/proxychains.conf
-	
 	echo "设置代理配置文件"
 	cat > proxychains.conf <<EOL
 strict_chain
