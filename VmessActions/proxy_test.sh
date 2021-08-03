@@ -169,7 +169,7 @@ if [[ -z ${STATUS} ]]; then
 	echo -e "网络连通测试失败"
 fi
 
-IP=$(proxychains4 curl -s -X POST http://ip.3322.net)
+IP=$(curl -s -L https://api.ipify.org)
 IPINFO=$(curl -s -X POST https://ip.taobao.com/outGetIpInfo\?ip\=${IP}\&accessKey\=alibaba-inc)
 
 echo -e "公网IP信息： ${IPINFO}"
