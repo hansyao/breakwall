@@ -116,10 +116,20 @@ clash() {
 proxy_chain() {
 	git clone https://github.com/rofl0r/proxychains-ng.git
 	cd proxychains-ng
-	./configure --prefix=/usr --sysconfdir=/etc >/dev/null
-
-	make >/dev/null && sudo make install >/dev/null
+	./configure --prefix=/usr --sysconfdir=/etc >/dev/null &2>1 &
+	wait
+	
+	echo "开始编译proxychains"
+	make >/dev/null 2&>1 &
+	wait
+	
+	sudo make install >/dev/null 2&>1 &
+	wait
+	
+	echo "编译并安装成功"
 	sudo rm -rf /etc/proxychains.conf
+	
+	echo "设置代理配置文件"
 	cat > proxychains.conf <<EOL
 strict_chain
 proxy_dns
@@ -157,31 +167,26 @@ clash start ${FINAL_CONFIG} ${CLASH_PID}
 echo -e "启动proxy_chain"
 proxy_chain
 
+echo "延迟 3 等待透明代理启动"
 sleep 3
 
-i=0
-while [[ $[i] -lt 5 ]]
-do
-	echo -e "测试网络连通性 ($[i])"
-	STATUS=$(proxychains4 curl -s -i https://connect.rom.miui.com/generate_204 | grep 204)
-	if [[ -z ${STATUS} ]]; then
-		echo -e "网络连通测试失败"
-	fi
+echo -e "测试网络连通性 ($[i])"
+STATUS=$(proxychains4 curl -s -i https://connect.rom.miui.com/generate_204 | grep 204)
+if [[ -z ${STATUS} ]]; then
+	echo -e "网络连通测试失败"
+fi
 
-	IP=$(proxychains4 curl -s -X POST http://ip.3322.net)
-	IPINFO=$(curl -s -X POST https://ip.taobao.com/outGetIpInfo\?ip\=${IP}\&accessKey\=alibaba-inc)
-	
-	echo -e "公网IP信息： ${IPINFO}"
-	#echo -e "网卡信息"
-	#ifconfig
+IP=$(proxychains4 curl -s -X POST http://ip.3322.net)
+IPINFO=$(curl -s -X POST https://ip.taobao.com/outGetIpInfo\?ip\=${IP}\&accessKey\=alibaba-inc)
 
-	echo -e "${STATUS}"
-	cat ${CLASH_LOG}
-	sleep 3
-	let i++
-done
+echo -e "公网IP信息： ${IPINFO}"
+#echo -e "网卡信息"
+#ifconfig
 
-unset i
+echo -e "${STATUS}"
+cat ${CLASH_LOG}
+
+
 unset STATUS
 unset IP
 
