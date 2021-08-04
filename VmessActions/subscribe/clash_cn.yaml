@@ -5,230 +5,306 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇨🇳 CN|中国|腾讯|504|, server: 43.128.18.186, port: 1010, type: ssr, cipher: aes-256-cfb, password: laobiao, protocol: origin, obfs: plain, protocol-param: "", obfs-param: ""}
-  - {name: 🇨🇳 CN|中国|上海|上海|阿里云|72|, server: 101.132.192.212, port: 30003, type: ss, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_d39m}
-  - {name: 🇨🇳 CN|中国|上海|上海|阿里云|73|, server: music.desperadoj.com, port: 30003, type: ss, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_d39m}
-  - {name: 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|74|, server: ntemp06.boom.party, port: 15000, type: ssr, cipher: aes-256-cfb, password: Uk92CS, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 143073:Cz8aOi, obfs-param: download.windowsupdate.com}
-  - {name: 🇨🇳 CN|中国|福建|泉州|电信|75|, server: p7.22332e.com, port: 8333, type: ssr, cipher: rc4-md5, password: passfw2xs4e!, protocol: origin, obfs: plain, protocol-param: "", obfs-param: ""}
-  - {name: 🇨🇳 CN|中国|上海|上海|联通|76|, server: n21.boom.party, port: 15000, type: ssr, cipher: aes-256-cfb, password: Uk92CS, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 209922:RkdzUU, obfs-param: download.windowsupdate.com}
-  - {name: 🇨🇳 CN|中国|福建|泉州|电信|77|, server: 117.28.243.169, port: 8333, type: ssr, cipher: rc4-md5, password: passfw2xs4e!, protocol: origin, obfs: plain, protocol-param: "", obfs-param: ""}
-  - {name: 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|78|, server: ntemp09.boom.party, port: 18000, type: ssr, cipher: aes-256-cfb, password: Uk92CS, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 209922:RkdzUU, obfs-param: download.windowsupdate.com}
-  - {name: 🇨🇳 CN|中国|福建|泉州|电信|79|, server: p8.22332e.com, port: 8333, type: ssr, cipher: rc4-md5, password: passfw2xs4e!, protocol: origin, obfs: plain, protocol-param: "", obfs-param: ""}
-  - {name: 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|80|, server: ntemp06.boom.party, port: 15000, type: ssr, cipher: aes-256-cfb, password: Uk92CS, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 209922:RkdzUU, obfs-param: download.windowsupdate.com}
-  - {name: 🇨🇳 CN|中国|广东|移动|81|, server: nf10.boom.party, port: 20000, type: ssr, cipher: aes-256-cfb, password: Uk92CS, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 209922:RkdzUU, obfs-param: download.windowsupdate.com}
-  - {name: 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|82|, server: n62.boom.party, port: 20000, type: ssr, cipher: aes-256-cfb, password: Uk92CS, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 209922:RkdzUU, obfs-param: download.windowsupdate.com}
-  - {name: 🇨🇳 CN|中国|广东|广州|移动|83|, server: cm-jm.okvpn.cc, port: 20002, type: vmess, uuid: 94a60d56-10ee-4796-a072-25fc8d9a52b8, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: cm-jm.okvpn.cc}}
-  - {name: 🇨🇳 CN|中国|广东|广州|移动|84|, server: ngzyd-1.okex-tradebot.xyz, port: 30004, type: vmess, uuid: 44a83c3d-dc4b-46c4-a9fd-f448302918e2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: ngzyd-1.okex-tradebot.xyz}}
-  - {name: 🇨🇳 CN|中国|广东|广州|移动|85|, server: ngzyd-1.okex-tradebot.xyz, port: 30006, type: vmess, uuid: 44a83c3d-dc4b-46c4-a9fd-f448302918e2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: ngzyd-1.okex-tradebot.xyz}}
-  - {name: 🇨🇳 CN|中国|广东|移动|86|, server: linode-yy-01.ddns-only.xyz, port: 20503, type: vmess, uuid: 378e65b1-901f-3a06-84d6-eee01b2f7cad, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /yy666666, ws-headers: {Host: linode-yy-01.ddns-only.xyz}}
-  - {name: 🇨🇳 CN|中国|北京|北京|电信|417|, server: hkhe09.cathayroute.com, port: 33099, type: ssr, cipher: rc4-md5, password: HdsrwE, protocol: origin, obfs: http_simple, protocol-param: "", obfs-param: download.windowsupdate.com}
-  - {name: 🇨🇳 CN|中国|北京|北京|电信|418|, server: sg01.cathayroute.com, port: 33099, type: ssr, cipher: rc4-md5, password: HdsrwE, protocol: origin, obfs: http_simple, protocol-param: "", obfs-param: download.windowsupdate.com}
-  - {name: 🇨🇳 CN|中国|北京|北京|电信|419|, server: sg12.clashcloud.tech, port: 37387, type: ssr, cipher: rc4-md5, password: qbpJjZ, protocol: origin, obfs: http_simple, protocol-param: "", obfs-param: download.windowsupdate.com}
-  - {name: 🇨🇳 CN|中国|北京|北京|电信|420|, server: hk01.clashcloud.tech, port: 37387, type: ssr, cipher: rc4-md5, password: qbpJjZ, protocol: origin, obfs: http_simple, protocol-param: "", obfs-param: download.windowsupdate.com}
-  - {name: 🇨🇳 CN|中国|北京|北京|电信|422|, server: sg11.cathayroute.com, port: 33099, type: ssr, cipher: rc4-md5, password: HdsrwE, protocol: origin, obfs: http_simple, protocol-param: "", obfs-param: download.windowsupdate.com}
-  - {name: 🇨🇳 CN|中国|北京|北京|电信|423|, server: sg09.cathayroute.com, port: 33099, type: ssr, cipher: rc4-md5, password: HdsrwE, protocol: origin, obfs: http_simple, protocol-param: "", obfs-param: download.windowsupdate.com}
-  - {name: 🇨🇳 CN|中国|北京|北京|电信|425|, server: hkhe03.cathayroute.com, port: 33099, type: ssr, cipher: rc4-md5, password: HdsrwE, protocol: origin, obfs: http_simple, protocol-param: "", obfs-param: download.windowsupdate.com}
-  - {name: 🇨🇳 CN|中国|北京|北京|电信|426|, server: hkt04.clashcloud.tech, port: 37387, type: ssr, cipher: rc4-md5, password: qbpJjZ, protocol: origin, obfs: http_simple, protocol-param: "", obfs-param: download.windowsupdate.com}
-  - {name: 🇨🇳 CN|中国|北京|北京|电信|427|, server: hgc09.cathayroute.com, port: 33099, type: ssr, cipher: rc4-md5, password: HdsrwE, protocol: origin, obfs: http_simple, protocol-param: "", obfs-param: download.windowsupdate.com}
-  - {name: 🇨🇳 CN|中国|北京|北京|电信|428|, server: pvcc01.cathayroute.com, port: 33099, type: ssr, cipher: rc4-md5, password: HdsrwE, protocol: origin, obfs: http_simple, protocol-param: "", obfs-param: download.windowsupdate.com}
+  - {name: 🇨🇳 CN|中国|腾讯|519|, server: 43.128.18.186, port: 1010, type: ssr, cipher: aes-256-cfb, password: laobiao, protocol: origin, obfs: plain, protocol-param: "", obfs-param: ""}
+  - {name: 🇨🇳 CN|中国|上海|上海|阿里云|104|, server: 101.132.192.212, port: 30003, type: ss, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_d39m}
+  - {name: 🇨🇳 CN|中国|上海|上海|阿里云|105|, server: music.desperadoj.com, port: 30003, type: ss, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_d39m}
+  - {name: 🇨🇳 CN|中国|福建|泉州|电信|106|, server: p5.22332e.com, port: 8333, type: ssr, cipher: rc4-md5, password: passfw2xs4e!, protocol: origin, obfs: plain, protocol-param: t.me/SSRSUB, obfs-param: ""}
+  - {name: 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|107|, server: ntemp09.boom.party, port: 18000, type: ssr, cipher: aes-256-cfb, password: Uk92CS, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 209922:RkdzUU, obfs-param: download.windowsupdate.com}
+  - {name: 🇨🇳 CN|中国|福建|泉州|电信|108|, server: 117.28.243.187, port: 8333, type: ssr, cipher: rc4-md5, password: passfw2xs4e!, protocol: origin, obfs: plain, protocol-param: t.me/SSRSUB, obfs-param: ""}
+  - {name: 🇨🇳 CN|中国|上海|上海|联通|109|, server: ntemp19.boom.party, port: 24000, type: ssr, cipher: aes-256-cfb, password: Uk92CS, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 143073:Cz8aOi, obfs-param: download.windowsupdate.com}
+  - {name: 🇨🇳 CN|中国|福建|泉州|电信|110|, server: 117.28.243.187, port: 8333, type: ssr, cipher: rc4-md5, password: passfw2xs4e!, protocol: origin, obfs: plain, protocol-param: "", obfs-param: ""}
+  - {name: 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|111|, server: ntemp06.boom.party, port: 15000, type: ssr, cipher: aes-256-cfb, password: Uk92CS, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 209922:RkdzUU, obfs-param: download.windowsupdate.com}
+  - {name: 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|112|, server: n62.boom.party, port: 20000, type: ssr, cipher: aes-256-cfb, password: Uk92CS, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 209922:RkdzUU, obfs-param: download.windowsupdate.com}
+  - {name: 🇨🇳 CN|中国|上海|上海|联通|113|, server: n21.boom.party, port: 15000, type: ssr, cipher: aes-256-cfb, password: Uk92CS, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 209922:RkdzUU, obfs-param: download.windowsupdate.com}
+  - {name: 🇨🇳 CN|中国|广东|移动|114|, server: nf8.boom.party, port: 18000, type: ssr, cipher: aes-256-cfb, password: Uk92CS, protocol: auth_aes128_sha1, obfs: http_simple, protocol-param: 209922:RkdzUU, obfs-param: download.windowsupdate.com}
+  - {name: 🇨🇳 CN|中国|广东|移动|115|, server: youyun-gd-01.ddns-only.xyz, port: 28679, type: vmess, uuid: 378e65b1-901f-3a06-84d6-eee01b2f7cad, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /yy666666, ws-headers: {Host: youyun-gd-01.ddns-only.xyz}}
+  - {name: 🇨🇳 CN|中国|广东|广州|移动|116|, server: ngzyd-1.okex-tradebot.xyz, port: 30006, type: vmess, uuid: 44a83c3d-dc4b-46c4-a9fd-f448302918e2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: ngzyd-1.okex-tradebot.xyz}}
+  - {name: 🇨🇳 CN|中国|上海|上海|电信|117|, server: yy-jz-cn2-01.ddns-only.xyz, port: 20423, type: vmess, uuid: 378e65b1-901f-3a06-84d6-eee01b2f7cad, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /yy666666, ws-headers: {Host: yy-jz-cn2-01.ddns-only.xyz}}
+  - {name: 🇨🇳 CN|中国|广东|移动|118|, server: youyun-gd-02.ddns-only.xyz, port: 20376, type: vmess, uuid: 378e65b1-901f-3a06-84d6-eee01b2f7cad, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /yy666666, ws-headers: {Host: youyun-gd-02.ddns-only.xyz}}
+  - {name: 🇨🇳 CN|中国|江西|南昌|移动|119|, server: sy-jx-cn2.ddns-only.xyz, port: 20471, type: vmess, uuid: 378e65b1-901f-3a06-84d6-eee01b2f7cad, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /yy666666, ws-headers: {Host: sy-jx-cn2.ddns-only.xyz}}
+  - {name: 🇨🇳 CN|中国|广东|广州|移动|120|, server: ngzyd-1.okex-tradebot.xyz, port: 30012, type: vmess, uuid: 44a83c3d-dc4b-46c4-a9fd-f448302918e2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: ngzyd-1.okex-tradebot.xyz}}
+  - {name: 🇨🇳 CN|中国|广东|移动|121|, server: youyun-gd-02.ddns-only.xyz, port: 20545, type: vmess, uuid: 378e65b1-901f-3a06-84d6-eee01b2f7cad, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /yy666666, ws-headers: {Host: youyun-gd-02.ddns-only.xyz}}
+  - {name: 🇨🇳 CN|中国|上海|上海|联通|122|, server: shanghai-01.ddns-only.xyz, port: 20547, type: vmess, uuid: 378e65b1-901f-3a06-84d6-eee01b2f7cad, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /yy666666, ws-headers: {Host: shanghai-01.ddns-only.xyz}}
+  - {name: 🇨🇳 CN|中国|广东|移动|123|, server: youyun-gd-xg-01.ddns-only.xyz, port: 20313, type: vmess, uuid: 378e65b1-901f-3a06-84d6-eee01b2f7cad, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /yy666666, ws-headers: {Host: youyun-gd-xg-01.ddns-only.xyz}}
+  - {name: 🇨🇳 CN|中国|江西|南昌|移动|124|, server: sy-jx-cn2.ddns-only.xyz, port: 20470, type: vmess, uuid: 378e65b1-901f-3a06-84d6-eee01b2f7cad, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /yy666666, ws-headers: {Host: sy-jx-cn2.ddns-only.xyz}}
+  - {name: 🇨🇳 CN|中国|广东|移动|125|, server: youyun-gd-xg-01.ddns-only.xyz, port: 20436, type: vmess, uuid: 378e65b1-901f-3a06-84d6-eee01b2f7cad, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /yy666666, ws-headers: {Host: youyun-gd-xg-01.ddns-only.xyz}}
+  - {name: 🇨🇳 CN|中国|上海|上海|电信|126|, server: yy-jz-cn2-01.ddns-only.xyz, port: 20425, type: vmess, uuid: 378e65b1-901f-3a06-84d6-eee01b2f7cad, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /yy666666, ws-headers: {Host: yy-jz-cn2-01.ddns-only.xyz}}
+  - {name: 🇨🇳 CN|中国|广东|广州|移动|127|, server: ngzyd-1.okex-tradebot.xyz, port: 30004, type: vmess, uuid: 44a83c3d-dc4b-46c4-a9fd-f448302918e2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: ngzyd-1.okex-tradebot.xyz}}
+  - {name: 🇨🇳 CN|中国|广东|广州|移动|129|, server: ngzyd-1.okex-tradebot.xyz, port: 30010, type: vmess, uuid: 44a83c3d-dc4b-46c4-a9fd-f448302918e2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: ngzyd-1.okex-tradebot.xyz}}
+  - {name: 🇨🇳 CN|中国|广东|移动|132|, server: linode-yy-01.ddns-only.xyz, port: 20503, type: vmess, uuid: 378e65b1-901f-3a06-84d6-eee01b2f7cad, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /yy666666, ws-headers: {Host: linode-yy-01.ddns-only.xyz}}
+  - {name: 🇨🇳 CN|中国|北京|北京|电信|518|, server: sg11.cathayroute.com, port: 33099, type: ssr, cipher: rc4-md5, password: HdsrwE, protocol: origin, obfs: http_simple, protocol-param: "", obfs-param: download.windowsupdate.com}
+  - {name: 🇨🇳 CN|中国|北京|北京|电信|519|, server: sg09.cathayroute.com, port: 33099, type: ssr, cipher: rc4-md5, password: HdsrwE, protocol: origin, obfs: http_simple, protocol-param: "", obfs-param: download.windowsupdate.com}
+  - {name: 🇨🇳 CN|中国|北京|北京|电信|520|, server: hgc09.cathayroute.com, port: 33099, type: ssr, cipher: rc4-md5, password: HdsrwE, protocol: origin, obfs: http_simple, protocol-param: "", obfs-param: download.windowsupdate.com}
+  - {name: 🇨🇳 CN|中国|北京|北京|电信|521|, server: hkhe03.cathayroute.com, port: 33099, type: ssr, cipher: rc4-md5, password: HdsrwE, protocol: origin, obfs: http_simple, protocol-param: "", obfs-param: download.windowsupdate.com}
+  - {name: 🇨🇳 CN|中国|北京|北京|电信|522|, server: pvcc01.cathayroute.com, port: 33099, type: ssr, cipher: rc4-md5, password: HdsrwE, protocol: origin, obfs: http_simple, protocol-param: "", obfs-param: download.windowsupdate.com}
+  - {name: 🇨🇳 CN|中国|北京|北京|电信|523|, server: hkt04.clashcloud.tech, port: 37387, type: ssr, cipher: rc4-md5, password: qbpJjZ, protocol: origin, obfs: http_simple, protocol-param: "", obfs-param: download.windowsupdate.com}
+  - {name: 🇨🇳 CN|中国|北京|北京|电信|524|, server: sg01.cathayroute.com, port: 33099, type: ssr, cipher: rc4-md5, password: HdsrwE, protocol: origin, obfs: http_simple, protocol-param: "", obfs-param: download.windowsupdate.com}
+  - {name: 🇨🇳 CN|中国|北京|北京|电信|526|, server: hk01.clashcloud.tech, port: 37387, type: ssr, cipher: rc4-md5, password: qbpJjZ, protocol: origin, obfs: http_simple, protocol-param: "", obfs-param: download.windowsupdate.com}
+  - {name: 🇨🇳 CN|中国|北京|北京|电信|527|, server: sg12.clashcloud.tech, port: 37387, type: ssr, cipher: rc4-md5, password: qbpJjZ, protocol: origin, obfs: http_simple, protocol-param: "", obfs-param: download.windowsupdate.com}
+  - {name: 🇨🇳 CN|中国|北京|北京|电信|529|, server: hkhe09.cathayroute.com, port: 33099, type: ssr, cipher: rc4-md5, password: HdsrwE, protocol: origin, obfs: http_simple, protocol-param: "", obfs-param: download.windowsupdate.com}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇨🇳 CN|中国|腾讯|504|
-      - 🇨🇳 CN|中国|上海|上海|阿里云|72|
-      - 🇨🇳 CN|中国|上海|上海|阿里云|73|
-      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|74|
-      - 🇨🇳 CN|中国|福建|泉州|电信|75|
-      - 🇨🇳 CN|中国|上海|上海|联通|76|
-      - 🇨🇳 CN|中国|福建|泉州|电信|77|
-      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|78|
-      - 🇨🇳 CN|中国|福建|泉州|电信|79|
-      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|80|
-      - 🇨🇳 CN|中国|广东|移动|81|
-      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|82|
-      - 🇨🇳 CN|中国|广东|广州|移动|83|
-      - 🇨🇳 CN|中国|广东|广州|移动|84|
-      - 🇨🇳 CN|中国|广东|广州|移动|85|
-      - 🇨🇳 CN|中国|广东|移动|86|
-      - 🇨🇳 CN|中国|北京|北京|电信|417|
-      - 🇨🇳 CN|中国|北京|北京|电信|418|
-      - 🇨🇳 CN|中国|北京|北京|电信|419|
-      - 🇨🇳 CN|中国|北京|北京|电信|420|
-      - 🇨🇳 CN|中国|北京|北京|电信|422|
-      - 🇨🇳 CN|中国|北京|北京|电信|423|
-      - 🇨🇳 CN|中国|北京|北京|电信|425|
-      - 🇨🇳 CN|中国|北京|北京|电信|426|
-      - 🇨🇳 CN|中国|北京|北京|电信|427|
-      - 🇨🇳 CN|中国|北京|北京|电信|428|
+      - 🇨🇳 CN|中国|腾讯|519|
+      - 🇨🇳 CN|中国|上海|上海|阿里云|104|
+      - 🇨🇳 CN|中国|上海|上海|阿里云|105|
+      - 🇨🇳 CN|中国|福建|泉州|电信|106|
+      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|107|
+      - 🇨🇳 CN|中国|福建|泉州|电信|108|
+      - 🇨🇳 CN|中国|上海|上海|联通|109|
+      - 🇨🇳 CN|中国|福建|泉州|电信|110|
+      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|111|
+      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|112|
+      - 🇨🇳 CN|中国|上海|上海|联通|113|
+      - 🇨🇳 CN|中国|广东|移动|114|
+      - 🇨🇳 CN|中国|广东|移动|115|
+      - 🇨🇳 CN|中国|广东|广州|移动|116|
+      - 🇨🇳 CN|中国|上海|上海|电信|117|
+      - 🇨🇳 CN|中国|广东|移动|118|
+      - 🇨🇳 CN|中国|江西|南昌|移动|119|
+      - 🇨🇳 CN|中国|广东|广州|移动|120|
+      - 🇨🇳 CN|中国|广东|移动|121|
+      - 🇨🇳 CN|中国|上海|上海|联通|122|
+      - 🇨🇳 CN|中国|广东|移动|123|
+      - 🇨🇳 CN|中国|江西|南昌|移动|124|
+      - 🇨🇳 CN|中国|广东|移动|125|
+      - 🇨🇳 CN|中国|上海|上海|电信|126|
+      - 🇨🇳 CN|中国|广东|广州|移动|127|
+      - 🇨🇳 CN|中国|广东|广州|移动|129|
+      - 🇨🇳 CN|中国|广东|移动|132|
+      - 🇨🇳 CN|中国|北京|北京|电信|518|
+      - 🇨🇳 CN|中国|北京|北京|电信|519|
+      - 🇨🇳 CN|中国|北京|北京|电信|520|
+      - 🇨🇳 CN|中国|北京|北京|电信|521|
+      - 🇨🇳 CN|中国|北京|北京|电信|522|
+      - 🇨🇳 CN|中国|北京|北京|电信|523|
+      - 🇨🇳 CN|中国|北京|北京|电信|524|
+      - 🇨🇳 CN|中国|北京|北京|电信|526|
+      - 🇨🇳 CN|中国|北京|北京|电信|527|
+      - 🇨🇳 CN|中国|北京|北京|电信|529|
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇨🇳 CN|中国|腾讯|504|
-      - 🇨🇳 CN|中国|上海|上海|阿里云|72|
-      - 🇨🇳 CN|中国|上海|上海|阿里云|73|
-      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|74|
-      - 🇨🇳 CN|中国|福建|泉州|电信|75|
-      - 🇨🇳 CN|中国|上海|上海|联通|76|
-      - 🇨🇳 CN|中国|福建|泉州|电信|77|
-      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|78|
-      - 🇨🇳 CN|中国|福建|泉州|电信|79|
-      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|80|
-      - 🇨🇳 CN|中国|广东|移动|81|
-      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|82|
-      - 🇨🇳 CN|中国|广东|广州|移动|83|
-      - 🇨🇳 CN|中国|广东|广州|移动|84|
-      - 🇨🇳 CN|中国|广东|广州|移动|85|
-      - 🇨🇳 CN|中国|广东|移动|86|
-      - 🇨🇳 CN|中国|北京|北京|电信|417|
-      - 🇨🇳 CN|中国|北京|北京|电信|418|
-      - 🇨🇳 CN|中国|北京|北京|电信|419|
-      - 🇨🇳 CN|中国|北京|北京|电信|420|
-      - 🇨🇳 CN|中国|北京|北京|电信|422|
-      - 🇨🇳 CN|中国|北京|北京|电信|423|
-      - 🇨🇳 CN|中国|北京|北京|电信|425|
-      - 🇨🇳 CN|中国|北京|北京|电信|426|
-      - 🇨🇳 CN|中国|北京|北京|电信|427|
-      - 🇨🇳 CN|中国|北京|北京|电信|428|
+      - 🇨🇳 CN|中国|腾讯|519|
+      - 🇨🇳 CN|中国|上海|上海|阿里云|104|
+      - 🇨🇳 CN|中国|上海|上海|阿里云|105|
+      - 🇨🇳 CN|中国|福建|泉州|电信|106|
+      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|107|
+      - 🇨🇳 CN|中国|福建|泉州|电信|108|
+      - 🇨🇳 CN|中国|上海|上海|联通|109|
+      - 🇨🇳 CN|中国|福建|泉州|电信|110|
+      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|111|
+      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|112|
+      - 🇨🇳 CN|中国|上海|上海|联通|113|
+      - 🇨🇳 CN|中国|广东|移动|114|
+      - 🇨🇳 CN|中国|广东|移动|115|
+      - 🇨🇳 CN|中国|广东|广州|移动|116|
+      - 🇨🇳 CN|中国|上海|上海|电信|117|
+      - 🇨🇳 CN|中国|广东|移动|118|
+      - 🇨🇳 CN|中国|江西|南昌|移动|119|
+      - 🇨🇳 CN|中国|广东|广州|移动|120|
+      - 🇨🇳 CN|中国|广东|移动|121|
+      - 🇨🇳 CN|中国|上海|上海|联通|122|
+      - 🇨🇳 CN|中国|广东|移动|123|
+      - 🇨🇳 CN|中国|江西|南昌|移动|124|
+      - 🇨🇳 CN|中国|广东|移动|125|
+      - 🇨🇳 CN|中国|上海|上海|电信|126|
+      - 🇨🇳 CN|中国|广东|广州|移动|127|
+      - 🇨🇳 CN|中国|广东|广州|移动|129|
+      - 🇨🇳 CN|中国|广东|移动|132|
+      - 🇨🇳 CN|中国|北京|北京|电信|518|
+      - 🇨🇳 CN|中国|北京|北京|电信|519|
+      - 🇨🇳 CN|中国|北京|北京|电信|520|
+      - 🇨🇳 CN|中国|北京|北京|电信|521|
+      - 🇨🇳 CN|中国|北京|北京|电信|522|
+      - 🇨🇳 CN|中国|北京|北京|电信|523|
+      - 🇨🇳 CN|中国|北京|北京|电信|524|
+      - 🇨🇳 CN|中国|北京|北京|电信|526|
+      - 🇨🇳 CN|中国|北京|北京|电信|527|
+      - 🇨🇳 CN|中国|北京|北京|电信|529|
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇨🇳 CN|中国|腾讯|504|
-      - 🇨🇳 CN|中国|上海|上海|阿里云|72|
-      - 🇨🇳 CN|中国|上海|上海|阿里云|73|
-      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|74|
-      - 🇨🇳 CN|中国|福建|泉州|电信|75|
-      - 🇨🇳 CN|中国|上海|上海|联通|76|
-      - 🇨🇳 CN|中国|福建|泉州|电信|77|
-      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|78|
-      - 🇨🇳 CN|中国|福建|泉州|电信|79|
-      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|80|
-      - 🇨🇳 CN|中国|广东|移动|81|
-      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|82|
-      - 🇨🇳 CN|中国|广东|广州|移动|83|
-      - 🇨🇳 CN|中国|广东|广州|移动|84|
-      - 🇨🇳 CN|中国|广东|广州|移动|85|
-      - 🇨🇳 CN|中国|广东|移动|86|
-      - 🇨🇳 CN|中国|北京|北京|电信|417|
-      - 🇨🇳 CN|中国|北京|北京|电信|418|
-      - 🇨🇳 CN|中国|北京|北京|电信|419|
-      - 🇨🇳 CN|中国|北京|北京|电信|420|
-      - 🇨🇳 CN|中国|北京|北京|电信|422|
-      - 🇨🇳 CN|中国|北京|北京|电信|423|
-      - 🇨🇳 CN|中国|北京|北京|电信|425|
-      - 🇨🇳 CN|中国|北京|北京|电信|426|
-      - 🇨🇳 CN|中国|北京|北京|电信|427|
-      - 🇨🇳 CN|中国|北京|北京|电信|428|
+      - 🇨🇳 CN|中国|腾讯|519|
+      - 🇨🇳 CN|中国|上海|上海|阿里云|104|
+      - 🇨🇳 CN|中国|上海|上海|阿里云|105|
+      - 🇨🇳 CN|中国|福建|泉州|电信|106|
+      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|107|
+      - 🇨🇳 CN|中国|福建|泉州|电信|108|
+      - 🇨🇳 CN|中国|上海|上海|联通|109|
+      - 🇨🇳 CN|中国|福建|泉州|电信|110|
+      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|111|
+      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|112|
+      - 🇨🇳 CN|中国|上海|上海|联通|113|
+      - 🇨🇳 CN|中国|广东|移动|114|
+      - 🇨🇳 CN|中国|广东|移动|115|
+      - 🇨🇳 CN|中国|广东|广州|移动|116|
+      - 🇨🇳 CN|中国|上海|上海|电信|117|
+      - 🇨🇳 CN|中国|广东|移动|118|
+      - 🇨🇳 CN|中国|江西|南昌|移动|119|
+      - 🇨🇳 CN|中国|广东|广州|移动|120|
+      - 🇨🇳 CN|中国|广东|移动|121|
+      - 🇨🇳 CN|中国|上海|上海|联通|122|
+      - 🇨🇳 CN|中国|广东|移动|123|
+      - 🇨🇳 CN|中国|江西|南昌|移动|124|
+      - 🇨🇳 CN|中国|广东|移动|125|
+      - 🇨🇳 CN|中国|上海|上海|电信|126|
+      - 🇨🇳 CN|中国|广东|广州|移动|127|
+      - 🇨🇳 CN|中国|广东|广州|移动|129|
+      - 🇨🇳 CN|中国|广东|移动|132|
+      - 🇨🇳 CN|中国|北京|北京|电信|518|
+      - 🇨🇳 CN|中国|北京|北京|电信|519|
+      - 🇨🇳 CN|中国|北京|北京|电信|520|
+      - 🇨🇳 CN|中国|北京|北京|电信|521|
+      - 🇨🇳 CN|中国|北京|北京|电信|522|
+      - 🇨🇳 CN|中国|北京|北京|电信|523|
+      - 🇨🇳 CN|中国|北京|北京|电信|524|
+      - 🇨🇳 CN|中国|北京|北京|电信|526|
+      - 🇨🇳 CN|中国|北京|北京|电信|527|
+      - 🇨🇳 CN|中国|北京|北京|电信|529|
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|74|
-      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|78|
-      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|80|
-      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|82|
+      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|107|
+      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|111|
+      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|112|
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 🇨🇳 CN|中国|腾讯|504|
-      - 🇨🇳 CN|中国|上海|上海|阿里云|72|
-      - 🇨🇳 CN|中国|上海|上海|阿里云|73|
-      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|74|
-      - 🇨🇳 CN|中国|福建|泉州|电信|75|
-      - 🇨🇳 CN|中国|上海|上海|联通|76|
-      - 🇨🇳 CN|中国|福建|泉州|电信|77|
-      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|78|
-      - 🇨🇳 CN|中国|福建|泉州|电信|79|
-      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|80|
-      - 🇨🇳 CN|中国|广东|移动|81|
-      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|82|
-      - 🇨🇳 CN|中国|广东|广州|移动|83|
-      - 🇨🇳 CN|中国|广东|广州|移动|84|
-      - 🇨🇳 CN|中国|广东|广州|移动|85|
-      - 🇨🇳 CN|中国|广东|移动|86|
-      - 🇨🇳 CN|中国|北京|北京|电信|417|
-      - 🇨🇳 CN|中国|北京|北京|电信|418|
-      - 🇨🇳 CN|中国|北京|北京|电信|419|
-      - 🇨🇳 CN|中国|北京|北京|电信|420|
-      - 🇨🇳 CN|中国|北京|北京|电信|422|
-      - 🇨🇳 CN|中国|北京|北京|电信|423|
-      - 🇨🇳 CN|中国|北京|北京|电信|425|
-      - 🇨🇳 CN|中国|北京|北京|电信|426|
-      - 🇨🇳 CN|中国|北京|北京|电信|427|
-      - 🇨🇳 CN|中国|北京|北京|电信|428|
+      - 🇨🇳 CN|中国|腾讯|519|
+      - 🇨🇳 CN|中国|上海|上海|阿里云|104|
+      - 🇨🇳 CN|中国|上海|上海|阿里云|105|
+      - 🇨🇳 CN|中国|福建|泉州|电信|106|
+      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|107|
+      - 🇨🇳 CN|中国|福建|泉州|电信|108|
+      - 🇨🇳 CN|中国|上海|上海|联通|109|
+      - 🇨🇳 CN|中国|福建|泉州|电信|110|
+      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|111|
+      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|112|
+      - 🇨🇳 CN|中国|上海|上海|联通|113|
+      - 🇨🇳 CN|中国|广东|移动|114|
+      - 🇨🇳 CN|中国|广东|移动|115|
+      - 🇨🇳 CN|中国|广东|广州|移动|116|
+      - 🇨🇳 CN|中国|上海|上海|电信|117|
+      - 🇨🇳 CN|中国|广东|移动|118|
+      - 🇨🇳 CN|中国|江西|南昌|移动|119|
+      - 🇨🇳 CN|中国|广东|广州|移动|120|
+      - 🇨🇳 CN|中国|广东|移动|121|
+      - 🇨🇳 CN|中国|上海|上海|联通|122|
+      - 🇨🇳 CN|中国|广东|移动|123|
+      - 🇨🇳 CN|中国|江西|南昌|移动|124|
+      - 🇨🇳 CN|中国|广东|移动|125|
+      - 🇨🇳 CN|中国|上海|上海|电信|126|
+      - 🇨🇳 CN|中国|广东|广州|移动|127|
+      - 🇨🇳 CN|中国|广东|广州|移动|129|
+      - 🇨🇳 CN|中国|广东|移动|132|
+      - 🇨🇳 CN|中国|北京|北京|电信|518|
+      - 🇨🇳 CN|中国|北京|北京|电信|519|
+      - 🇨🇳 CN|中国|北京|北京|电信|520|
+      - 🇨🇳 CN|中国|北京|北京|电信|521|
+      - 🇨🇳 CN|中国|北京|北京|电信|522|
+      - 🇨🇳 CN|中国|北京|北京|电信|523|
+      - 🇨🇳 CN|中国|北京|北京|电信|524|
+      - 🇨🇳 CN|中国|北京|北京|电信|526|
+      - 🇨🇳 CN|中国|北京|北京|电信|527|
+      - 🇨🇳 CN|中国|北京|北京|电信|529|
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 🇨🇳 CN|中国|腾讯|504|
-      - 🇨🇳 CN|中国|上海|上海|阿里云|72|
-      - 🇨🇳 CN|中国|上海|上海|阿里云|73|
-      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|74|
-      - 🇨🇳 CN|中国|福建|泉州|电信|75|
-      - 🇨🇳 CN|中国|上海|上海|联通|76|
-      - 🇨🇳 CN|中国|福建|泉州|电信|77|
-      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|78|
-      - 🇨🇳 CN|中国|福建|泉州|电信|79|
-      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|80|
-      - 🇨🇳 CN|中国|广东|移动|81|
-      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|82|
-      - 🇨🇳 CN|中国|广东|广州|移动|83|
-      - 🇨🇳 CN|中国|广东|广州|移动|84|
-      - 🇨🇳 CN|中国|广东|广州|移动|85|
-      - 🇨🇳 CN|中国|广东|移动|86|
-      - 🇨🇳 CN|中国|北京|北京|电信|417|
-      - 🇨🇳 CN|中国|北京|北京|电信|418|
-      - 🇨🇳 CN|中国|北京|北京|电信|419|
-      - 🇨🇳 CN|中国|北京|北京|电信|420|
-      - 🇨🇳 CN|中国|北京|北京|电信|422|
-      - 🇨🇳 CN|中国|北京|北京|电信|423|
-      - 🇨🇳 CN|中国|北京|北京|电信|425|
-      - 🇨🇳 CN|中国|北京|北京|电信|426|
-      - 🇨🇳 CN|中国|北京|北京|电信|427|
-      - 🇨🇳 CN|中国|北京|北京|电信|428|
+      - 🇨🇳 CN|中国|腾讯|519|
+      - 🇨🇳 CN|中国|上海|上海|阿里云|104|
+      - 🇨🇳 CN|中国|上海|上海|阿里云|105|
+      - 🇨🇳 CN|中国|福建|泉州|电信|106|
+      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|107|
+      - 🇨🇳 CN|中国|福建|泉州|电信|108|
+      - 🇨🇳 CN|中国|上海|上海|联通|109|
+      - 🇨🇳 CN|中国|福建|泉州|电信|110|
+      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|111|
+      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|112|
+      - 🇨🇳 CN|中国|上海|上海|联通|113|
+      - 🇨🇳 CN|中国|广东|移动|114|
+      - 🇨🇳 CN|中国|广东|移动|115|
+      - 🇨🇳 CN|中国|广东|广州|移动|116|
+      - 🇨🇳 CN|中国|上海|上海|电信|117|
+      - 🇨🇳 CN|中国|广东|移动|118|
+      - 🇨🇳 CN|中国|江西|南昌|移动|119|
+      - 🇨🇳 CN|中国|广东|广州|移动|120|
+      - 🇨🇳 CN|中国|广东|移动|121|
+      - 🇨🇳 CN|中国|上海|上海|联通|122|
+      - 🇨🇳 CN|中国|广东|移动|123|
+      - 🇨🇳 CN|中国|江西|南昌|移动|124|
+      - 🇨🇳 CN|中国|广东|移动|125|
+      - 🇨🇳 CN|中国|上海|上海|电信|126|
+      - 🇨🇳 CN|中国|广东|广州|移动|127|
+      - 🇨🇳 CN|中国|广东|广州|移动|129|
+      - 🇨🇳 CN|中国|广东|移动|132|
+      - 🇨🇳 CN|中国|北京|北京|电信|518|
+      - 🇨🇳 CN|中国|北京|北京|电信|519|
+      - 🇨🇳 CN|中国|北京|北京|电信|520|
+      - 🇨🇳 CN|中国|北京|北京|电信|521|
+      - 🇨🇳 CN|中国|北京|北京|电信|522|
+      - 🇨🇳 CN|中国|北京|北京|电信|523|
+      - 🇨🇳 CN|中国|北京|北京|电信|524|
+      - 🇨🇳 CN|中国|北京|北京|电信|526|
+      - 🇨🇳 CN|中国|北京|北京|电信|527|
+      - 🇨🇳 CN|中国|北京|北京|电信|529|
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇨🇳 CN|中国|腾讯|504|
-      - 🇨🇳 CN|中国|上海|上海|阿里云|72|
-      - 🇨🇳 CN|中国|上海|上海|阿里云|73|
-      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|74|
-      - 🇨🇳 CN|中国|福建|泉州|电信|75|
-      - 🇨🇳 CN|中国|上海|上海|联通|76|
-      - 🇨🇳 CN|中国|福建|泉州|电信|77|
-      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|78|
-      - 🇨🇳 CN|中国|福建|泉州|电信|79|
-      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|80|
-      - 🇨🇳 CN|中国|广东|移动|81|
-      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|82|
-      - 🇨🇳 CN|中国|广东|广州|移动|83|
-      - 🇨🇳 CN|中国|广东|广州|移动|84|
-      - 🇨🇳 CN|中国|广东|广州|移动|85|
-      - 🇨🇳 CN|中国|广东|移动|86|
-      - 🇨🇳 CN|中国|北京|北京|电信|417|
-      - 🇨🇳 CN|中国|北京|北京|电信|418|
-      - 🇨🇳 CN|中国|北京|北京|电信|419|
-      - 🇨🇳 CN|中国|北京|北京|电信|420|
-      - 🇨🇳 CN|中国|北京|北京|电信|422|
-      - 🇨🇳 CN|中国|北京|北京|电信|423|
-      - 🇨🇳 CN|中国|北京|北京|电信|425|
-      - 🇨🇳 CN|中国|北京|北京|电信|426|
-      - 🇨🇳 CN|中国|北京|北京|电信|427|
-      - 🇨🇳 CN|中国|北京|北京|电信|428|
+      - 🇨🇳 CN|中国|腾讯|519|
+      - 🇨🇳 CN|中国|上海|上海|阿里云|104|
+      - 🇨🇳 CN|中国|上海|上海|阿里云|105|
+      - 🇨🇳 CN|中国|福建|泉州|电信|106|
+      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|107|
+      - 🇨🇳 CN|中国|福建|泉州|电信|108|
+      - 🇨🇳 CN|中国|上海|上海|联通|109|
+      - 🇨🇳 CN|中国|福建|泉州|电信|110|
+      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|111|
+      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|112|
+      - 🇨🇳 CN|中国|上海|上海|联通|113|
+      - 🇨🇳 CN|中国|广东|移动|114|
+      - 🇨🇳 CN|中国|广东|移动|115|
+      - 🇨🇳 CN|中国|广东|广州|移动|116|
+      - 🇨🇳 CN|中国|上海|上海|电信|117|
+      - 🇨🇳 CN|中国|广东|移动|118|
+      - 🇨🇳 CN|中国|江西|南昌|移动|119|
+      - 🇨🇳 CN|中国|广东|广州|移动|120|
+      - 🇨🇳 CN|中国|广东|移动|121|
+      - 🇨🇳 CN|中国|上海|上海|联通|122|
+      - 🇨🇳 CN|中国|广东|移动|123|
+      - 🇨🇳 CN|中国|江西|南昌|移动|124|
+      - 🇨🇳 CN|中国|广东|移动|125|
+      - 🇨🇳 CN|中国|上海|上海|电信|126|
+      - 🇨🇳 CN|中国|广东|广州|移动|127|
+      - 🇨🇳 CN|中国|广东|广州|移动|129|
+      - 🇨🇳 CN|中国|广东|移动|132|
+      - 🇨🇳 CN|中国|北京|北京|电信|518|
+      - 🇨🇳 CN|中国|北京|北京|电信|519|
+      - 🇨🇳 CN|中国|北京|北京|电信|520|
+      - 🇨🇳 CN|中国|北京|北京|电信|521|
+      - 🇨🇳 CN|中国|北京|北京|电信|522|
+      - 🇨🇳 CN|中国|北京|北京|电信|523|
+      - 🇨🇳 CN|中国|北京|北京|电信|524|
+      - 🇨🇳 CN|中国|北京|北京|电信|526|
+      - 🇨🇳 CN|中国|北京|北京|电信|527|
+      - 🇨🇳 CN|中国|北京|北京|电信|529|
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -244,32 +320,43 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇨🇳 CN|中国|腾讯|504|
-      - 🇨🇳 CN|中国|上海|上海|阿里云|72|
-      - 🇨🇳 CN|中国|上海|上海|阿里云|73|
-      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|74|
-      - 🇨🇳 CN|中国|福建|泉州|电信|75|
-      - 🇨🇳 CN|中国|上海|上海|联通|76|
-      - 🇨🇳 CN|中国|福建|泉州|电信|77|
-      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|78|
-      - 🇨🇳 CN|中国|福建|泉州|电信|79|
-      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|80|
-      - 🇨🇳 CN|中国|广东|移动|81|
-      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|82|
-      - 🇨🇳 CN|中国|广东|广州|移动|83|
-      - 🇨🇳 CN|中国|广东|广州|移动|84|
-      - 🇨🇳 CN|中国|广东|广州|移动|85|
-      - 🇨🇳 CN|中国|广东|移动|86|
-      - 🇨🇳 CN|中国|北京|北京|电信|417|
-      - 🇨🇳 CN|中国|北京|北京|电信|418|
-      - 🇨🇳 CN|中国|北京|北京|电信|419|
-      - 🇨🇳 CN|中国|北京|北京|电信|420|
-      - 🇨🇳 CN|中国|北京|北京|电信|422|
-      - 🇨🇳 CN|中国|北京|北京|电信|423|
-      - 🇨🇳 CN|中国|北京|北京|电信|425|
-      - 🇨🇳 CN|中国|北京|北京|电信|426|
-      - 🇨🇳 CN|中国|北京|北京|电信|427|
-      - 🇨🇳 CN|中国|北京|北京|电信|428|
+      - 🇨🇳 CN|中国|腾讯|519|
+      - 🇨🇳 CN|中国|上海|上海|阿里云|104|
+      - 🇨🇳 CN|中国|上海|上海|阿里云|105|
+      - 🇨🇳 CN|中国|福建|泉州|电信|106|
+      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|107|
+      - 🇨🇳 CN|中国|福建|泉州|电信|108|
+      - 🇨🇳 CN|中国|上海|上海|联通|109|
+      - 🇨🇳 CN|中国|福建|泉州|电信|110|
+      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|111|
+      - 🇨🇳 CN|中国|SH|上海|上海|China Unicom Shanghai Province Network|112|
+      - 🇨🇳 CN|中国|上海|上海|联通|113|
+      - 🇨🇳 CN|中国|广东|移动|114|
+      - 🇨🇳 CN|中国|广东|移动|115|
+      - 🇨🇳 CN|中国|广东|广州|移动|116|
+      - 🇨🇳 CN|中国|上海|上海|电信|117|
+      - 🇨🇳 CN|中国|广东|移动|118|
+      - 🇨🇳 CN|中国|江西|南昌|移动|119|
+      - 🇨🇳 CN|中国|广东|广州|移动|120|
+      - 🇨🇳 CN|中国|广东|移动|121|
+      - 🇨🇳 CN|中国|上海|上海|联通|122|
+      - 🇨🇳 CN|中国|广东|移动|123|
+      - 🇨🇳 CN|中国|江西|南昌|移动|124|
+      - 🇨🇳 CN|中国|广东|移动|125|
+      - 🇨🇳 CN|中国|上海|上海|电信|126|
+      - 🇨🇳 CN|中国|广东|广州|移动|127|
+      - 🇨🇳 CN|中国|广东|广州|移动|129|
+      - 🇨🇳 CN|中国|广东|移动|132|
+      - 🇨🇳 CN|中国|北京|北京|电信|518|
+      - 🇨🇳 CN|中国|北京|北京|电信|519|
+      - 🇨🇳 CN|中国|北京|北京|电信|520|
+      - 🇨🇳 CN|中国|北京|北京|电信|521|
+      - 🇨🇳 CN|中国|北京|北京|电信|522|
+      - 🇨🇳 CN|中国|北京|北京|电信|523|
+      - 🇨🇳 CN|中国|北京|北京|电信|524|
+      - 🇨🇳 CN|中国|北京|北京|电信|526|
+      - 🇨🇳 CN|中国|北京|北京|电信|527|
+      - 🇨🇳 CN|中国|北京|北京|电信|529|
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
