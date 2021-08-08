@@ -210,6 +210,7 @@ pool_rename() {
 		  | sed "s/\"name\":\"${NAME}/\"name\":\"${NAME}\|$[i]\|/g")
 
 		echo ${NEW_LINE} >> $2
+		echo $[i] >/tmp/total_nodes
 	done
 	
 	unset LINE
@@ -296,9 +297,10 @@ multi_pool_rename_fd() {
 			NEW_LINE=$(echo $LINE \
 				| sed "s/\"name\":\"${NAME}/\"name\":\
 				\"${NAME}\|$i\|/g")
-
+			
 			echo ${NEW_LINE} >> $2
-
+			echo $[i] >/tmp/total_nodes
+			
 			echo >&3
 		}&
 	done
