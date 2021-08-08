@@ -5,103 +5,63 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇩🇪 US|美国|德克萨斯|休斯顿|2|, server: 199.10.64.133, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
-  - {name: 🇺🇸 US|美国|亚马逊|6|, server: ss.uk.sshmax.net, port: 1443, type: ss, cipher: chacha20-ietf-poly1305, password: JSvsHhHYIuVG, udp: true}
-  - {name: 🇦🇹 AT|奥地利|3|, server: 37.120.221.5, port: 31944, type: ss, cipher: aes-256-gcm, password: aYNeKDMzYQYw4KbUbJA8Wszq}
-  - {name: 🇨🇦 CA|加拿大|魁北克|博阿努瓦|4|, server: ss.ca.sshmax.net, port: 1443, type: ss, cipher: chacha20-ietf-poly1305, password: r4TeEt5bK0UD, udp: true}
-  - {name: 🇺🇸 US|美国|弗吉尼亚|5|, server: ss.us.sshmax.net, port: 1443, type: ss, cipher: chacha20-ietf-poly1305, password: T3j6elRwEuA4, udp: true}
-  - {name: 🇺🇸 US|美国|弗吉尼亚|8|, server: ss.us.sshmax.net, port: 57478, type: ss, cipher: chacha20-ietf-poly1305, password: syCiJl3nb8OD, udp: true}
-  - {name: 🇺🇸 US|美国|亚马逊|10|, server: ss.de.sshmax.net, port: 21474, type: ss, cipher: chacha20-ietf-poly1305, password: cWv8FcJk0VpS, udp: true}
-  - {name: 🇺🇸 US|美国|亚马逊|7|, server: ss.de.sshmax.net, port: 21474, type: ss, cipher: chacha20-ietf-poly1305, password: HgCMlgbtQMxl, udp: true}
-  - {name: 🇺🇸 US|美国|亚马逊|9|, server: ss.uk.sshmax.net, port: 57478, type: ss, cipher: chacha20-ietf-poly1305, password: HgVDIN05O6bH, udp: true}
-  - {name: 🇺🇸 US|美国|弗吉尼亚|11|, server: 207.244.67.149, port: 40093, type: ss, cipher: aes-256-gcm, password: x23Z4LGkGDkThZ9Kaz4DURQp, udp: true}
-  - {name: 🇺🇸 US|美国|弗吉尼亚|14|, server: 23.82.11.49, port: 37588, type: ss, cipher: aes-256-gcm, password: kD9vkjnE6dsUzwQfvKkPkQAd, udp: true}
-  - {name: 🇺🇸 US|美国|弗吉尼亚|13|, server: 23.82.11.49, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD, udp: true}
-  - {name: 🇧🇪 BE|比利时|15|, server: 91.90.123.115, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
-  - {name: 🇺🇸 US|美国|弗吉尼亚|12|, server: 207.244.67.149, port: 35294, type: ss, cipher: aes-256-gcm, password: J9Y2ncrdPEC38gwydNFFGBna, udp: true}
-  - {name: 🇳🇱 NL|荷兰|北荷兰|16|, server: 81.19.208.107, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇫🇮 FI|芬兰|Uusimaa|17|, server: 196.244.191.45, port: 39556, type: ss, cipher: aes-256-gcm, password: g4AfpNELpdYEeLYhM8XCX9se}
-  - {name: 🇧🇪 BE|比利时|18|, server: 91.90.123.115, port: 35294, type: ss, cipher: aes-256-gcm, password: J9Y2ncrdPEC38gwydNFFGBna}
-  - {name: 🇬🇧 GB|英国|伦敦|伦敦|19|, server: 102.165.23.42, port: 44539, type: ss, cipher: aes-256-gcm, password: r6hDrkP4Et6EENTS8Qy7Tcmg}
-  - {name: 🇺🇸 US|美国|弗吉尼亚|21|, server: 207.244.67.149, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇺🇸 US|美国|佐治亚|亚特兰大|20|, server: 198.8.92.84, port: 49396, type: ss, cipher: aes-256-gcm, password: BdRWC38L5JUDMTYNNxJGcUwB}
+  - {name: 🇺🇸 US|美国|佛罗里达|2|, server: 198.147.22.87, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
+  - {name: 🇺🇸 US|美国|堪萨斯|4|, server: 143.244.60.162, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
+  - {name: "|5|", server: ss.uk.sshmax.net, port: 1443, type: ss, cipher: chacha20-ietf-poly1305, password: JSvsHhHYIuVG, udp: true}
+  - {name: 🇺🇸 US|美国|佛罗里达|3|, server: 198.147.22.87, port: 31757, type: ss, cipher: aes-256-gcm, password: wj7nDCuNARchSeKNCN8VFK62}
+  - {name: 🇺🇸 US|美国|弗吉尼亚|6|, server: ss.us.sshmax.net, port: 1443, type: ss, cipher: chacha20-ietf-poly1305, password: T3j6elRwEuA4, udp: true}
+  - {name: 🇺🇸 US|美国|弗吉尼亚|7|, server: ss.us.sshmax.net, port: 57478, type: ss, cipher: chacha20-ietf-poly1305, password: syCiJl3nb8OD, udp: true}
+  - {name: 🇺🇸 US|美国|亚马逊|9|, server: ss.de.sshmax.net, port: 21474, type: ss, cipher: chacha20-ietf-poly1305, password: HgCMlgbtQMxl, udp: true}
+  - {name: 🇫🇷 FR|法国|8|, server: ss.fr.sshmax.net, port: 1443, type: ss, cipher: chacha20-ietf-poly1305, password: 6nhHHuGHw2D5, udp: true}
+  - {name: 🇺🇸 US|美国|亚马逊|10|, server: ss.uk.sshmax.net, port: 57478, type: ss, cipher: chacha20-ietf-poly1305, password: HgVDIN05O6bH, udp: true}
+  - {name: 🇺🇸 US|美国|佛罗里达|11|, server: 198.147.22.87, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|2|
-      - 🇺🇸 US|美国|亚马逊|6|
-      - 🇦🇹 AT|奥地利|3|
-      - 🇨🇦 CA|加拿大|魁北克|博阿努瓦|4|
-      - 🇺🇸 US|美国|弗吉尼亚|5|
-      - 🇺🇸 US|美国|弗吉尼亚|8|
-      - 🇺🇸 US|美国|亚马逊|10|
-      - 🇺🇸 US|美国|亚马逊|7|
+      - 🇺🇸 US|美国|佛罗里达|2|
+      - 🇺🇸 US|美国|堪萨斯|4|
+      - "|5|"
+      - 🇺🇸 US|美国|佛罗里达|3|
+      - 🇺🇸 US|美国|弗吉尼亚|6|
+      - 🇺🇸 US|美国|弗吉尼亚|7|
       - 🇺🇸 US|美国|亚马逊|9|
-      - 🇺🇸 US|美国|弗吉尼亚|11|
-      - 🇺🇸 US|美国|弗吉尼亚|14|
-      - 🇺🇸 US|美国|弗吉尼亚|13|
-      - 🇧🇪 BE|比利时|15|
-      - 🇺🇸 US|美国|弗吉尼亚|12|
-      - 🇳🇱 NL|荷兰|北荷兰|16|
-      - 🇫🇮 FI|芬兰|Uusimaa|17|
-      - 🇧🇪 BE|比利时|18|
-      - 🇬🇧 GB|英国|伦敦|伦敦|19|
-      - 🇺🇸 US|美国|弗吉尼亚|21|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|20|
+      - 🇫🇷 FR|法国|8|
+      - 🇺🇸 US|美国|亚马逊|10|
+      - 🇺🇸 US|美国|佛罗里达|11|
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|2|
-      - 🇺🇸 US|美国|亚马逊|6|
-      - 🇦🇹 AT|奥地利|3|
-      - 🇨🇦 CA|加拿大|魁北克|博阿努瓦|4|
-      - 🇺🇸 US|美国|弗吉尼亚|5|
-      - 🇺🇸 US|美国|弗吉尼亚|8|
-      - 🇺🇸 US|美国|亚马逊|10|
-      - 🇺🇸 US|美国|亚马逊|7|
+      - 🇺🇸 US|美国|佛罗里达|2|
+      - 🇺🇸 US|美国|堪萨斯|4|
+      - "|5|"
+      - 🇺🇸 US|美国|佛罗里达|3|
+      - 🇺🇸 US|美国|弗吉尼亚|6|
+      - 🇺🇸 US|美国|弗吉尼亚|7|
       - 🇺🇸 US|美国|亚马逊|9|
-      - 🇺🇸 US|美国|弗吉尼亚|11|
-      - 🇺🇸 US|美国|弗吉尼亚|14|
-      - 🇺🇸 US|美国|弗吉尼亚|13|
-      - 🇧🇪 BE|比利时|15|
-      - 🇺🇸 US|美国|弗吉尼亚|12|
-      - 🇳🇱 NL|荷兰|北荷兰|16|
-      - 🇫🇮 FI|芬兰|Uusimaa|17|
-      - 🇧🇪 BE|比利时|18|
-      - 🇬🇧 GB|英国|伦敦|伦敦|19|
-      - 🇺🇸 US|美国|弗吉尼亚|21|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|20|
+      - 🇫🇷 FR|法国|8|
+      - 🇺🇸 US|美国|亚马逊|10|
+      - 🇺🇸 US|美国|佛罗里达|11|
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|2|
-      - 🇺🇸 US|美国|亚马逊|6|
-      - 🇦🇹 AT|奥地利|3|
-      - 🇨🇦 CA|加拿大|魁北克|博阿努瓦|4|
-      - 🇺🇸 US|美国|弗吉尼亚|5|
-      - 🇺🇸 US|美国|弗吉尼亚|8|
-      - 🇺🇸 US|美国|亚马逊|10|
-      - 🇺🇸 US|美国|亚马逊|7|
+      - 🇺🇸 US|美国|佛罗里达|2|
+      - 🇺🇸 US|美国|堪萨斯|4|
+      - "|5|"
+      - 🇺🇸 US|美国|佛罗里达|3|
+      - 🇺🇸 US|美国|弗吉尼亚|6|
+      - 🇺🇸 US|美国|弗吉尼亚|7|
       - 🇺🇸 US|美国|亚马逊|9|
-      - 🇺🇸 US|美国|弗吉尼亚|11|
-      - 🇺🇸 US|美国|弗吉尼亚|14|
-      - 🇺🇸 US|美国|弗吉尼亚|13|
-      - 🇧🇪 BE|比利时|15|
-      - 🇺🇸 US|美国|弗吉尼亚|12|
-      - 🇳🇱 NL|荷兰|北荷兰|16|
-      - 🇫🇮 FI|芬兰|Uusimaa|17|
-      - 🇧🇪 BE|比利时|18|
-      - 🇬🇧 GB|英国|伦敦|伦敦|19|
-      - 🇺🇸 US|美国|弗吉尼亚|21|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|20|
+      - 🇫🇷 FR|法国|8|
+      - 🇺🇸 US|美国|亚马逊|10|
+      - 🇺🇸 US|美国|佛罗里达|11|
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -112,77 +72,47 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|2|
-      - 🇺🇸 US|美国|亚马逊|6|
-      - 🇦🇹 AT|奥地利|3|
-      - 🇨🇦 CA|加拿大|魁北克|博阿努瓦|4|
-      - 🇺🇸 US|美国|弗吉尼亚|5|
-      - 🇺🇸 US|美国|弗吉尼亚|8|
-      - 🇺🇸 US|美国|亚马逊|10|
-      - 🇺🇸 US|美国|亚马逊|7|
+      - 🇺🇸 US|美国|佛罗里达|2|
+      - 🇺🇸 US|美国|堪萨斯|4|
+      - "|5|"
+      - 🇺🇸 US|美国|佛罗里达|3|
+      - 🇺🇸 US|美国|弗吉尼亚|6|
+      - 🇺🇸 US|美国|弗吉尼亚|7|
       - 🇺🇸 US|美国|亚马逊|9|
-      - 🇺🇸 US|美国|弗吉尼亚|11|
-      - 🇺🇸 US|美国|弗吉尼亚|14|
-      - 🇺🇸 US|美国|弗吉尼亚|13|
-      - 🇧🇪 BE|比利时|15|
-      - 🇺🇸 US|美国|弗吉尼亚|12|
-      - 🇳🇱 NL|荷兰|北荷兰|16|
-      - 🇫🇮 FI|芬兰|Uusimaa|17|
-      - 🇧🇪 BE|比利时|18|
-      - 🇬🇧 GB|英国|伦敦|伦敦|19|
-      - 🇺🇸 US|美国|弗吉尼亚|21|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|20|
+      - 🇫🇷 FR|法国|8|
+      - 🇺🇸 US|美国|亚马逊|10|
+      - 🇺🇸 US|美国|佛罗里达|11|
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|2|
-      - 🇺🇸 US|美国|亚马逊|6|
-      - 🇦🇹 AT|奥地利|3|
-      - 🇨🇦 CA|加拿大|魁北克|博阿努瓦|4|
-      - 🇺🇸 US|美国|弗吉尼亚|5|
-      - 🇺🇸 US|美国|弗吉尼亚|8|
-      - 🇺🇸 US|美国|亚马逊|10|
-      - 🇺🇸 US|美国|亚马逊|7|
+      - 🇺🇸 US|美国|佛罗里达|2|
+      - 🇺🇸 US|美国|堪萨斯|4|
+      - "|5|"
+      - 🇺🇸 US|美国|佛罗里达|3|
+      - 🇺🇸 US|美国|弗吉尼亚|6|
+      - 🇺🇸 US|美国|弗吉尼亚|7|
       - 🇺🇸 US|美国|亚马逊|9|
-      - 🇺🇸 US|美国|弗吉尼亚|11|
-      - 🇺🇸 US|美国|弗吉尼亚|14|
-      - 🇺🇸 US|美国|弗吉尼亚|13|
-      - 🇧🇪 BE|比利时|15|
-      - 🇺🇸 US|美国|弗吉尼亚|12|
-      - 🇳🇱 NL|荷兰|北荷兰|16|
-      - 🇫🇮 FI|芬兰|Uusimaa|17|
-      - 🇧🇪 BE|比利时|18|
-      - 🇬🇧 GB|英国|伦敦|伦敦|19|
-      - 🇺🇸 US|美国|弗吉尼亚|21|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|20|
+      - 🇫🇷 FR|法国|8|
+      - 🇺🇸 US|美国|亚马逊|10|
+      - 🇺🇸 US|美国|佛罗里达|11|
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|2|
-      - 🇺🇸 US|美国|亚马逊|6|
-      - 🇦🇹 AT|奥地利|3|
-      - 🇨🇦 CA|加拿大|魁北克|博阿努瓦|4|
-      - 🇺🇸 US|美国|弗吉尼亚|5|
-      - 🇺🇸 US|美国|弗吉尼亚|8|
-      - 🇺🇸 US|美国|亚马逊|10|
-      - 🇺🇸 US|美国|亚马逊|7|
+      - 🇺🇸 US|美国|佛罗里达|2|
+      - 🇺🇸 US|美国|堪萨斯|4|
+      - "|5|"
+      - 🇺🇸 US|美国|佛罗里达|3|
+      - 🇺🇸 US|美国|弗吉尼亚|6|
+      - 🇺🇸 US|美国|弗吉尼亚|7|
       - 🇺🇸 US|美国|亚马逊|9|
-      - 🇺🇸 US|美国|弗吉尼亚|11|
-      - 🇺🇸 US|美国|弗吉尼亚|14|
-      - 🇺🇸 US|美国|弗吉尼亚|13|
-      - 🇧🇪 BE|比利时|15|
-      - 🇺🇸 US|美国|弗吉尼亚|12|
-      - 🇳🇱 NL|荷兰|北荷兰|16|
-      - 🇫🇮 FI|芬兰|Uusimaa|17|
-      - 🇧🇪 BE|比利时|18|
-      - 🇬🇧 GB|英国|伦敦|伦敦|19|
-      - 🇺🇸 US|美国|弗吉尼亚|21|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|20|
+      - 🇫🇷 FR|法国|8|
+      - 🇺🇸 US|美国|亚马逊|10|
+      - 🇺🇸 US|美国|佛罗里达|11|
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -198,26 +128,16 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|2|
-      - 🇺🇸 US|美国|亚马逊|6|
-      - 🇦🇹 AT|奥地利|3|
-      - 🇨🇦 CA|加拿大|魁北克|博阿努瓦|4|
-      - 🇺🇸 US|美国|弗吉尼亚|5|
-      - 🇺🇸 US|美国|弗吉尼亚|8|
-      - 🇺🇸 US|美国|亚马逊|10|
-      - 🇺🇸 US|美国|亚马逊|7|
+      - 🇺🇸 US|美国|佛罗里达|2|
+      - 🇺🇸 US|美国|堪萨斯|4|
+      - "|5|"
+      - 🇺🇸 US|美国|佛罗里达|3|
+      - 🇺🇸 US|美国|弗吉尼亚|6|
+      - 🇺🇸 US|美国|弗吉尼亚|7|
       - 🇺🇸 US|美国|亚马逊|9|
-      - 🇺🇸 US|美国|弗吉尼亚|11|
-      - 🇺🇸 US|美国|弗吉尼亚|14|
-      - 🇺🇸 US|美国|弗吉尼亚|13|
-      - 🇧🇪 BE|比利时|15|
-      - 🇺🇸 US|美国|弗吉尼亚|12|
-      - 🇳🇱 NL|荷兰|北荷兰|16|
-      - 🇫🇮 FI|芬兰|Uusimaa|17|
-      - 🇧🇪 BE|比利时|18|
-      - 🇬🇧 GB|英国|伦敦|伦敦|19|
-      - 🇺🇸 US|美国|弗吉尼亚|21|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|20|
+      - 🇫🇷 FR|法国|8|
+      - 🇺🇸 US|美国|亚马逊|10|
+      - 🇺🇸 US|美国|佛罗里达|11|
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
