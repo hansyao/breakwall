@@ -205,7 +205,7 @@ pool_rename() {
 		NAME=$(echo ${LINE} | awk -F"\"name\":" '{print $2}' \
 			| awk -F"," '{print $1}'| sed 's/\"//g')
 		
-		local i=$(cat /tmp/total_nodes) + 1
+		local i=$(($(cat /tmp/total_nodes) + 1))
 		NEW_LINE=$(echo ${LINE} \
 		  | sed "s/\"name\":\"${NAME}/\"name\":\"${NAME}\|$[i]\|/g")
 
@@ -273,6 +273,7 @@ multi_pool_rename_pid() {
 # $1 - 源配置文件 $2 - 目标配置文件 $3 - 每个线程队列数最大处理数
 multi_pool_rename_fd() {
 	m=$3
+	cat 0 >/tmp/total_nodes
 
 	START_TIME=$(date +%s)
 	[ -e /tmp/fd1 ] || mkfifo /tmp/fd1
@@ -283,15 +284,15 @@ multi_pool_rename_fd() {
 		echo >&3
 	done
 
-	local i=0
 	cat $1 | while read line || [[ -n ${line} ]]
 	do
 		read -u 3
-		let local i++
 		{
 			LINE=$(pool_rename_line ${line})
 			NAME=$(echo $LINE | awk -F"\"name\":" '{print $2}' \
 				| awk -F"," '{print $1}'| sed 's/\"//g')
+			
+			local i=$(($(cat /tmp/total_nodes) + 1))
 			NEW_LINE=$(echo $LINE \
 				| sed "s/\"name\":\"${NAME}/\"name\":\
 				\"${NAME}\|$i\|/g")
