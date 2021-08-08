@@ -198,7 +198,7 @@ pool_rename_line() {
 
 # 根据地域批量节点服务器重命名
 pool_rename() {
-	i=0
+	local i=0
 	cat $1 | while read line || [[ -n ${line} ]]
 	do
 		LINE=$(pool_rename_line ${line})
@@ -206,14 +206,14 @@ pool_rename() {
 		NAME=$(echo ${LINE} | awk -F"\"name\":" '{print $2}' \
 			| awk -F"," '{print $1}'| sed 's/\"//g')
 	
-		let i++
+		let local i++
 		NEW_LINE=$(echo ${LINE} \
 		  | sed "s/\"name\":\"${NAME}/\"name\":\"${NAME}\|$i\|/g")
 
 		echo ${NEW_LINE} >> $2
 	done
-
-	unset i
+	
+	unset local i
 	unset LINE
 	unset NAME
 	unset NEW_LINE
@@ -248,12 +248,12 @@ multi_pool_rename_pid() {
 
 	wait
 
-	i=1
+	local i=1
 	#echo "proxies:" > $1 
 	while [ $[i] -le $[n] ]
 	do
 		cat ${TEMP}/FINAL-$[i].yaml >> $2
-		let i++
+		let local i++
 	done
 
 	rm -rf ${TEMP}
@@ -266,7 +266,7 @@ multi_pool_rename_pid() {
 	unset n
 	unset START_TIME
 	unset TEMP
-	unset i
+	unset local i
 	unset STOP_TIME
 }
 
@@ -285,11 +285,11 @@ multi_pool_rename_fd() {
 		echo >&3
 	done
 
-	i=0
+	local i=0
 	cat $1 | while read line || [[ -n ${line} ]]
 	do
 		read -u 3
-		let i++
+		let local i++
 		{
 			LINE=$(pool_rename_line ${line})
 			NAME=$(echo $LINE | awk -F"\"name\":" '{print $2}' \
@@ -313,7 +313,7 @@ multi_pool_rename_fd() {
 	
 	unset m
 	unset START_TIME
-	unset i
+	unset local i
 	unset LINE
 	unset NAME
 	unset NEW_LINE
