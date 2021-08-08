@@ -198,22 +198,20 @@ pool_rename_line() {
 
 # 根据地域批量节点服务器重命名
 pool_rename() {
-	local i=0
 	cat $1 | while read line || [[ -n ${line} ]]
 	do
 		LINE=$(pool_rename_line ${line})
 
 		NAME=$(echo ${LINE} | awk -F"\"name\":" '{print $2}' \
 			| awk -F"," '{print $1}'| sed 's/\"//g')
-	
-		let local i++
+		
+		local i=$(cat /tmp/total_nodes) + 1
 		NEW_LINE=$(echo ${LINE} \
-		  | sed "s/\"name\":\"${NAME}/\"name\":\"${NAME}\|$i\|/g")
+		  | sed "s/\"name\":\"${NAME}/\"name\":\"${NAME}\|$[i]\|/g")
 
 		echo ${NEW_LINE} >> $2
 	done
 	
-	unset local i
 	unset LINE
 	unset NAME
 	unset NEW_LINE
@@ -229,7 +227,7 @@ multi_pool_rename_pid() {
 
 	START_TIME=$(date +%s)
 
-
+	cat 0 >/tmp/total_nodes
 	TEMP=tmp
 	rm -rf ${TEMP}
 	mkdir ${TEMP}
