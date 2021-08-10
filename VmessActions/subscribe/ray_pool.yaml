@@ -5,784 +5,1050 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇦🇺 AU|澳大利亚|841|, server: www.freetouchor.xyz, port: 443, type: trojan, password: mima0.0.000, skip-cert-verify: true, udp: true}
-  - {name: 🇨🇦 CA|加拿大|魁北克|蒙特利尔|105|, server: 67.219.137.218, port: 25113, type: trojan, password: KbKHH46F6biGX3u5, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US|美国|加利福尼亚|112|, server: 104.245.96.158, port: 61173, type: vmess, uuid: 9d1043a6-e87e-4bb7-8858-c1185e9c0c3b, alterId: 8, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇯🇵 JP|日本|大阪府|大阪|119|, server: c39s4.jamjams.net, port: 10606, type: vmess, uuid: c474da00-e28b-40b0-8356-8f62e5eb71e2, alterId: 8, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇯🇵 JP|日本|东京都|东京|亚马逊|892|, server: d0a8692.t1.gladns.com, port: 3306, type: vmess, uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0, alterId: 32, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /s/d0a8692.fm.apple.com:32667, ws-headers: {Host: d0a8692.t1.gladns.com}}
-  - {name: 🇯🇵 JP|日本|东京都|东京|亚马逊|899|, server: d0a8692.hc.gladns.com, port: 3306, type: vmess, uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0, alterId: 32, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /s/d0a8692.fm.apple.com:32667, ws-headers: {Host: d0a8692.hc.gladns.com}}
-  - {name: 🇯🇵 JP|日本|东京都|东京|亚马逊|907|, server: d0a8692.t3.gladns.com, port: 3306, type: vmess, uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0, alterId: 32, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /s/d0a8692.fm.apple.com:32667, ws-headers: {Host: d0a8692.t3.gladns.com}}
-  - {name: 🇯🇵 JP|日本|东京都|东京|亚马逊|916|, server: d0a8692.hd.gladns.com, port: 3306, type: vmess, uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0, alterId: 32, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /s/d0a8692.fm.apple.com:32667, ws-headers: {Host: d0a8692.hd.gladns.com}}
-  - {name: 🇯🇵 JP|日本|东京都|东京|亚马逊|923|, server: d0a8692.hf.gladns.com, port: 3306, type: vmess, uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0, alterId: 32, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /s/d0a8692.fm.apple.com:32667, ws-headers: {Host: d0a8692.hf.gladns.com}}
-  - {name: 🇯🇵 JP|日本|东京都|东京|亚马逊|930|, server: d0a8692.he.gladns.com, port: 3306, type: vmess, uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0, alterId: 32, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /s/d0a8692.fm.apple.com:32667, ws-headers: {Host: d0a8692.he.gladns.com}}
-  - {name: 🇯🇵 JP|日本|东京都|东京|亚马逊|951|, server: d0a8692.ha.gladns.com, port: 3306, type: vmess, uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0, alterId: 32, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /s/d0a8692.fm.apple.com:32667, ws-headers: {Host: d0a8692.ha.gladns.com}}
-  - {name: 🇯🇵 JP|日本|东京都|东京|亚马逊|957|, server: d0a8692.hb.gladns.com, port: 3306, type: vmess, uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0, alterId: 32, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /s/d0a8692.fm.apple.com:32667, ws-headers: {Host: d0a8692.hb.gladns.com}}
-  - {name: 🇩🇪 DE|德国|法兰克福|法兰克福|亚马逊|62|, server: 18.193.122.123, port: 25275, type: vmess, uuid: eebfe76a-c71f-49e4-f983-983384d5dadf, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇩🇪 DE|德国|HE|Hesse|法兰克福|Melbikomas UAB|69|, server: 213.226.71.146, port: 49004, type: vmess, uuid: 77294cd4-e244-4b2b-d337-4fd1cd8ad3e5, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇺🇸 US|美国|亚马逊|76|, server: 18.157.179.71, port: 443, type: vmess, uuid: 81dd574d-8d47-4b31-9f5a-3f638b427842, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇩🇪 DE|德国|98|, server: 194.195.124.174, port: 4443, type: trojan, password: 7x42LetRa0, skip-cert-verify: true, udp: true}
-  - {name: 🇬🇧 GB|英国|伦敦|伦敦|亚马逊|17|, server: 3.8.89.83, port: 35017, type: vmess, uuid: 0457b5ce-79ea-4369-c2a0-ae793ccced13, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇬🇧 GB|英国|伦敦|伦敦|亚马逊|35|, server: 35.178.68.152, port: 47611, type: vmess, uuid: 97a4d167-b361-48b8-b004-8bc45669e334, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇬🇧 GB|英国|伦敦|伦敦|44|, server: 5.183.102.142, port: 14420, type: vmess, uuid: 9984501d-e80a-4144-c6bd-2503fb49872d, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇩🇪 ES|西班牙|马德里|马德里|51|, server: 5.183.103.196, port: 57801, type: vmess, uuid: 337ae850-ba0b-4647-e9b7-a222dc09b0dc, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇺🇸 US|美国|马萨诸塞|亚马逊|804|, server: 18.166.69.249, port: 44334, type: vmess, uuid: 3b6d56a7-8e76-408e-c885-5a1bb4413e85, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 18.166.69.249}}
-  - {name: 🇺🇸 US|美国|亚马逊|1|, server: 18.162.149.17, port: 44334, type: vmess, uuid: 2e4f069d-300a-4055-857c-f9bd785935b3, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 18.162.149.17}}
-  - {name: 🇭🇰 HK|中国|香港|微软|8|, server: anycast.live.hk-b.starseadata.com, port: 44817, type: vmess, uuid: 1fc889fc-cd4d-4925-97f7-ff182bd73ded, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: anycast.live.hk-b.starseadata.com}}
-  - {name: 🇭🇰 HK|中国|香港|微软|28|, server: anycast.live.hk-b.starseadata.com, port: 41370, type: vmess, uuid: 1fc889fc-cd4d-4925-97f7-ff182bd73ded, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: anycast.live.hk-b.starseadata.com}}
-  - {name: 🇮🇱 IL|以色列|1788|, server: 212.80.205.133, port: 31262, type: vmess, uuid: 00415a68-d5eb-4573-b73e-2b21f6b45c5d, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇺🇸 US|美国|纽约|纽约|2959|, server: 167.71.235.142, port: 44334, type: vmess, uuid: 927f8a2a-f2db-499b-e0f0-b1e344508546, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 167.71.235.142}}
-  - {name: 🇮🇳 IN|印度|卡纳塔克|班加罗尔|3014|, server: in1-1.noojat.com, port: 1443, type: trojan, password: 7x42LetRa0, skip-cert-verify: true, udp: true}
-  - {name: 🇮🇹 IT|意大利|Palermo|558|, server: 91.201.65.42, port: 27104, type: vmess, uuid: 1889fa38-619f-4ec3-bdf5-ace28ff82362, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇯🇵 JP|日本|东京都|东京|亚马逊|137|, server: kddi.zeroyyds.cc, port: 80, type: vmess, uuid: e6d14923-99e3-4e4d-8dd3-65968a21114b, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: kddi.zeroyyds.cc}}
-  - {name: 🇯🇵 JP|日本|东京都|东京|亚马逊|143|, server: 52.198.131.234, port: 44334, type: vmess, uuid: 45c88021-cfc7-4beb-946f-d2748a6b01b2, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 52.198.131.234}}
-  - {name: 🇯🇵 JP|日本|东京都|东京|151|, server: auto.freev2.top, port: 34711, type: vmess, uuid: 1ddb096d-fec7-4711-be1a-c2d5a2fc50fe, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇺🇸 US|美国|康涅狄格|亚马逊|157|, server: 13.208.173.61, port: 80, type: vmess, uuid: e1aa83ff-b8b5-41b8-a854-fdcd3faa8875, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 13.208.173.61}}
-  - {name: 🇯🇵 JP|日本|东京都|东京|亚马逊|165|, server: japan.mini.00001.zeroyyds.cc, port: 80, type: vmess, uuid: e6d14923-99e3-4e4d-8dd3-65968a21114b, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: japan.mini.00001.zeroyyds.cc}}
-  - {name: 🇺🇸 US|美国|加利福尼亚|层峰网络|172|, server: usa3-node.3366test.com, port: 13723, type: vmess, uuid: a90597c1-bab3-4217-ad6f-0838675c8633, alterId: 10, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /ray, ws-headers: {Host: usa3-node.3366test.com}}
-  - {name: 🇰🇷 KR|韩国|首尔|首尔|亚马逊|745|, server: 52.79.60.0, port: 29254, type: vmess, uuid: de4b1aef-e578-4855-ef63-6753345f05de, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 52.79.60.0}}
-  - {name: 🇰🇷 KR|韩国|首尔|首尔|亚马逊|761|, server: 52.79.60.0, port: 44223, type: vmess, uuid: 8b409727-b3e2-4e1f-b237-12b34cfb46e3, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 52.79.60.0}}
-  - {name: 🇺🇸 US|美国|康涅狄格|亚马逊|798|, server: 13.209.43.110, port: 56531, type: vmess, uuid: dca7cafb-0828-465c-b6e7-812b241ad538, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|348|, server: 46.182.107.151, port: 443, type: vmess, uuid: f5250c4e-f855-4eff-b73c-a02226d42fe7, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.151}}
-  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|356|, server: 46.182.107.152, port: 443, type: vmess, uuid: f5250c4e-f855-4eff-b73c-a02226d42fe7, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.152}}
-  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|364|, server: 5.180.79.11, port: 27449, type: vmess, uuid: 0cd64346-cd8d-4306-c256-05e12c76d5a5, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|372|, server: 46.182.107.97, port: 443, type: vmess, uuid: 6e79eea4-5f72-4683-ad0e-5339f013421b, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.97}}
-  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|380|, server: 46.182.107.93, port: 443, type: vmess, uuid: 743bdc87-1dea-41bf-aa0b-51dfbbfec8aa, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.93}}
-  - {name: 🇭🇰 HK|中国|香港|386|, server: 154.84.1.10, port: 443, type: vmess, uuid: bcca23ea-be73-4caf-b143-cbab2be93145, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 154.84.1.10}}
-  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|392|, server: 46.182.107.3, port: 443, type: vmess, uuid: bcca23ea-be73-4caf-b143-cbab2be93145, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.3}}
-  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|399|, server: 46.182.107.81, port: 443, type: vmess, uuid: 37c29f42-b7c7-40c7-9da9-743dcc4895bc, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.81}}
-  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|405|, server: 46.182.107.82, port: 443, type: vmess, uuid: 37c29f42-b7c7-40c7-9da9-743dcc4895bc, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.82}}
-  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|412|, server: 46.182.107.36, port: 443, type: vmess, uuid: 65ea6727-4461-47a7-a5c4-fef2c67f2f79, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.36}}
-  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|418|, server: 46.182.107.94, port: 443, type: vmess, uuid: 743bdc87-1dea-41bf-aa0b-51dfbbfec8aa, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.94}}
-  - {name: 🇭🇰 HK|中国|香港|425|, server: 154.84.1.106, port: 443, type: vmess, uuid: 37c29f42-b7c7-40c7-9da9-743dcc4895bc, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 154.84.1.106}}
-  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|431|, server: 46.182.107.45, port: 443, type: vmess, uuid: fe5f69e7-e183-439b-950b-9661ef0651f2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.45}}
-  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|440|, server: 46.182.107.146, port: 443, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca4690dd24, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.146}}
-  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|449|, server: 46.182.107.157, port: 443, type: vmess, uuid: 20b30916-e203-412e-8ec0-900f3acd5128, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.157}}
-  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|457|, server: 46.182.107.148, port: 443, type: vmess, uuid: 1d474f0b-e78d-4af9-bc4a-a467467bc7a7, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.148}}
-  - {name: 🇭🇰 HK|中国|香港|464|, server: 154.84.1.147, port: 443, type: vmess, uuid: bcca23ea-be73-4caf-b143-cbab2be93145, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 154.84.1.147}}
-  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|471|, server: 46.182.107.165, port: 443, type: vmess, uuid: d3133484-f2bf-4b0c-8d38-f8e645b65687, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.165}}
-  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|477|, server: 46.182.107.154, port: 443, type: vmess, uuid: 130c9f2e-42b1-4ebf-b345-e26456a061f9, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.154}}
-  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|483|, server: 46.182.107.39, port: 443, type: vmess, uuid: d3133484-f2bf-4b0c-8d38-f8e645b65687, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.39}}
-  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|491|, server: 46.182.107.150, port: 443, type: vmess, uuid: f5250c4e-f855-4eff-b73c-a02226d42fe7, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.150}}
-  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|499|, server: 46.182.107.44, port: 443, type: vmess, uuid: fe5f69e7-e183-439b-950b-9661ef0651f2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.44}}
-  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|507|, server: 46.182.107.37, port: 443, type: vmess, uuid: 65ea6727-4461-47a7-a5c4-fef2c67f2f79, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.37}}
-  - {name: 🇳🇱 NL|荷兰|Flevoland|545|, server: 5.2.67.108, port: 17105, type: trojan, password: 13844906-ae35-3a91-a98a-a90b823abe88, skip-cert-verify: true, udp: true}
-  - {name: 🇷🇺 RU|俄罗斯|莫斯科|莫斯科|600|, server: 45.11.92.139, port: 10121, type: vmess, uuid: c2b9c453-0c2f-487d-ab1a-d45d17dde4f5, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 45.11.92.139}}
-  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|630|, server: 185.246.154.76, port: 18019, type: vmess, uuid: 7d00ead2-b08a-46d4-80c9-c642d8a9790a, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇷🇺 RU|俄罗斯|莫斯科|莫斯科|636|, server: 195.133.49.216, port: 52333, type: vmess, uuid: 475e7113-a34c-455a-e2a4-1ec8ec930108, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 195.133.49.216}}
-  - {name: 🇩🇪 SE|瑞典|斯德哥尔摩|亚马逊|415|, server: 13.49.246.208, port: 443, type: vmess, uuid: df055ea2-4d3a-445e-977d-8e958abaad3a, alterId: 2, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /xamjyss143/, ws-headers: {Host: 13.49.246.208}}
-  - {name: 🇸🇬 SG|新加坡|341|, server: 68.183.182.145, port: 44334, type: vmess, uuid: 3752ec00-90d7-4c9e-986a-869981537e15, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 68.183.182.145}}
-  - {name: 🇹🇷 TR|土耳其|Bursa|841|, server: 185.247.138.25, port: 15079, type: vmess, uuid: a1d846ec-9bef-4ffd-e34a-43bb06323ac3, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇹🇷 TR|土耳其|858|, server: 193.31.116.230, port: 48003, type: vmess, uuid: 4d274187-109a-44df-bb55-b2c84eb03ba7, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇯🇵 JP|日本|东京都|东京|亚马逊|1471|, server: d0a8692.rb.gladns.com, port: 80, type: vmess, uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0, alterId: 32, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /s/d0a8692.fm.apple.com:32667, ws-headers: {Host: d0a8692.rb.gladns.com}}
-  - {name: 🇯🇵 JP|日本|东京都|东京|亚马逊|1479|, server: d0a8692.rc.gladns.com, port: 80, type: vmess, uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0, alterId: 32, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /s/d0a8692.fm.apple.com:32667, ws-headers: {Host: d0a8692.rc.gladns.com}}
-  - {name: 🇯🇵 JP|日本|东京都|东京|亚马逊|1492|, server: d0a8692.rf.gladns.com, port: 80, type: vmess, uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0, alterId: 32, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /s/d0a8692.fm.apple.com:32667, ws-headers: {Host: d0a8692.rf.gladns.com}}
-  - {name: 🇯🇵 JP|日本|东京都|东京|亚马逊|1499|, server: d0a8692.re.gladns.com, port: 80, type: vmess, uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0, alterId: 32, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /s/d0a8692.fm.apple.com:32667, ws-headers: {Host: d0a8692.re.gladns.com}}
-  - {name: 🇯🇵 JP|日本|东京都|东京|亚马逊|1514|, server: d0a8692.ra.gladns.com, port: 80, type: vmess, uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0, alterId: 32, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /s/d0a8692.fm.apple.com:32667, ws-headers: {Host: d0a8692.ra.gladns.com}}
-  - {name: 🇺🇸 US|美国|加利福尼亚|12|, server: 72.44.74.98, port: 443, type: vmess, uuid: 81295af2-bcd2-0d7e-8bc4-f1367049cf95, alterId: 1, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /gafnvws, ws-headers: {Host: 72.44.74.98}}
-  - {name: 🇺🇸 US|美国|加利福尼亚|20|, server: 96.43.91.59, port: 443, type: vmess, uuid: 3bfb43e2-7dfe-4757-86ee-1ce9fb9fd13a, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /path/310910211916, ws-headers: {Host: 96.43.91.59}}
-  - {name: 🇺🇸 US|美国|加利福尼亚|27|, server: 193.42.96.98, port: 30104, type: vmess, uuid: c7d03e59-8fff-463e-9589-9f8099d3e366, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇺🇸 US|美国|加利福尼亚|层峰网络|33|, server: usa5b-node.3366test.com, port: 13723, type: vmess, uuid: a90597c1-bab3-4217-ad6f-0838675c8634, alterId: 10, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: ray, ws-headers: {Host: usa5b-node.3366test.com}}
-  - {name: 🇺🇸 US|美国|加利福尼亚|38|, server: 198.211.3.154, port: 443, type: vmess, uuid: 3bfb43e2-7dfe-4757-86ee-1ce9fb9fd13a, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /path/310910211916, ws-headers: {Host: 198.211.3.154}}
-  - {name: 🇺🇸 US|美国|加利福尼亚|层峰网络|47|, server: 104.251.233.106, port: 13723, type: vmess, uuid: a90597c1-bab3-4217-ad6f-0838675c8638, alterId: 10, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /ray, ws-headers: {Host: 104.251.233.106}}
-  - {name: 🇺🇸 US|美国|加利福尼亚|层峰网络|56|, server: 128.14.157.112, port: 13723, type: vmess, uuid: a90597c1-bab3-4217-ad6f-0838675c8634, alterId: 10, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /ray, ws-headers: {Host: 128.14.157.112}}
-  - {name: 🇺🇸 US|美国|加利福尼亚|费利蒙|64|, server: 23.83.227.244, port: 61173, type: vmess, uuid: 9d1043a6-e87e-4bb7-8858-c1185e9c0c3b, alterId: 8, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇺🇸 US|美国|加利福尼亚|73|, server: nn-ssr24.feiclouddd.me, port: 443, type: vmess, uuid: 94d3ddba-3c75-4ddd-84c5-b859a30b1fb9, alterId: 60, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /dsafasdf, ws-headers: {Host: nn-ssr24.feiclouddd.me}}
-  - {name: 🇺🇸 US|美国|加利福尼亚|80|, server: www.92726054.xyz, port: 443, type: vmess, uuid: d3cbe556-8db3-47e0-8ef1-06b2cce00411, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /path/310910211916, ws-headers: {Host: www.92726054.xyz}}
-  - {name: 🇺🇸 US|美国|加利福尼亚|87|, server: www.17080100.xyz, port: 443, type: vmess, uuid: 2566d00f-218c-48f7-9a36-13d3d6f1a724, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /path/310910211916, ws-headers: {Host: www.17080100.xyz}}
-  - {name: 🇺🇸 US|美国|加利福尼亚|94|, server: 96.43.91.58, port: 443, type: vmess, uuid: 3bfb43e2-7dfe-4757-86ee-1ce9fb9fd13a, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /path/310910211916, ws-headers: {Host: 96.43.91.58}}
-  - {name: 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|101|, server: 52.53.159.192, port: 80, type: vmess, uuid: e1aa83ff-b8b5-41b8-a854-fdcd3faa8875, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 52.53.159.192}}
-  - {name: 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|109|, server: 54.151.33.166, port: 80, type: vmess, uuid: e1aa83ff-b8b5-41b8-a854-fdcd3faa8875, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 54.151.33.166}}
-  - {name: 🇺🇸 US|美国|华盛顿|亚马逊|116|, server: a3f9de24309558b0c.awsglobalaccelerator.com, port: 24648, type: vmess, uuid: c2b9c453-0c2f-487d-ab1a-d45d17dde4f5, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: a3f9de24309558b0c.awsglobalaccelerator.com}}
-  - {name: 🇺🇸 US|美国|CloudFlare|122|, server: euserv12p.ezddns.tk, port: 80, type: vmess, uuid: c0304bc1-f8ff-4108-9bc6-3415d16ae5e3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /video, ws-headers: {Host: euserv12p.ezddns.tk}}
-  - {name: 🇺🇸 US|美国|CloudFlare|129|, server: euserv18p.ezddns.tk, port: 80, type: vmess, uuid: 344c0b7d-2c35-4c95-8481-e2fc3c456a06, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /audio.mp3, ws-headers: {Host: euserv18p.ezddns.tk}}
-  - {name: 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|137|, server: 54.183.244.5, port: 80, type: vmess, uuid: e1aa83ff-b8b5-41b8-a854-fdcd3faa8875, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 54.183.244.5}}
-  - {name: 🇺🇸 US|美国|加利福尼亚|旧金山|144|, server: 172.67.182.11, port: 443, type: vmess, uuid: e1aa83ff-b8b5-41b8-a854-fdcd3faa8875, alterId: 1, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 172.67.182.11}}
-  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|151|, server: 164.90.204.216, port: 80, type: vmess, uuid: e1aa83ff-b8b5-41b8-a854-fdcd3faa8875, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 164.90.204.216}}
-  - {name: 🇺🇸 US|美国|佐治亚|亚特兰大|158|, server: 15.152.41.22, port: 80, type: vmess, uuid: e1aa83ff-b8b5-41b8-a854-fdcd3faa8875, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 15.152.41.22}}
-  - {name: 🇺🇸 US|美国|加利福尼亚|167|, server: 23.224.30.37, port: 443, type: vmess, uuid: e4494518-74e8-4d6b-942a-6b332cce09ef, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /path/310910211916, ws-headers: {Host: 23.224.30.37}}
-  - {name: 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|175|, server: us-01.yinriver.top, port: 80, type: vmess, uuid: e1aa83ff-b8b5-41b8-a854-fdcd3faa8875, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: us-01.yinriver.top}}
-  - {name: 🇺🇸 US|美国|加利福尼亚|费利蒙|181|, server: c23s801.jamjams.net, port: 61173, type: vmess, uuid: 9d1043a6-e87e-4bb7-8858-c1185e9c0c3b, alterId: 8, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇺🇸 US|美国|CloudFlare|188|, server: 104.21.67.220, port: 443, type: vmess, uuid: e1aa83ff-b8b5-41b8-a854-fdcd3faa8875, alterId: 1, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 104.21.67.220}}
-  - {name: 🇺🇸 US|美国|加利福尼亚|195|, server: c23s3.jamjams.net, port: 61173, type: vmess, uuid: 9d1043a6-e87e-4bb7-8858-c1185e9c0c3b, alterId: 8, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇺🇸 US|美国|加利福尼亚|203|, server: 23.224.30.36, port: 443, type: vmess, uuid: e4494518-74e8-4d6b-942a-6b332cce09ef, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /path/310910211916, ws-headers: {Host: 23.224.30.36}}
-  - {name: 🇺🇸 US|美国|加利福尼亚|210|, server: 96.43.91.60, port: 443, type: vmess, uuid: 3bfb43e2-7dfe-4757-86ee-1ce9fb9fd13a, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /path/310910211916, ws-headers: {Host: 96.43.91.60}}
-  - {name: 🇺🇸 US|美国|弗吉尼亚|阿什本|亚马逊|217|, server: v2raylpc.herokuapp.com, port: 443, type: vmess, uuid: ad806487-2d26-4636-98b6-ab85cc8521f7, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: v2raylpc.herokuapp.com}}
-  - {name: 🇩🇪 US|美国|德克萨斯|休斯顿|224|, server: 16.162.191.144, port: 44334, type: vmess, uuid: c8931063-7412-4635-b78e-0337804ee308, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 16.162.191.144}}
-  - {name: 🇩🇪 US|美国|德克萨斯|休斯顿|230|, server: 16.162.103.183, port: 44334, type: vmess, uuid: 49f7c16f-1607-4dd3-8d53-878d682fb406, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 16.162.103.183}}
-  - {name: 🇺🇸 US|美国|纽约|纽约|237|, server: 161.35.216.140, port: 44334, type: vmess, uuid: c2677816-0c3b-465f-eb2c-2b5b2edfc7fb, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 161.35.216.140}}
+  - {name: 🇺🇸 US|美国|CloudFlare|1155|, server: euserv6p.ezddns.tk, port: 80, type: vmess, uuid: 499737a4-9f18-4e1f-fb38-437e1855fc04, alterId: 0, cipher: auto, tls: false, network: ws, ws-path: /video, ws-headers: {Host: euserv6p.ezddns.tk}, udp: true}
+  - {name: 🇦🇺 AU|澳大利亚|CloudFlare|5869|, server: 1.0.0.0, port: 443, type: vmess, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 1.0.0.0}}
+  - {name: 🇦🇺 AU|澳大利亚|5890|, server: www.freetouchor.xyz, port: 443, type: trojan, password: mima0.0.000, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 US|美国|加利福尼亚|2087|, server: 104.245.96.158, port: 61173, type: vmess, uuid: 9d1043a6-e87e-4bb7-8858-c1185e9c0c3b, alterId: 8, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: 🇯🇵 JP|日本|大阪府|大阪|2094|, server: 204.124.181.217, port: 61173, type: vmess, uuid: 9d1043a6-e87e-4bb7-8858-c1185e9c0c3b, alterId: 8, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: 🇨🇦 CA|加拿大|魁北克|蒙特利尔|2101|, server: 67.219.137.218, port: 25113, type: trojan, password: KbKHH46F6biGX3u5, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 JP|日本|大阪府|大阪|2122|, server: c39s4.jamjams.net, port: 10606, type: vmess, uuid: c474da00-e28b-40b0-8356-8f62e5eb71e2, alterId: 8, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: 🇨🇦 CA|加拿大|安大略|奥克维尔|2129|, server: 165.154.234.111, port: 41182, type: vmess, uuid: 610a5731-123c-4e8d-8f82-2d96459e42f5, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: 🇯🇵 JP|日本|东京都|东京|亚马逊|2955|, server: d0a8692.t2.gladns.com, port: 3306, type: vmess, uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0, alterId: 32, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /s/d0a8692.fm.apple.com:32667, ws-headers: {Host: d0a8692.t2.gladns.com}}
+  - {name: 🇯🇵 JP|日本|东京都|东京|亚马逊|2962|, server: d0a8692.hf.gladns.com, port: 3306, type: vmess, uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0, alterId: 32, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /s/d0a8692.fm.apple.com:32667, ws-headers: {Host: d0a8692.hf.gladns.com}}
+  - {name: 🇯🇵 JP|日本|东京都|东京|亚马逊|2969|, server: d0a8692.hd.gladns.com, port: 3306, type: vmess, uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0, alterId: 32, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /s/d0a8692.fm.apple.com:32667, ws-headers: {Host: d0a8692.hd.gladns.com}}
+  - {name: 🇯🇵 JP|日本|东京都|东京|亚马逊|2976|, server: d0a8692.he.gladns.com, port: 3306, type: vmess, uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0, alterId: 32, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /s/d0a8692.fm.apple.com:32667, ws-headers: {Host: d0a8692.he.gladns.com}}
+  - {name: 🇩🇪 DE|德国|HE|Hesse|法兰克福|Melbikomas UAB|148|, server: 213.226.71.146, port: 49004, type: vmess, uuid: 77294cd4-e244-4b2b-d337-4fd1cd8ad3e5, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: 🇺🇸 US|美国|佐治亚|亚特兰大|155|, server: 64.225.107.38, port: 44334, type: vmess, uuid: 013c0a7f-6b25-416f-d496-98611ea46c4f, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 64.225.107.38}}
+  - {name: 🇩🇪 DE|德国|法兰克福|法兰克福|亚马逊|165|, server: 18.193.122.123, port: 25275, type: vmess, uuid: eebfe76a-c71f-49e4-f983-983384d5dadf, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: 🇩🇪 DE|德国|199|, server: 194.195.124.174, port: 4443, type: trojan, password: 7x42LetRa0, skip-cert-verify: true, udp: true}
+  - {name: 🇬🇧 GB|英国|伦敦|伦敦|亚马逊|550|, server: 3.8.89.83, port: 35017, type: vmess, uuid: 0457b5ce-79ea-4369-c2a0-ae793ccced13, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: 🇬🇧 GB|英国|伦敦|伦敦|573|, server: 5.183.102.142, port: 14420, type: vmess, uuid: 9984501d-e80a-4144-c6bd-2503fb49872d, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: 🇩🇪 ES|西班牙|马德里|马德里|588|, server: 5.183.103.196, port: 57801, type: vmess, uuid: 337ae850-ba0b-4647-e9b7-a222dc09b0dc, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: 🇺🇸 US|美国|亚马逊|1840|, server: 18.162.149.17, port: 44334, type: vmess, uuid: 2e4f069d-300a-4055-857c-f9bd785935b3, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 18.162.149.17}}
+  - {name: 🇺🇸 US|美国|亚马逊|1857|, server: jb.wocaonimabi666.xyz, port: 59113, type: vmess, uuid: c7a50d0c-9e90-41cb-912e-fcc4b68af7ff, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: 🇺🇸 US|美国|亚马逊|1864|, server: jb.wocaonimabi666.xyz, port: 21384, type: vmess, uuid: c099175e-70e6-40cb-f431-b6ba475978d3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: 🇺🇸 US|美国|亚马逊|1873|, server: jb.wocaonimabi666.xyz, port: 16668, type: vmess, uuid: 6e351ded-1fc1-48f6-9f11-8c1d9621edd6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: 🇺🇸 US|美国|亚马逊|1881|, server: jb.wocaonimabi666.xyz, port: 48258, type: vmess, uuid: 5080a95a-27b6-441f-8cee-a6e2ba5c780a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: 🇺🇸 US|美国|亚马逊|1888|, server: jb.wocaonimabi666.xyz, port: 35407, type: vmess, uuid: b3342b04-7da5-400f-c897-1f999a2e446b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: 🇺🇸 US|美国|马萨诸塞|亚马逊|1893|, server: 18.166.69.249, port: 44334, type: vmess, uuid: 3b6d56a7-8e76-408e-c885-5a1bb4413e85, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 18.166.69.249}}
+  - {name: 🇺🇸 US|美国|亚马逊|1899|, server: jb.wocaonimabi666.xyz, port: 14615, type: vmess, uuid: d1305fa0-5d4e-4f8c-d840-301563800e45, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: 🇺🇸 US|美国|亚马逊|1908|, server: jb.wocaonimabi666.xyz, port: 29263, type: vmess, uuid: 505814ca-96c6-4259-da70-f8ae33d81197, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: 🇭🇰 HK|中国|香港|微软|1938|, server: anycast.live.hk-b.starseadata.com, port: 44817, type: vmess, uuid: 1fc889fc-cd4d-4925-97f7-ff182bd73ded, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: anycast.live.hk-b.starseadata.com}}
+  - {name: 🇺🇸 US|美国|亚马逊|1962|, server: jb.wocaonimabi666.xyz, port: 35715, type: vmess, uuid: a47a5806-797f-4395-dce0-b1b3385949e2, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: 🇮🇱 IL|以色列|3755|, server: 212.80.205.133, port: 31262, type: vmess, uuid: 00415a68-d5eb-4573-b73e-2b21f6b45c5d, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: 🇺🇸 US|美国|纽约|纽约|4884|, server: 167.71.235.142, port: 44334, type: vmess, uuid: 927f8a2a-f2db-499b-e0f0-b1e344508546, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 167.71.235.142}}
+  - {name: 🇮🇳 IN|印度|卡纳塔克|班加罗尔|4931|, server: in1-1.noojat.com, port: 1443, type: trojan, password: 7x42LetRa0, skip-cert-verify: true, udp: true}
+  - {name: 🇮🇹 IT|意大利|Palermo|1658|, server: 91.201.65.42, port: 27104, type: vmess, uuid: 1889fa38-619f-4ec3-bdf5-ace28ff82362, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: 🇯🇵 JP|日本|东京都|东京|2135|, server: auto.freev2.top, port: 34711, type: vmess, uuid: 1ddb096d-fec7-4711-be1a-c2d5a2fc50fe, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: 🇯🇵 JP|日本|东京都|东京|亚马逊|2142|, server: 52.198.131.234, port: 44334, type: vmess, uuid: 45c88021-cfc7-4beb-946f-d2748a6b01b2, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 52.198.131.234}}
+  - {name: 🇺🇸 US|美国|康涅狄格|亚马逊|2148|, server: 13.208.173.61, port: 80, type: vmess, uuid: e1aa83ff-b8b5-41b8-a854-fdcd3faa8875, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 13.208.173.61}}
+  - {name: 🇯🇵 JP|日本|东京都|东京|亚马逊|2155|, server: jp-1.azure.v2ray.ikuuu.pro, port: 448, type: vmess, uuid: 3c7919b0-87bd-3399-abd2-a79cd334c0c2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /hls/cctv5phd.m3u8, ws-headers: {Host: jp-1.azure.v2ray.ikuuu.pro}}
+  - {name: 🇺🇸 US|美国|加利福尼亚|层峰网络|2162|, server: usa3-node.3366test.com, port: 13723, type: vmess, uuid: a90597c1-bab3-4217-ad6f-0838675c8633, alterId: 10, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /ray, ws-headers: {Host: usa3-node.3366test.com}}
+  - {name: 🇯🇵 JP|日本|东京都|东京|亚马逊|2169|, server: japan.mini.00001.zeroyyds.cc, port: 80, type: vmess, uuid: e6d14923-99e3-4e4d-8dd3-65968a21114b, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: japan.mini.00001.zeroyyds.cc}}
+  - {name: 🇯🇵 JP|日本|东京都|东京|亚马逊|2176|, server: kddi.zeroyyds.cc, port: 80, type: vmess, uuid: e6d14923-99e3-4e4d-8dd3-65968a21114b, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: kddi.zeroyyds.cc}}
+  - {name: 🇰🇷 KR|韩国|首尔|首尔|亚马逊|2812|, server: 13.125.238.14, port: 44334, type: vmess, uuid: bc6c0edf-7fad-4cb2-c0e9-0c2ea8614ae0, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 13.125.238.14}}
+  - {name: 🇰🇷 KR|韩国|首尔|首尔|亚马逊|2825|, server: 52.79.60.0, port: 44223, type: vmess, uuid: 8b409727-b3e2-4e1f-b237-12b34cfb46e3, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 52.79.60.0}}
+  - {name: 🇰🇷 KR|韩国|首尔|首尔|亚马逊|2839|, server: 13.124.66.77, port: 44334, type: vmess, uuid: 9c0a9f28-f9db-4b18-cd76-c14d0755e5b2, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 13.124.66.77}}
+  - {name: 🇰🇷 KR|韩国|首尔|首尔|亚马逊|2854|, server: 52.79.60.0, port: 29254, type: vmess, uuid: de4b1aef-e578-4855-ef63-6753345f05de, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 52.79.60.0}}
+  - {name: 🇭🇰 HK|中国|香港|1570|, server: 154.84.1.106, port: 443, type: vmess, uuid: 37c29f42-b7c7-40c7-9da9-743dcc4895bc, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 154.84.1.106}}
+  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1577|, server: 46.182.107.39, port: 443, type: vmess, uuid: d3133484-f2bf-4b0c-8d38-f8e645b65687, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.39}}
+  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1585|, server: 46.182.107.44, port: 443, type: vmess, uuid: fe5f69e7-e183-439b-950b-9661ef0651f2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.44}}
+  - {name: 🇭🇰 HK|中国|香港|1593|, server: 154.84.1.217, port: 443, type: vmess, uuid: 130c9f2e-42b1-4ebf-b345-e26456a061f9, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 154.84.1.217}}
+  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1603|, server: 46.182.107.148, port: 443, type: vmess, uuid: 1d474f0b-e78d-4af9-bc4a-a467467bc7a7, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.148}}
+  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1610|, server: 46.182.107.36, port: 443, type: vmess, uuid: 65ea6727-4461-47a7-a5c4-fef2c67f2f79, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.36}}
+  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1618|, server: 46.182.107.154, port: 443, type: vmess, uuid: 130c9f2e-42b1-4ebf-b345-e26456a061f9, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.154}}
+  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1626|, server: 46.182.107.165, port: 443, type: vmess, uuid: d3133484-f2bf-4b0c-8d38-f8e645b65687, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.165}}
+  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1635|, server: 46.182.107.81, port: 443, type: vmess, uuid: 37c29f42-b7c7-40c7-9da9-743dcc4895bc, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.81}}
+  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1642|, server: 46.182.107.97, port: 443, type: vmess, uuid: 6e79eea4-5f72-4683-ad0e-5339f013421b, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.97}}
+  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1651|, server: 46.182.107.93, port: 443, type: vmess, uuid: 743bdc87-1dea-41bf-aa0b-51dfbbfec8aa, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.93}}
+  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1659|, server: 46.182.107.94, port: 443, type: vmess, uuid: 743bdc87-1dea-41bf-aa0b-51dfbbfec8aa, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.94}}
+  - {name: 🇭🇰 HK|中国|香港|1667|, server: 154.84.1.10, port: 443, type: vmess, uuid: bcca23ea-be73-4caf-b143-cbab2be93145, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 154.84.1.10}}
+  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1675|, server: 46.182.107.3, port: 443, type: vmess, uuid: bcca23ea-be73-4caf-b143-cbab2be93145, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.3}}
+  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1682|, server: 5.180.79.11, port: 27449, type: vmess, uuid: 0cd64346-cd8d-4306-c256-05e12c76d5a5, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: 🇭🇰 HK|中国|香港|1689|, server: 154.84.1.147, port: 443, type: vmess, uuid: bcca23ea-be73-4caf-b143-cbab2be93145, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 154.84.1.147}}
+  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1697|, server: 46.182.107.82, port: 443, type: vmess, uuid: 37c29f42-b7c7-40c7-9da9-743dcc4895bc, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.82}}
+  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1705|, server: 46.182.107.146, port: 443, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca4690dd24, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.146}}
+  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1712|, server: 46.182.107.37, port: 443, type: vmess, uuid: 65ea6727-4461-47a7-a5c4-fef2c67f2f79, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.37}}
+  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1718|, server: 46.182.107.157, port: 443, type: vmess, uuid: 20b30916-e203-412e-8ec0-900f3acd5128, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.157}}
+  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1725|, server: 46.182.107.150, port: 443, type: vmess, uuid: f5250c4e-f855-4eff-b73c-a02226d42fe7, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.150}}
+  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1733|, server: 46.182.107.152, port: 443, type: vmess, uuid: f5250c4e-f855-4eff-b73c-a02226d42fe7, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.152}}
+  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1738|, server: 46.182.107.45, port: 443, type: vmess, uuid: fe5f69e7-e183-439b-950b-9661ef0651f2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.45}}
+  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1747|, server: 46.182.107.151, port: 443, type: vmess, uuid: f5250c4e-f855-4eff-b73c-a02226d42fe7, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 46.182.107.151}}
+  - {name: 🇳🇱 NL|荷兰|Flevoland|1755|, server: 5.2.67.108, port: 17105, type: trojan, password: 13844906-ae35-3a91-a98a-a90b823abe88, skip-cert-verify: true, udp: true}
+  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|676|, server: 185.246.154.76, port: 18019, type: vmess, uuid: 7d00ead2-b08a-46d4-80c9-c642d8a9790a, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: 🇷🇺 RU|俄罗斯|莫斯科|莫斯科|692|, server: 45.11.92.139, port: 10121, type: vmess, uuid: c2b9c453-0c2f-487d-ab1a-d45d17dde4f5, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 45.11.92.139}}
+  - {name: 🇷🇺 RU|俄罗斯|莫斯科|莫斯科|715|, server: 195.133.49.216, port: 52333, type: vmess, uuid: 475e7113-a34c-455a-e2a4-1ec8ec930108, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 195.133.49.216}}
+  - {name: 🇩🇪 SE|瑞典|斯德哥尔摩|亚马逊|1174|, server: 13.49.246.208, port: 443, type: vmess, uuid: df055ea2-4d3a-445e-977d-8e958abaad3a, alterId: 2, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /xamjyss143/, ws-headers: {Host: 13.49.246.208}}
+  - {name: 🇹🇷 TR|土耳其|Bursa|3140|, server: 185.247.138.25, port: 15079, type: vmess, uuid: a1d846ec-9bef-4ffd-e34a-43bb06323ac3, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: 🇹🇷 TR|土耳其|3148|, server: 193.31.116.230, port: 48003, type: vmess, uuid: 4d274187-109a-44df-bb55-b2c84eb03ba7, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: 🇺🇸 US|美国|加利福尼亚|层峰网络|2403|, server: 128.14.157.112, port: 13723, type: vmess, uuid: a90597c1-bab3-4217-ad6f-0838675c8634, alterId: 10, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /ray, ws-headers: {Host: 128.14.157.112}}
+  - {name: 🇺🇸 US|美国|加利福尼亚|2411|, server: c23s3.jamjams.net, port: 61173, type: vmess, uuid: 9d1043a6-e87e-4bb7-8858-c1185e9c0c3b, alterId: 8, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: 🇺🇸 US|美国|加利福尼亚|2420|, server: 23.224.30.37, port: 443, type: vmess, uuid: e4494518-74e8-4d6b-942a-6b332cce09ef, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /path/310910211916, ws-headers: {Host: 23.224.30.37}}
+  - {name: 🇺🇸 US|美国|加利福尼亚|费利蒙|2435|, server: c23s801.jamjams.net, port: 61173, type: vmess, uuid: 9d1043a6-e87e-4bb7-8858-c1185e9c0c3b, alterId: 8, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: 🇺🇸 US|美国|弗吉尼亚|阿什本|亚马逊|2443|, server: v2raylpc.herokuapp.com, port: 443, type: vmess, uuid: ad806487-2d26-4636-98b6-ab85cc8521f7, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: v2raylpc.herokuapp.com}}
+  - {name: 🇺🇸 US|美国|加利福尼亚|2451|, server: 23.224.30.36, port: 443, type: vmess, uuid: e4494518-74e8-4d6b-942a-6b332cce09ef, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /path/310910211916, ws-headers: {Host: 23.224.30.36}}
+  - {name: 🇺🇸 US|美国|佐治亚|亚特兰大|2460|, server: nn-ssr4.feiclouddd.me, port: 443, type: vmess, uuid: 79214731-7f0c-4f2d-a894-13b7df293624, alterId: 60, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /sadfasdf, ws-headers: {Host: nn-ssr4.feiclouddd.me}}
+  - {name: 🇺🇸 US|美国|加利福尼亚|2466|, server: 96.43.91.60, port: 443, type: vmess, uuid: 3bfb43e2-7dfe-4757-86ee-1ce9fb9fd13a, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /path/310910211916, ws-headers: {Host: 96.43.91.60}}
+  - {name: 🇺🇸 US|美国|加利福尼亚|2476|, server: www.92726054.xyz, port: 443, type: vmess, uuid: d3cbe556-8db3-47e0-8ef1-06b2cce00411, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /path/310910211916, ws-headers: {Host: www.92726054.xyz}}
+  - {name: 🇺🇸 US|美国|加利福尼亚|2483|, server: 96.43.91.58, port: 443, type: vmess, uuid: 3bfb43e2-7dfe-4757-86ee-1ce9fb9fd13a, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /path/310910211916, ws-headers: {Host: 96.43.91.58}}
+  - {name: 🇺🇸 US|美国|加利福尼亚|2492|, server: 193.42.96.98, port: 30104, type: vmess, uuid: c7d03e59-8fff-463e-9589-9f8099d3e366, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|2499|, server: 54.151.33.166, port: 80, type: vmess, uuid: e1aa83ff-b8b5-41b8-a854-fdcd3faa8875, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 54.151.33.166}}
+  - {name: 🇺🇸 US|美国|加利福尼亚|旧金山|2507|, server: 99uu.wtf, port: 443, type: vmess, uuid: 8f91b6a0-e8ee-11ea-adc1-0242ac120020, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /8f91b6a0-e8ee-11ea-adc1-0242ac120020-vmess, ws-headers: {Host: 99uu.wtf}}
+  - {name: 🇺🇸 US|美国|加利福尼亚|旧金山|2515|, server: 172.67.150.130, port: 80, type: vmess, uuid: 3d31728e-064d-42b8-b945-f79c008f73fc, alterId: 233, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 172.67.150.130}}
+  - {name: 🇺🇸 US|美国|加利福尼亚|2523|, server: 96.43.91.59, port: 443, type: vmess, uuid: 3bfb43e2-7dfe-4757-86ee-1ce9fb9fd13a, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /path/310910211916, ws-headers: {Host: 96.43.91.59}}
+  - {name: 🇺🇸 US|美国|加利福尼亚|2530|, server: 198.211.3.154, port: 443, type: vmess, uuid: 3bfb43e2-7dfe-4757-86ee-1ce9fb9fd13a, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /path/310910211916, ws-headers: {Host: 198.211.3.154}}
+  - {name: 🇺🇸 US|美国|加利福尼亚|层峰网络|2537|, server: usa5b-node.3366test.com, port: 13723, type: vmess, uuid: a90597c1-bab3-4217-ad6f-0838675c8634, alterId: 10, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: ray, ws-headers: {Host: usa5b-node.3366test.com}}
+  - {name: 🇺🇸 US|美国|加利福尼亚|2545|, server: 72.44.74.98, port: 443, type: vmess, uuid: 81295af2-bcd2-0d7e-8bc4-f1367049cf95, alterId: 1, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /gafnvws, ws-headers: {Host: 72.44.74.98}}
+  - {name: 🇺🇸 US|美国|加利福尼亚|层峰网络|2554|, server: 104.251.233.106, port: 13723, type: vmess, uuid: a90597c1-bab3-4217-ad6f-0838675c8638, alterId: 10, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /ray, ws-headers: {Host: 104.251.233.106}}
+  - {name: 🇺🇸 US|美国|加利福尼亚|旧金山|2561|, server: free-russian01-cdn.xiaohouzi.club, port: 80, type: vmess, uuid: 3d31728e-064d-42b8-b945-f79c008f73fc, alterId: 233, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: free-russian01-cdn.xiaohouzi.club}}
+  - {name: 🇺🇸 US|美国|CloudFlare|2569|, server: 104.17.36.178, port: 443, type: vmess, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 104.17.36.178}}
+  - {name: 🇺🇸 US|美国|加利福尼亚|旧金山|2579|, server: euserv18p.ezddns.tk, port: 80, type: vmess, uuid: 344c0b7d-2c35-4c95-8481-e2fc3c456a06, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /audio.mp3, ws-headers: {Host: euserv18p.ezddns.tk}}
+  - {name: 🇺🇸 US|美国|CloudFlare|2588|, server: euserv12p.ezddns.tk, port: 80, type: vmess, uuid: c0304bc1-f8ff-4108-9bc6-3415d16ae5e3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /video, ws-headers: {Host: euserv12p.ezddns.tk}}
+  - {name: 🇺🇸 US|美国|CloudFlare|2594|, server: 104.16.16.255, port: 443, type: vmess, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 104.16.16.255}}
+  - {name: 🇺🇸 US|美国|CloudFlare|2601|, server: 104.16.167.138, port: 443, type: vmess, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 104.16.167.138}}
+  - {name: 🇺🇸 US|美国|CloudFlare|2611|, server: 104.25.175.69, port: 443, type: vmess, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 104.25.175.69}}
+  - {name: 🇺🇸 US|美国|CloudFlare|2618|, server: 104.21.76.229, port: 443, type: vmess, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 104.21.76.229}}
+  - {name: 🇺🇸 US|美国|CloudFlare|2626|, server: 104.20.130.175, port: 443, type: vmess, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 104.20.130.175}}
+  - {name: 🇺🇸 US|美国|CloudFlare|2632|, server: 104.18.8.157, port: 443, type: vmess, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 104.18.8.157}}
+  - {name: 🇺🇸 US|美国|CloudFlare|2640|, server: 104.16.110.238, port: 443, type: vmess, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 104.16.110.238}}
+  - {name: 🇺🇸 US|美国|CloudFlare|2647|, server: 104.18.27.64, port: 443, type: vmess, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 104.18.27.64}}
+  - {name: 🇺🇸 US|美国|加利福尼亚|旧金山|2654|, server: 172.67.223.77, port: 443, type: vmess, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 172.67.223.77}}
+  - {name: 🇺🇸 US|美国|CloudFlare|2662|, server: 104.16.149.48, port: 443, type: vmess, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 104.16.149.48}}
+  - {name: 🇺🇸 US|美国|CloudFlare|2669|, server: 104.22.4.180, port: 443, type: vmess, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 104.22.4.180}}
+  - {name: 🇺🇸 US|美国|CloudFlare|2676|, server: 104.16.207.196, port: 443, type: vmess, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 104.16.207.196}}
+  - {name: 🇺🇸 US|美国|CloudFlare|2685|, server: 104.21.239.147, port: 443, type: vmess, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 104.21.239.147}}
+  - {name: 🇺🇸 US|美国|CloudFlare|2692|, server: 104.18.135.208, port: 443, type: vmess, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 104.18.135.208}}
+  - {name: 🇺🇸 US|美国|CloudFlare|2701|, server: www.digitalocean.com, port: 443, type: vmess, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: www.digitalocean.com}}
+  - {name: 🇺🇸 US|美国|加利福尼亚|旧金山|2709|, server: 172.67.209.58, port: 443, type: vmess, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 172.67.209.58}}
+  - {name: 🇺🇸 US|美国|CloudFlare|2718|, server: 104.22.44.50, port: 443, type: vmess, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 104.22.44.50}}
+  - {name: 🇺🇸 US|美国|CloudFlare|2726|, server: 104.25.104.240, port: 443, type: vmess, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 104.25.104.240}}
+  - {name: 🇺🇸 US|美国|CloudFlare|2734|, server: 104.19.23.24, port: 443, type: vmess, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 104.19.23.24}}
+  - {name: 🇺🇸 US|美国|CloudFlare|2742|, server: 104.16.160.114, port: 443, type: vmess, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 104.16.160.114}}
+  - {name: 🇺🇸 US|美国|纽约|纽约|2750|, server: 161.35.216.140, port: 44334, type: vmess, uuid: c2677816-0c3b-465f-eb2c-2b5b2edfc7fb, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 161.35.216.140}}
+  - {name: 🇺🇸 US|美国|加利福尼亚|2757|, server: 104.160.186.54, port: 443, type: vmess, uuid: d3cbe556-8db3-47e0-8ef1-06b2cce00411, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /path/310910211916, ws-headers: {Host: 104.160.186.54}}
+  - {name: 🇺🇸 US|美国|CloudFlare|2764|, server: 104.17.188.91, port: 443, type: vmess, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 104.17.188.91}}
+  - {name: 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|2771|, server: 52.53.159.192, port: 80, type: vmess, uuid: e1aa83ff-b8b5-41b8-a854-fdcd3faa8875, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 52.53.159.192}}
+  - {name: 🇩🇪 US|美国|德克萨斯|休斯顿|2777|, server: 16.162.191.144, port: 44334, type: vmess, uuid: c8931063-7412-4635-b78e-0337804ee308, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 16.162.191.144}}
+  - {name: 🇺🇸 US|美国|加利福尼亚|2784|, server: 107.167.9.124, port: 443, type: vmess, uuid: 2566d00f-218c-48f7-9a36-13d3d6f1a724, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /path/310910211916, ws-headers: {Host: 107.167.9.124}}
+  - {name: 🇩🇪 US|美国|德克萨斯|休斯顿|2791|, server: 16.162.103.183, port: 44334, type: vmess, uuid: 49f7c16f-1607-4dd3-8d53-878d682fb406, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 16.162.103.183}}
+  - {name: 🇺🇸 US|美国|CloudFlare|2800|, server: ip.codeforces.live, port: 443, type: vmess, uuid: e6397eda-dd27-4832-a693-b3fb156ec0f3, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /233blog, ws-headers: {Host: ip.codeforces.live}}
+  - {name: 🇺🇸 US|美国|佐治亚|亚特兰大|2809|, server: 15.152.41.22, port: 80, type: vmess, uuid: e1aa83ff-b8b5-41b8-a854-fdcd3faa8875, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 15.152.41.22}}
+  - {name: 🇺🇸 US|美国|CloudFlare|2818|, server: 104.21.67.220, port: 443, type: vmess, uuid: e1aa83ff-b8b5-41b8-a854-fdcd3faa8875, alterId: 1, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 104.21.67.220}}
+  - {name: 🇺🇸 US|美国|CloudFlare|2824|, server: 104.16.182.15, port: 443, type: vmess, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 104.16.182.15}}
+  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|2831|, server: 164.90.204.216, port: 80, type: vmess, uuid: e1aa83ff-b8b5-41b8-a854-fdcd3faa8875, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 164.90.204.216}}
+  - {name: 🇺🇸 US|美国|CloudFlare|2838|, server: 104.16.148.48, port: 443, type: vmess, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 104.16.148.48}}
+  - {name: 🇺🇸 US|美国|加利福尼亚|旧金山|2845|, server: hostmonit.com, port: 443, type: vmess, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: hostmonit.com}}
+  - {name: 🇺🇸 US|美国|CloudFlare|2852|, server: 104.20.130.43, port: 443, type: vmess, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 104.20.130.43}}
+  - {name: 🇺🇸 US|美国|加利福尼亚|旧金山|2858|, server: 172.67.182.11, port: 443, type: vmess, uuid: e1aa83ff-b8b5-41b8-a854-fdcd3faa8875, alterId: 1, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 172.67.182.11}}
+  - {name: 🇺🇸 US|美国|CloudFlare|2866|, server: 104.20.81.240, port: 443, type: vmess, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 104.20.81.240}}
+  - {name: 🇺🇸 US|美国|CloudFlare|2874|, server: 104.16.181.15, port: 443, type: vmess, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 104.16.181.15}}
+  - {name: 🇺🇸 US|美国|CloudFlare|2881|, server: 104.26.14.221, port: 443, type: vmess, uuid: 5ed1ad68-6337-4fdb-a34b-f57e0b96ddbc, alterId: 16, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /phpmyadmin, ws-headers: {Host: 104.26.14.221}}
+  - {name: 🇺🇸 US|美国|CloudFlare|2888|, server: icook.tw, port: 443, type: vmess, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: icook.tw}}
+  - {name: 🇺🇸 US|美国|CloudFlare|2896|, server: www.garmin.com, port: 443, type: vmess, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: www.garmin.com}}
+  - {name: 🇺🇸 US|美国|CloudFlare|2904|, server: 104.22.3.3, port: 443, type: vmess, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 104.22.3.3}}
+  - {name: 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|2911|, server: 54.183.244.5, port: 80, type: vmess, uuid: e1aa83ff-b8b5-41b8-a854-fdcd3faa8875, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 54.183.244.5}}
+  - {name: 🇺🇸 US|美国|CloudFlare|2919|, server: boom-1811160045.blizzard.ltd, port: 443, type: vmess, uuid: 5ed1ad68-6337-4fdb-a34b-f57e0b96ddbc, alterId: 16, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /phpmyadmin, ws-headers: {Host: boom-1811160045.blizzard.ltd}}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇦🇺 AU|澳大利亚|841|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|105|
-      - 🇺🇸 US|美国|加利福尼亚|112|
-      - 🇯🇵 JP|日本|大阪府|大阪|119|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|892|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|899|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|907|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|916|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|923|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|930|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|951|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|957|
-      - 🇩🇪 DE|德国|法兰克福|法兰克福|亚马逊|62|
-      - 🇩🇪 DE|德国|HE|Hesse|法兰克福|Melbikomas UAB|69|
-      - 🇺🇸 US|美国|亚马逊|76|
-      - 🇩🇪 DE|德国|98|
-      - 🇬🇧 GB|英国|伦敦|伦敦|亚马逊|17|
-      - 🇬🇧 GB|英国|伦敦|伦敦|亚马逊|35|
-      - 🇬🇧 GB|英国|伦敦|伦敦|44|
-      - 🇩🇪 ES|西班牙|马德里|马德里|51|
-      - 🇺🇸 US|美国|马萨诸塞|亚马逊|804|
-      - 🇺🇸 US|美国|亚马逊|1|
-      - 🇭🇰 HK|中国|香港|微软|8|
-      - 🇭🇰 HK|中国|香港|微软|28|
-      - 🇮🇱 IL|以色列|1788|
-      - 🇺🇸 US|美国|纽约|纽约|2959|
-      - 🇮🇳 IN|印度|卡纳塔克|班加罗尔|3014|
-      - 🇮🇹 IT|意大利|Palermo|558|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|137|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|143|
-      - 🇯🇵 JP|日本|东京都|东京|151|
-      - 🇺🇸 US|美国|康涅狄格|亚马逊|157|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|165|
-      - 🇺🇸 US|美国|加利福尼亚|层峰网络|172|
-      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|745|
-      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|761|
-      - 🇺🇸 US|美国|康涅狄格|亚马逊|798|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|348|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|356|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|364|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|372|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|380|
-      - 🇭🇰 HK|中国|香港|386|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|392|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|399|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|405|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|412|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|418|
-      - 🇭🇰 HK|中国|香港|425|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|431|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|440|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|449|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|457|
-      - 🇭🇰 HK|中国|香港|464|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|471|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|477|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|483|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|491|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|499|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|507|
-      - 🇳🇱 NL|荷兰|Flevoland|545|
-      - 🇷🇺 RU|俄罗斯|莫斯科|莫斯科|600|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|630|
-      - 🇷🇺 RU|俄罗斯|莫斯科|莫斯科|636|
-      - 🇩🇪 SE|瑞典|斯德哥尔摩|亚马逊|415|
-      - 🇸🇬 SG|新加坡|341|
-      - 🇹🇷 TR|土耳其|Bursa|841|
-      - 🇹🇷 TR|土耳其|858|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|1471|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|1479|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|1492|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|1499|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|1514|
-      - 🇺🇸 US|美国|加利福尼亚|12|
-      - 🇺🇸 US|美国|加利福尼亚|20|
-      - 🇺🇸 US|美国|加利福尼亚|27|
-      - 🇺🇸 US|美国|加利福尼亚|层峰网络|33|
-      - 🇺🇸 US|美国|加利福尼亚|38|
-      - 🇺🇸 US|美国|加利福尼亚|层峰网络|47|
-      - 🇺🇸 US|美国|加利福尼亚|层峰网络|56|
-      - 🇺🇸 US|美国|加利福尼亚|费利蒙|64|
-      - 🇺🇸 US|美国|加利福尼亚|73|
-      - 🇺🇸 US|美国|加利福尼亚|80|
-      - 🇺🇸 US|美国|加利福尼亚|87|
-      - 🇺🇸 US|美国|加利福尼亚|94|
-      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|101|
-      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|109|
-      - 🇺🇸 US|美国|华盛顿|亚马逊|116|
-      - 🇺🇸 US|美国|CloudFlare|122|
-      - 🇺🇸 US|美国|CloudFlare|129|
-      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|137|
-      - 🇺🇸 US|美国|加利福尼亚|旧金山|144|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|151|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|158|
-      - 🇺🇸 US|美国|加利福尼亚|167|
-      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|175|
-      - 🇺🇸 US|美国|加利福尼亚|费利蒙|181|
-      - 🇺🇸 US|美国|CloudFlare|188|
-      - 🇺🇸 US|美国|加利福尼亚|195|
-      - 🇺🇸 US|美国|加利福尼亚|203|
-      - 🇺🇸 US|美国|加利福尼亚|210|
-      - 🇺🇸 US|美国|弗吉尼亚|阿什本|亚马逊|217|
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|224|
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|230|
-      - 🇺🇸 US|美国|纽约|纽约|237|
+      - 🇺🇸 US|美国|CloudFlare|1155|
+      - 🇦🇺 AU|澳大利亚|CloudFlare|5869|
+      - 🇦🇺 AU|澳大利亚|5890|
+      - 🇺🇸 US|美国|加利福尼亚|2087|
+      - 🇯🇵 JP|日本|大阪府|大阪|2094|
+      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|2101|
+      - 🇯🇵 JP|日本|大阪府|大阪|2122|
+      - 🇨🇦 CA|加拿大|安大略|奥克维尔|2129|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2955|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2962|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2969|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2976|
+      - 🇩🇪 DE|德国|HE|Hesse|法兰克福|Melbikomas UAB|148|
+      - 🇺🇸 US|美国|佐治亚|亚特兰大|155|
+      - 🇩🇪 DE|德国|法兰克福|法兰克福|亚马逊|165|
+      - 🇩🇪 DE|德国|199|
+      - 🇬🇧 GB|英国|伦敦|伦敦|亚马逊|550|
+      - 🇬🇧 GB|英国|伦敦|伦敦|573|
+      - 🇩🇪 ES|西班牙|马德里|马德里|588|
+      - 🇺🇸 US|美国|亚马逊|1840|
+      - 🇺🇸 US|美国|亚马逊|1857|
+      - 🇺🇸 US|美国|亚马逊|1864|
+      - 🇺🇸 US|美国|亚马逊|1873|
+      - 🇺🇸 US|美国|亚马逊|1881|
+      - 🇺🇸 US|美国|亚马逊|1888|
+      - 🇺🇸 US|美国|马萨诸塞|亚马逊|1893|
+      - 🇺🇸 US|美国|亚马逊|1899|
+      - 🇺🇸 US|美国|亚马逊|1908|
+      - 🇭🇰 HK|中国|香港|微软|1938|
+      - 🇺🇸 US|美国|亚马逊|1962|
+      - 🇮🇱 IL|以色列|3755|
+      - 🇺🇸 US|美国|纽约|纽约|4884|
+      - 🇮🇳 IN|印度|卡纳塔克|班加罗尔|4931|
+      - 🇮🇹 IT|意大利|Palermo|1658|
+      - 🇯🇵 JP|日本|东京都|东京|2135|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2142|
+      - 🇺🇸 US|美国|康涅狄格|亚马逊|2148|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2155|
+      - 🇺🇸 US|美国|加利福尼亚|层峰网络|2162|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2169|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2176|
+      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|2812|
+      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|2825|
+      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|2839|
+      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|2854|
+      - 🇭🇰 HK|中国|香港|1570|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1577|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1585|
+      - 🇭🇰 HK|中国|香港|1593|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1603|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1610|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1618|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1626|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1635|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1642|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1651|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1659|
+      - 🇭🇰 HK|中国|香港|1667|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1675|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1682|
+      - 🇭🇰 HK|中国|香港|1689|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1697|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1705|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1712|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1718|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1725|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1733|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1738|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1747|
+      - 🇳🇱 NL|荷兰|Flevoland|1755|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|676|
+      - 🇷🇺 RU|俄罗斯|莫斯科|莫斯科|692|
+      - 🇷🇺 RU|俄罗斯|莫斯科|莫斯科|715|
+      - 🇩🇪 SE|瑞典|斯德哥尔摩|亚马逊|1174|
+      - 🇹🇷 TR|土耳其|Bursa|3140|
+      - 🇹🇷 TR|土耳其|3148|
+      - 🇺🇸 US|美国|加利福尼亚|层峰网络|2403|
+      - 🇺🇸 US|美国|加利福尼亚|2411|
+      - 🇺🇸 US|美国|加利福尼亚|2420|
+      - 🇺🇸 US|美国|加利福尼亚|费利蒙|2435|
+      - 🇺🇸 US|美国|弗吉尼亚|阿什本|亚马逊|2443|
+      - 🇺🇸 US|美国|加利福尼亚|2451|
+      - 🇺🇸 US|美国|佐治亚|亚特兰大|2460|
+      - 🇺🇸 US|美国|加利福尼亚|2466|
+      - 🇺🇸 US|美国|加利福尼亚|2476|
+      - 🇺🇸 US|美国|加利福尼亚|2483|
+      - 🇺🇸 US|美国|加利福尼亚|2492|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|2499|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2507|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2515|
+      - 🇺🇸 US|美国|加利福尼亚|2523|
+      - 🇺🇸 US|美国|加利福尼亚|2530|
+      - 🇺🇸 US|美国|加利福尼亚|层峰网络|2537|
+      - 🇺🇸 US|美国|加利福尼亚|2545|
+      - 🇺🇸 US|美国|加利福尼亚|层峰网络|2554|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2561|
+      - 🇺🇸 US|美国|CloudFlare|2569|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2579|
+      - 🇺🇸 US|美国|CloudFlare|2588|
+      - 🇺🇸 US|美国|CloudFlare|2594|
+      - 🇺🇸 US|美国|CloudFlare|2601|
+      - 🇺🇸 US|美国|CloudFlare|2611|
+      - 🇺🇸 US|美国|CloudFlare|2618|
+      - 🇺🇸 US|美国|CloudFlare|2626|
+      - 🇺🇸 US|美国|CloudFlare|2632|
+      - 🇺🇸 US|美国|CloudFlare|2640|
+      - 🇺🇸 US|美国|CloudFlare|2647|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2654|
+      - 🇺🇸 US|美国|CloudFlare|2662|
+      - 🇺🇸 US|美国|CloudFlare|2669|
+      - 🇺🇸 US|美国|CloudFlare|2676|
+      - 🇺🇸 US|美国|CloudFlare|2685|
+      - 🇺🇸 US|美国|CloudFlare|2692|
+      - 🇺🇸 US|美国|CloudFlare|2701|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2709|
+      - 🇺🇸 US|美国|CloudFlare|2718|
+      - 🇺🇸 US|美国|CloudFlare|2726|
+      - 🇺🇸 US|美国|CloudFlare|2734|
+      - 🇺🇸 US|美国|CloudFlare|2742|
+      - 🇺🇸 US|美国|纽约|纽约|2750|
+      - 🇺🇸 US|美国|加利福尼亚|2757|
+      - 🇺🇸 US|美国|CloudFlare|2764|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|2771|
+      - 🇩🇪 US|美国|德克萨斯|休斯顿|2777|
+      - 🇺🇸 US|美国|加利福尼亚|2784|
+      - 🇩🇪 US|美国|德克萨斯|休斯顿|2791|
+      - 🇺🇸 US|美国|CloudFlare|2800|
+      - 🇺🇸 US|美国|佐治亚|亚特兰大|2809|
+      - 🇺🇸 US|美国|CloudFlare|2818|
+      - 🇺🇸 US|美国|CloudFlare|2824|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|2831|
+      - 🇺🇸 US|美国|CloudFlare|2838|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2845|
+      - 🇺🇸 US|美国|CloudFlare|2852|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2858|
+      - 🇺🇸 US|美国|CloudFlare|2866|
+      - 🇺🇸 US|美国|CloudFlare|2874|
+      - 🇺🇸 US|美国|CloudFlare|2881|
+      - 🇺🇸 US|美国|CloudFlare|2888|
+      - 🇺🇸 US|美国|CloudFlare|2896|
+      - 🇺🇸 US|美国|CloudFlare|2904|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|2911|
+      - 🇺🇸 US|美国|CloudFlare|2919|
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇦🇺 AU|澳大利亚|841|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|105|
-      - 🇺🇸 US|美国|加利福尼亚|112|
-      - 🇯🇵 JP|日本|大阪府|大阪|119|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|892|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|899|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|907|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|916|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|923|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|930|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|951|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|957|
-      - 🇩🇪 DE|德国|法兰克福|法兰克福|亚马逊|62|
-      - 🇩🇪 DE|德国|HE|Hesse|法兰克福|Melbikomas UAB|69|
-      - 🇺🇸 US|美国|亚马逊|76|
-      - 🇩🇪 DE|德国|98|
-      - 🇬🇧 GB|英国|伦敦|伦敦|亚马逊|17|
-      - 🇬🇧 GB|英国|伦敦|伦敦|亚马逊|35|
-      - 🇬🇧 GB|英国|伦敦|伦敦|44|
-      - 🇩🇪 ES|西班牙|马德里|马德里|51|
-      - 🇺🇸 US|美国|马萨诸塞|亚马逊|804|
-      - 🇺🇸 US|美国|亚马逊|1|
-      - 🇭🇰 HK|中国|香港|微软|8|
-      - 🇭🇰 HK|中国|香港|微软|28|
-      - 🇮🇱 IL|以色列|1788|
-      - 🇺🇸 US|美国|纽约|纽约|2959|
-      - 🇮🇳 IN|印度|卡纳塔克|班加罗尔|3014|
-      - 🇮🇹 IT|意大利|Palermo|558|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|137|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|143|
-      - 🇯🇵 JP|日本|东京都|东京|151|
-      - 🇺🇸 US|美国|康涅狄格|亚马逊|157|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|165|
-      - 🇺🇸 US|美国|加利福尼亚|层峰网络|172|
-      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|745|
-      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|761|
-      - 🇺🇸 US|美国|康涅狄格|亚马逊|798|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|348|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|356|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|364|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|372|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|380|
-      - 🇭🇰 HK|中国|香港|386|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|392|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|399|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|405|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|412|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|418|
-      - 🇭🇰 HK|中国|香港|425|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|431|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|440|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|449|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|457|
-      - 🇭🇰 HK|中国|香港|464|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|471|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|477|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|483|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|491|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|499|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|507|
-      - 🇳🇱 NL|荷兰|Flevoland|545|
-      - 🇷🇺 RU|俄罗斯|莫斯科|莫斯科|600|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|630|
-      - 🇷🇺 RU|俄罗斯|莫斯科|莫斯科|636|
-      - 🇩🇪 SE|瑞典|斯德哥尔摩|亚马逊|415|
-      - 🇸🇬 SG|新加坡|341|
-      - 🇹🇷 TR|土耳其|Bursa|841|
-      - 🇹🇷 TR|土耳其|858|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|1471|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|1479|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|1492|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|1499|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|1514|
-      - 🇺🇸 US|美国|加利福尼亚|12|
-      - 🇺🇸 US|美国|加利福尼亚|20|
-      - 🇺🇸 US|美国|加利福尼亚|27|
-      - 🇺🇸 US|美国|加利福尼亚|层峰网络|33|
-      - 🇺🇸 US|美国|加利福尼亚|38|
-      - 🇺🇸 US|美国|加利福尼亚|层峰网络|47|
-      - 🇺🇸 US|美国|加利福尼亚|层峰网络|56|
-      - 🇺🇸 US|美国|加利福尼亚|费利蒙|64|
-      - 🇺🇸 US|美国|加利福尼亚|73|
-      - 🇺🇸 US|美国|加利福尼亚|80|
-      - 🇺🇸 US|美国|加利福尼亚|87|
-      - 🇺🇸 US|美国|加利福尼亚|94|
-      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|101|
-      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|109|
-      - 🇺🇸 US|美国|华盛顿|亚马逊|116|
-      - 🇺🇸 US|美国|CloudFlare|122|
-      - 🇺🇸 US|美国|CloudFlare|129|
-      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|137|
-      - 🇺🇸 US|美国|加利福尼亚|旧金山|144|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|151|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|158|
-      - 🇺🇸 US|美国|加利福尼亚|167|
-      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|175|
-      - 🇺🇸 US|美国|加利福尼亚|费利蒙|181|
-      - 🇺🇸 US|美国|CloudFlare|188|
-      - 🇺🇸 US|美国|加利福尼亚|195|
-      - 🇺🇸 US|美国|加利福尼亚|203|
-      - 🇺🇸 US|美国|加利福尼亚|210|
-      - 🇺🇸 US|美国|弗吉尼亚|阿什本|亚马逊|217|
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|224|
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|230|
-      - 🇺🇸 US|美国|纽约|纽约|237|
+      - 🇺🇸 US|美国|CloudFlare|1155|
+      - 🇦🇺 AU|澳大利亚|CloudFlare|5869|
+      - 🇦🇺 AU|澳大利亚|5890|
+      - 🇺🇸 US|美国|加利福尼亚|2087|
+      - 🇯🇵 JP|日本|大阪府|大阪|2094|
+      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|2101|
+      - 🇯🇵 JP|日本|大阪府|大阪|2122|
+      - 🇨🇦 CA|加拿大|安大略|奥克维尔|2129|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2955|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2962|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2969|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2976|
+      - 🇩🇪 DE|德国|HE|Hesse|法兰克福|Melbikomas UAB|148|
+      - 🇺🇸 US|美国|佐治亚|亚特兰大|155|
+      - 🇩🇪 DE|德国|法兰克福|法兰克福|亚马逊|165|
+      - 🇩🇪 DE|德国|199|
+      - 🇬🇧 GB|英国|伦敦|伦敦|亚马逊|550|
+      - 🇬🇧 GB|英国|伦敦|伦敦|573|
+      - 🇩🇪 ES|西班牙|马德里|马德里|588|
+      - 🇺🇸 US|美国|亚马逊|1840|
+      - 🇺🇸 US|美国|亚马逊|1857|
+      - 🇺🇸 US|美国|亚马逊|1864|
+      - 🇺🇸 US|美国|亚马逊|1873|
+      - 🇺🇸 US|美国|亚马逊|1881|
+      - 🇺🇸 US|美国|亚马逊|1888|
+      - 🇺🇸 US|美国|马萨诸塞|亚马逊|1893|
+      - 🇺🇸 US|美国|亚马逊|1899|
+      - 🇺🇸 US|美国|亚马逊|1908|
+      - 🇭🇰 HK|中国|香港|微软|1938|
+      - 🇺🇸 US|美国|亚马逊|1962|
+      - 🇮🇱 IL|以色列|3755|
+      - 🇺🇸 US|美国|纽约|纽约|4884|
+      - 🇮🇳 IN|印度|卡纳塔克|班加罗尔|4931|
+      - 🇮🇹 IT|意大利|Palermo|1658|
+      - 🇯🇵 JP|日本|东京都|东京|2135|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2142|
+      - 🇺🇸 US|美国|康涅狄格|亚马逊|2148|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2155|
+      - 🇺🇸 US|美国|加利福尼亚|层峰网络|2162|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2169|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2176|
+      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|2812|
+      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|2825|
+      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|2839|
+      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|2854|
+      - 🇭🇰 HK|中国|香港|1570|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1577|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1585|
+      - 🇭🇰 HK|中国|香港|1593|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1603|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1610|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1618|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1626|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1635|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1642|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1651|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1659|
+      - 🇭🇰 HK|中国|香港|1667|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1675|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1682|
+      - 🇭🇰 HK|中国|香港|1689|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1697|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1705|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1712|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1718|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1725|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1733|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1738|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1747|
+      - 🇳🇱 NL|荷兰|Flevoland|1755|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|676|
+      - 🇷🇺 RU|俄罗斯|莫斯科|莫斯科|692|
+      - 🇷🇺 RU|俄罗斯|莫斯科|莫斯科|715|
+      - 🇩🇪 SE|瑞典|斯德哥尔摩|亚马逊|1174|
+      - 🇹🇷 TR|土耳其|Bursa|3140|
+      - 🇹🇷 TR|土耳其|3148|
+      - 🇺🇸 US|美国|加利福尼亚|层峰网络|2403|
+      - 🇺🇸 US|美国|加利福尼亚|2411|
+      - 🇺🇸 US|美国|加利福尼亚|2420|
+      - 🇺🇸 US|美国|加利福尼亚|费利蒙|2435|
+      - 🇺🇸 US|美国|弗吉尼亚|阿什本|亚马逊|2443|
+      - 🇺🇸 US|美国|加利福尼亚|2451|
+      - 🇺🇸 US|美国|佐治亚|亚特兰大|2460|
+      - 🇺🇸 US|美国|加利福尼亚|2466|
+      - 🇺🇸 US|美国|加利福尼亚|2476|
+      - 🇺🇸 US|美国|加利福尼亚|2483|
+      - 🇺🇸 US|美国|加利福尼亚|2492|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|2499|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2507|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2515|
+      - 🇺🇸 US|美国|加利福尼亚|2523|
+      - 🇺🇸 US|美国|加利福尼亚|2530|
+      - 🇺🇸 US|美国|加利福尼亚|层峰网络|2537|
+      - 🇺🇸 US|美国|加利福尼亚|2545|
+      - 🇺🇸 US|美国|加利福尼亚|层峰网络|2554|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2561|
+      - 🇺🇸 US|美国|CloudFlare|2569|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2579|
+      - 🇺🇸 US|美国|CloudFlare|2588|
+      - 🇺🇸 US|美国|CloudFlare|2594|
+      - 🇺🇸 US|美国|CloudFlare|2601|
+      - 🇺🇸 US|美国|CloudFlare|2611|
+      - 🇺🇸 US|美国|CloudFlare|2618|
+      - 🇺🇸 US|美国|CloudFlare|2626|
+      - 🇺🇸 US|美国|CloudFlare|2632|
+      - 🇺🇸 US|美国|CloudFlare|2640|
+      - 🇺🇸 US|美国|CloudFlare|2647|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2654|
+      - 🇺🇸 US|美国|CloudFlare|2662|
+      - 🇺🇸 US|美国|CloudFlare|2669|
+      - 🇺🇸 US|美国|CloudFlare|2676|
+      - 🇺🇸 US|美国|CloudFlare|2685|
+      - 🇺🇸 US|美国|CloudFlare|2692|
+      - 🇺🇸 US|美国|CloudFlare|2701|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2709|
+      - 🇺🇸 US|美国|CloudFlare|2718|
+      - 🇺🇸 US|美国|CloudFlare|2726|
+      - 🇺🇸 US|美国|CloudFlare|2734|
+      - 🇺🇸 US|美国|CloudFlare|2742|
+      - 🇺🇸 US|美国|纽约|纽约|2750|
+      - 🇺🇸 US|美国|加利福尼亚|2757|
+      - 🇺🇸 US|美国|CloudFlare|2764|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|2771|
+      - 🇩🇪 US|美国|德克萨斯|休斯顿|2777|
+      - 🇺🇸 US|美国|加利福尼亚|2784|
+      - 🇩🇪 US|美国|德克萨斯|休斯顿|2791|
+      - 🇺🇸 US|美国|CloudFlare|2800|
+      - 🇺🇸 US|美国|佐治亚|亚特兰大|2809|
+      - 🇺🇸 US|美国|CloudFlare|2818|
+      - 🇺🇸 US|美国|CloudFlare|2824|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|2831|
+      - 🇺🇸 US|美国|CloudFlare|2838|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2845|
+      - 🇺🇸 US|美国|CloudFlare|2852|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2858|
+      - 🇺🇸 US|美国|CloudFlare|2866|
+      - 🇺🇸 US|美国|CloudFlare|2874|
+      - 🇺🇸 US|美国|CloudFlare|2881|
+      - 🇺🇸 US|美国|CloudFlare|2888|
+      - 🇺🇸 US|美国|CloudFlare|2896|
+      - 🇺🇸 US|美国|CloudFlare|2904|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|2911|
+      - 🇺🇸 US|美国|CloudFlare|2919|
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇦🇺 AU|澳大利亚|841|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|105|
-      - 🇺🇸 US|美国|加利福尼亚|112|
-      - 🇯🇵 JP|日本|大阪府|大阪|119|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|892|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|899|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|907|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|916|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|923|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|930|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|951|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|957|
-      - 🇩🇪 DE|德国|法兰克福|法兰克福|亚马逊|62|
-      - 🇩🇪 DE|德国|HE|Hesse|法兰克福|Melbikomas UAB|69|
-      - 🇺🇸 US|美国|亚马逊|76|
-      - 🇩🇪 DE|德国|98|
-      - 🇬🇧 GB|英国|伦敦|伦敦|亚马逊|17|
-      - 🇬🇧 GB|英国|伦敦|伦敦|亚马逊|35|
-      - 🇬🇧 GB|英国|伦敦|伦敦|44|
-      - 🇩🇪 ES|西班牙|马德里|马德里|51|
-      - 🇺🇸 US|美国|马萨诸塞|亚马逊|804|
-      - 🇺🇸 US|美国|亚马逊|1|
-      - 🇭🇰 HK|中国|香港|微软|8|
-      - 🇭🇰 HK|中国|香港|微软|28|
-      - 🇮🇱 IL|以色列|1788|
-      - 🇺🇸 US|美国|纽约|纽约|2959|
-      - 🇮🇳 IN|印度|卡纳塔克|班加罗尔|3014|
-      - 🇮🇹 IT|意大利|Palermo|558|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|137|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|143|
-      - 🇯🇵 JP|日本|东京都|东京|151|
-      - 🇺🇸 US|美国|康涅狄格|亚马逊|157|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|165|
-      - 🇺🇸 US|美国|加利福尼亚|层峰网络|172|
-      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|745|
-      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|761|
-      - 🇺🇸 US|美国|康涅狄格|亚马逊|798|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|348|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|356|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|364|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|372|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|380|
-      - 🇭🇰 HK|中国|香港|386|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|392|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|399|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|405|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|412|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|418|
-      - 🇭🇰 HK|中国|香港|425|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|431|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|440|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|449|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|457|
-      - 🇭🇰 HK|中国|香港|464|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|471|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|477|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|483|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|491|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|499|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|507|
-      - 🇳🇱 NL|荷兰|Flevoland|545|
-      - 🇷🇺 RU|俄罗斯|莫斯科|莫斯科|600|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|630|
-      - 🇷🇺 RU|俄罗斯|莫斯科|莫斯科|636|
-      - 🇩🇪 SE|瑞典|斯德哥尔摩|亚马逊|415|
-      - 🇸🇬 SG|新加坡|341|
-      - 🇹🇷 TR|土耳其|Bursa|841|
-      - 🇹🇷 TR|土耳其|858|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|1471|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|1479|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|1492|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|1499|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|1514|
-      - 🇺🇸 US|美国|加利福尼亚|12|
-      - 🇺🇸 US|美国|加利福尼亚|20|
-      - 🇺🇸 US|美国|加利福尼亚|27|
-      - 🇺🇸 US|美国|加利福尼亚|层峰网络|33|
-      - 🇺🇸 US|美国|加利福尼亚|38|
-      - 🇺🇸 US|美国|加利福尼亚|层峰网络|47|
-      - 🇺🇸 US|美国|加利福尼亚|层峰网络|56|
-      - 🇺🇸 US|美国|加利福尼亚|费利蒙|64|
-      - 🇺🇸 US|美国|加利福尼亚|73|
-      - 🇺🇸 US|美国|加利福尼亚|80|
-      - 🇺🇸 US|美国|加利福尼亚|87|
-      - 🇺🇸 US|美国|加利福尼亚|94|
-      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|101|
-      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|109|
-      - 🇺🇸 US|美国|华盛顿|亚马逊|116|
-      - 🇺🇸 US|美国|CloudFlare|122|
-      - 🇺🇸 US|美国|CloudFlare|129|
-      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|137|
-      - 🇺🇸 US|美国|加利福尼亚|旧金山|144|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|151|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|158|
-      - 🇺🇸 US|美国|加利福尼亚|167|
-      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|175|
-      - 🇺🇸 US|美国|加利福尼亚|费利蒙|181|
-      - 🇺🇸 US|美国|CloudFlare|188|
-      - 🇺🇸 US|美国|加利福尼亚|195|
-      - 🇺🇸 US|美国|加利福尼亚|203|
-      - 🇺🇸 US|美国|加利福尼亚|210|
-      - 🇺🇸 US|美国|弗吉尼亚|阿什本|亚马逊|217|
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|224|
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|230|
-      - 🇺🇸 US|美国|纽约|纽约|237|
+      - 🇺🇸 US|美国|CloudFlare|1155|
+      - 🇦🇺 AU|澳大利亚|CloudFlare|5869|
+      - 🇦🇺 AU|澳大利亚|5890|
+      - 🇺🇸 US|美国|加利福尼亚|2087|
+      - 🇯🇵 JP|日本|大阪府|大阪|2094|
+      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|2101|
+      - 🇯🇵 JP|日本|大阪府|大阪|2122|
+      - 🇨🇦 CA|加拿大|安大略|奥克维尔|2129|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2955|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2962|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2969|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2976|
+      - 🇩🇪 DE|德国|HE|Hesse|法兰克福|Melbikomas UAB|148|
+      - 🇺🇸 US|美国|佐治亚|亚特兰大|155|
+      - 🇩🇪 DE|德国|法兰克福|法兰克福|亚马逊|165|
+      - 🇩🇪 DE|德国|199|
+      - 🇬🇧 GB|英国|伦敦|伦敦|亚马逊|550|
+      - 🇬🇧 GB|英国|伦敦|伦敦|573|
+      - 🇩🇪 ES|西班牙|马德里|马德里|588|
+      - 🇺🇸 US|美国|亚马逊|1840|
+      - 🇺🇸 US|美国|亚马逊|1857|
+      - 🇺🇸 US|美国|亚马逊|1864|
+      - 🇺🇸 US|美国|亚马逊|1873|
+      - 🇺🇸 US|美国|亚马逊|1881|
+      - 🇺🇸 US|美国|亚马逊|1888|
+      - 🇺🇸 US|美国|马萨诸塞|亚马逊|1893|
+      - 🇺🇸 US|美国|亚马逊|1899|
+      - 🇺🇸 US|美国|亚马逊|1908|
+      - 🇭🇰 HK|中国|香港|微软|1938|
+      - 🇺🇸 US|美国|亚马逊|1962|
+      - 🇮🇱 IL|以色列|3755|
+      - 🇺🇸 US|美国|纽约|纽约|4884|
+      - 🇮🇳 IN|印度|卡纳塔克|班加罗尔|4931|
+      - 🇮🇹 IT|意大利|Palermo|1658|
+      - 🇯🇵 JP|日本|东京都|东京|2135|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2142|
+      - 🇺🇸 US|美国|康涅狄格|亚马逊|2148|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2155|
+      - 🇺🇸 US|美国|加利福尼亚|层峰网络|2162|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2169|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2176|
+      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|2812|
+      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|2825|
+      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|2839|
+      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|2854|
+      - 🇭🇰 HK|中国|香港|1570|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1577|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1585|
+      - 🇭🇰 HK|中国|香港|1593|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1603|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1610|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1618|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1626|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1635|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1642|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1651|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1659|
+      - 🇭🇰 HK|中国|香港|1667|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1675|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1682|
+      - 🇭🇰 HK|中国|香港|1689|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1697|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1705|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1712|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1718|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1725|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1733|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1738|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1747|
+      - 🇳🇱 NL|荷兰|Flevoland|1755|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|676|
+      - 🇷🇺 RU|俄罗斯|莫斯科|莫斯科|692|
+      - 🇷🇺 RU|俄罗斯|莫斯科|莫斯科|715|
+      - 🇩🇪 SE|瑞典|斯德哥尔摩|亚马逊|1174|
+      - 🇹🇷 TR|土耳其|Bursa|3140|
+      - 🇹🇷 TR|土耳其|3148|
+      - 🇺🇸 US|美国|加利福尼亚|层峰网络|2403|
+      - 🇺🇸 US|美国|加利福尼亚|2411|
+      - 🇺🇸 US|美国|加利福尼亚|2420|
+      - 🇺🇸 US|美国|加利福尼亚|费利蒙|2435|
+      - 🇺🇸 US|美国|弗吉尼亚|阿什本|亚马逊|2443|
+      - 🇺🇸 US|美国|加利福尼亚|2451|
+      - 🇺🇸 US|美国|佐治亚|亚特兰大|2460|
+      - 🇺🇸 US|美国|加利福尼亚|2466|
+      - 🇺🇸 US|美国|加利福尼亚|2476|
+      - 🇺🇸 US|美国|加利福尼亚|2483|
+      - 🇺🇸 US|美国|加利福尼亚|2492|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|2499|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2507|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2515|
+      - 🇺🇸 US|美国|加利福尼亚|2523|
+      - 🇺🇸 US|美国|加利福尼亚|2530|
+      - 🇺🇸 US|美国|加利福尼亚|层峰网络|2537|
+      - 🇺🇸 US|美国|加利福尼亚|2545|
+      - 🇺🇸 US|美国|加利福尼亚|层峰网络|2554|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2561|
+      - 🇺🇸 US|美国|CloudFlare|2569|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2579|
+      - 🇺🇸 US|美国|CloudFlare|2588|
+      - 🇺🇸 US|美国|CloudFlare|2594|
+      - 🇺🇸 US|美国|CloudFlare|2601|
+      - 🇺🇸 US|美国|CloudFlare|2611|
+      - 🇺🇸 US|美国|CloudFlare|2618|
+      - 🇺🇸 US|美国|CloudFlare|2626|
+      - 🇺🇸 US|美国|CloudFlare|2632|
+      - 🇺🇸 US|美国|CloudFlare|2640|
+      - 🇺🇸 US|美国|CloudFlare|2647|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2654|
+      - 🇺🇸 US|美国|CloudFlare|2662|
+      - 🇺🇸 US|美国|CloudFlare|2669|
+      - 🇺🇸 US|美国|CloudFlare|2676|
+      - 🇺🇸 US|美国|CloudFlare|2685|
+      - 🇺🇸 US|美国|CloudFlare|2692|
+      - 🇺🇸 US|美国|CloudFlare|2701|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2709|
+      - 🇺🇸 US|美国|CloudFlare|2718|
+      - 🇺🇸 US|美国|CloudFlare|2726|
+      - 🇺🇸 US|美国|CloudFlare|2734|
+      - 🇺🇸 US|美国|CloudFlare|2742|
+      - 🇺🇸 US|美国|纽约|纽约|2750|
+      - 🇺🇸 US|美国|加利福尼亚|2757|
+      - 🇺🇸 US|美国|CloudFlare|2764|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|2771|
+      - 🇩🇪 US|美国|德克萨斯|休斯顿|2777|
+      - 🇺🇸 US|美国|加利福尼亚|2784|
+      - 🇩🇪 US|美国|德克萨斯|休斯顿|2791|
+      - 🇺🇸 US|美国|CloudFlare|2800|
+      - 🇺🇸 US|美国|佐治亚|亚特兰大|2809|
+      - 🇺🇸 US|美国|CloudFlare|2818|
+      - 🇺🇸 US|美国|CloudFlare|2824|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|2831|
+      - 🇺🇸 US|美国|CloudFlare|2838|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2845|
+      - 🇺🇸 US|美国|CloudFlare|2852|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2858|
+      - 🇺🇸 US|美国|CloudFlare|2866|
+      - 🇺🇸 US|美国|CloudFlare|2874|
+      - 🇺🇸 US|美国|CloudFlare|2881|
+      - 🇺🇸 US|美国|CloudFlare|2888|
+      - 🇺🇸 US|美国|CloudFlare|2896|
+      - 🇺🇸 US|美国|CloudFlare|2904|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|2911|
+      - 🇺🇸 US|美国|CloudFlare|2919|
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 🇭🇰 HK|中国|香港|微软|8|
-      - 🇭🇰 HK|中国|香港|微软|28|
-      - 🇭🇰 HK|中国|香港|386|
-      - 🇭🇰 HK|中国|香港|425|
-      - 🇭🇰 HK|中国|香港|464|
+      - 🇭🇰 HK|中国|香港|微软|1938|
+      - 🇭🇰 HK|中国|香港|1570|
+      - 🇭🇰 HK|中国|香港|1593|
+      - 🇭🇰 HK|中国|香港|1667|
+      - 🇭🇰 HK|中国|香港|1689|
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 🇦🇺 AU|澳大利亚|841|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|105|
-      - 🇺🇸 US|美国|加利福尼亚|112|
-      - 🇯🇵 JP|日本|大阪府|大阪|119|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|892|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|899|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|907|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|916|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|923|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|930|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|951|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|957|
-      - 🇩🇪 DE|德国|法兰克福|法兰克福|亚马逊|62|
-      - 🇩🇪 DE|德国|HE|Hesse|法兰克福|Melbikomas UAB|69|
-      - 🇺🇸 US|美国|亚马逊|76|
-      - 🇩🇪 DE|德国|98|
-      - 🇬🇧 GB|英国|伦敦|伦敦|亚马逊|17|
-      - 🇬🇧 GB|英国|伦敦|伦敦|亚马逊|35|
-      - 🇬🇧 GB|英国|伦敦|伦敦|44|
-      - 🇩🇪 ES|西班牙|马德里|马德里|51|
-      - 🇺🇸 US|美国|马萨诸塞|亚马逊|804|
-      - 🇺🇸 US|美国|亚马逊|1|
-      - 🇭🇰 HK|中国|香港|微软|8|
-      - 🇭🇰 HK|中国|香港|微软|28|
-      - 🇮🇱 IL|以色列|1788|
-      - 🇺🇸 US|美国|纽约|纽约|2959|
-      - 🇮🇳 IN|印度|卡纳塔克|班加罗尔|3014|
-      - 🇮🇹 IT|意大利|Palermo|558|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|137|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|143|
-      - 🇯🇵 JP|日本|东京都|东京|151|
-      - 🇺🇸 US|美国|康涅狄格|亚马逊|157|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|165|
-      - 🇺🇸 US|美国|加利福尼亚|层峰网络|172|
-      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|745|
-      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|761|
-      - 🇺🇸 US|美国|康涅狄格|亚马逊|798|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|348|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|356|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|364|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|372|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|380|
-      - 🇭🇰 HK|中国|香港|386|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|392|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|399|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|405|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|412|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|418|
-      - 🇭🇰 HK|中国|香港|425|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|431|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|440|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|449|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|457|
-      - 🇭🇰 HK|中国|香港|464|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|471|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|477|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|483|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|491|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|499|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|507|
-      - 🇳🇱 NL|荷兰|Flevoland|545|
-      - 🇷🇺 RU|俄罗斯|莫斯科|莫斯科|600|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|630|
-      - 🇷🇺 RU|俄罗斯|莫斯科|莫斯科|636|
-      - 🇩🇪 SE|瑞典|斯德哥尔摩|亚马逊|415|
-      - 🇸🇬 SG|新加坡|341|
-      - 🇹🇷 TR|土耳其|Bursa|841|
-      - 🇹🇷 TR|土耳其|858|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|1471|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|1479|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|1492|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|1499|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|1514|
-      - 🇺🇸 US|美国|加利福尼亚|12|
-      - 🇺🇸 US|美国|加利福尼亚|20|
-      - 🇺🇸 US|美国|加利福尼亚|27|
-      - 🇺🇸 US|美国|加利福尼亚|层峰网络|33|
-      - 🇺🇸 US|美国|加利福尼亚|38|
-      - 🇺🇸 US|美国|加利福尼亚|层峰网络|47|
-      - 🇺🇸 US|美国|加利福尼亚|层峰网络|56|
-      - 🇺🇸 US|美国|加利福尼亚|费利蒙|64|
-      - 🇺🇸 US|美国|加利福尼亚|73|
-      - 🇺🇸 US|美国|加利福尼亚|80|
-      - 🇺🇸 US|美国|加利福尼亚|87|
-      - 🇺🇸 US|美国|加利福尼亚|94|
-      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|101|
-      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|109|
-      - 🇺🇸 US|美国|华盛顿|亚马逊|116|
-      - 🇺🇸 US|美国|CloudFlare|122|
-      - 🇺🇸 US|美国|CloudFlare|129|
-      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|137|
-      - 🇺🇸 US|美国|加利福尼亚|旧金山|144|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|151|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|158|
-      - 🇺🇸 US|美国|加利福尼亚|167|
-      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|175|
-      - 🇺🇸 US|美国|加利福尼亚|费利蒙|181|
-      - 🇺🇸 US|美国|CloudFlare|188|
-      - 🇺🇸 US|美国|加利福尼亚|195|
-      - 🇺🇸 US|美国|加利福尼亚|203|
-      - 🇺🇸 US|美国|加利福尼亚|210|
-      - 🇺🇸 US|美国|弗吉尼亚|阿什本|亚马逊|217|
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|224|
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|230|
-      - 🇺🇸 US|美国|纽约|纽约|237|
+      - 🇺🇸 US|美国|CloudFlare|1155|
+      - 🇦🇺 AU|澳大利亚|CloudFlare|5869|
+      - 🇦🇺 AU|澳大利亚|5890|
+      - 🇺🇸 US|美国|加利福尼亚|2087|
+      - 🇯🇵 JP|日本|大阪府|大阪|2094|
+      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|2101|
+      - 🇯🇵 JP|日本|大阪府|大阪|2122|
+      - 🇨🇦 CA|加拿大|安大略|奥克维尔|2129|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2955|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2962|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2969|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2976|
+      - 🇩🇪 DE|德国|HE|Hesse|法兰克福|Melbikomas UAB|148|
+      - 🇺🇸 US|美国|佐治亚|亚特兰大|155|
+      - 🇩🇪 DE|德国|法兰克福|法兰克福|亚马逊|165|
+      - 🇩🇪 DE|德国|199|
+      - 🇬🇧 GB|英国|伦敦|伦敦|亚马逊|550|
+      - 🇬🇧 GB|英国|伦敦|伦敦|573|
+      - 🇩🇪 ES|西班牙|马德里|马德里|588|
+      - 🇺🇸 US|美国|亚马逊|1840|
+      - 🇺🇸 US|美国|亚马逊|1857|
+      - 🇺🇸 US|美国|亚马逊|1864|
+      - 🇺🇸 US|美国|亚马逊|1873|
+      - 🇺🇸 US|美国|亚马逊|1881|
+      - 🇺🇸 US|美国|亚马逊|1888|
+      - 🇺🇸 US|美国|马萨诸塞|亚马逊|1893|
+      - 🇺🇸 US|美国|亚马逊|1899|
+      - 🇺🇸 US|美国|亚马逊|1908|
+      - 🇭🇰 HK|中国|香港|微软|1938|
+      - 🇺🇸 US|美国|亚马逊|1962|
+      - 🇮🇱 IL|以色列|3755|
+      - 🇺🇸 US|美国|纽约|纽约|4884|
+      - 🇮🇳 IN|印度|卡纳塔克|班加罗尔|4931|
+      - 🇮🇹 IT|意大利|Palermo|1658|
+      - 🇯🇵 JP|日本|东京都|东京|2135|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2142|
+      - 🇺🇸 US|美国|康涅狄格|亚马逊|2148|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2155|
+      - 🇺🇸 US|美国|加利福尼亚|层峰网络|2162|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2169|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2176|
+      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|2812|
+      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|2825|
+      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|2839|
+      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|2854|
+      - 🇭🇰 HK|中国|香港|1570|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1577|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1585|
+      - 🇭🇰 HK|中国|香港|1593|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1603|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1610|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1618|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1626|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1635|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1642|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1651|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1659|
+      - 🇭🇰 HK|中国|香港|1667|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1675|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1682|
+      - 🇭🇰 HK|中国|香港|1689|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1697|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1705|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1712|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1718|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1725|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1733|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1738|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1747|
+      - 🇳🇱 NL|荷兰|Flevoland|1755|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|676|
+      - 🇷🇺 RU|俄罗斯|莫斯科|莫斯科|692|
+      - 🇷🇺 RU|俄罗斯|莫斯科|莫斯科|715|
+      - 🇩🇪 SE|瑞典|斯德哥尔摩|亚马逊|1174|
+      - 🇹🇷 TR|土耳其|Bursa|3140|
+      - 🇹🇷 TR|土耳其|3148|
+      - 🇺🇸 US|美国|加利福尼亚|层峰网络|2403|
+      - 🇺🇸 US|美国|加利福尼亚|2411|
+      - 🇺🇸 US|美国|加利福尼亚|2420|
+      - 🇺🇸 US|美国|加利福尼亚|费利蒙|2435|
+      - 🇺🇸 US|美国|弗吉尼亚|阿什本|亚马逊|2443|
+      - 🇺🇸 US|美国|加利福尼亚|2451|
+      - 🇺🇸 US|美国|佐治亚|亚特兰大|2460|
+      - 🇺🇸 US|美国|加利福尼亚|2466|
+      - 🇺🇸 US|美国|加利福尼亚|2476|
+      - 🇺🇸 US|美国|加利福尼亚|2483|
+      - 🇺🇸 US|美国|加利福尼亚|2492|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|2499|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2507|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2515|
+      - 🇺🇸 US|美国|加利福尼亚|2523|
+      - 🇺🇸 US|美国|加利福尼亚|2530|
+      - 🇺🇸 US|美国|加利福尼亚|层峰网络|2537|
+      - 🇺🇸 US|美国|加利福尼亚|2545|
+      - 🇺🇸 US|美国|加利福尼亚|层峰网络|2554|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2561|
+      - 🇺🇸 US|美国|CloudFlare|2569|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2579|
+      - 🇺🇸 US|美国|CloudFlare|2588|
+      - 🇺🇸 US|美国|CloudFlare|2594|
+      - 🇺🇸 US|美国|CloudFlare|2601|
+      - 🇺🇸 US|美国|CloudFlare|2611|
+      - 🇺🇸 US|美国|CloudFlare|2618|
+      - 🇺🇸 US|美国|CloudFlare|2626|
+      - 🇺🇸 US|美国|CloudFlare|2632|
+      - 🇺🇸 US|美国|CloudFlare|2640|
+      - 🇺🇸 US|美国|CloudFlare|2647|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2654|
+      - 🇺🇸 US|美国|CloudFlare|2662|
+      - 🇺🇸 US|美国|CloudFlare|2669|
+      - 🇺🇸 US|美国|CloudFlare|2676|
+      - 🇺🇸 US|美国|CloudFlare|2685|
+      - 🇺🇸 US|美国|CloudFlare|2692|
+      - 🇺🇸 US|美国|CloudFlare|2701|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2709|
+      - 🇺🇸 US|美国|CloudFlare|2718|
+      - 🇺🇸 US|美国|CloudFlare|2726|
+      - 🇺🇸 US|美国|CloudFlare|2734|
+      - 🇺🇸 US|美国|CloudFlare|2742|
+      - 🇺🇸 US|美国|纽约|纽约|2750|
+      - 🇺🇸 US|美国|加利福尼亚|2757|
+      - 🇺🇸 US|美国|CloudFlare|2764|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|2771|
+      - 🇩🇪 US|美国|德克萨斯|休斯顿|2777|
+      - 🇺🇸 US|美国|加利福尼亚|2784|
+      - 🇩🇪 US|美国|德克萨斯|休斯顿|2791|
+      - 🇺🇸 US|美国|CloudFlare|2800|
+      - 🇺🇸 US|美国|佐治亚|亚特兰大|2809|
+      - 🇺🇸 US|美国|CloudFlare|2818|
+      - 🇺🇸 US|美国|CloudFlare|2824|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|2831|
+      - 🇺🇸 US|美国|CloudFlare|2838|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2845|
+      - 🇺🇸 US|美国|CloudFlare|2852|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2858|
+      - 🇺🇸 US|美国|CloudFlare|2866|
+      - 🇺🇸 US|美国|CloudFlare|2874|
+      - 🇺🇸 US|美国|CloudFlare|2881|
+      - 🇺🇸 US|美国|CloudFlare|2888|
+      - 🇺🇸 US|美国|CloudFlare|2896|
+      - 🇺🇸 US|美国|CloudFlare|2904|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|2911|
+      - 🇺🇸 US|美国|CloudFlare|2919|
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 🇦🇺 AU|澳大利亚|841|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|105|
-      - 🇺🇸 US|美国|加利福尼亚|112|
-      - 🇯🇵 JP|日本|大阪府|大阪|119|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|892|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|899|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|907|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|916|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|923|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|930|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|951|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|957|
-      - 🇩🇪 DE|德国|法兰克福|法兰克福|亚马逊|62|
-      - 🇩🇪 DE|德国|HE|Hesse|法兰克福|Melbikomas UAB|69|
-      - 🇺🇸 US|美国|亚马逊|76|
-      - 🇩🇪 DE|德国|98|
-      - 🇬🇧 GB|英国|伦敦|伦敦|亚马逊|17|
-      - 🇬🇧 GB|英国|伦敦|伦敦|亚马逊|35|
-      - 🇬🇧 GB|英国|伦敦|伦敦|44|
-      - 🇩🇪 ES|西班牙|马德里|马德里|51|
-      - 🇺🇸 US|美国|马萨诸塞|亚马逊|804|
-      - 🇺🇸 US|美国|亚马逊|1|
-      - 🇭🇰 HK|中国|香港|微软|8|
-      - 🇭🇰 HK|中国|香港|微软|28|
-      - 🇮🇱 IL|以色列|1788|
-      - 🇺🇸 US|美国|纽约|纽约|2959|
-      - 🇮🇳 IN|印度|卡纳塔克|班加罗尔|3014|
-      - 🇮🇹 IT|意大利|Palermo|558|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|137|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|143|
-      - 🇯🇵 JP|日本|东京都|东京|151|
-      - 🇺🇸 US|美国|康涅狄格|亚马逊|157|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|165|
-      - 🇺🇸 US|美国|加利福尼亚|层峰网络|172|
-      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|745|
-      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|761|
-      - 🇺🇸 US|美国|康涅狄格|亚马逊|798|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|348|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|356|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|364|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|372|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|380|
-      - 🇭🇰 HK|中国|香港|386|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|392|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|399|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|405|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|412|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|418|
-      - 🇭🇰 HK|中国|香港|425|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|431|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|440|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|449|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|457|
-      - 🇭🇰 HK|中国|香港|464|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|471|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|477|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|483|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|491|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|499|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|507|
-      - 🇳🇱 NL|荷兰|Flevoland|545|
-      - 🇷🇺 RU|俄罗斯|莫斯科|莫斯科|600|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|630|
-      - 🇷🇺 RU|俄罗斯|莫斯科|莫斯科|636|
-      - 🇩🇪 SE|瑞典|斯德哥尔摩|亚马逊|415|
-      - 🇸🇬 SG|新加坡|341|
-      - 🇹🇷 TR|土耳其|Bursa|841|
-      - 🇹🇷 TR|土耳其|858|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|1471|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|1479|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|1492|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|1499|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|1514|
-      - 🇺🇸 US|美国|加利福尼亚|12|
-      - 🇺🇸 US|美国|加利福尼亚|20|
-      - 🇺🇸 US|美国|加利福尼亚|27|
-      - 🇺🇸 US|美国|加利福尼亚|层峰网络|33|
-      - 🇺🇸 US|美国|加利福尼亚|38|
-      - 🇺🇸 US|美国|加利福尼亚|层峰网络|47|
-      - 🇺🇸 US|美国|加利福尼亚|层峰网络|56|
-      - 🇺🇸 US|美国|加利福尼亚|费利蒙|64|
-      - 🇺🇸 US|美国|加利福尼亚|73|
-      - 🇺🇸 US|美国|加利福尼亚|80|
-      - 🇺🇸 US|美国|加利福尼亚|87|
-      - 🇺🇸 US|美国|加利福尼亚|94|
-      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|101|
-      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|109|
-      - 🇺🇸 US|美国|华盛顿|亚马逊|116|
-      - 🇺🇸 US|美国|CloudFlare|122|
-      - 🇺🇸 US|美国|CloudFlare|129|
-      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|137|
-      - 🇺🇸 US|美国|加利福尼亚|旧金山|144|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|151|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|158|
-      - 🇺🇸 US|美国|加利福尼亚|167|
-      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|175|
-      - 🇺🇸 US|美国|加利福尼亚|费利蒙|181|
-      - 🇺🇸 US|美国|CloudFlare|188|
-      - 🇺🇸 US|美国|加利福尼亚|195|
-      - 🇺🇸 US|美国|加利福尼亚|203|
-      - 🇺🇸 US|美国|加利福尼亚|210|
-      - 🇺🇸 US|美国|弗吉尼亚|阿什本|亚马逊|217|
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|224|
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|230|
-      - 🇺🇸 US|美国|纽约|纽约|237|
+      - 🇺🇸 US|美国|CloudFlare|1155|
+      - 🇦🇺 AU|澳大利亚|CloudFlare|5869|
+      - 🇦🇺 AU|澳大利亚|5890|
+      - 🇺🇸 US|美国|加利福尼亚|2087|
+      - 🇯🇵 JP|日本|大阪府|大阪|2094|
+      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|2101|
+      - 🇯🇵 JP|日本|大阪府|大阪|2122|
+      - 🇨🇦 CA|加拿大|安大略|奥克维尔|2129|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2955|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2962|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2969|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2976|
+      - 🇩🇪 DE|德国|HE|Hesse|法兰克福|Melbikomas UAB|148|
+      - 🇺🇸 US|美国|佐治亚|亚特兰大|155|
+      - 🇩🇪 DE|德国|法兰克福|法兰克福|亚马逊|165|
+      - 🇩🇪 DE|德国|199|
+      - 🇬🇧 GB|英国|伦敦|伦敦|亚马逊|550|
+      - 🇬🇧 GB|英国|伦敦|伦敦|573|
+      - 🇩🇪 ES|西班牙|马德里|马德里|588|
+      - 🇺🇸 US|美国|亚马逊|1840|
+      - 🇺🇸 US|美国|亚马逊|1857|
+      - 🇺🇸 US|美国|亚马逊|1864|
+      - 🇺🇸 US|美国|亚马逊|1873|
+      - 🇺🇸 US|美国|亚马逊|1881|
+      - 🇺🇸 US|美国|亚马逊|1888|
+      - 🇺🇸 US|美国|马萨诸塞|亚马逊|1893|
+      - 🇺🇸 US|美国|亚马逊|1899|
+      - 🇺🇸 US|美国|亚马逊|1908|
+      - 🇭🇰 HK|中国|香港|微软|1938|
+      - 🇺🇸 US|美国|亚马逊|1962|
+      - 🇮🇱 IL|以色列|3755|
+      - 🇺🇸 US|美国|纽约|纽约|4884|
+      - 🇮🇳 IN|印度|卡纳塔克|班加罗尔|4931|
+      - 🇮🇹 IT|意大利|Palermo|1658|
+      - 🇯🇵 JP|日本|东京都|东京|2135|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2142|
+      - 🇺🇸 US|美国|康涅狄格|亚马逊|2148|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2155|
+      - 🇺🇸 US|美国|加利福尼亚|层峰网络|2162|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2169|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2176|
+      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|2812|
+      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|2825|
+      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|2839|
+      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|2854|
+      - 🇭🇰 HK|中国|香港|1570|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1577|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1585|
+      - 🇭🇰 HK|中国|香港|1593|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1603|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1610|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1618|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1626|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1635|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1642|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1651|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1659|
+      - 🇭🇰 HK|中国|香港|1667|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1675|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1682|
+      - 🇭🇰 HK|中国|香港|1689|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1697|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1705|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1712|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1718|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1725|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1733|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1738|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1747|
+      - 🇳🇱 NL|荷兰|Flevoland|1755|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|676|
+      - 🇷🇺 RU|俄罗斯|莫斯科|莫斯科|692|
+      - 🇷🇺 RU|俄罗斯|莫斯科|莫斯科|715|
+      - 🇩🇪 SE|瑞典|斯德哥尔摩|亚马逊|1174|
+      - 🇹🇷 TR|土耳其|Bursa|3140|
+      - 🇹🇷 TR|土耳其|3148|
+      - 🇺🇸 US|美国|加利福尼亚|层峰网络|2403|
+      - 🇺🇸 US|美国|加利福尼亚|2411|
+      - 🇺🇸 US|美国|加利福尼亚|2420|
+      - 🇺🇸 US|美国|加利福尼亚|费利蒙|2435|
+      - 🇺🇸 US|美国|弗吉尼亚|阿什本|亚马逊|2443|
+      - 🇺🇸 US|美国|加利福尼亚|2451|
+      - 🇺🇸 US|美国|佐治亚|亚特兰大|2460|
+      - 🇺🇸 US|美国|加利福尼亚|2466|
+      - 🇺🇸 US|美国|加利福尼亚|2476|
+      - 🇺🇸 US|美国|加利福尼亚|2483|
+      - 🇺🇸 US|美国|加利福尼亚|2492|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|2499|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2507|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2515|
+      - 🇺🇸 US|美国|加利福尼亚|2523|
+      - 🇺🇸 US|美国|加利福尼亚|2530|
+      - 🇺🇸 US|美国|加利福尼亚|层峰网络|2537|
+      - 🇺🇸 US|美国|加利福尼亚|2545|
+      - 🇺🇸 US|美国|加利福尼亚|层峰网络|2554|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2561|
+      - 🇺🇸 US|美国|CloudFlare|2569|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2579|
+      - 🇺🇸 US|美国|CloudFlare|2588|
+      - 🇺🇸 US|美国|CloudFlare|2594|
+      - 🇺🇸 US|美国|CloudFlare|2601|
+      - 🇺🇸 US|美国|CloudFlare|2611|
+      - 🇺🇸 US|美国|CloudFlare|2618|
+      - 🇺🇸 US|美国|CloudFlare|2626|
+      - 🇺🇸 US|美国|CloudFlare|2632|
+      - 🇺🇸 US|美国|CloudFlare|2640|
+      - 🇺🇸 US|美国|CloudFlare|2647|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2654|
+      - 🇺🇸 US|美国|CloudFlare|2662|
+      - 🇺🇸 US|美国|CloudFlare|2669|
+      - 🇺🇸 US|美国|CloudFlare|2676|
+      - 🇺🇸 US|美国|CloudFlare|2685|
+      - 🇺🇸 US|美国|CloudFlare|2692|
+      - 🇺🇸 US|美国|CloudFlare|2701|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2709|
+      - 🇺🇸 US|美国|CloudFlare|2718|
+      - 🇺🇸 US|美国|CloudFlare|2726|
+      - 🇺🇸 US|美国|CloudFlare|2734|
+      - 🇺🇸 US|美国|CloudFlare|2742|
+      - 🇺🇸 US|美国|纽约|纽约|2750|
+      - 🇺🇸 US|美国|加利福尼亚|2757|
+      - 🇺🇸 US|美国|CloudFlare|2764|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|2771|
+      - 🇩🇪 US|美国|德克萨斯|休斯顿|2777|
+      - 🇺🇸 US|美国|加利福尼亚|2784|
+      - 🇩🇪 US|美国|德克萨斯|休斯顿|2791|
+      - 🇺🇸 US|美国|CloudFlare|2800|
+      - 🇺🇸 US|美国|佐治亚|亚特兰大|2809|
+      - 🇺🇸 US|美国|CloudFlare|2818|
+      - 🇺🇸 US|美国|CloudFlare|2824|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|2831|
+      - 🇺🇸 US|美国|CloudFlare|2838|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2845|
+      - 🇺🇸 US|美国|CloudFlare|2852|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2858|
+      - 🇺🇸 US|美国|CloudFlare|2866|
+      - 🇺🇸 US|美国|CloudFlare|2874|
+      - 🇺🇸 US|美国|CloudFlare|2881|
+      - 🇺🇸 US|美国|CloudFlare|2888|
+      - 🇺🇸 US|美国|CloudFlare|2896|
+      - 🇺🇸 US|美国|CloudFlare|2904|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|2911|
+      - 🇺🇸 US|美国|CloudFlare|2919|
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇦🇺 AU|澳大利亚|841|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|105|
-      - 🇺🇸 US|美国|加利福尼亚|112|
-      - 🇯🇵 JP|日本|大阪府|大阪|119|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|892|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|899|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|907|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|916|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|923|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|930|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|951|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|957|
-      - 🇩🇪 DE|德国|法兰克福|法兰克福|亚马逊|62|
-      - 🇩🇪 DE|德国|HE|Hesse|法兰克福|Melbikomas UAB|69|
-      - 🇺🇸 US|美国|亚马逊|76|
-      - 🇩🇪 DE|德国|98|
-      - 🇬🇧 GB|英国|伦敦|伦敦|亚马逊|17|
-      - 🇬🇧 GB|英国|伦敦|伦敦|亚马逊|35|
-      - 🇬🇧 GB|英国|伦敦|伦敦|44|
-      - 🇩🇪 ES|西班牙|马德里|马德里|51|
-      - 🇺🇸 US|美国|马萨诸塞|亚马逊|804|
-      - 🇺🇸 US|美国|亚马逊|1|
-      - 🇭🇰 HK|中国|香港|微软|8|
-      - 🇭🇰 HK|中国|香港|微软|28|
-      - 🇮🇱 IL|以色列|1788|
-      - 🇺🇸 US|美国|纽约|纽约|2959|
-      - 🇮🇳 IN|印度|卡纳塔克|班加罗尔|3014|
-      - 🇮🇹 IT|意大利|Palermo|558|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|137|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|143|
-      - 🇯🇵 JP|日本|东京都|东京|151|
-      - 🇺🇸 US|美国|康涅狄格|亚马逊|157|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|165|
-      - 🇺🇸 US|美国|加利福尼亚|层峰网络|172|
-      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|745|
-      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|761|
-      - 🇺🇸 US|美国|康涅狄格|亚马逊|798|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|348|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|356|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|364|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|372|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|380|
-      - 🇭🇰 HK|中国|香港|386|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|392|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|399|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|405|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|412|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|418|
-      - 🇭🇰 HK|中国|香港|425|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|431|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|440|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|449|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|457|
-      - 🇭🇰 HK|中国|香港|464|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|471|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|477|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|483|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|491|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|499|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|507|
-      - 🇳🇱 NL|荷兰|Flevoland|545|
-      - 🇷🇺 RU|俄罗斯|莫斯科|莫斯科|600|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|630|
-      - 🇷🇺 RU|俄罗斯|莫斯科|莫斯科|636|
-      - 🇩🇪 SE|瑞典|斯德哥尔摩|亚马逊|415|
-      - 🇸🇬 SG|新加坡|341|
-      - 🇹🇷 TR|土耳其|Bursa|841|
-      - 🇹🇷 TR|土耳其|858|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|1471|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|1479|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|1492|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|1499|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|1514|
-      - 🇺🇸 US|美国|加利福尼亚|12|
-      - 🇺🇸 US|美国|加利福尼亚|20|
-      - 🇺🇸 US|美国|加利福尼亚|27|
-      - 🇺🇸 US|美国|加利福尼亚|层峰网络|33|
-      - 🇺🇸 US|美国|加利福尼亚|38|
-      - 🇺🇸 US|美国|加利福尼亚|层峰网络|47|
-      - 🇺🇸 US|美国|加利福尼亚|层峰网络|56|
-      - 🇺🇸 US|美国|加利福尼亚|费利蒙|64|
-      - 🇺🇸 US|美国|加利福尼亚|73|
-      - 🇺🇸 US|美国|加利福尼亚|80|
-      - 🇺🇸 US|美国|加利福尼亚|87|
-      - 🇺🇸 US|美国|加利福尼亚|94|
-      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|101|
-      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|109|
-      - 🇺🇸 US|美国|华盛顿|亚马逊|116|
-      - 🇺🇸 US|美国|CloudFlare|122|
-      - 🇺🇸 US|美国|CloudFlare|129|
-      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|137|
-      - 🇺🇸 US|美国|加利福尼亚|旧金山|144|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|151|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|158|
-      - 🇺🇸 US|美国|加利福尼亚|167|
-      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|175|
-      - 🇺🇸 US|美国|加利福尼亚|费利蒙|181|
-      - 🇺🇸 US|美国|CloudFlare|188|
-      - 🇺🇸 US|美国|加利福尼亚|195|
-      - 🇺🇸 US|美国|加利福尼亚|203|
-      - 🇺🇸 US|美国|加利福尼亚|210|
-      - 🇺🇸 US|美国|弗吉尼亚|阿什本|亚马逊|217|
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|224|
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|230|
-      - 🇺🇸 US|美国|纽约|纽约|237|
+      - 🇺🇸 US|美国|CloudFlare|1155|
+      - 🇦🇺 AU|澳大利亚|CloudFlare|5869|
+      - 🇦🇺 AU|澳大利亚|5890|
+      - 🇺🇸 US|美国|加利福尼亚|2087|
+      - 🇯🇵 JP|日本|大阪府|大阪|2094|
+      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|2101|
+      - 🇯🇵 JP|日本|大阪府|大阪|2122|
+      - 🇨🇦 CA|加拿大|安大略|奥克维尔|2129|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2955|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2962|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2969|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2976|
+      - 🇩🇪 DE|德国|HE|Hesse|法兰克福|Melbikomas UAB|148|
+      - 🇺🇸 US|美国|佐治亚|亚特兰大|155|
+      - 🇩🇪 DE|德国|法兰克福|法兰克福|亚马逊|165|
+      - 🇩🇪 DE|德国|199|
+      - 🇬🇧 GB|英国|伦敦|伦敦|亚马逊|550|
+      - 🇬🇧 GB|英国|伦敦|伦敦|573|
+      - 🇩🇪 ES|西班牙|马德里|马德里|588|
+      - 🇺🇸 US|美国|亚马逊|1840|
+      - 🇺🇸 US|美国|亚马逊|1857|
+      - 🇺🇸 US|美国|亚马逊|1864|
+      - 🇺🇸 US|美国|亚马逊|1873|
+      - 🇺🇸 US|美国|亚马逊|1881|
+      - 🇺🇸 US|美国|亚马逊|1888|
+      - 🇺🇸 US|美国|马萨诸塞|亚马逊|1893|
+      - 🇺🇸 US|美国|亚马逊|1899|
+      - 🇺🇸 US|美国|亚马逊|1908|
+      - 🇭🇰 HK|中国|香港|微软|1938|
+      - 🇺🇸 US|美国|亚马逊|1962|
+      - 🇮🇱 IL|以色列|3755|
+      - 🇺🇸 US|美国|纽约|纽约|4884|
+      - 🇮🇳 IN|印度|卡纳塔克|班加罗尔|4931|
+      - 🇮🇹 IT|意大利|Palermo|1658|
+      - 🇯🇵 JP|日本|东京都|东京|2135|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2142|
+      - 🇺🇸 US|美国|康涅狄格|亚马逊|2148|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2155|
+      - 🇺🇸 US|美国|加利福尼亚|层峰网络|2162|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2169|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2176|
+      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|2812|
+      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|2825|
+      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|2839|
+      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|2854|
+      - 🇭🇰 HK|中国|香港|1570|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1577|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1585|
+      - 🇭🇰 HK|中国|香港|1593|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1603|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1610|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1618|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1626|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1635|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1642|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1651|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1659|
+      - 🇭🇰 HK|中国|香港|1667|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1675|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1682|
+      - 🇭🇰 HK|中国|香港|1689|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1697|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1705|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1712|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1718|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1725|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1733|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1738|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1747|
+      - 🇳🇱 NL|荷兰|Flevoland|1755|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|676|
+      - 🇷🇺 RU|俄罗斯|莫斯科|莫斯科|692|
+      - 🇷🇺 RU|俄罗斯|莫斯科|莫斯科|715|
+      - 🇩🇪 SE|瑞典|斯德哥尔摩|亚马逊|1174|
+      - 🇹🇷 TR|土耳其|Bursa|3140|
+      - 🇹🇷 TR|土耳其|3148|
+      - 🇺🇸 US|美国|加利福尼亚|层峰网络|2403|
+      - 🇺🇸 US|美国|加利福尼亚|2411|
+      - 🇺🇸 US|美国|加利福尼亚|2420|
+      - 🇺🇸 US|美国|加利福尼亚|费利蒙|2435|
+      - 🇺🇸 US|美国|弗吉尼亚|阿什本|亚马逊|2443|
+      - 🇺🇸 US|美国|加利福尼亚|2451|
+      - 🇺🇸 US|美国|佐治亚|亚特兰大|2460|
+      - 🇺🇸 US|美国|加利福尼亚|2466|
+      - 🇺🇸 US|美国|加利福尼亚|2476|
+      - 🇺🇸 US|美国|加利福尼亚|2483|
+      - 🇺🇸 US|美国|加利福尼亚|2492|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|2499|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2507|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2515|
+      - 🇺🇸 US|美国|加利福尼亚|2523|
+      - 🇺🇸 US|美国|加利福尼亚|2530|
+      - 🇺🇸 US|美国|加利福尼亚|层峰网络|2537|
+      - 🇺🇸 US|美国|加利福尼亚|2545|
+      - 🇺🇸 US|美国|加利福尼亚|层峰网络|2554|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2561|
+      - 🇺🇸 US|美国|CloudFlare|2569|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2579|
+      - 🇺🇸 US|美国|CloudFlare|2588|
+      - 🇺🇸 US|美国|CloudFlare|2594|
+      - 🇺🇸 US|美国|CloudFlare|2601|
+      - 🇺🇸 US|美国|CloudFlare|2611|
+      - 🇺🇸 US|美国|CloudFlare|2618|
+      - 🇺🇸 US|美国|CloudFlare|2626|
+      - 🇺🇸 US|美国|CloudFlare|2632|
+      - 🇺🇸 US|美国|CloudFlare|2640|
+      - 🇺🇸 US|美国|CloudFlare|2647|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2654|
+      - 🇺🇸 US|美国|CloudFlare|2662|
+      - 🇺🇸 US|美国|CloudFlare|2669|
+      - 🇺🇸 US|美国|CloudFlare|2676|
+      - 🇺🇸 US|美国|CloudFlare|2685|
+      - 🇺🇸 US|美国|CloudFlare|2692|
+      - 🇺🇸 US|美国|CloudFlare|2701|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2709|
+      - 🇺🇸 US|美国|CloudFlare|2718|
+      - 🇺🇸 US|美国|CloudFlare|2726|
+      - 🇺🇸 US|美国|CloudFlare|2734|
+      - 🇺🇸 US|美国|CloudFlare|2742|
+      - 🇺🇸 US|美国|纽约|纽约|2750|
+      - 🇺🇸 US|美国|加利福尼亚|2757|
+      - 🇺🇸 US|美国|CloudFlare|2764|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|2771|
+      - 🇩🇪 US|美国|德克萨斯|休斯顿|2777|
+      - 🇺🇸 US|美国|加利福尼亚|2784|
+      - 🇩🇪 US|美国|德克萨斯|休斯顿|2791|
+      - 🇺🇸 US|美国|CloudFlare|2800|
+      - 🇺🇸 US|美国|佐治亚|亚特兰大|2809|
+      - 🇺🇸 US|美国|CloudFlare|2818|
+      - 🇺🇸 US|美国|CloudFlare|2824|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|2831|
+      - 🇺🇸 US|美国|CloudFlare|2838|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2845|
+      - 🇺🇸 US|美国|CloudFlare|2852|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2858|
+      - 🇺🇸 US|美国|CloudFlare|2866|
+      - 🇺🇸 US|美国|CloudFlare|2874|
+      - 🇺🇸 US|美国|CloudFlare|2881|
+      - 🇺🇸 US|美国|CloudFlare|2888|
+      - 🇺🇸 US|美国|CloudFlare|2896|
+      - 🇺🇸 US|美国|CloudFlare|2904|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|2911|
+      - 🇺🇸 US|美国|CloudFlare|2919|
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -798,111 +1064,149 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇦🇺 AU|澳大利亚|841|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|105|
-      - 🇺🇸 US|美国|加利福尼亚|112|
-      - 🇯🇵 JP|日本|大阪府|大阪|119|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|892|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|899|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|907|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|916|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|923|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|930|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|951|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|957|
-      - 🇩🇪 DE|德国|法兰克福|法兰克福|亚马逊|62|
-      - 🇩🇪 DE|德国|HE|Hesse|法兰克福|Melbikomas UAB|69|
-      - 🇺🇸 US|美国|亚马逊|76|
-      - 🇩🇪 DE|德国|98|
-      - 🇬🇧 GB|英国|伦敦|伦敦|亚马逊|17|
-      - 🇬🇧 GB|英国|伦敦|伦敦|亚马逊|35|
-      - 🇬🇧 GB|英国|伦敦|伦敦|44|
-      - 🇩🇪 ES|西班牙|马德里|马德里|51|
-      - 🇺🇸 US|美国|马萨诸塞|亚马逊|804|
-      - 🇺🇸 US|美国|亚马逊|1|
-      - 🇭🇰 HK|中国|香港|微软|8|
-      - 🇭🇰 HK|中国|香港|微软|28|
-      - 🇮🇱 IL|以色列|1788|
-      - 🇺🇸 US|美国|纽约|纽约|2959|
-      - 🇮🇳 IN|印度|卡纳塔克|班加罗尔|3014|
-      - 🇮🇹 IT|意大利|Palermo|558|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|137|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|143|
-      - 🇯🇵 JP|日本|东京都|东京|151|
-      - 🇺🇸 US|美国|康涅狄格|亚马逊|157|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|165|
-      - 🇺🇸 US|美国|加利福尼亚|层峰网络|172|
-      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|745|
-      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|761|
-      - 🇺🇸 US|美国|康涅狄格|亚马逊|798|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|348|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|356|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|364|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|372|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|380|
-      - 🇭🇰 HK|中国|香港|386|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|392|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|399|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|405|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|412|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|418|
-      - 🇭🇰 HK|中国|香港|425|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|431|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|440|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|449|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|457|
-      - 🇭🇰 HK|中国|香港|464|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|471|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|477|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|483|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|491|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|499|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|507|
-      - 🇳🇱 NL|荷兰|Flevoland|545|
-      - 🇷🇺 RU|俄罗斯|莫斯科|莫斯科|600|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|630|
-      - 🇷🇺 RU|俄罗斯|莫斯科|莫斯科|636|
-      - 🇩🇪 SE|瑞典|斯德哥尔摩|亚马逊|415|
-      - 🇸🇬 SG|新加坡|341|
-      - 🇹🇷 TR|土耳其|Bursa|841|
-      - 🇹🇷 TR|土耳其|858|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|1471|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|1479|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|1492|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|1499|
-      - 🇯🇵 JP|日本|东京都|东京|亚马逊|1514|
-      - 🇺🇸 US|美国|加利福尼亚|12|
-      - 🇺🇸 US|美国|加利福尼亚|20|
-      - 🇺🇸 US|美国|加利福尼亚|27|
-      - 🇺🇸 US|美国|加利福尼亚|层峰网络|33|
-      - 🇺🇸 US|美国|加利福尼亚|38|
-      - 🇺🇸 US|美国|加利福尼亚|层峰网络|47|
-      - 🇺🇸 US|美国|加利福尼亚|层峰网络|56|
-      - 🇺🇸 US|美国|加利福尼亚|费利蒙|64|
-      - 🇺🇸 US|美国|加利福尼亚|73|
-      - 🇺🇸 US|美国|加利福尼亚|80|
-      - 🇺🇸 US|美国|加利福尼亚|87|
-      - 🇺🇸 US|美国|加利福尼亚|94|
-      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|101|
-      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|109|
-      - 🇺🇸 US|美国|华盛顿|亚马逊|116|
-      - 🇺🇸 US|美国|CloudFlare|122|
-      - 🇺🇸 US|美国|CloudFlare|129|
-      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|137|
-      - 🇺🇸 US|美国|加利福尼亚|旧金山|144|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|151|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|158|
-      - 🇺🇸 US|美国|加利福尼亚|167|
-      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|175|
-      - 🇺🇸 US|美国|加利福尼亚|费利蒙|181|
-      - 🇺🇸 US|美国|CloudFlare|188|
-      - 🇺🇸 US|美国|加利福尼亚|195|
-      - 🇺🇸 US|美国|加利福尼亚|203|
-      - 🇺🇸 US|美国|加利福尼亚|210|
-      - 🇺🇸 US|美国|弗吉尼亚|阿什本|亚马逊|217|
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|224|
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|230|
-      - 🇺🇸 US|美国|纽约|纽约|237|
+      - 🇺🇸 US|美国|CloudFlare|1155|
+      - 🇦🇺 AU|澳大利亚|CloudFlare|5869|
+      - 🇦🇺 AU|澳大利亚|5890|
+      - 🇺🇸 US|美国|加利福尼亚|2087|
+      - 🇯🇵 JP|日本|大阪府|大阪|2094|
+      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|2101|
+      - 🇯🇵 JP|日本|大阪府|大阪|2122|
+      - 🇨🇦 CA|加拿大|安大略|奥克维尔|2129|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2955|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2962|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2969|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2976|
+      - 🇩🇪 DE|德国|HE|Hesse|法兰克福|Melbikomas UAB|148|
+      - 🇺🇸 US|美国|佐治亚|亚特兰大|155|
+      - 🇩🇪 DE|德国|法兰克福|法兰克福|亚马逊|165|
+      - 🇩🇪 DE|德国|199|
+      - 🇬🇧 GB|英国|伦敦|伦敦|亚马逊|550|
+      - 🇬🇧 GB|英国|伦敦|伦敦|573|
+      - 🇩🇪 ES|西班牙|马德里|马德里|588|
+      - 🇺🇸 US|美国|亚马逊|1840|
+      - 🇺🇸 US|美国|亚马逊|1857|
+      - 🇺🇸 US|美国|亚马逊|1864|
+      - 🇺🇸 US|美国|亚马逊|1873|
+      - 🇺🇸 US|美国|亚马逊|1881|
+      - 🇺🇸 US|美国|亚马逊|1888|
+      - 🇺🇸 US|美国|马萨诸塞|亚马逊|1893|
+      - 🇺🇸 US|美国|亚马逊|1899|
+      - 🇺🇸 US|美国|亚马逊|1908|
+      - 🇭🇰 HK|中国|香港|微软|1938|
+      - 🇺🇸 US|美国|亚马逊|1962|
+      - 🇮🇱 IL|以色列|3755|
+      - 🇺🇸 US|美国|纽约|纽约|4884|
+      - 🇮🇳 IN|印度|卡纳塔克|班加罗尔|4931|
+      - 🇮🇹 IT|意大利|Palermo|1658|
+      - 🇯🇵 JP|日本|东京都|东京|2135|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2142|
+      - 🇺🇸 US|美国|康涅狄格|亚马逊|2148|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2155|
+      - 🇺🇸 US|美国|加利福尼亚|层峰网络|2162|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2169|
+      - 🇯🇵 JP|日本|东京都|东京|亚马逊|2176|
+      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|2812|
+      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|2825|
+      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|2839|
+      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|2854|
+      - 🇭🇰 HK|中国|香港|1570|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1577|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1585|
+      - 🇭🇰 HK|中国|香港|1593|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1603|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1610|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1618|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1626|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1635|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1642|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1651|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1659|
+      - 🇭🇰 HK|中国|香港|1667|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1675|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1682|
+      - 🇭🇰 HK|中国|香港|1689|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1697|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1705|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1712|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1718|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1725|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1733|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1738|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|1747|
+      - 🇳🇱 NL|荷兰|Flevoland|1755|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|676|
+      - 🇷🇺 RU|俄罗斯|莫斯科|莫斯科|692|
+      - 🇷🇺 RU|俄罗斯|莫斯科|莫斯科|715|
+      - 🇩🇪 SE|瑞典|斯德哥尔摩|亚马逊|1174|
+      - 🇹🇷 TR|土耳其|Bursa|3140|
+      - 🇹🇷 TR|土耳其|3148|
+      - 🇺🇸 US|美国|加利福尼亚|层峰网络|2403|
+      - 🇺🇸 US|美国|加利福尼亚|2411|
+      - 🇺🇸 US|美国|加利福尼亚|2420|
+      - 🇺🇸 US|美国|加利福尼亚|费利蒙|2435|
+      - 🇺🇸 US|美国|弗吉尼亚|阿什本|亚马逊|2443|
+      - 🇺🇸 US|美国|加利福尼亚|2451|
+      - 🇺🇸 US|美国|佐治亚|亚特兰大|2460|
+      - 🇺🇸 US|美国|加利福尼亚|2466|
+      - 🇺🇸 US|美国|加利福尼亚|2476|
+      - 🇺🇸 US|美国|加利福尼亚|2483|
+      - 🇺🇸 US|美国|加利福尼亚|2492|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|2499|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2507|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2515|
+      - 🇺🇸 US|美国|加利福尼亚|2523|
+      - 🇺🇸 US|美国|加利福尼亚|2530|
+      - 🇺🇸 US|美国|加利福尼亚|层峰网络|2537|
+      - 🇺🇸 US|美国|加利福尼亚|2545|
+      - 🇺🇸 US|美国|加利福尼亚|层峰网络|2554|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2561|
+      - 🇺🇸 US|美国|CloudFlare|2569|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2579|
+      - 🇺🇸 US|美国|CloudFlare|2588|
+      - 🇺🇸 US|美国|CloudFlare|2594|
+      - 🇺🇸 US|美国|CloudFlare|2601|
+      - 🇺🇸 US|美国|CloudFlare|2611|
+      - 🇺🇸 US|美国|CloudFlare|2618|
+      - 🇺🇸 US|美国|CloudFlare|2626|
+      - 🇺🇸 US|美国|CloudFlare|2632|
+      - 🇺🇸 US|美国|CloudFlare|2640|
+      - 🇺🇸 US|美国|CloudFlare|2647|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2654|
+      - 🇺🇸 US|美国|CloudFlare|2662|
+      - 🇺🇸 US|美国|CloudFlare|2669|
+      - 🇺🇸 US|美国|CloudFlare|2676|
+      - 🇺🇸 US|美国|CloudFlare|2685|
+      - 🇺🇸 US|美国|CloudFlare|2692|
+      - 🇺🇸 US|美国|CloudFlare|2701|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2709|
+      - 🇺🇸 US|美国|CloudFlare|2718|
+      - 🇺🇸 US|美国|CloudFlare|2726|
+      - 🇺🇸 US|美国|CloudFlare|2734|
+      - 🇺🇸 US|美国|CloudFlare|2742|
+      - 🇺🇸 US|美国|纽约|纽约|2750|
+      - 🇺🇸 US|美国|加利福尼亚|2757|
+      - 🇺🇸 US|美国|CloudFlare|2764|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|2771|
+      - 🇩🇪 US|美国|德克萨斯|休斯顿|2777|
+      - 🇺🇸 US|美国|加利福尼亚|2784|
+      - 🇩🇪 US|美国|德克萨斯|休斯顿|2791|
+      - 🇺🇸 US|美国|CloudFlare|2800|
+      - 🇺🇸 US|美国|佐治亚|亚特兰大|2809|
+      - 🇺🇸 US|美国|CloudFlare|2818|
+      - 🇺🇸 US|美国|CloudFlare|2824|
+      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|2831|
+      - 🇺🇸 US|美国|CloudFlare|2838|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2845|
+      - 🇺🇸 US|美国|CloudFlare|2852|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|2858|
+      - 🇺🇸 US|美国|CloudFlare|2866|
+      - 🇺🇸 US|美国|CloudFlare|2874|
+      - 🇺🇸 US|美国|CloudFlare|2881|
+      - 🇺🇸 US|美国|CloudFlare|2888|
+      - 🇺🇸 US|美国|CloudFlare|2896|
+      - 🇺🇸 US|美国|CloudFlare|2904|
+      - 🇺🇸 US|美国|加利福尼亚|旧金山|亚马逊|2911|
+      - 🇺🇸 US|美国|CloudFlare|2919|
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
