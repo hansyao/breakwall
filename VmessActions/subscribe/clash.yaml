@@ -5,31 +5,35 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇺🇸 US|美国|佛罗里达|2|, server: 209.216.92.3, port: 35294, type: ss, cipher: aes-256-gcm, password: J9Y2ncrdPEC38gwydNFFGBna}
-  - {name: 🇩🇪 US|美国|德克萨斯|休斯顿|2|, server: 199.10.64.133, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
+  - {name: 🇺🇸 US|美国|加利福尼亚|费利蒙|4|, server: 185.124.240.169, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
+  - {name: 🇺🇸 US|美国|佛罗里达|5|, server: 198.147.22.87, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
+  - {name: 🇺🇸 US|美国|纽约|纽约|2|, server: 84.17.35.78, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇺🇸 US|美国|佛罗里达|2|
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|2|
+      - 🇺🇸 US|美国|加利福尼亚|费利蒙|4|
+      - 🇺🇸 US|美国|佛罗里达|5|
+      - 🇺🇸 US|美国|纽约|纽约|2|
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇺🇸 US|美国|佛罗里达|2|
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|2|
+      - 🇺🇸 US|美国|加利福尼亚|费利蒙|4|
+      - 🇺🇸 US|美国|佛罗里达|5|
+      - 🇺🇸 US|美国|纽约|纽约|2|
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇺🇸 US|美国|佛罗里达|2|
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|2|
+      - 🇺🇸 US|美国|加利福尼亚|费利蒙|4|
+      - 🇺🇸 US|美国|佛罗里达|5|
+      - 🇺🇸 US|美国|纽约|纽约|2|
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -40,23 +44,26 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 🇺🇸 US|美国|佛罗里达|2|
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|2|
+      - 🇺🇸 US|美国|加利福尼亚|费利蒙|4|
+      - 🇺🇸 US|美国|佛罗里达|5|
+      - 🇺🇸 US|美国|纽约|纽约|2|
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 🇺🇸 US|美国|佛罗里达|2|
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|2|
+      - 🇺🇸 US|美国|加利福尼亚|费利蒙|4|
+      - 🇺🇸 US|美国|佛罗里达|5|
+      - 🇺🇸 US|美国|纽约|纽约|2|
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇺🇸 US|美国|佛罗里达|2|
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|2|
+      - 🇺🇸 US|美国|加利福尼亚|费利蒙|4|
+      - 🇺🇸 US|美国|佛罗里达|5|
+      - 🇺🇸 US|美国|纽约|纽约|2|
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,8 +79,9 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇺🇸 US|美国|佛罗里达|2|
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|2|
+      - 🇺🇸 US|美国|加利福尼亚|费利蒙|4|
+      - 🇺🇸 US|美国|佛罗里达|5|
+      - 🇺🇸 US|美国|纽约|纽约|2|
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
