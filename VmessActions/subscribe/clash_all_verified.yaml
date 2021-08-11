@@ -5,423 +5,91 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇺🇸 US|美国|加利福尼亚|费利蒙|1|, server: 185.124.240.169, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
-  - {name: 🇩🇪 US|美国|德克萨斯|休斯顿|8|, server: 199.10.64.133, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
-  - {name: 🇱🇻 LV|拉脱维亚|Riga|11|, server: 188.92.78.145, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
-  - {name: 🇱🇻 LV|拉脱维亚|Riga|7|, server: 188.92.78.145, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
-  - {name: 🇺🇸 US|美国|弗吉尼亚|1817|, server: 207.244.67.149, port: 40093, type: ss, cipher: aes-256-gcm, password: x23Z4LGkGDkThZ9Kaz4DURQp, udp: true}
-  - {name: 🇺🇸 US|美国|弗吉尼亚|3|, server: 207.244.67.149, port: 35294, type: ss, cipher: aes-256-gcm, password: J9Y2ncrdPEC38gwydNFFGBna, udp: true}
-  - {name: 🇸🇬 US|美国|新泽西|1|, server: 156.146.62.46, port: 41992, type: ss, cipher: aes-256-gcm, password: XmQSxDCn5ehpcq6DBYms8FJf}
-  - {name: 🇸🇬 US|美国|新泽西|425|, server: 156.146.62.46, port: 33148, type: ss, cipher: aes-256-gcm, password: CMduaFXddcQbwNAAs7xFDnc8}
-  - {name: 🇳🇱 NL|荷兰|北荷兰|5|, server: 81.19.208.107, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇳🇱 NL|荷兰|Drenthe|Level3|9|, server: 185.252.222.117, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇺🇦 UA|乌克兰|2|, server: 37.19.211.42, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇺🇦 UA|乌克兰|243|, server: 37.19.211.44, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇮🇪 IE|爱尔兰|Dublin|1427|, server: 5.157.13.133, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇮🇪 IE|爱尔兰|Dublin|7|, server: 5.157.13.69, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇪🇺 EU|欧洲|3|, server: 138.199.40.167, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇩🇪 DE|德国|法兰克福|法兰克福|1|, server: 193.176.86.131, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇬🇧 GB|英国|Manchester|45|, server: 89.238.138.237, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|1|, server: 37.120.236.139, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇵🇹 PT|葡萄牙|4|, server: 91.250.240.138, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|1| 2, server: 37.120.233.75, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇦🇹 AT|奥地利|1128|, server: 194.37.98.61, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|1| 3, server: 139.28.176.51, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇭🇷 HR|克罗地亚|4|, server: 176.222.34.132, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇨🇿 CZ|捷克|1Hlavni mesto Praha|布拉格|M247 Ltd|172|, server: 217.138.220.173, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇬🇧 GB|英国|XX||XX|XX|218|, server: 217.138.220.187, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇨🇿 CZ|捷克|1Hlavni mesto Praha|布拉格|M247 Ltd|44|, server: 217.138.220.147, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|1| 4, server: 91.245.254.19, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇨🇦 CA|加拿大|魁北克|蒙特利尔|451185154|, server: 139.28.218.91, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|795|, server: 91.245.254.131, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇬🇧 GB|英国|11425|, server: 146.70.27.13, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|113|, server: 91.245.254.75, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇬🇧 GB|英国|4258|, server: 146.70.27.11, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇨🇦 CA|加拿大|魁北克|蒙特利尔|794|, server: 37.120.205.93, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|585145118702908|, server: 212.102.35.214, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|585145118702909|, server: 91.245.254.37, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇩🇪 DE|德国|法兰克福|法兰克福|2|, server: 45.87.212.181, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇺🇸 US|美国|佐治亚|亚特兰大|2|, server: 66.115.182.109, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇺🇸 US|美国|弗吉尼亚|1|, server: 207.244.67.149, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇺🇸 US|美国|马萨诸塞|波士顿|1818|, server: 173.237.207.52, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇺🇸 US|美国|马萨诸塞|波士顿|23|, server: 173.237.207.60, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|47|, server: 194.5.215.115, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇧🇪 BE|比利时|2173|, server: 91.90.123.115, port: 35294, type: ss, cipher: aes-256-gcm, password: J9Y2ncrdPEC38gwydNFFGBna}
-  - {name: 🇫🇷 FR|法国|6|, server: 146.59.3.33, port: 1443, type: ss, cipher: chacha20-ietf-poly1305, password: M1LCZAlfz1bV, udp: true}
-  - {name: 🇺🇸 US|美国|加利福尼亚|圣何塞|426|, server: 23.81.181.7, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇩🇪 ES|西班牙|马德里|马德里|295|, server: 185.216.32.59, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇧🇪 BE|比利时|80|, server: 91.90.123.115, port: 41676, type: ss, cipher: aes-256-gcm, password: z6pH3RyttkRWhJ5tpRyt6dYk}
-  - {name: 🇧🇪 BE|比利时|4511816|, server: 91.90.123.115, port: 48794, type: ss, cipher: aes-256-gcm, password: r9Q3adc3ru9sfBDPEj4yp6U6}
-  - {name: 🇧🇪 BE|比利时|11816|, server: 91.90.123.115, port: 37588, type: ss, cipher: aes-256-gcm, password: kD9vkjnE6dsUzwQfvKkPkQAd}
-  - {name: 🇧🇪 BE|比利时|189|, server: 91.90.123.115, port: 47027, type: ss, cipher: aes-256-gcm, password: Vt5pBJFwdtNB26cJbTXxm88Z}
-  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|2983|, server: 89.36.76.59, port: 49396, type: ss, cipher: aes-256-gcm, password: BdRWC38L5JUDMTYNNxJGcUwB}
-  - {name: 🇧🇪 BE|比利时|2|, server: 91.90.123.115, port: 31944, type: ss, cipher: aes-256-gcm, password: aYNeKDMzYQYw4KbUbJA8Wszq}
-  - {name: 🇧🇪 BE|比利时|9|, server: 91.90.123.115, port: 46642, type: ss, cipher: aes-256-gcm, password: gYL83DQWXuDbxmZAVVtUTXaK}
-  - {name: 🇧🇪 BE|比利时|532|, server: 91.90.123.115, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇧🇪 BE|比利时|321|, server: 91.90.123.115, port: 44820, type: ss, cipher: aes-256-gcm, password: jspgz9G3VmvBMCgMUWLBaZHu}
-  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|14|, server: 89.36.76.59, port: 46642, type: ss, cipher: aes-256-gcm, password: gYL83DQWXuDbxmZAVVtUTXaK}
-  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|11085153|, server: 89.36.76.59, port: 38742, type: ss, cipher: aes-256-gcm, password: DKXfWwc4ebscpXTKpbt85rSH}
-  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|451185155|, server: 89.36.76.59, port: 45329, type: ss, cipher: aes-256-gcm, password: CXSjgD7u7Ar7GxkZ4CgTMUsj}
-  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|451187|, server: 89.36.76.59, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|2907|, server: 89.36.76.59, port: 33148, type: ss, cipher: aes-256-gcm, password: CMduaFXddcQbwNAAs7xFDnc8}
-  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|2|, server: 89.36.76.59, port: 48794, type: ss, cipher: aes-256-gcm, password: r9Q3adc3ru9sfBDPEj4yp6U6}
-  - {name: 🇨🇭 CH|瑞士|Zurich|6|, server: 212.102.36.234, port: 33998, type: ss, cipher: aes-256-gcm, password: NHwQTPLCfaTMSqTnU3mjcSxe}
-  - {name: 🇨🇭 CH|瑞士|Zurich|1|, server: 212.102.36.234, port: 46642, type: ss, cipher: aes-256-gcm, password: gYL83DQWXuDbxmZAVVtUTXaK}
-  - {name: 🇨🇭 CH|瑞士|Zurich|4|, server: 212.102.36.234, port: 31944, type: ss, cipher: aes-256-gcm, password: aYNeKDMzYQYw4KbUbJA8Wszq}
-  - {name: 🇨🇭 CH|瑞士|Zurich|220|, server: 212.102.36.234, port: 44236, type: ss, cipher: aes-256-gcm, password: FWrXcxPZjJxAN89xLgqY3Acp}
-  - {name: 🇨🇭 CH|瑞士|Zurich|82|, server: 212.102.36.234, port: 35294, type: ss, cipher: aes-256-gcm, password: J9Y2ncrdPEC38gwydNFFGBna}
-  - {name: 🇧🇪 BE|比利时|6|, server: 185.232.21.51, port: 43893, type: ss, cipher: aes-256-gcm, password: YyCBeDdYX4cadHpCkkmdJLq8}
-  - {name: 🇸🇬 US|美国|新泽西|322|, server: 156.146.62.36, port: 42304, type: ss, cipher: aes-256-gcm, password: p26v2JwhQVHDHsXk66fXt56r}
-  - {name: 🇸🇬 US|美国|新泽西|13|, server: 156.146.62.36, port: 41738, type: ss, cipher: aes-256-gcm, password: X6yMGXnfUsuKTvEDYZSLPk4d}
-  - {name: 🇸🇬 US|美国|新泽西|8415|, server: 156.146.62.36, port: 33148, type: ss, cipher: aes-256-gcm, password: CMduaFXddcQbwNAAs7xFDnc8}
-  - {name: 🇸🇬 US|美国|新泽西|85|, server: 156.146.62.36, port: 42166, type: ss, cipher: aes-256-gcm, password: H9Dbn3szZMqLR3NpgEFEPCKb}
-  - {name: 🇸🇬 US|美国|新泽西|1| 2, server: 156.146.62.36, port: 45329, type: ss, cipher: aes-256-gcm, password: CXSjgD7u7Ar7GxkZ4CgTMUsj}
-  - {name: 🇸🇬 US|美国|新泽西|3220|, server: 156.146.62.36, port: 42816, type: ss, cipher: aes-256-gcm, password: tBKBf4pVzNCFKdbPgvwrNXq3}
-  - {name: 🇸🇬 US|美国|新泽西|33|, server: 156.146.62.36, port: 44236, type: ss, cipher: aes-256-gcm, password: FWrXcxPZjJxAN89xLgqY3Acp}
-  - {name: 🇸🇬 US|美国|新泽西|35|, server: 156.146.62.36, port: 35294, type: ss, cipher: aes-256-gcm, password: J9Y2ncrdPEC38gwydNFFGBna}
-  - {name: 🇸🇬 US|美国|新泽西|414|, server: 156.146.62.36, port: 31764, type: ss, cipher: aes-256-gcm, password: YgusH2MWA8PWc3p2VDsR7AVv}
-  - {name: 🇸🇬 US|美国|新泽西|827|, server: 156.146.62.36, port: 49126, type: ss, cipher: aes-256-gcm, password: wrCaGtrUbzeRqQLdc8Kmk3Nd}
-  - {name: 🇸🇬 US|美国|新泽西|29006|, server: 156.146.62.36, port: 44628, type: ss, cipher: aes-256-gcm, password: VASQbVcukHfdBGmeS9L7Z8TT}
-  - {name: 🇸🇬 US|美国|新泽西|10|, server: 156.146.62.36, port: 46642, type: ss, cipher: aes-256-gcm, password: gYL83DQWXuDbxmZAVVtUTXaK}
-  - {name: 🇸🇬 US|美国|新泽西|34|, server: 156.146.62.36, port: 48938, type: ss, cipher: aes-256-gcm, password: 4ejJ8n5ddLuYDUHGXJre2ufJ}
-  - {name: 🇸🇬 US|美国|新泽西|1426|, server: 156.146.62.36, port: 37588, type: ss, cipher: aes-256-gcm, password: kD9vkjnE6dsUzwQfvKkPkQAd}
-  - {name: 🇸🇬 US|美国|新泽西|26|, server: 156.146.62.36, port: 33998, type: ss, cipher: aes-256-gcm, password: NHwQTPLCfaTMSqTnU3mjcSxe}
-  - {name: 🇸🇬 US|美国|新泽西|2984|, server: 156.146.62.36, port: 38742, type: ss, cipher: aes-256-gcm, password: DKXfWwc4ebscpXTKpbt85rSH}
-  - {name: 🇸🇬 US|美国|新泽西|1| 3, server: 156.146.62.36, port: 49468, type: ss, cipher: aes-256-gcm, password: LsYSQDxmPj9AcWpSX5HrYfu6}
-  - {name: 🇺🇸 US|美国|密歇根|9|, server: 104.244.211.141, port: 49339, type: ss, cipher: aes-256-gcm, password: suucSeVLmt6PQKAP77NtGw9x}
-  - {name: 🇺🇸 US|美国|密歇根|2|, server: 104.244.211.139, port: 49339, type: ss, cipher: aes-256-gcm, password: suucSeVLmt6PQKAP77NtGw9x}
-  - {name: 🇺🇸 US|美国|密歇根|1|, server: 104.244.211.139, port: 48938, type: ss, cipher: aes-256-gcm, password: 4ejJ8n5ddLuYDUHGXJre2ufJ}
-  - {name: 🇺🇸 US|美国|密歇根|424|, server: 104.244.211.139, port: 43893, type: ss, cipher: aes-256-gcm, password: YyCBeDdYX4cadHpCkkmdJLq8}
-  - {name: 🇷🇺 US|美国|俄勒冈|88|, server: 154.16.168.184, port: 34687, type: ss, cipher: aes-256-gcm, password: txmK9WhwP6WPhP7hqSBLVxpN}
-  - {name: 🇮🇹 IT|意大利|米兰|米兰|53|, server: 212.102.54.141, port: 50695, type: ss, cipher: aes-256-gcm, password: gqtwGu9bVreJqL3FTHSVKGzy}
-  - {name: 🇮🇹 IT|意大利|米兰|米兰|1|, server: 212.102.54.141, port: 34687, type: ss, cipher: aes-256-gcm, password: txmK9WhwP6WPhP7hqSBLVxpN}
-  - {name: 🇨🇦 CA|加拿大|魁北克|蒙特利尔|35|, server: 86.106.90.43, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇧🇷 BR|巴西|5|, server: 5.189.202.16, port: 40282, type: ss, cipher: aes-256-gcm, password: Pvvaw486867D2w4yctL2ULTQ}
-  - {name: 🇺🇸 US|美国|堪萨斯|7|, server: 143.244.57.99, port: 41738, type: ss, cipher: aes-256-gcm, password: X6yMGXnfUsuKTvEDYZSLPk4d}
-  - {name: 🇧🇷 BR|巴西|3|, server: 5.189.202.16, port: 44539, type: ss, cipher: aes-256-gcm, password: r6hDrkP4Et6EENTS8Qy7Tcmg}
-  - {name: 🇺🇸 US|美国|堪萨斯|219|, server: 143.244.57.99, port: 40282, type: ss, cipher: aes-256-gcm, password: Pvvaw486867D2w4yctL2ULTQ}
-  - {name: 🇪🇺 EU|欧洲|3| 2, server: 138.199.19.152, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇧🇪 BE|比利时|4|, server: 91.90.123.115, port: 34687, type: ss, cipher: aes-256-gcm, password: txmK9WhwP6WPhP7hqSBLVxpN}
-  - {name: 🇧🇷 BR|巴西|4|, server: 5.189.202.16, port: 42816, type: ss, cipher: aes-256-gcm, password: tBKBf4pVzNCFKdbPgvwrNXq3}
-  - {name: 🇺🇸 US|美国|科罗拉多|丹佛|2|, server: 212.102.44.81, port: 33998, type: ss, cipher: aes-256-gcm, password: NHwQTPLCfaTMSqTnU3mjcSxe}
-  - {name: 🇺🇸 US|美国|科罗拉多|丹佛|2| 2, server: 212.102.44.81, port: 49339, type: ss, cipher: aes-256-gcm, password: suucSeVLmt6PQKAP77NtGw9x}
+  - {name: 🇺🇸 US|美国|佛罗里达|2|, server: 209.216.92.3, port: 35294, type: ss, cipher: aes-256-gcm, password: J9Y2ncrdPEC38gwydNFFGBna}
+  - {name: 🇩🇪 US|美国|德克萨斯|休斯顿|2|, server: 199.10.64.133, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
+  - {name: 🇱🇻 LV|拉脱维亚|Riga|2|, server: 188.92.78.145, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
+  - {name: 🇱🇻 LV|拉脱维亚|Riga|2| 2, server: 188.92.78.145, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
+  - {name: 🇦🇹 AT|奥地利|2|, server: 37.120.221.5, port: 37473, type: ss, cipher: aes-256-gcm, password: enctdKyJfSu76VqznKwTt6Ap}
+  - {name: 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|2|, server: 180.149.228.147, port: 43893, type: ss, cipher: aes-256-gcm, password: YyCBeDdYX4cadHpCkkmdJLq8}
+  - {name: 🇳🇱 NL|荷兰|北荷兰|2|, server: 81.19.208.107, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇳🇱 NL|荷兰|Drenthe|Level3|4|, server: 185.252.222.115, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇩🇪 ES|西班牙|马德里|马德里|5|, server: 82.102.26.147, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇩🇪 ES|西班牙|马德里|马德里|4|, server: 82.102.26.237, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇺🇦 UA|乌克兰|4|, server: 37.19.211.7, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇺🇦 UA|乌克兰|5|, server: 37.19.211.137, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇺🇦 UA|乌克兰|7|, server: 37.19.211.47, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇺🇦 UA|乌克兰|12|, server: 37.19.211.109, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇪🇺 EU|欧洲|5|, server: 138.199.42.143, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇩🇪 DE|德国|法兰克福|法兰克福|7|, server: 193.176.86.173, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|8|, server: 37.120.235.213, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇺🇸 US|美国|加利福尼亚|费利蒙|1|
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|8|
-      - 🇱🇻 LV|拉脱维亚|Riga|11|
-      - 🇱🇻 LV|拉脱维亚|Riga|7|
-      - 🇺🇸 US|美国|弗吉尼亚|1817|
-      - 🇺🇸 US|美国|弗吉尼亚|3|
-      - 🇸🇬 US|美国|新泽西|1|
-      - 🇸🇬 US|美国|新泽西|425|
-      - 🇳🇱 NL|荷兰|北荷兰|5|
-      - 🇳🇱 NL|荷兰|Drenthe|Level3|9|
-      - 🇺🇦 UA|乌克兰|2|
-      - 🇺🇦 UA|乌克兰|243|
-      - 🇮🇪 IE|爱尔兰|Dublin|1427|
-      - 🇮🇪 IE|爱尔兰|Dublin|7|
-      - 🇪🇺 EU|欧洲|3|
-      - 🇩🇪 DE|德国|法兰克福|法兰克福|1|
-      - 🇬🇧 GB|英国|Manchester|45|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|1|
-      - 🇵🇹 PT|葡萄牙|4|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|1| 2
-      - 🇦🇹 AT|奥地利|1128|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|1| 3
-      - 🇭🇷 HR|克罗地亚|4|
-      - 🇨🇿 CZ|捷克|1Hlavni mesto Praha|布拉格|M247 Ltd|172|
-      - 🇬🇧 GB|英国|XX||XX|XX|218|
-      - 🇨🇿 CZ|捷克|1Hlavni mesto Praha|布拉格|M247 Ltd|44|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|1| 4
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|451185154|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|795|
-      - 🇬🇧 GB|英国|11425|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|113|
-      - 🇬🇧 GB|英国|4258|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|794|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|585145118702908|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|585145118702909|
-      - 🇩🇪 DE|德国|法兰克福|法兰克福|2|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|2|
-      - 🇺🇸 US|美国|弗吉尼亚|1|
-      - 🇺🇸 US|美国|马萨诸塞|波士顿|1818|
-      - 🇺🇸 US|美国|马萨诸塞|波士顿|23|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|47|
-      - 🇧🇪 BE|比利时|2173|
-      - 🇫🇷 FR|法国|6|
-      - 🇺🇸 US|美国|加利福尼亚|圣何塞|426|
-      - 🇩🇪 ES|西班牙|马德里|马德里|295|
-      - 🇧🇪 BE|比利时|80|
-      - 🇧🇪 BE|比利时|4511816|
-      - 🇧🇪 BE|比利时|11816|
-      - 🇧🇪 BE|比利时|189|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|2983|
-      - 🇧🇪 BE|比利时|2|
-      - 🇧🇪 BE|比利时|9|
-      - 🇧🇪 BE|比利时|532|
-      - 🇧🇪 BE|比利时|321|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|14|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|11085153|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|451185155|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|451187|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|2907|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|2|
-      - 🇨🇭 CH|瑞士|Zurich|6|
-      - 🇨🇭 CH|瑞士|Zurich|1|
-      - 🇨🇭 CH|瑞士|Zurich|4|
-      - 🇨🇭 CH|瑞士|Zurich|220|
-      - 🇨🇭 CH|瑞士|Zurich|82|
-      - 🇧🇪 BE|比利时|6|
-      - 🇸🇬 US|美国|新泽西|322|
-      - 🇸🇬 US|美国|新泽西|13|
-      - 🇸🇬 US|美国|新泽西|8415|
-      - 🇸🇬 US|美国|新泽西|85|
-      - 🇸🇬 US|美国|新泽西|1| 2
-      - 🇸🇬 US|美国|新泽西|3220|
-      - 🇸🇬 US|美国|新泽西|33|
-      - 🇸🇬 US|美国|新泽西|35|
-      - 🇸🇬 US|美国|新泽西|414|
-      - 🇸🇬 US|美国|新泽西|827|
-      - 🇸🇬 US|美国|新泽西|29006|
-      - 🇸🇬 US|美国|新泽西|10|
-      - 🇸🇬 US|美国|新泽西|34|
-      - 🇸🇬 US|美国|新泽西|1426|
-      - 🇸🇬 US|美国|新泽西|26|
-      - 🇸🇬 US|美国|新泽西|2984|
-      - 🇸🇬 US|美国|新泽西|1| 3
-      - 🇺🇸 US|美国|密歇根|9|
-      - 🇺🇸 US|美国|密歇根|2|
-      - 🇺🇸 US|美国|密歇根|1|
-      - 🇺🇸 US|美国|密歇根|424|
-      - 🇷🇺 US|美国|俄勒冈|88|
-      - 🇮🇹 IT|意大利|米兰|米兰|53|
-      - 🇮🇹 IT|意大利|米兰|米兰|1|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|35|
-      - 🇧🇷 BR|巴西|5|
-      - 🇺🇸 US|美国|堪萨斯|7|
-      - 🇧🇷 BR|巴西|3|
-      - 🇺🇸 US|美国|堪萨斯|219|
-      - 🇪🇺 EU|欧洲|3| 2
-      - 🇧🇪 BE|比利时|4|
-      - 🇧🇷 BR|巴西|4|
-      - 🇺🇸 US|美国|科罗拉多|丹佛|2|
-      - 🇺🇸 US|美国|科罗拉多|丹佛|2| 2
+      - 🇺🇸 US|美国|佛罗里达|2|
+      - 🇩🇪 US|美国|德克萨斯|休斯顿|2|
+      - 🇱🇻 LV|拉脱维亚|Riga|2|
+      - 🇱🇻 LV|拉脱维亚|Riga|2| 2
+      - 🇦🇹 AT|奥地利|2|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|2|
+      - 🇳🇱 NL|荷兰|北荷兰|2|
+      - 🇳🇱 NL|荷兰|Drenthe|Level3|4|
+      - 🇩🇪 ES|西班牙|马德里|马德里|5|
+      - 🇩🇪 ES|西班牙|马德里|马德里|4|
+      - 🇺🇦 UA|乌克兰|4|
+      - 🇺🇦 UA|乌克兰|5|
+      - 🇺🇦 UA|乌克兰|7|
+      - 🇺🇦 UA|乌克兰|12|
+      - 🇪🇺 EU|欧洲|5|
+      - 🇩🇪 DE|德国|法兰克福|法兰克福|7|
+      - 🇷🇴 RO|罗马尼亚|布加勒斯特|8|
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇺🇸 US|美国|加利福尼亚|费利蒙|1|
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|8|
-      - 🇱🇻 LV|拉脱维亚|Riga|11|
-      - 🇱🇻 LV|拉脱维亚|Riga|7|
-      - 🇺🇸 US|美国|弗吉尼亚|1817|
-      - 🇺🇸 US|美国|弗吉尼亚|3|
-      - 🇸🇬 US|美国|新泽西|1|
-      - 🇸🇬 US|美国|新泽西|425|
-      - 🇳🇱 NL|荷兰|北荷兰|5|
-      - 🇳🇱 NL|荷兰|Drenthe|Level3|9|
-      - 🇺🇦 UA|乌克兰|2|
-      - 🇺🇦 UA|乌克兰|243|
-      - 🇮🇪 IE|爱尔兰|Dublin|1427|
-      - 🇮🇪 IE|爱尔兰|Dublin|7|
-      - 🇪🇺 EU|欧洲|3|
-      - 🇩🇪 DE|德国|法兰克福|法兰克福|1|
-      - 🇬🇧 GB|英国|Manchester|45|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|1|
-      - 🇵🇹 PT|葡萄牙|4|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|1| 2
-      - 🇦🇹 AT|奥地利|1128|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|1| 3
-      - 🇭🇷 HR|克罗地亚|4|
-      - 🇨🇿 CZ|捷克|1Hlavni mesto Praha|布拉格|M247 Ltd|172|
-      - 🇬🇧 GB|英国|XX||XX|XX|218|
-      - 🇨🇿 CZ|捷克|1Hlavni mesto Praha|布拉格|M247 Ltd|44|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|1| 4
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|451185154|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|795|
-      - 🇬🇧 GB|英国|11425|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|113|
-      - 🇬🇧 GB|英国|4258|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|794|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|585145118702908|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|585145118702909|
-      - 🇩🇪 DE|德国|法兰克福|法兰克福|2|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|2|
-      - 🇺🇸 US|美国|弗吉尼亚|1|
-      - 🇺🇸 US|美国|马萨诸塞|波士顿|1818|
-      - 🇺🇸 US|美国|马萨诸塞|波士顿|23|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|47|
-      - 🇧🇪 BE|比利时|2173|
-      - 🇫🇷 FR|法国|6|
-      - 🇺🇸 US|美国|加利福尼亚|圣何塞|426|
-      - 🇩🇪 ES|西班牙|马德里|马德里|295|
-      - 🇧🇪 BE|比利时|80|
-      - 🇧🇪 BE|比利时|4511816|
-      - 🇧🇪 BE|比利时|11816|
-      - 🇧🇪 BE|比利时|189|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|2983|
-      - 🇧🇪 BE|比利时|2|
-      - 🇧🇪 BE|比利时|9|
-      - 🇧🇪 BE|比利时|532|
-      - 🇧🇪 BE|比利时|321|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|14|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|11085153|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|451185155|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|451187|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|2907|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|2|
-      - 🇨🇭 CH|瑞士|Zurich|6|
-      - 🇨🇭 CH|瑞士|Zurich|1|
-      - 🇨🇭 CH|瑞士|Zurich|4|
-      - 🇨🇭 CH|瑞士|Zurich|220|
-      - 🇨🇭 CH|瑞士|Zurich|82|
-      - 🇧🇪 BE|比利时|6|
-      - 🇸🇬 US|美国|新泽西|322|
-      - 🇸🇬 US|美国|新泽西|13|
-      - 🇸🇬 US|美国|新泽西|8415|
-      - 🇸🇬 US|美国|新泽西|85|
-      - 🇸🇬 US|美国|新泽西|1| 2
-      - 🇸🇬 US|美国|新泽西|3220|
-      - 🇸🇬 US|美国|新泽西|33|
-      - 🇸🇬 US|美国|新泽西|35|
-      - 🇸🇬 US|美国|新泽西|414|
-      - 🇸🇬 US|美国|新泽西|827|
-      - 🇸🇬 US|美国|新泽西|29006|
-      - 🇸🇬 US|美国|新泽西|10|
-      - 🇸🇬 US|美国|新泽西|34|
-      - 🇸🇬 US|美国|新泽西|1426|
-      - 🇸🇬 US|美国|新泽西|26|
-      - 🇸🇬 US|美国|新泽西|2984|
-      - 🇸🇬 US|美国|新泽西|1| 3
-      - 🇺🇸 US|美国|密歇根|9|
-      - 🇺🇸 US|美国|密歇根|2|
-      - 🇺🇸 US|美国|密歇根|1|
-      - 🇺🇸 US|美国|密歇根|424|
-      - 🇷🇺 US|美国|俄勒冈|88|
-      - 🇮🇹 IT|意大利|米兰|米兰|53|
-      - 🇮🇹 IT|意大利|米兰|米兰|1|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|35|
-      - 🇧🇷 BR|巴西|5|
-      - 🇺🇸 US|美国|堪萨斯|7|
-      - 🇧🇷 BR|巴西|3|
-      - 🇺🇸 US|美国|堪萨斯|219|
-      - 🇪🇺 EU|欧洲|3| 2
-      - 🇧🇪 BE|比利时|4|
-      - 🇧🇷 BR|巴西|4|
-      - 🇺🇸 US|美国|科罗拉多|丹佛|2|
-      - 🇺🇸 US|美国|科罗拉多|丹佛|2| 2
+      - 🇺🇸 US|美国|佛罗里达|2|
+      - 🇩🇪 US|美国|德克萨斯|休斯顿|2|
+      - 🇱🇻 LV|拉脱维亚|Riga|2|
+      - 🇱🇻 LV|拉脱维亚|Riga|2| 2
+      - 🇦🇹 AT|奥地利|2|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|2|
+      - 🇳🇱 NL|荷兰|北荷兰|2|
+      - 🇳🇱 NL|荷兰|Drenthe|Level3|4|
+      - 🇩🇪 ES|西班牙|马德里|马德里|5|
+      - 🇩🇪 ES|西班牙|马德里|马德里|4|
+      - 🇺🇦 UA|乌克兰|4|
+      - 🇺🇦 UA|乌克兰|5|
+      - 🇺🇦 UA|乌克兰|7|
+      - 🇺🇦 UA|乌克兰|12|
+      - 🇪🇺 EU|欧洲|5|
+      - 🇩🇪 DE|德国|法兰克福|法兰克福|7|
+      - 🇷🇴 RO|罗马尼亚|布加勒斯特|8|
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇺🇸 US|美国|加利福尼亚|费利蒙|1|
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|8|
-      - 🇱🇻 LV|拉脱维亚|Riga|11|
-      - 🇱🇻 LV|拉脱维亚|Riga|7|
-      - 🇺🇸 US|美国|弗吉尼亚|1817|
-      - 🇺🇸 US|美国|弗吉尼亚|3|
-      - 🇸🇬 US|美国|新泽西|1|
-      - 🇸🇬 US|美国|新泽西|425|
-      - 🇳🇱 NL|荷兰|北荷兰|5|
-      - 🇳🇱 NL|荷兰|Drenthe|Level3|9|
-      - 🇺🇦 UA|乌克兰|2|
-      - 🇺🇦 UA|乌克兰|243|
-      - 🇮🇪 IE|爱尔兰|Dublin|1427|
-      - 🇮🇪 IE|爱尔兰|Dublin|7|
-      - 🇪🇺 EU|欧洲|3|
-      - 🇩🇪 DE|德国|法兰克福|法兰克福|1|
-      - 🇬🇧 GB|英国|Manchester|45|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|1|
-      - 🇵🇹 PT|葡萄牙|4|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|1| 2
-      - 🇦🇹 AT|奥地利|1128|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|1| 3
-      - 🇭🇷 HR|克罗地亚|4|
-      - 🇨🇿 CZ|捷克|1Hlavni mesto Praha|布拉格|M247 Ltd|172|
-      - 🇬🇧 GB|英国|XX||XX|XX|218|
-      - 🇨🇿 CZ|捷克|1Hlavni mesto Praha|布拉格|M247 Ltd|44|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|1| 4
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|451185154|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|795|
-      - 🇬🇧 GB|英国|11425|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|113|
-      - 🇬🇧 GB|英国|4258|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|794|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|585145118702908|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|585145118702909|
-      - 🇩🇪 DE|德国|法兰克福|法兰克福|2|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|2|
-      - 🇺🇸 US|美国|弗吉尼亚|1|
-      - 🇺🇸 US|美国|马萨诸塞|波士顿|1818|
-      - 🇺🇸 US|美国|马萨诸塞|波士顿|23|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|47|
-      - 🇧🇪 BE|比利时|2173|
-      - 🇫🇷 FR|法国|6|
-      - 🇺🇸 US|美国|加利福尼亚|圣何塞|426|
-      - 🇩🇪 ES|西班牙|马德里|马德里|295|
-      - 🇧🇪 BE|比利时|80|
-      - 🇧🇪 BE|比利时|4511816|
-      - 🇧🇪 BE|比利时|11816|
-      - 🇧🇪 BE|比利时|189|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|2983|
-      - 🇧🇪 BE|比利时|2|
-      - 🇧🇪 BE|比利时|9|
-      - 🇧🇪 BE|比利时|532|
-      - 🇧🇪 BE|比利时|321|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|14|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|11085153|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|451185155|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|451187|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|2907|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|2|
-      - 🇨🇭 CH|瑞士|Zurich|6|
-      - 🇨🇭 CH|瑞士|Zurich|1|
-      - 🇨🇭 CH|瑞士|Zurich|4|
-      - 🇨🇭 CH|瑞士|Zurich|220|
-      - 🇨🇭 CH|瑞士|Zurich|82|
-      - 🇧🇪 BE|比利时|6|
-      - 🇸🇬 US|美国|新泽西|322|
-      - 🇸🇬 US|美国|新泽西|13|
-      - 🇸🇬 US|美国|新泽西|8415|
-      - 🇸🇬 US|美国|新泽西|85|
-      - 🇸🇬 US|美国|新泽西|1| 2
-      - 🇸🇬 US|美国|新泽西|3220|
-      - 🇸🇬 US|美国|新泽西|33|
-      - 🇸🇬 US|美国|新泽西|35|
-      - 🇸🇬 US|美国|新泽西|414|
-      - 🇸🇬 US|美国|新泽西|827|
-      - 🇸🇬 US|美国|新泽西|29006|
-      - 🇸🇬 US|美国|新泽西|10|
-      - 🇸🇬 US|美国|新泽西|34|
-      - 🇸🇬 US|美国|新泽西|1426|
-      - 🇸🇬 US|美国|新泽西|26|
-      - 🇸🇬 US|美国|新泽西|2984|
-      - 🇸🇬 US|美国|新泽西|1| 3
-      - 🇺🇸 US|美国|密歇根|9|
-      - 🇺🇸 US|美国|密歇根|2|
-      - 🇺🇸 US|美国|密歇根|1|
-      - 🇺🇸 US|美国|密歇根|424|
-      - 🇷🇺 US|美国|俄勒冈|88|
-      - 🇮🇹 IT|意大利|米兰|米兰|53|
-      - 🇮🇹 IT|意大利|米兰|米兰|1|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|35|
-      - 🇧🇷 BR|巴西|5|
-      - 🇺🇸 US|美国|堪萨斯|7|
-      - 🇧🇷 BR|巴西|3|
-      - 🇺🇸 US|美国|堪萨斯|219|
-      - 🇪🇺 EU|欧洲|3| 2
-      - 🇧🇪 BE|比利时|4|
-      - 🇧🇷 BR|巴西|4|
-      - 🇺🇸 US|美国|科罗拉多|丹佛|2|
-      - 🇺🇸 US|美国|科罗拉多|丹佛|2| 2
+      - 🇺🇸 US|美国|佛罗里达|2|
+      - 🇩🇪 US|美国|德克萨斯|休斯顿|2|
+      - 🇱🇻 LV|拉脱维亚|Riga|2|
+      - 🇱🇻 LV|拉脱维亚|Riga|2| 2
+      - 🇦🇹 AT|奥地利|2|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|2|
+      - 🇳🇱 NL|荷兰|北荷兰|2|
+      - 🇳🇱 NL|荷兰|Drenthe|Level3|4|
+      - 🇩🇪 ES|西班牙|马德里|马德里|5|
+      - 🇩🇪 ES|西班牙|马德里|马德里|4|
+      - 🇺🇦 UA|乌克兰|4|
+      - 🇺🇦 UA|乌克兰|5|
+      - 🇺🇦 UA|乌克兰|7|
+      - 🇺🇦 UA|乌克兰|12|
+      - 🇪🇺 EU|欧洲|5|
+      - 🇩🇪 DE|德国|法兰克福|法兰克福|7|
+      - 🇷🇴 RO|罗马尼亚|布加勒斯特|8|
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -432,317 +100,68 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 🇺🇸 US|美国|加利福尼亚|费利蒙|1|
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|8|
-      - 🇱🇻 LV|拉脱维亚|Riga|11|
-      - 🇱🇻 LV|拉脱维亚|Riga|7|
-      - 🇺🇸 US|美国|弗吉尼亚|1817|
-      - 🇺🇸 US|美国|弗吉尼亚|3|
-      - 🇸🇬 US|美国|新泽西|1|
-      - 🇸🇬 US|美国|新泽西|425|
-      - 🇳🇱 NL|荷兰|北荷兰|5|
-      - 🇳🇱 NL|荷兰|Drenthe|Level3|9|
-      - 🇺🇦 UA|乌克兰|2|
-      - 🇺🇦 UA|乌克兰|243|
-      - 🇮🇪 IE|爱尔兰|Dublin|1427|
-      - 🇮🇪 IE|爱尔兰|Dublin|7|
-      - 🇪🇺 EU|欧洲|3|
-      - 🇩🇪 DE|德国|法兰克福|法兰克福|1|
-      - 🇬🇧 GB|英国|Manchester|45|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|1|
-      - 🇵🇹 PT|葡萄牙|4|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|1| 2
-      - 🇦🇹 AT|奥地利|1128|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|1| 3
-      - 🇭🇷 HR|克罗地亚|4|
-      - 🇨🇿 CZ|捷克|1Hlavni mesto Praha|布拉格|M247 Ltd|172|
-      - 🇬🇧 GB|英国|XX||XX|XX|218|
-      - 🇨🇿 CZ|捷克|1Hlavni mesto Praha|布拉格|M247 Ltd|44|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|1| 4
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|451185154|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|795|
-      - 🇬🇧 GB|英国|11425|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|113|
-      - 🇬🇧 GB|英国|4258|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|794|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|585145118702908|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|585145118702909|
-      - 🇩🇪 DE|德国|法兰克福|法兰克福|2|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|2|
-      - 🇺🇸 US|美国|弗吉尼亚|1|
-      - 🇺🇸 US|美国|马萨诸塞|波士顿|1818|
-      - 🇺🇸 US|美国|马萨诸塞|波士顿|23|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|47|
-      - 🇧🇪 BE|比利时|2173|
-      - 🇫🇷 FR|法国|6|
-      - 🇺🇸 US|美国|加利福尼亚|圣何塞|426|
-      - 🇩🇪 ES|西班牙|马德里|马德里|295|
-      - 🇧🇪 BE|比利时|80|
-      - 🇧🇪 BE|比利时|4511816|
-      - 🇧🇪 BE|比利时|11816|
-      - 🇧🇪 BE|比利时|189|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|2983|
-      - 🇧🇪 BE|比利时|2|
-      - 🇧🇪 BE|比利时|9|
-      - 🇧🇪 BE|比利时|532|
-      - 🇧🇪 BE|比利时|321|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|14|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|11085153|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|451185155|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|451187|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|2907|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|2|
-      - 🇨🇭 CH|瑞士|Zurich|6|
-      - 🇨🇭 CH|瑞士|Zurich|1|
-      - 🇨🇭 CH|瑞士|Zurich|4|
-      - 🇨🇭 CH|瑞士|Zurich|220|
-      - 🇨🇭 CH|瑞士|Zurich|82|
-      - 🇧🇪 BE|比利时|6|
-      - 🇸🇬 US|美国|新泽西|322|
-      - 🇸🇬 US|美国|新泽西|13|
-      - 🇸🇬 US|美国|新泽西|8415|
-      - 🇸🇬 US|美国|新泽西|85|
-      - 🇸🇬 US|美国|新泽西|1| 2
-      - 🇸🇬 US|美国|新泽西|3220|
-      - 🇸🇬 US|美国|新泽西|33|
-      - 🇸🇬 US|美国|新泽西|35|
-      - 🇸🇬 US|美国|新泽西|414|
-      - 🇸🇬 US|美国|新泽西|827|
-      - 🇸🇬 US|美国|新泽西|29006|
-      - 🇸🇬 US|美国|新泽西|10|
-      - 🇸🇬 US|美国|新泽西|34|
-      - 🇸🇬 US|美国|新泽西|1426|
-      - 🇸🇬 US|美国|新泽西|26|
-      - 🇸🇬 US|美国|新泽西|2984|
-      - 🇸🇬 US|美国|新泽西|1| 3
-      - 🇺🇸 US|美国|密歇根|9|
-      - 🇺🇸 US|美国|密歇根|2|
-      - 🇺🇸 US|美国|密歇根|1|
-      - 🇺🇸 US|美国|密歇根|424|
-      - 🇷🇺 US|美国|俄勒冈|88|
-      - 🇮🇹 IT|意大利|米兰|米兰|53|
-      - 🇮🇹 IT|意大利|米兰|米兰|1|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|35|
-      - 🇧🇷 BR|巴西|5|
-      - 🇺🇸 US|美国|堪萨斯|7|
-      - 🇧🇷 BR|巴西|3|
-      - 🇺🇸 US|美国|堪萨斯|219|
-      - 🇪🇺 EU|欧洲|3| 2
-      - 🇧🇪 BE|比利时|4|
-      - 🇧🇷 BR|巴西|4|
-      - 🇺🇸 US|美国|科罗拉多|丹佛|2|
-      - 🇺🇸 US|美国|科罗拉多|丹佛|2| 2
+      - 🇺🇸 US|美国|佛罗里达|2|
+      - 🇩🇪 US|美国|德克萨斯|休斯顿|2|
+      - 🇱🇻 LV|拉脱维亚|Riga|2|
+      - 🇱🇻 LV|拉脱维亚|Riga|2| 2
+      - 🇦🇹 AT|奥地利|2|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|2|
+      - 🇳🇱 NL|荷兰|北荷兰|2|
+      - 🇳🇱 NL|荷兰|Drenthe|Level3|4|
+      - 🇩🇪 ES|西班牙|马德里|马德里|5|
+      - 🇩🇪 ES|西班牙|马德里|马德里|4|
+      - 🇺🇦 UA|乌克兰|4|
+      - 🇺🇦 UA|乌克兰|5|
+      - 🇺🇦 UA|乌克兰|7|
+      - 🇺🇦 UA|乌克兰|12|
+      - 🇪🇺 EU|欧洲|5|
+      - 🇩🇪 DE|德国|法兰克福|法兰克福|7|
+      - 🇷🇴 RO|罗马尼亚|布加勒斯特|8|
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 🇺🇸 US|美国|加利福尼亚|费利蒙|1|
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|8|
-      - 🇱🇻 LV|拉脱维亚|Riga|11|
-      - 🇱🇻 LV|拉脱维亚|Riga|7|
-      - 🇺🇸 US|美国|弗吉尼亚|1817|
-      - 🇺🇸 US|美国|弗吉尼亚|3|
-      - 🇸🇬 US|美国|新泽西|1|
-      - 🇸🇬 US|美国|新泽西|425|
-      - 🇳🇱 NL|荷兰|北荷兰|5|
-      - 🇳🇱 NL|荷兰|Drenthe|Level3|9|
-      - 🇺🇦 UA|乌克兰|2|
-      - 🇺🇦 UA|乌克兰|243|
-      - 🇮🇪 IE|爱尔兰|Dublin|1427|
-      - 🇮🇪 IE|爱尔兰|Dublin|7|
-      - 🇪🇺 EU|欧洲|3|
-      - 🇩🇪 DE|德国|法兰克福|法兰克福|1|
-      - 🇬🇧 GB|英国|Manchester|45|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|1|
-      - 🇵🇹 PT|葡萄牙|4|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|1| 2
-      - 🇦🇹 AT|奥地利|1128|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|1| 3
-      - 🇭🇷 HR|克罗地亚|4|
-      - 🇨🇿 CZ|捷克|1Hlavni mesto Praha|布拉格|M247 Ltd|172|
-      - 🇬🇧 GB|英国|XX||XX|XX|218|
-      - 🇨🇿 CZ|捷克|1Hlavni mesto Praha|布拉格|M247 Ltd|44|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|1| 4
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|451185154|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|795|
-      - 🇬🇧 GB|英国|11425|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|113|
-      - 🇬🇧 GB|英国|4258|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|794|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|585145118702908|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|585145118702909|
-      - 🇩🇪 DE|德国|法兰克福|法兰克福|2|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|2|
-      - 🇺🇸 US|美国|弗吉尼亚|1|
-      - 🇺🇸 US|美国|马萨诸塞|波士顿|1818|
-      - 🇺🇸 US|美国|马萨诸塞|波士顿|23|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|47|
-      - 🇧🇪 BE|比利时|2173|
-      - 🇫🇷 FR|法国|6|
-      - 🇺🇸 US|美国|加利福尼亚|圣何塞|426|
-      - 🇩🇪 ES|西班牙|马德里|马德里|295|
-      - 🇧🇪 BE|比利时|80|
-      - 🇧🇪 BE|比利时|4511816|
-      - 🇧🇪 BE|比利时|11816|
-      - 🇧🇪 BE|比利时|189|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|2983|
-      - 🇧🇪 BE|比利时|2|
-      - 🇧🇪 BE|比利时|9|
-      - 🇧🇪 BE|比利时|532|
-      - 🇧🇪 BE|比利时|321|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|14|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|11085153|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|451185155|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|451187|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|2907|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|2|
-      - 🇨🇭 CH|瑞士|Zurich|6|
-      - 🇨🇭 CH|瑞士|Zurich|1|
-      - 🇨🇭 CH|瑞士|Zurich|4|
-      - 🇨🇭 CH|瑞士|Zurich|220|
-      - 🇨🇭 CH|瑞士|Zurich|82|
-      - 🇧🇪 BE|比利时|6|
-      - 🇸🇬 US|美国|新泽西|322|
-      - 🇸🇬 US|美国|新泽西|13|
-      - 🇸🇬 US|美国|新泽西|8415|
-      - 🇸🇬 US|美国|新泽西|85|
-      - 🇸🇬 US|美国|新泽西|1| 2
-      - 🇸🇬 US|美国|新泽西|3220|
-      - 🇸🇬 US|美国|新泽西|33|
-      - 🇸🇬 US|美国|新泽西|35|
-      - 🇸🇬 US|美国|新泽西|414|
-      - 🇸🇬 US|美国|新泽西|827|
-      - 🇸🇬 US|美国|新泽西|29006|
-      - 🇸🇬 US|美国|新泽西|10|
-      - 🇸🇬 US|美国|新泽西|34|
-      - 🇸🇬 US|美国|新泽西|1426|
-      - 🇸🇬 US|美国|新泽西|26|
-      - 🇸🇬 US|美国|新泽西|2984|
-      - 🇸🇬 US|美国|新泽西|1| 3
-      - 🇺🇸 US|美国|密歇根|9|
-      - 🇺🇸 US|美国|密歇根|2|
-      - 🇺🇸 US|美国|密歇根|1|
-      - 🇺🇸 US|美国|密歇根|424|
-      - 🇷🇺 US|美国|俄勒冈|88|
-      - 🇮🇹 IT|意大利|米兰|米兰|53|
-      - 🇮🇹 IT|意大利|米兰|米兰|1|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|35|
-      - 🇧🇷 BR|巴西|5|
-      - 🇺🇸 US|美国|堪萨斯|7|
-      - 🇧🇷 BR|巴西|3|
-      - 🇺🇸 US|美国|堪萨斯|219|
-      - 🇪🇺 EU|欧洲|3| 2
-      - 🇧🇪 BE|比利时|4|
-      - 🇧🇷 BR|巴西|4|
-      - 🇺🇸 US|美国|科罗拉多|丹佛|2|
-      - 🇺🇸 US|美国|科罗拉多|丹佛|2| 2
+      - 🇺🇸 US|美国|佛罗里达|2|
+      - 🇩🇪 US|美国|德克萨斯|休斯顿|2|
+      - 🇱🇻 LV|拉脱维亚|Riga|2|
+      - 🇱🇻 LV|拉脱维亚|Riga|2| 2
+      - 🇦🇹 AT|奥地利|2|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|2|
+      - 🇳🇱 NL|荷兰|北荷兰|2|
+      - 🇳🇱 NL|荷兰|Drenthe|Level3|4|
+      - 🇩🇪 ES|西班牙|马德里|马德里|5|
+      - 🇩🇪 ES|西班牙|马德里|马德里|4|
+      - 🇺🇦 UA|乌克兰|4|
+      - 🇺🇦 UA|乌克兰|5|
+      - 🇺🇦 UA|乌克兰|7|
+      - 🇺🇦 UA|乌克兰|12|
+      - 🇪🇺 EU|欧洲|5|
+      - 🇩🇪 DE|德国|法兰克福|法兰克福|7|
+      - 🇷🇴 RO|罗马尼亚|布加勒斯特|8|
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇺🇸 US|美国|加利福尼亚|费利蒙|1|
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|8|
-      - 🇱🇻 LV|拉脱维亚|Riga|11|
-      - 🇱🇻 LV|拉脱维亚|Riga|7|
-      - 🇺🇸 US|美国|弗吉尼亚|1817|
-      - 🇺🇸 US|美国|弗吉尼亚|3|
-      - 🇸🇬 US|美国|新泽西|1|
-      - 🇸🇬 US|美国|新泽西|425|
-      - 🇳🇱 NL|荷兰|北荷兰|5|
-      - 🇳🇱 NL|荷兰|Drenthe|Level3|9|
-      - 🇺🇦 UA|乌克兰|2|
-      - 🇺🇦 UA|乌克兰|243|
-      - 🇮🇪 IE|爱尔兰|Dublin|1427|
-      - 🇮🇪 IE|爱尔兰|Dublin|7|
-      - 🇪🇺 EU|欧洲|3|
-      - 🇩🇪 DE|德国|法兰克福|法兰克福|1|
-      - 🇬🇧 GB|英国|Manchester|45|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|1|
-      - 🇵🇹 PT|葡萄牙|4|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|1| 2
-      - 🇦🇹 AT|奥地利|1128|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|1| 3
-      - 🇭🇷 HR|克罗地亚|4|
-      - 🇨🇿 CZ|捷克|1Hlavni mesto Praha|布拉格|M247 Ltd|172|
-      - 🇬🇧 GB|英国|XX||XX|XX|218|
-      - 🇨🇿 CZ|捷克|1Hlavni mesto Praha|布拉格|M247 Ltd|44|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|1| 4
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|451185154|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|795|
-      - 🇬🇧 GB|英国|11425|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|113|
-      - 🇬🇧 GB|英国|4258|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|794|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|585145118702908|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|585145118702909|
-      - 🇩🇪 DE|德国|法兰克福|法兰克福|2|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|2|
-      - 🇺🇸 US|美国|弗吉尼亚|1|
-      - 🇺🇸 US|美国|马萨诸塞|波士顿|1818|
-      - 🇺🇸 US|美国|马萨诸塞|波士顿|23|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|47|
-      - 🇧🇪 BE|比利时|2173|
-      - 🇫🇷 FR|法国|6|
-      - 🇺🇸 US|美国|加利福尼亚|圣何塞|426|
-      - 🇩🇪 ES|西班牙|马德里|马德里|295|
-      - 🇧🇪 BE|比利时|80|
-      - 🇧🇪 BE|比利时|4511816|
-      - 🇧🇪 BE|比利时|11816|
-      - 🇧🇪 BE|比利时|189|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|2983|
-      - 🇧🇪 BE|比利时|2|
-      - 🇧🇪 BE|比利时|9|
-      - 🇧🇪 BE|比利时|532|
-      - 🇧🇪 BE|比利时|321|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|14|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|11085153|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|451185155|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|451187|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|2907|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|2|
-      - 🇨🇭 CH|瑞士|Zurich|6|
-      - 🇨🇭 CH|瑞士|Zurich|1|
-      - 🇨🇭 CH|瑞士|Zurich|4|
-      - 🇨🇭 CH|瑞士|Zurich|220|
-      - 🇨🇭 CH|瑞士|Zurich|82|
-      - 🇧🇪 BE|比利时|6|
-      - 🇸🇬 US|美国|新泽西|322|
-      - 🇸🇬 US|美国|新泽西|13|
-      - 🇸🇬 US|美国|新泽西|8415|
-      - 🇸🇬 US|美国|新泽西|85|
-      - 🇸🇬 US|美国|新泽西|1| 2
-      - 🇸🇬 US|美国|新泽西|3220|
-      - 🇸🇬 US|美国|新泽西|33|
-      - 🇸🇬 US|美国|新泽西|35|
-      - 🇸🇬 US|美国|新泽西|414|
-      - 🇸🇬 US|美国|新泽西|827|
-      - 🇸🇬 US|美国|新泽西|29006|
-      - 🇸🇬 US|美国|新泽西|10|
-      - 🇸🇬 US|美国|新泽西|34|
-      - 🇸🇬 US|美国|新泽西|1426|
-      - 🇸🇬 US|美国|新泽西|26|
-      - 🇸🇬 US|美国|新泽西|2984|
-      - 🇸🇬 US|美国|新泽西|1| 3
-      - 🇺🇸 US|美国|密歇根|9|
-      - 🇺🇸 US|美国|密歇根|2|
-      - 🇺🇸 US|美国|密歇根|1|
-      - 🇺🇸 US|美国|密歇根|424|
-      - 🇷🇺 US|美国|俄勒冈|88|
-      - 🇮🇹 IT|意大利|米兰|米兰|53|
-      - 🇮🇹 IT|意大利|米兰|米兰|1|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|35|
-      - 🇧🇷 BR|巴西|5|
-      - 🇺🇸 US|美国|堪萨斯|7|
-      - 🇧🇷 BR|巴西|3|
-      - 🇺🇸 US|美国|堪萨斯|219|
-      - 🇪🇺 EU|欧洲|3| 2
-      - 🇧🇪 BE|比利时|4|
-      - 🇧🇷 BR|巴西|4|
-      - 🇺🇸 US|美国|科罗拉多|丹佛|2|
-      - 🇺🇸 US|美国|科罗拉多|丹佛|2| 2
+      - 🇺🇸 US|美国|佛罗里达|2|
+      - 🇩🇪 US|美国|德克萨斯|休斯顿|2|
+      - 🇱🇻 LV|拉脱维亚|Riga|2|
+      - 🇱🇻 LV|拉脱维亚|Riga|2| 2
+      - 🇦🇹 AT|奥地利|2|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|2|
+      - 🇳🇱 NL|荷兰|北荷兰|2|
+      - 🇳🇱 NL|荷兰|Drenthe|Level3|4|
+      - 🇩🇪 ES|西班牙|马德里|马德里|5|
+      - 🇩🇪 ES|西班牙|马德里|马德里|4|
+      - 🇺🇦 UA|乌克兰|4|
+      - 🇺🇦 UA|乌克兰|5|
+      - 🇺🇦 UA|乌克兰|7|
+      - 🇺🇦 UA|乌克兰|12|
+      - 🇪🇺 EU|欧洲|5|
+      - 🇩🇪 DE|德国|法兰克福|法兰克福|7|
+      - 🇷🇴 RO|罗马尼亚|布加勒斯特|8|
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -758,106 +177,23 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇺🇸 US|美国|加利福尼亚|费利蒙|1|
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|8|
-      - 🇱🇻 LV|拉脱维亚|Riga|11|
-      - 🇱🇻 LV|拉脱维亚|Riga|7|
-      - 🇺🇸 US|美国|弗吉尼亚|1817|
-      - 🇺🇸 US|美国|弗吉尼亚|3|
-      - 🇸🇬 US|美国|新泽西|1|
-      - 🇸🇬 US|美国|新泽西|425|
-      - 🇳🇱 NL|荷兰|北荷兰|5|
-      - 🇳🇱 NL|荷兰|Drenthe|Level3|9|
-      - 🇺🇦 UA|乌克兰|2|
-      - 🇺🇦 UA|乌克兰|243|
-      - 🇮🇪 IE|爱尔兰|Dublin|1427|
-      - 🇮🇪 IE|爱尔兰|Dublin|7|
-      - 🇪🇺 EU|欧洲|3|
-      - 🇩🇪 DE|德国|法兰克福|法兰克福|1|
-      - 🇬🇧 GB|英国|Manchester|45|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|1|
-      - 🇵🇹 PT|葡萄牙|4|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|1| 2
-      - 🇦🇹 AT|奥地利|1128|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|1| 3
-      - 🇭🇷 HR|克罗地亚|4|
-      - 🇨🇿 CZ|捷克|1Hlavni mesto Praha|布拉格|M247 Ltd|172|
-      - 🇬🇧 GB|英国|XX||XX|XX|218|
-      - 🇨🇿 CZ|捷克|1Hlavni mesto Praha|布拉格|M247 Ltd|44|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|1| 4
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|451185154|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|795|
-      - 🇬🇧 GB|英国|11425|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|113|
-      - 🇬🇧 GB|英国|4258|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|794|
-      - 🇳🇱 NL|荷兰|阿姆斯特丹|阿姆斯特丹|585145118702908|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|585145118702909|
-      - 🇩🇪 DE|德国|法兰克福|法兰克福|2|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|2|
-      - 🇺🇸 US|美国|弗吉尼亚|1|
-      - 🇺🇸 US|美国|马萨诸塞|波士顿|1818|
-      - 🇺🇸 US|美国|马萨诸塞|波士顿|23|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|47|
-      - 🇧🇪 BE|比利时|2173|
-      - 🇫🇷 FR|法国|6|
-      - 🇺🇸 US|美国|加利福尼亚|圣何塞|426|
-      - 🇩🇪 ES|西班牙|马德里|马德里|295|
-      - 🇧🇪 BE|比利时|80|
-      - 🇧🇪 BE|比利时|4511816|
-      - 🇧🇪 BE|比利时|11816|
-      - 🇧🇪 BE|比利时|189|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|2983|
-      - 🇧🇪 BE|比利时|2|
-      - 🇧🇪 BE|比利时|9|
-      - 🇧🇪 BE|比利时|532|
-      - 🇧🇪 BE|比利时|321|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|14|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|11085153|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|451185155|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|451187|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|2907|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|2|
-      - 🇨🇭 CH|瑞士|Zurich|6|
-      - 🇨🇭 CH|瑞士|Zurich|1|
-      - 🇨🇭 CH|瑞士|Zurich|4|
-      - 🇨🇭 CH|瑞士|Zurich|220|
-      - 🇨🇭 CH|瑞士|Zurich|82|
-      - 🇧🇪 BE|比利时|6|
-      - 🇸🇬 US|美国|新泽西|322|
-      - 🇸🇬 US|美国|新泽西|13|
-      - 🇸🇬 US|美国|新泽西|8415|
-      - 🇸🇬 US|美国|新泽西|85|
-      - 🇸🇬 US|美国|新泽西|1| 2
-      - 🇸🇬 US|美国|新泽西|3220|
-      - 🇸🇬 US|美国|新泽西|33|
-      - 🇸🇬 US|美国|新泽西|35|
-      - 🇸🇬 US|美国|新泽西|414|
-      - 🇸🇬 US|美国|新泽西|827|
-      - 🇸🇬 US|美国|新泽西|29006|
-      - 🇸🇬 US|美国|新泽西|10|
-      - 🇸🇬 US|美国|新泽西|34|
-      - 🇸🇬 US|美国|新泽西|1426|
-      - 🇸🇬 US|美国|新泽西|26|
-      - 🇸🇬 US|美国|新泽西|2984|
-      - 🇸🇬 US|美国|新泽西|1| 3
-      - 🇺🇸 US|美国|密歇根|9|
-      - 🇺🇸 US|美国|密歇根|2|
-      - 🇺🇸 US|美国|密歇根|1|
-      - 🇺🇸 US|美国|密歇根|424|
-      - 🇷🇺 US|美国|俄勒冈|88|
-      - 🇮🇹 IT|意大利|米兰|米兰|53|
-      - 🇮🇹 IT|意大利|米兰|米兰|1|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|35|
-      - 🇧🇷 BR|巴西|5|
-      - 🇺🇸 US|美国|堪萨斯|7|
-      - 🇧🇷 BR|巴西|3|
-      - 🇺🇸 US|美国|堪萨斯|219|
-      - 🇪🇺 EU|欧洲|3| 2
-      - 🇧🇪 BE|比利时|4|
-      - 🇧🇷 BR|巴西|4|
-      - 🇺🇸 US|美国|科罗拉多|丹佛|2|
-      - 🇺🇸 US|美国|科罗拉多|丹佛|2| 2
+      - 🇺🇸 US|美国|佛罗里达|2|
+      - 🇩🇪 US|美国|德克萨斯|休斯顿|2|
+      - 🇱🇻 LV|拉脱维亚|Riga|2|
+      - 🇱🇻 LV|拉脱维亚|Riga|2| 2
+      - 🇦🇹 AT|奥地利|2|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|2|
+      - 🇳🇱 NL|荷兰|北荷兰|2|
+      - 🇳🇱 NL|荷兰|Drenthe|Level3|4|
+      - 🇩🇪 ES|西班牙|马德里|马德里|5|
+      - 🇩🇪 ES|西班牙|马德里|马德里|4|
+      - 🇺🇦 UA|乌克兰|4|
+      - 🇺🇦 UA|乌克兰|5|
+      - 🇺🇦 UA|乌克兰|7|
+      - 🇺🇦 UA|乌克兰|12|
+      - 🇪🇺 EU|欧洲|5|
+      - 🇩🇪 DE|德国|法兰克福|法兰克福|7|
+      - 🇷🇴 RO|罗马尼亚|布加勒斯特|8|
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
