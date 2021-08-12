@@ -5,323 +5,147 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇦🇹 AT|奥地利|384417585|, server: 37.120.221.5, port: 31944, type: ss, cipher: aes-256-gcm, password: aYNeKDMzYQYw4KbUbJA8Wszq}
-  - {name: 🇩🇰 DK|丹麦|哥本哈根|492819271|, server: 193.29.107.99, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
-  - {name: 🇨🇭 CH|瑞士|Zurich|391659075|, server: 212.102.36.234, port: 38620, type: ss, cipher: aes-256-gcm, password: Kquv5UhvZXNMemAQy8DxZ7qn}
-  - {name: 🇧🇪 BE|比利时|586467470|, server: 91.90.123.115, port: 35294, type: ss, cipher: aes-256-gcm, password: J9Y2ncrdPEC38gwydNFFGBna}
-  - {name: 🇨🇭 CH|瑞士|Zurich|600754536|, server: 212.102.36.234, port: 47027, type: ss, cipher: aes-256-gcm, password: Vt5pBJFwdtNB26cJbTXxm88Z}
-  - {name: 🇳🇱 NL|荷兰|Drenthe|Level3|998707332|, server: 185.252.223.83, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇺🇦 UA|乌克兰|194231829|, server: 37.19.211.84, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇳🇱 NL|荷兰|北荷兰|198661885|, server: 81.19.208.107, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇺🇦 UA|乌克兰|393976296|, server: 37.19.211.34, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇺🇦 UA|乌克兰|486093776|, server: 37.19.211.94, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇺🇦 UA|乌克兰|789967894|, server: 37.19.211.37, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇪🇺 EU|欧洲|998488932|, server: 138.199.42.165, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇪🇺 EU|欧洲|994574887|, server: 138.199.42.131, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|193930330|, server: 89.36.76.69, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇪🇺 EU|欧洲|200642277|, server: 138.199.42.155, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇬🇧 GB|英国|Manchester|587321001|, server: 89.238.130.245, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|788815270|, server: 37.120.233.251, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇨🇭 CH|瑞士|Zurich|804351759|, server: 212.102.36.234, port: 48794, type: ss, cipher: aes-256-gcm, password: r9Q3adc3ru9sfBDPEj4yp6U6}
-  - {name: 🇧🇪 BE|比利时|995086990|, server: 91.90.123.123, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇬🇧 GB|英国|Manchester|994397312|, server: 91.90.121.147, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇩🇰 DK|丹麦|哥本哈根|387792421|, server: 193.29.107.213, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇱🇺 LU|卢森堡|Luxembourg|598659816|, server: 185.153.151.195, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇧🇪 BE|比利时|684907594|, server: 91.90.123.181, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇬🇧 GB|英国|XX||XX|XX|790159324|, server: 217.138.220.189, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇨🇿 CZ|捷克|1Hlavni mesto Praha|布拉格|M247 Ltd|799737029|, server: 217.138.220.187, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇬🇧 GB|英国|185974627|, server: 146.70.27.45, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|487717397|, server: 91.245.254.237, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇬🇧 GB|英国|伦敦|伦敦|503749768|, server: 185.44.76.104, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|499672206|, server: 91.245.254.125, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇵🇹 PT|葡萄牙|986270803|, server: 91.205.230.170, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇵🇹 PT|葡萄牙|186871132|, server: 91.205.230.146, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇧🇪 BE|比利时|386121183|, server: 91.90.123.115, port: 34687, type: ss, cipher: aes-256-gcm, password: txmK9WhwP6WPhP7hqSBLVxpN}
-  - {name: 🇧🇦 BA|波黑|486371712|, server: 185.99.3.118, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇵🇱 PL|波兰|100807426|, server: 37.28.156.117, port: 39556, type: ss, cipher: aes-256-gcm, password: g4AfpNELpdYEeLYhM8XCX9se}
-  - {name: 🇵🇱 PL|波兰|204026113|, server: 37.28.156.117, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇩🇰 DK|丹麦|285817415|, server: 185.108.105.75, port: 47121, type: ss, cipher: aes-256-gcm, password: CTK8GXFQgKYQErrghPJfZ6tk}
-  - {name: 🇭🇷 HR|克罗地亚|495548709|, server: 85.10.50.164, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD, udp: true}
-  - {name: 🇫🇷 FR|法国|689635504|, server: 146.59.3.33, port: 1443, type: ss, cipher: chacha20-ietf-poly1305, password: M1LCZAlfz1bV, udp: true}
-  - {name: 🇫🇷 FR|法国|997271295|, server: 51.75.141.238, port: 57478, type: ss, cipher: chacha20-ietf-poly1305, password: PkaS32tULDz4}
-  - {name: 🇧🇪 BE|比利时|788963351|, server: 91.90.123.115, port: 48794, type: ss, cipher: aes-256-gcm, password: r9Q3adc3ru9sfBDPEj4yp6U6}
-  - {name: 🇧🇪 BE|比利时|798134117|, server: 91.90.123.115, port: 47027, type: ss, cipher: aes-256-gcm, password: Vt5pBJFwdtNB26cJbTXxm88Z}
-  - {name: 🇧🇪 BE|比利时|889327519|, server: 91.90.123.115, port: 40093, type: ss, cipher: aes-256-gcm, password: x23Z4LGkGDkThZ9Kaz4DURQp}
-  - {name: 🇧🇪 BE|比利时|098338961|, server: 91.90.123.115, port: 44236, type: ss, cipher: aes-256-gcm, password: FWrXcxPZjJxAN89xLgqY3Acp}
-  - {name: 🇧🇪 BE|比利时|288073965|, server: 91.90.123.115, port: 31944, type: ss, cipher: aes-256-gcm, password: aYNeKDMzYQYw4KbUbJA8Wszq}
-  - {name: 🇧🇪 BE|比利时|590237056|, server: 91.90.123.115, port: 44820, type: ss, cipher: aes-256-gcm, password: jspgz9G3VmvBMCgMUWLBaZHu}
-  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|587014568|, server: 89.36.76.59, port: 49396, type: ss, cipher: aes-256-gcm, password: BdRWC38L5JUDMTYNNxJGcUwB}
-  - {name: 🇧🇪 BE|比利时|688290699|, server: 91.90.123.115, port: 46642, type: ss, cipher: aes-256-gcm, password: gYL83DQWXuDbxmZAVVtUTXaK}
-  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|905127908|, server: 89.36.76.59, port: 49126, type: ss, cipher: aes-256-gcm, password: wrCaGtrUbzeRqQLdc8Kmk3Nd}
-  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|087005263|, server: 89.36.76.59, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|302946273|, server: 89.36.76.59, port: 49653, type: ss, cipher: aes-256-gcm, password: Y9GcTPemHMKEkrfGQPJqFDNr}
-  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|394177910|, server: 89.36.76.59, port: 49339, type: ss, cipher: aes-256-gcm, password: suucSeVLmt6PQKAP77NtGw9x}
-  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|495570179|, server: 89.36.76.59, port: 44236, type: ss, cipher: aes-256-gcm, password: FWrXcxPZjJxAN89xLgqY3Acp}
-  - {name: 🇪🇺 EU|欧洲|787840339|, server: 138.199.16.152, port: 35294, type: ss, cipher: aes-256-gcm, password: J9Y2ncrdPEC38gwydNFFGBna}
-  - {name: 🇪🇺 EU|欧洲|802767604|, server: 138.199.16.152, port: 40093, type: ss, cipher: aes-256-gcm, password: x23Z4LGkGDkThZ9Kaz4DURQp}
-  - {name: 🇨🇭 CH|瑞士|Zurich|189424506|, server: 212.102.36.234, port: 40093, type: ss, cipher: aes-256-gcm, password: x23Z4LGkGDkThZ9Kaz4DURQp}
-  - {name: 🇨🇭 CH|瑞士|Zurich|199573484|, server: 212.102.36.234, port: 47121, type: ss, cipher: aes-256-gcm, password: CTK8GXFQgKYQErrghPJfZ6tk}
-  - {name: 🇨🇭 CH|瑞士|Zurich|287563413|, server: 212.102.36.234, port: 48938, type: ss, cipher: aes-256-gcm, password: 4ejJ8n5ddLuYDUHGXJre2ufJ}
-  - {name: 🇨🇭 CH|瑞士|Zurich|589372493|, server: 212.102.36.234, port: 44236, type: ss, cipher: aes-256-gcm, password: FWrXcxPZjJxAN89xLgqY3Acp}
-  - {name: 🇨🇭 CH|瑞士|Zurich|592752954|, server: 212.102.36.234, port: 31764, type: ss, cipher: aes-256-gcm, password: YgusH2MWA8PWc3p2VDsR7AVv}
-  - {name: 🇨🇭 CH|瑞士|Zurich|986294468|, server: 212.102.36.234, port: 35294, type: ss, cipher: aes-256-gcm, password: J9Y2ncrdPEC38gwydNFFGBna}
-  - {name: 🇨🇭 CH|瑞士|Zurich|004024908|, server: 212.102.36.234, port: 33148, type: ss, cipher: aes-256-gcm, password: CMduaFXddcQbwNAAs7xFDnc8}
-  - {name: 🇨🇭 CH|瑞士|Zurich|096798620|, server: 212.102.36.234, port: 34687, type: ss, cipher: aes-256-gcm, password: txmK9WhwP6WPhP7hqSBLVxpN}
-  - {name: 🇨🇭 CH|瑞士|Zurich|384746249|, server: 212.102.36.234, port: 49396, type: ss, cipher: aes-256-gcm, password: BdRWC38L5JUDMTYNNxJGcUwB}
-  - {name: 🇨🇭 CH|瑞士|Zurich|389253224|, server: 212.102.36.234, port: 49126, type: ss, cipher: aes-256-gcm, password: wrCaGtrUbzeRqQLdc8Kmk3Nd}
-  - {name: 🇩🇰 DK|丹麦|697778222|, server: 185.108.105.75, port: 37588, type: ss, cipher: aes-256-gcm, password: kD9vkjnE6dsUzwQfvKkPkQAd}
-  - {name: 🇩🇰 DK|丹麦|888582454|, server: 185.108.105.75, port: 49339, type: ss, cipher: aes-256-gcm, password: suucSeVLmt6PQKAP77NtGw9x}
-  - {name: 🇩🇰 DK|丹麦|901624641|, server: 185.108.105.75, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
-  - {name: 🇵🇹 PT|葡萄牙|190576203|, server: 91.205.230.133, port: 46642, type: ss, cipher: aes-256-gcm, password: gYL83DQWXuDbxmZAVVtUTXaK}
-  - {name: 🇵🇹 PT|葡萄牙|188099112|, server: 91.205.230.133, port: 48794, type: ss, cipher: aes-256-gcm, password: r9Q3adc3ru9sfBDPEj4yp6U6}
-  - {name: 🇵🇹 PT|葡萄牙|487055666|, server: 91.205.230.133, port: 33148, type: ss, cipher: aes-256-gcm, password: CMduaFXddcQbwNAAs7xFDnc8}
-  - {name: 🇵🇹 PT|葡萄牙|691364099|, server: 91.205.230.133, port: 34687, type: ss, cipher: aes-256-gcm, password: txmK9WhwP6WPhP7hqSBLVxpN}
-  - {name: 🇵🇹 PT|葡萄牙|696469318|, server: 91.205.230.133, port: 48938, type: ss, cipher: aes-256-gcm, password: 4ejJ8n5ddLuYDUHGXJre2ufJ}
-  - {name: 🇩🇰 DK|丹麦|992806798|, server: 185.108.105.75, port: 33998, type: ss, cipher: aes-256-gcm, password: NHwQTPLCfaTMSqTnU3mjcSxe}
-  - {name: 🇩🇰 DK|丹麦|994098951|, server: 185.108.105.75, port: 31944, type: ss, cipher: aes-256-gcm, password: aYNeKDMzYQYw4KbUbJA8Wszq}
-  - {name: 🇩🇰 DK|丹麦|191637422|, server: 185.108.105.75, port: 38620, type: ss, cipher: aes-256-gcm, password: Kquv5UhvZXNMemAQy8DxZ7qn}
+  - {name: 🇧🇪 BE|比利时|491813142|, server: 185.232.21.51, port: 43893, type: ss, cipher: aes-256-gcm, password: YyCBeDdYX4cadHpCkkmdJLq8}
+  - {name: 🇦🇹 AT|奥地利|193165261|, server: 37.120.221.5, port: 31944, type: ss, cipher: aes-256-gcm, password: aYNeKDMzYQYw4KbUbJA8Wszq}
+  - {name: 🇩🇰 DK|丹麦|哥本哈根|288988003|, server: 193.29.107.91, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
+  - {name: 🇦🇹 AT|奥地利|300033106|, server: 37.120.221.5, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
+  - {name: 🇦🇹 AT|奥地利|596915972|, server: 37.120.221.5, port: 31764, type: ss, cipher: aes-256-gcm, password: YgusH2MWA8PWc3p2VDsR7AVv}
+  - {name: 🇩🇰 DK|丹麦|哥本哈根|800771783|, server: 193.29.107.117, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
+  - {name: 🇧🇪 BE|比利时|394755377|, server: 91.90.123.115, port: 45329, type: ss, cipher: aes-256-gcm, password: CXSjgD7u7Ar7GxkZ4CgTMUsj, udp: true}
+  - {name: 🇮🇹 IT|意大利|米兰|米兰|703491091|, server: 82.102.26.117, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
+  - {name: 🇮🇹 IT|意大利|米兰|米兰|791635297|, server: 82.102.26.117, port: 47121, type: ss, cipher: aes-256-gcm, password: CTK8GXFQgKYQErrghPJfZ6tk}
+  - {name: 🇮🇹 IT|意大利|米兰|米兰|093222366|, server: 82.102.26.117, port: 41676, type: ss, cipher: aes-256-gcm, password: z6pH3RyttkRWhJ5tpRyt6dYk}
+  - {name: 🇮🇹 IT|意大利|米兰|米兰|293939042|, server: 82.102.26.117, port: 45746, type: ss, cipher: aes-256-gcm, password: wEsFcHCvbL4eJkL4DZQa7RgR}
+  - {name: 🇮🇹 IT|意大利|米兰|米兰|300055492|, server: 82.102.26.117, port: 33998, type: ss, cipher: aes-256-gcm, password: NHwQTPLCfaTMSqTnU3mjcSxe}
+  - {name: 🇧🇪 BE|比利时|486566202|, server: 91.90.123.115, port: 35294, type: ss, cipher: aes-256-gcm, password: J9Y2ncrdPEC38gwydNFFGBna}
+  - {name: 🇧🇪 BE|比利时|500876409|, server: 91.90.123.115, port: 49339, type: ss, cipher: aes-256-gcm, password: suucSeVLmt6PQKAP77NtGw9x}
+  - {name: 🇳🇱 NL|荷兰|北荷兰|802309324|, server: 81.19.208.107, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇷🇸 RS|塞尔维亚|997040965|, server: 152.89.160.149, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇩🇪 ES|西班牙|马德里|马德里|092928548|, server: 82.102.26.149, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇩🇪 ES|西班牙|马德里|马德里|192581058|, server: 82.102.26.157, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇺🇦 UA|乌克兰|201704537|, server: 37.19.211.54, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇺🇦 UA|乌克兰|595758950|, server: 37.19.211.92, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇺🇦 UA|乌克兰|705195444|, server: 37.19.211.39, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇺🇦 UA|乌克兰|789991621|, server: 37.19.211.14, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇮🇪 IE|爱尔兰|Dublin|894850214|, server: 5.157.13.107, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇪🇺 EU|欧洲|998177711|, server: 138.199.42.169, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇪🇺 EU|欧洲|296417218|, server: 138.199.42.141, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇪🇺 EU|欧洲|492636554|, server: 138.199.40.167, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇧🇪 BE|比利时|592950073|, server: 91.90.123.115, port: 33148, type: ss, cipher: aes-256-gcm, password: CMduaFXddcQbwNAAs7xFDnc8}
+  - {name: 🇧🇪 BE|比利时|684693570|, server: 91.90.123.115, port: 38620, type: ss, cipher: aes-256-gcm, password: Kquv5UhvZXNMemAQy8DxZ7qn}
+  - {name: 🇩🇪 DE|德国|法兰克福|法兰克福|698233863|, server: 193.29.106.197, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇬🇧 GB|英国|399756313|, server: 146.70.28.93, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇬🇧 GB|英国|Manchester|697722001|, server: 89.238.137.29, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇦🇹 AT|奥地利|384417585|
-      - 🇩🇰 DK|丹麦|哥本哈根|492819271|
-      - 🇨🇭 CH|瑞士|Zurich|391659075|
-      - 🇧🇪 BE|比利时|586467470|
-      - 🇨🇭 CH|瑞士|Zurich|600754536|
-      - 🇳🇱 NL|荷兰|Drenthe|Level3|998707332|
-      - 🇺🇦 UA|乌克兰|194231829|
-      - 🇳🇱 NL|荷兰|北荷兰|198661885|
-      - 🇺🇦 UA|乌克兰|393976296|
-      - 🇺🇦 UA|乌克兰|486093776|
-      - 🇺🇦 UA|乌克兰|789967894|
-      - 🇪🇺 EU|欧洲|998488932|
-      - 🇪🇺 EU|欧洲|994574887|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|193930330|
-      - 🇪🇺 EU|欧洲|200642277|
-      - 🇬🇧 GB|英国|Manchester|587321001|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|788815270|
-      - 🇨🇭 CH|瑞士|Zurich|804351759|
-      - 🇧🇪 BE|比利时|995086990|
-      - 🇬🇧 GB|英国|Manchester|994397312|
-      - 🇩🇰 DK|丹麦|哥本哈根|387792421|
-      - 🇱🇺 LU|卢森堡|Luxembourg|598659816|
-      - 🇧🇪 BE|比利时|684907594|
-      - 🇬🇧 GB|英国|XX||XX|XX|790159324|
-      - 🇨🇿 CZ|捷克|1Hlavni mesto Praha|布拉格|M247 Ltd|799737029|
-      - 🇬🇧 GB|英国|185974627|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|487717397|
-      - 🇬🇧 GB|英国|伦敦|伦敦|503749768|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|499672206|
-      - 🇵🇹 PT|葡萄牙|986270803|
-      - 🇵🇹 PT|葡萄牙|186871132|
-      - 🇧🇪 BE|比利时|386121183|
-      - 🇧🇦 BA|波黑|486371712|
-      - 🇵🇱 PL|波兰|100807426|
-      - 🇵🇱 PL|波兰|204026113|
-      - 🇩🇰 DK|丹麦|285817415|
-      - 🇭🇷 HR|克罗地亚|495548709|
-      - 🇫🇷 FR|法国|689635504|
-      - 🇫🇷 FR|法国|997271295|
-      - 🇧🇪 BE|比利时|788963351|
-      - 🇧🇪 BE|比利时|798134117|
-      - 🇧🇪 BE|比利时|889327519|
-      - 🇧🇪 BE|比利时|098338961|
-      - 🇧🇪 BE|比利时|288073965|
-      - 🇧🇪 BE|比利时|590237056|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|587014568|
-      - 🇧🇪 BE|比利时|688290699|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|905127908|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|087005263|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|302946273|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|394177910|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|495570179|
-      - 🇪🇺 EU|欧洲|787840339|
-      - 🇪🇺 EU|欧洲|802767604|
-      - 🇨🇭 CH|瑞士|Zurich|189424506|
-      - 🇨🇭 CH|瑞士|Zurich|199573484|
-      - 🇨🇭 CH|瑞士|Zurich|287563413|
-      - 🇨🇭 CH|瑞士|Zurich|589372493|
-      - 🇨🇭 CH|瑞士|Zurich|592752954|
-      - 🇨🇭 CH|瑞士|Zurich|986294468|
-      - 🇨🇭 CH|瑞士|Zurich|004024908|
-      - 🇨🇭 CH|瑞士|Zurich|096798620|
-      - 🇨🇭 CH|瑞士|Zurich|384746249|
-      - 🇨🇭 CH|瑞士|Zurich|389253224|
-      - 🇩🇰 DK|丹麦|697778222|
-      - 🇩🇰 DK|丹麦|888582454|
-      - 🇩🇰 DK|丹麦|901624641|
-      - 🇵🇹 PT|葡萄牙|190576203|
-      - 🇵🇹 PT|葡萄牙|188099112|
-      - 🇵🇹 PT|葡萄牙|487055666|
-      - 🇵🇹 PT|葡萄牙|691364099|
-      - 🇵🇹 PT|葡萄牙|696469318|
-      - 🇩🇰 DK|丹麦|992806798|
-      - 🇩🇰 DK|丹麦|994098951|
-      - 🇩🇰 DK|丹麦|191637422|
+      - 🇧🇪 BE|比利时|491813142|
+      - 🇦🇹 AT|奥地利|193165261|
+      - 🇩🇰 DK|丹麦|哥本哈根|288988003|
+      - 🇦🇹 AT|奥地利|300033106|
+      - 🇦🇹 AT|奥地利|596915972|
+      - 🇩🇰 DK|丹麦|哥本哈根|800771783|
+      - 🇧🇪 BE|比利时|394755377|
+      - 🇮🇹 IT|意大利|米兰|米兰|703491091|
+      - 🇮🇹 IT|意大利|米兰|米兰|791635297|
+      - 🇮🇹 IT|意大利|米兰|米兰|093222366|
+      - 🇮🇹 IT|意大利|米兰|米兰|293939042|
+      - 🇮🇹 IT|意大利|米兰|米兰|300055492|
+      - 🇧🇪 BE|比利时|486566202|
+      - 🇧🇪 BE|比利时|500876409|
+      - 🇳🇱 NL|荷兰|北荷兰|802309324|
+      - 🇷🇸 RS|塞尔维亚|997040965|
+      - 🇩🇪 ES|西班牙|马德里|马德里|092928548|
+      - 🇩🇪 ES|西班牙|马德里|马德里|192581058|
+      - 🇺🇦 UA|乌克兰|201704537|
+      - 🇺🇦 UA|乌克兰|595758950|
+      - 🇺🇦 UA|乌克兰|705195444|
+      - 🇺🇦 UA|乌克兰|789991621|
+      - 🇮🇪 IE|爱尔兰|Dublin|894850214|
+      - 🇪🇺 EU|欧洲|998177711|
+      - 🇪🇺 EU|欧洲|296417218|
+      - 🇪🇺 EU|欧洲|492636554|
+      - 🇧🇪 BE|比利时|592950073|
+      - 🇧🇪 BE|比利时|684693570|
+      - 🇩🇪 DE|德国|法兰克福|法兰克福|698233863|
+      - 🇬🇧 GB|英国|399756313|
+      - 🇬🇧 GB|英国|Manchester|697722001|
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇦🇹 AT|奥地利|384417585|
-      - 🇩🇰 DK|丹麦|哥本哈根|492819271|
-      - 🇨🇭 CH|瑞士|Zurich|391659075|
-      - 🇧🇪 BE|比利时|586467470|
-      - 🇨🇭 CH|瑞士|Zurich|600754536|
-      - 🇳🇱 NL|荷兰|Drenthe|Level3|998707332|
-      - 🇺🇦 UA|乌克兰|194231829|
-      - 🇳🇱 NL|荷兰|北荷兰|198661885|
-      - 🇺🇦 UA|乌克兰|393976296|
-      - 🇺🇦 UA|乌克兰|486093776|
-      - 🇺🇦 UA|乌克兰|789967894|
-      - 🇪🇺 EU|欧洲|998488932|
-      - 🇪🇺 EU|欧洲|994574887|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|193930330|
-      - 🇪🇺 EU|欧洲|200642277|
-      - 🇬🇧 GB|英国|Manchester|587321001|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|788815270|
-      - 🇨🇭 CH|瑞士|Zurich|804351759|
-      - 🇧🇪 BE|比利时|995086990|
-      - 🇬🇧 GB|英国|Manchester|994397312|
-      - 🇩🇰 DK|丹麦|哥本哈根|387792421|
-      - 🇱🇺 LU|卢森堡|Luxembourg|598659816|
-      - 🇧🇪 BE|比利时|684907594|
-      - 🇬🇧 GB|英国|XX||XX|XX|790159324|
-      - 🇨🇿 CZ|捷克|1Hlavni mesto Praha|布拉格|M247 Ltd|799737029|
-      - 🇬🇧 GB|英国|185974627|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|487717397|
-      - 🇬🇧 GB|英国|伦敦|伦敦|503749768|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|499672206|
-      - 🇵🇹 PT|葡萄牙|986270803|
-      - 🇵🇹 PT|葡萄牙|186871132|
-      - 🇧🇪 BE|比利时|386121183|
-      - 🇧🇦 BA|波黑|486371712|
-      - 🇵🇱 PL|波兰|100807426|
-      - 🇵🇱 PL|波兰|204026113|
-      - 🇩🇰 DK|丹麦|285817415|
-      - 🇭🇷 HR|克罗地亚|495548709|
-      - 🇫🇷 FR|法国|689635504|
-      - 🇫🇷 FR|法国|997271295|
-      - 🇧🇪 BE|比利时|788963351|
-      - 🇧🇪 BE|比利时|798134117|
-      - 🇧🇪 BE|比利时|889327519|
-      - 🇧🇪 BE|比利时|098338961|
-      - 🇧🇪 BE|比利时|288073965|
-      - 🇧🇪 BE|比利时|590237056|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|587014568|
-      - 🇧🇪 BE|比利时|688290699|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|905127908|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|087005263|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|302946273|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|394177910|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|495570179|
-      - 🇪🇺 EU|欧洲|787840339|
-      - 🇪🇺 EU|欧洲|802767604|
-      - 🇨🇭 CH|瑞士|Zurich|189424506|
-      - 🇨🇭 CH|瑞士|Zurich|199573484|
-      - 🇨🇭 CH|瑞士|Zurich|287563413|
-      - 🇨🇭 CH|瑞士|Zurich|589372493|
-      - 🇨🇭 CH|瑞士|Zurich|592752954|
-      - 🇨🇭 CH|瑞士|Zurich|986294468|
-      - 🇨🇭 CH|瑞士|Zurich|004024908|
-      - 🇨🇭 CH|瑞士|Zurich|096798620|
-      - 🇨🇭 CH|瑞士|Zurich|384746249|
-      - 🇨🇭 CH|瑞士|Zurich|389253224|
-      - 🇩🇰 DK|丹麦|697778222|
-      - 🇩🇰 DK|丹麦|888582454|
-      - 🇩🇰 DK|丹麦|901624641|
-      - 🇵🇹 PT|葡萄牙|190576203|
-      - 🇵🇹 PT|葡萄牙|188099112|
-      - 🇵🇹 PT|葡萄牙|487055666|
-      - 🇵🇹 PT|葡萄牙|691364099|
-      - 🇵🇹 PT|葡萄牙|696469318|
-      - 🇩🇰 DK|丹麦|992806798|
-      - 🇩🇰 DK|丹麦|994098951|
-      - 🇩🇰 DK|丹麦|191637422|
+      - 🇧🇪 BE|比利时|491813142|
+      - 🇦🇹 AT|奥地利|193165261|
+      - 🇩🇰 DK|丹麦|哥本哈根|288988003|
+      - 🇦🇹 AT|奥地利|300033106|
+      - 🇦🇹 AT|奥地利|596915972|
+      - 🇩🇰 DK|丹麦|哥本哈根|800771783|
+      - 🇧🇪 BE|比利时|394755377|
+      - 🇮🇹 IT|意大利|米兰|米兰|703491091|
+      - 🇮🇹 IT|意大利|米兰|米兰|791635297|
+      - 🇮🇹 IT|意大利|米兰|米兰|093222366|
+      - 🇮🇹 IT|意大利|米兰|米兰|293939042|
+      - 🇮🇹 IT|意大利|米兰|米兰|300055492|
+      - 🇧🇪 BE|比利时|486566202|
+      - 🇧🇪 BE|比利时|500876409|
+      - 🇳🇱 NL|荷兰|北荷兰|802309324|
+      - 🇷🇸 RS|塞尔维亚|997040965|
+      - 🇩🇪 ES|西班牙|马德里|马德里|092928548|
+      - 🇩🇪 ES|西班牙|马德里|马德里|192581058|
+      - 🇺🇦 UA|乌克兰|201704537|
+      - 🇺🇦 UA|乌克兰|595758950|
+      - 🇺🇦 UA|乌克兰|705195444|
+      - 🇺🇦 UA|乌克兰|789991621|
+      - 🇮🇪 IE|爱尔兰|Dublin|894850214|
+      - 🇪🇺 EU|欧洲|998177711|
+      - 🇪🇺 EU|欧洲|296417218|
+      - 🇪🇺 EU|欧洲|492636554|
+      - 🇧🇪 BE|比利时|592950073|
+      - 🇧🇪 BE|比利时|684693570|
+      - 🇩🇪 DE|德国|法兰克福|法兰克福|698233863|
+      - 🇬🇧 GB|英国|399756313|
+      - 🇬🇧 GB|英国|Manchester|697722001|
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇦🇹 AT|奥地利|384417585|
-      - 🇩🇰 DK|丹麦|哥本哈根|492819271|
-      - 🇨🇭 CH|瑞士|Zurich|391659075|
-      - 🇧🇪 BE|比利时|586467470|
-      - 🇨🇭 CH|瑞士|Zurich|600754536|
-      - 🇳🇱 NL|荷兰|Drenthe|Level3|998707332|
-      - 🇺🇦 UA|乌克兰|194231829|
-      - 🇳🇱 NL|荷兰|北荷兰|198661885|
-      - 🇺🇦 UA|乌克兰|393976296|
-      - 🇺🇦 UA|乌克兰|486093776|
-      - 🇺🇦 UA|乌克兰|789967894|
-      - 🇪🇺 EU|欧洲|998488932|
-      - 🇪🇺 EU|欧洲|994574887|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|193930330|
-      - 🇪🇺 EU|欧洲|200642277|
-      - 🇬🇧 GB|英国|Manchester|587321001|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|788815270|
-      - 🇨🇭 CH|瑞士|Zurich|804351759|
-      - 🇧🇪 BE|比利时|995086990|
-      - 🇬🇧 GB|英国|Manchester|994397312|
-      - 🇩🇰 DK|丹麦|哥本哈根|387792421|
-      - 🇱🇺 LU|卢森堡|Luxembourg|598659816|
-      - 🇧🇪 BE|比利时|684907594|
-      - 🇬🇧 GB|英国|XX||XX|XX|790159324|
-      - 🇨🇿 CZ|捷克|1Hlavni mesto Praha|布拉格|M247 Ltd|799737029|
-      - 🇬🇧 GB|英国|185974627|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|487717397|
-      - 🇬🇧 GB|英国|伦敦|伦敦|503749768|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|499672206|
-      - 🇵🇹 PT|葡萄牙|986270803|
-      - 🇵🇹 PT|葡萄牙|186871132|
-      - 🇧🇪 BE|比利时|386121183|
-      - 🇧🇦 BA|波黑|486371712|
-      - 🇵🇱 PL|波兰|100807426|
-      - 🇵🇱 PL|波兰|204026113|
-      - 🇩🇰 DK|丹麦|285817415|
-      - 🇭🇷 HR|克罗地亚|495548709|
-      - 🇫🇷 FR|法国|689635504|
-      - 🇫🇷 FR|法国|997271295|
-      - 🇧🇪 BE|比利时|788963351|
-      - 🇧🇪 BE|比利时|798134117|
-      - 🇧🇪 BE|比利时|889327519|
-      - 🇧🇪 BE|比利时|098338961|
-      - 🇧🇪 BE|比利时|288073965|
-      - 🇧🇪 BE|比利时|590237056|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|587014568|
-      - 🇧🇪 BE|比利时|688290699|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|905127908|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|087005263|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|302946273|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|394177910|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|495570179|
-      - 🇪🇺 EU|欧洲|787840339|
-      - 🇪🇺 EU|欧洲|802767604|
-      - 🇨🇭 CH|瑞士|Zurich|189424506|
-      - 🇨🇭 CH|瑞士|Zurich|199573484|
-      - 🇨🇭 CH|瑞士|Zurich|287563413|
-      - 🇨🇭 CH|瑞士|Zurich|589372493|
-      - 🇨🇭 CH|瑞士|Zurich|592752954|
-      - 🇨🇭 CH|瑞士|Zurich|986294468|
-      - 🇨🇭 CH|瑞士|Zurich|004024908|
-      - 🇨🇭 CH|瑞士|Zurich|096798620|
-      - 🇨🇭 CH|瑞士|Zurich|384746249|
-      - 🇨🇭 CH|瑞士|Zurich|389253224|
-      - 🇩🇰 DK|丹麦|697778222|
-      - 🇩🇰 DK|丹麦|888582454|
-      - 🇩🇰 DK|丹麦|901624641|
-      - 🇵🇹 PT|葡萄牙|190576203|
-      - 🇵🇹 PT|葡萄牙|188099112|
-      - 🇵🇹 PT|葡萄牙|487055666|
-      - 🇵🇹 PT|葡萄牙|691364099|
-      - 🇵🇹 PT|葡萄牙|696469318|
-      - 🇩🇰 DK|丹麦|992806798|
-      - 🇩🇰 DK|丹麦|994098951|
-      - 🇩🇰 DK|丹麦|191637422|
+      - 🇧🇪 BE|比利时|491813142|
+      - 🇦🇹 AT|奥地利|193165261|
+      - 🇩🇰 DK|丹麦|哥本哈根|288988003|
+      - 🇦🇹 AT|奥地利|300033106|
+      - 🇦🇹 AT|奥地利|596915972|
+      - 🇩🇰 DK|丹麦|哥本哈根|800771783|
+      - 🇧🇪 BE|比利时|394755377|
+      - 🇮🇹 IT|意大利|米兰|米兰|703491091|
+      - 🇮🇹 IT|意大利|米兰|米兰|791635297|
+      - 🇮🇹 IT|意大利|米兰|米兰|093222366|
+      - 🇮🇹 IT|意大利|米兰|米兰|293939042|
+      - 🇮🇹 IT|意大利|米兰|米兰|300055492|
+      - 🇧🇪 BE|比利时|486566202|
+      - 🇧🇪 BE|比利时|500876409|
+      - 🇳🇱 NL|荷兰|北荷兰|802309324|
+      - 🇷🇸 RS|塞尔维亚|997040965|
+      - 🇩🇪 ES|西班牙|马德里|马德里|092928548|
+      - 🇩🇪 ES|西班牙|马德里|马德里|192581058|
+      - 🇺🇦 UA|乌克兰|201704537|
+      - 🇺🇦 UA|乌克兰|595758950|
+      - 🇺🇦 UA|乌克兰|705195444|
+      - 🇺🇦 UA|乌克兰|789991621|
+      - 🇮🇪 IE|爱尔兰|Dublin|894850214|
+      - 🇪🇺 EU|欧洲|998177711|
+      - 🇪🇺 EU|欧洲|296417218|
+      - 🇪🇺 EU|欧洲|492636554|
+      - 🇧🇪 BE|比利时|592950073|
+      - 🇧🇪 BE|比利时|684693570|
+      - 🇩🇪 DE|德国|法兰克福|法兰克福|698233863|
+      - 🇬🇧 GB|英国|399756313|
+      - 🇬🇧 GB|英国|Manchester|697722001|
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -332,242 +156,110 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 🇦🇹 AT|奥地利|384417585|
-      - 🇩🇰 DK|丹麦|哥本哈根|492819271|
-      - 🇨🇭 CH|瑞士|Zurich|391659075|
-      - 🇧🇪 BE|比利时|586467470|
-      - 🇨🇭 CH|瑞士|Zurich|600754536|
-      - 🇳🇱 NL|荷兰|Drenthe|Level3|998707332|
-      - 🇺🇦 UA|乌克兰|194231829|
-      - 🇳🇱 NL|荷兰|北荷兰|198661885|
-      - 🇺🇦 UA|乌克兰|393976296|
-      - 🇺🇦 UA|乌克兰|486093776|
-      - 🇺🇦 UA|乌克兰|789967894|
-      - 🇪🇺 EU|欧洲|998488932|
-      - 🇪🇺 EU|欧洲|994574887|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|193930330|
-      - 🇪🇺 EU|欧洲|200642277|
-      - 🇬🇧 GB|英国|Manchester|587321001|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|788815270|
-      - 🇨🇭 CH|瑞士|Zurich|804351759|
-      - 🇧🇪 BE|比利时|995086990|
-      - 🇬🇧 GB|英国|Manchester|994397312|
-      - 🇩🇰 DK|丹麦|哥本哈根|387792421|
-      - 🇱🇺 LU|卢森堡|Luxembourg|598659816|
-      - 🇧🇪 BE|比利时|684907594|
-      - 🇬🇧 GB|英国|XX||XX|XX|790159324|
-      - 🇨🇿 CZ|捷克|1Hlavni mesto Praha|布拉格|M247 Ltd|799737029|
-      - 🇬🇧 GB|英国|185974627|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|487717397|
-      - 🇬🇧 GB|英国|伦敦|伦敦|503749768|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|499672206|
-      - 🇵🇹 PT|葡萄牙|986270803|
-      - 🇵🇹 PT|葡萄牙|186871132|
-      - 🇧🇪 BE|比利时|386121183|
-      - 🇧🇦 BA|波黑|486371712|
-      - 🇵🇱 PL|波兰|100807426|
-      - 🇵🇱 PL|波兰|204026113|
-      - 🇩🇰 DK|丹麦|285817415|
-      - 🇭🇷 HR|克罗地亚|495548709|
-      - 🇫🇷 FR|法国|689635504|
-      - 🇫🇷 FR|法国|997271295|
-      - 🇧🇪 BE|比利时|788963351|
-      - 🇧🇪 BE|比利时|798134117|
-      - 🇧🇪 BE|比利时|889327519|
-      - 🇧🇪 BE|比利时|098338961|
-      - 🇧🇪 BE|比利时|288073965|
-      - 🇧🇪 BE|比利时|590237056|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|587014568|
-      - 🇧🇪 BE|比利时|688290699|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|905127908|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|087005263|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|302946273|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|394177910|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|495570179|
-      - 🇪🇺 EU|欧洲|787840339|
-      - 🇪🇺 EU|欧洲|802767604|
-      - 🇨🇭 CH|瑞士|Zurich|189424506|
-      - 🇨🇭 CH|瑞士|Zurich|199573484|
-      - 🇨🇭 CH|瑞士|Zurich|287563413|
-      - 🇨🇭 CH|瑞士|Zurich|589372493|
-      - 🇨🇭 CH|瑞士|Zurich|592752954|
-      - 🇨🇭 CH|瑞士|Zurich|986294468|
-      - 🇨🇭 CH|瑞士|Zurich|004024908|
-      - 🇨🇭 CH|瑞士|Zurich|096798620|
-      - 🇨🇭 CH|瑞士|Zurich|384746249|
-      - 🇨🇭 CH|瑞士|Zurich|389253224|
-      - 🇩🇰 DK|丹麦|697778222|
-      - 🇩🇰 DK|丹麦|888582454|
-      - 🇩🇰 DK|丹麦|901624641|
-      - 🇵🇹 PT|葡萄牙|190576203|
-      - 🇵🇹 PT|葡萄牙|188099112|
-      - 🇵🇹 PT|葡萄牙|487055666|
-      - 🇵🇹 PT|葡萄牙|691364099|
-      - 🇵🇹 PT|葡萄牙|696469318|
-      - 🇩🇰 DK|丹麦|992806798|
-      - 🇩🇰 DK|丹麦|994098951|
-      - 🇩🇰 DK|丹麦|191637422|
+      - 🇧🇪 BE|比利时|491813142|
+      - 🇦🇹 AT|奥地利|193165261|
+      - 🇩🇰 DK|丹麦|哥本哈根|288988003|
+      - 🇦🇹 AT|奥地利|300033106|
+      - 🇦🇹 AT|奥地利|596915972|
+      - 🇩🇰 DK|丹麦|哥本哈根|800771783|
+      - 🇧🇪 BE|比利时|394755377|
+      - 🇮🇹 IT|意大利|米兰|米兰|703491091|
+      - 🇮🇹 IT|意大利|米兰|米兰|791635297|
+      - 🇮🇹 IT|意大利|米兰|米兰|093222366|
+      - 🇮🇹 IT|意大利|米兰|米兰|293939042|
+      - 🇮🇹 IT|意大利|米兰|米兰|300055492|
+      - 🇧🇪 BE|比利时|486566202|
+      - 🇧🇪 BE|比利时|500876409|
+      - 🇳🇱 NL|荷兰|北荷兰|802309324|
+      - 🇷🇸 RS|塞尔维亚|997040965|
+      - 🇩🇪 ES|西班牙|马德里|马德里|092928548|
+      - 🇩🇪 ES|西班牙|马德里|马德里|192581058|
+      - 🇺🇦 UA|乌克兰|201704537|
+      - 🇺🇦 UA|乌克兰|595758950|
+      - 🇺🇦 UA|乌克兰|705195444|
+      - 🇺🇦 UA|乌克兰|789991621|
+      - 🇮🇪 IE|爱尔兰|Dublin|894850214|
+      - 🇪🇺 EU|欧洲|998177711|
+      - 🇪🇺 EU|欧洲|296417218|
+      - 🇪🇺 EU|欧洲|492636554|
+      - 🇧🇪 BE|比利时|592950073|
+      - 🇧🇪 BE|比利时|684693570|
+      - 🇩🇪 DE|德国|法兰克福|法兰克福|698233863|
+      - 🇬🇧 GB|英国|399756313|
+      - 🇬🇧 GB|英国|Manchester|697722001|
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 🇦🇹 AT|奥地利|384417585|
-      - 🇩🇰 DK|丹麦|哥本哈根|492819271|
-      - 🇨🇭 CH|瑞士|Zurich|391659075|
-      - 🇧🇪 BE|比利时|586467470|
-      - 🇨🇭 CH|瑞士|Zurich|600754536|
-      - 🇳🇱 NL|荷兰|Drenthe|Level3|998707332|
-      - 🇺🇦 UA|乌克兰|194231829|
-      - 🇳🇱 NL|荷兰|北荷兰|198661885|
-      - 🇺🇦 UA|乌克兰|393976296|
-      - 🇺🇦 UA|乌克兰|486093776|
-      - 🇺🇦 UA|乌克兰|789967894|
-      - 🇪🇺 EU|欧洲|998488932|
-      - 🇪🇺 EU|欧洲|994574887|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|193930330|
-      - 🇪🇺 EU|欧洲|200642277|
-      - 🇬🇧 GB|英国|Manchester|587321001|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|788815270|
-      - 🇨🇭 CH|瑞士|Zurich|804351759|
-      - 🇧🇪 BE|比利时|995086990|
-      - 🇬🇧 GB|英国|Manchester|994397312|
-      - 🇩🇰 DK|丹麦|哥本哈根|387792421|
-      - 🇱🇺 LU|卢森堡|Luxembourg|598659816|
-      - 🇧🇪 BE|比利时|684907594|
-      - 🇬🇧 GB|英国|XX||XX|XX|790159324|
-      - 🇨🇿 CZ|捷克|1Hlavni mesto Praha|布拉格|M247 Ltd|799737029|
-      - 🇬🇧 GB|英国|185974627|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|487717397|
-      - 🇬🇧 GB|英国|伦敦|伦敦|503749768|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|499672206|
-      - 🇵🇹 PT|葡萄牙|986270803|
-      - 🇵🇹 PT|葡萄牙|186871132|
-      - 🇧🇪 BE|比利时|386121183|
-      - 🇧🇦 BA|波黑|486371712|
-      - 🇵🇱 PL|波兰|100807426|
-      - 🇵🇱 PL|波兰|204026113|
-      - 🇩🇰 DK|丹麦|285817415|
-      - 🇭🇷 HR|克罗地亚|495548709|
-      - 🇫🇷 FR|法国|689635504|
-      - 🇫🇷 FR|法国|997271295|
-      - 🇧🇪 BE|比利时|788963351|
-      - 🇧🇪 BE|比利时|798134117|
-      - 🇧🇪 BE|比利时|889327519|
-      - 🇧🇪 BE|比利时|098338961|
-      - 🇧🇪 BE|比利时|288073965|
-      - 🇧🇪 BE|比利时|590237056|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|587014568|
-      - 🇧🇪 BE|比利时|688290699|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|905127908|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|087005263|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|302946273|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|394177910|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|495570179|
-      - 🇪🇺 EU|欧洲|787840339|
-      - 🇪🇺 EU|欧洲|802767604|
-      - 🇨🇭 CH|瑞士|Zurich|189424506|
-      - 🇨🇭 CH|瑞士|Zurich|199573484|
-      - 🇨🇭 CH|瑞士|Zurich|287563413|
-      - 🇨🇭 CH|瑞士|Zurich|589372493|
-      - 🇨🇭 CH|瑞士|Zurich|592752954|
-      - 🇨🇭 CH|瑞士|Zurich|986294468|
-      - 🇨🇭 CH|瑞士|Zurich|004024908|
-      - 🇨🇭 CH|瑞士|Zurich|096798620|
-      - 🇨🇭 CH|瑞士|Zurich|384746249|
-      - 🇨🇭 CH|瑞士|Zurich|389253224|
-      - 🇩🇰 DK|丹麦|697778222|
-      - 🇩🇰 DK|丹麦|888582454|
-      - 🇩🇰 DK|丹麦|901624641|
-      - 🇵🇹 PT|葡萄牙|190576203|
-      - 🇵🇹 PT|葡萄牙|188099112|
-      - 🇵🇹 PT|葡萄牙|487055666|
-      - 🇵🇹 PT|葡萄牙|691364099|
-      - 🇵🇹 PT|葡萄牙|696469318|
-      - 🇩🇰 DK|丹麦|992806798|
-      - 🇩🇰 DK|丹麦|994098951|
-      - 🇩🇰 DK|丹麦|191637422|
+      - 🇧🇪 BE|比利时|491813142|
+      - 🇦🇹 AT|奥地利|193165261|
+      - 🇩🇰 DK|丹麦|哥本哈根|288988003|
+      - 🇦🇹 AT|奥地利|300033106|
+      - 🇦🇹 AT|奥地利|596915972|
+      - 🇩🇰 DK|丹麦|哥本哈根|800771783|
+      - 🇧🇪 BE|比利时|394755377|
+      - 🇮🇹 IT|意大利|米兰|米兰|703491091|
+      - 🇮🇹 IT|意大利|米兰|米兰|791635297|
+      - 🇮🇹 IT|意大利|米兰|米兰|093222366|
+      - 🇮🇹 IT|意大利|米兰|米兰|293939042|
+      - 🇮🇹 IT|意大利|米兰|米兰|300055492|
+      - 🇧🇪 BE|比利时|486566202|
+      - 🇧🇪 BE|比利时|500876409|
+      - 🇳🇱 NL|荷兰|北荷兰|802309324|
+      - 🇷🇸 RS|塞尔维亚|997040965|
+      - 🇩🇪 ES|西班牙|马德里|马德里|092928548|
+      - 🇩🇪 ES|西班牙|马德里|马德里|192581058|
+      - 🇺🇦 UA|乌克兰|201704537|
+      - 🇺🇦 UA|乌克兰|595758950|
+      - 🇺🇦 UA|乌克兰|705195444|
+      - 🇺🇦 UA|乌克兰|789991621|
+      - 🇮🇪 IE|爱尔兰|Dublin|894850214|
+      - 🇪🇺 EU|欧洲|998177711|
+      - 🇪🇺 EU|欧洲|296417218|
+      - 🇪🇺 EU|欧洲|492636554|
+      - 🇧🇪 BE|比利时|592950073|
+      - 🇧🇪 BE|比利时|684693570|
+      - 🇩🇪 DE|德国|法兰克福|法兰克福|698233863|
+      - 🇬🇧 GB|英国|399756313|
+      - 🇬🇧 GB|英国|Manchester|697722001|
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇦🇹 AT|奥地利|384417585|
-      - 🇩🇰 DK|丹麦|哥本哈根|492819271|
-      - 🇨🇭 CH|瑞士|Zurich|391659075|
-      - 🇧🇪 BE|比利时|586467470|
-      - 🇨🇭 CH|瑞士|Zurich|600754536|
-      - 🇳🇱 NL|荷兰|Drenthe|Level3|998707332|
-      - 🇺🇦 UA|乌克兰|194231829|
-      - 🇳🇱 NL|荷兰|北荷兰|198661885|
-      - 🇺🇦 UA|乌克兰|393976296|
-      - 🇺🇦 UA|乌克兰|486093776|
-      - 🇺🇦 UA|乌克兰|789967894|
-      - 🇪🇺 EU|欧洲|998488932|
-      - 🇪🇺 EU|欧洲|994574887|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|193930330|
-      - 🇪🇺 EU|欧洲|200642277|
-      - 🇬🇧 GB|英国|Manchester|587321001|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|788815270|
-      - 🇨🇭 CH|瑞士|Zurich|804351759|
-      - 🇧🇪 BE|比利时|995086990|
-      - 🇬🇧 GB|英国|Manchester|994397312|
-      - 🇩🇰 DK|丹麦|哥本哈根|387792421|
-      - 🇱🇺 LU|卢森堡|Luxembourg|598659816|
-      - 🇧🇪 BE|比利时|684907594|
-      - 🇬🇧 GB|英国|XX||XX|XX|790159324|
-      - 🇨🇿 CZ|捷克|1Hlavni mesto Praha|布拉格|M247 Ltd|799737029|
-      - 🇬🇧 GB|英国|185974627|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|487717397|
-      - 🇬🇧 GB|英国|伦敦|伦敦|503749768|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|499672206|
-      - 🇵🇹 PT|葡萄牙|986270803|
-      - 🇵🇹 PT|葡萄牙|186871132|
-      - 🇧🇪 BE|比利时|386121183|
-      - 🇧🇦 BA|波黑|486371712|
-      - 🇵🇱 PL|波兰|100807426|
-      - 🇵🇱 PL|波兰|204026113|
-      - 🇩🇰 DK|丹麦|285817415|
-      - 🇭🇷 HR|克罗地亚|495548709|
-      - 🇫🇷 FR|法国|689635504|
-      - 🇫🇷 FR|法国|997271295|
-      - 🇧🇪 BE|比利时|788963351|
-      - 🇧🇪 BE|比利时|798134117|
-      - 🇧🇪 BE|比利时|889327519|
-      - 🇧🇪 BE|比利时|098338961|
-      - 🇧🇪 BE|比利时|288073965|
-      - 🇧🇪 BE|比利时|590237056|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|587014568|
-      - 🇧🇪 BE|比利时|688290699|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|905127908|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|087005263|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|302946273|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|394177910|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|495570179|
-      - 🇪🇺 EU|欧洲|787840339|
-      - 🇪🇺 EU|欧洲|802767604|
-      - 🇨🇭 CH|瑞士|Zurich|189424506|
-      - 🇨🇭 CH|瑞士|Zurich|199573484|
-      - 🇨🇭 CH|瑞士|Zurich|287563413|
-      - 🇨🇭 CH|瑞士|Zurich|589372493|
-      - 🇨🇭 CH|瑞士|Zurich|592752954|
-      - 🇨🇭 CH|瑞士|Zurich|986294468|
-      - 🇨🇭 CH|瑞士|Zurich|004024908|
-      - 🇨🇭 CH|瑞士|Zurich|096798620|
-      - 🇨🇭 CH|瑞士|Zurich|384746249|
-      - 🇨🇭 CH|瑞士|Zurich|389253224|
-      - 🇩🇰 DK|丹麦|697778222|
-      - 🇩🇰 DK|丹麦|888582454|
-      - 🇩🇰 DK|丹麦|901624641|
-      - 🇵🇹 PT|葡萄牙|190576203|
-      - 🇵🇹 PT|葡萄牙|188099112|
-      - 🇵🇹 PT|葡萄牙|487055666|
-      - 🇵🇹 PT|葡萄牙|691364099|
-      - 🇵🇹 PT|葡萄牙|696469318|
-      - 🇩🇰 DK|丹麦|992806798|
-      - 🇩🇰 DK|丹麦|994098951|
-      - 🇩🇰 DK|丹麦|191637422|
+      - 🇧🇪 BE|比利时|491813142|
+      - 🇦🇹 AT|奥地利|193165261|
+      - 🇩🇰 DK|丹麦|哥本哈根|288988003|
+      - 🇦🇹 AT|奥地利|300033106|
+      - 🇦🇹 AT|奥地利|596915972|
+      - 🇩🇰 DK|丹麦|哥本哈根|800771783|
+      - 🇧🇪 BE|比利时|394755377|
+      - 🇮🇹 IT|意大利|米兰|米兰|703491091|
+      - 🇮🇹 IT|意大利|米兰|米兰|791635297|
+      - 🇮🇹 IT|意大利|米兰|米兰|093222366|
+      - 🇮🇹 IT|意大利|米兰|米兰|293939042|
+      - 🇮🇹 IT|意大利|米兰|米兰|300055492|
+      - 🇧🇪 BE|比利时|486566202|
+      - 🇧🇪 BE|比利时|500876409|
+      - 🇳🇱 NL|荷兰|北荷兰|802309324|
+      - 🇷🇸 RS|塞尔维亚|997040965|
+      - 🇩🇪 ES|西班牙|马德里|马德里|092928548|
+      - 🇩🇪 ES|西班牙|马德里|马德里|192581058|
+      - 🇺🇦 UA|乌克兰|201704537|
+      - 🇺🇦 UA|乌克兰|595758950|
+      - 🇺🇦 UA|乌克兰|705195444|
+      - 🇺🇦 UA|乌克兰|789991621|
+      - 🇮🇪 IE|爱尔兰|Dublin|894850214|
+      - 🇪🇺 EU|欧洲|998177711|
+      - 🇪🇺 EU|欧洲|296417218|
+      - 🇪🇺 EU|欧洲|492636554|
+      - 🇧🇪 BE|比利时|592950073|
+      - 🇧🇪 BE|比利时|684693570|
+      - 🇩🇪 DE|德国|法兰克福|法兰克福|698233863|
+      - 🇬🇧 GB|英国|399756313|
+      - 🇬🇧 GB|英国|Manchester|697722001|
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -583,81 +275,37 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇦🇹 AT|奥地利|384417585|
-      - 🇩🇰 DK|丹麦|哥本哈根|492819271|
-      - 🇨🇭 CH|瑞士|Zurich|391659075|
-      - 🇧🇪 BE|比利时|586467470|
-      - 🇨🇭 CH|瑞士|Zurich|600754536|
-      - 🇳🇱 NL|荷兰|Drenthe|Level3|998707332|
-      - 🇺🇦 UA|乌克兰|194231829|
-      - 🇳🇱 NL|荷兰|北荷兰|198661885|
-      - 🇺🇦 UA|乌克兰|393976296|
-      - 🇺🇦 UA|乌克兰|486093776|
-      - 🇺🇦 UA|乌克兰|789967894|
-      - 🇪🇺 EU|欧洲|998488932|
-      - 🇪🇺 EU|欧洲|994574887|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|193930330|
-      - 🇪🇺 EU|欧洲|200642277|
-      - 🇬🇧 GB|英国|Manchester|587321001|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|788815270|
-      - 🇨🇭 CH|瑞士|Zurich|804351759|
-      - 🇧🇪 BE|比利时|995086990|
-      - 🇬🇧 GB|英国|Manchester|994397312|
-      - 🇩🇰 DK|丹麦|哥本哈根|387792421|
-      - 🇱🇺 LU|卢森堡|Luxembourg|598659816|
-      - 🇧🇪 BE|比利时|684907594|
-      - 🇬🇧 GB|英国|XX||XX|XX|790159324|
-      - 🇨🇿 CZ|捷克|1Hlavni mesto Praha|布拉格|M247 Ltd|799737029|
-      - 🇬🇧 GB|英国|185974627|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|487717397|
-      - 🇬🇧 GB|英国|伦敦|伦敦|503749768|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|499672206|
-      - 🇵🇹 PT|葡萄牙|986270803|
-      - 🇵🇹 PT|葡萄牙|186871132|
-      - 🇧🇪 BE|比利时|386121183|
-      - 🇧🇦 BA|波黑|486371712|
-      - 🇵🇱 PL|波兰|100807426|
-      - 🇵🇱 PL|波兰|204026113|
-      - 🇩🇰 DK|丹麦|285817415|
-      - 🇭🇷 HR|克罗地亚|495548709|
-      - 🇫🇷 FR|法国|689635504|
-      - 🇫🇷 FR|法国|997271295|
-      - 🇧🇪 BE|比利时|788963351|
-      - 🇧🇪 BE|比利时|798134117|
-      - 🇧🇪 BE|比利时|889327519|
-      - 🇧🇪 BE|比利时|098338961|
-      - 🇧🇪 BE|比利时|288073965|
-      - 🇧🇪 BE|比利时|590237056|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|587014568|
-      - 🇧🇪 BE|比利时|688290699|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|905127908|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|087005263|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|302946273|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|394177910|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|495570179|
-      - 🇪🇺 EU|欧洲|787840339|
-      - 🇪🇺 EU|欧洲|802767604|
-      - 🇨🇭 CH|瑞士|Zurich|189424506|
-      - 🇨🇭 CH|瑞士|Zurich|199573484|
-      - 🇨🇭 CH|瑞士|Zurich|287563413|
-      - 🇨🇭 CH|瑞士|Zurich|589372493|
-      - 🇨🇭 CH|瑞士|Zurich|592752954|
-      - 🇨🇭 CH|瑞士|Zurich|986294468|
-      - 🇨🇭 CH|瑞士|Zurich|004024908|
-      - 🇨🇭 CH|瑞士|Zurich|096798620|
-      - 🇨🇭 CH|瑞士|Zurich|384746249|
-      - 🇨🇭 CH|瑞士|Zurich|389253224|
-      - 🇩🇰 DK|丹麦|697778222|
-      - 🇩🇰 DK|丹麦|888582454|
-      - 🇩🇰 DK|丹麦|901624641|
-      - 🇵🇹 PT|葡萄牙|190576203|
-      - 🇵🇹 PT|葡萄牙|188099112|
-      - 🇵🇹 PT|葡萄牙|487055666|
-      - 🇵🇹 PT|葡萄牙|691364099|
-      - 🇵🇹 PT|葡萄牙|696469318|
-      - 🇩🇰 DK|丹麦|992806798|
-      - 🇩🇰 DK|丹麦|994098951|
-      - 🇩🇰 DK|丹麦|191637422|
+      - 🇧🇪 BE|比利时|491813142|
+      - 🇦🇹 AT|奥地利|193165261|
+      - 🇩🇰 DK|丹麦|哥本哈根|288988003|
+      - 🇦🇹 AT|奥地利|300033106|
+      - 🇦🇹 AT|奥地利|596915972|
+      - 🇩🇰 DK|丹麦|哥本哈根|800771783|
+      - 🇧🇪 BE|比利时|394755377|
+      - 🇮🇹 IT|意大利|米兰|米兰|703491091|
+      - 🇮🇹 IT|意大利|米兰|米兰|791635297|
+      - 🇮🇹 IT|意大利|米兰|米兰|093222366|
+      - 🇮🇹 IT|意大利|米兰|米兰|293939042|
+      - 🇮🇹 IT|意大利|米兰|米兰|300055492|
+      - 🇧🇪 BE|比利时|486566202|
+      - 🇧🇪 BE|比利时|500876409|
+      - 🇳🇱 NL|荷兰|北荷兰|802309324|
+      - 🇷🇸 RS|塞尔维亚|997040965|
+      - 🇩🇪 ES|西班牙|马德里|马德里|092928548|
+      - 🇩🇪 ES|西班牙|马德里|马德里|192581058|
+      - 🇺🇦 UA|乌克兰|201704537|
+      - 🇺🇦 UA|乌克兰|595758950|
+      - 🇺🇦 UA|乌克兰|705195444|
+      - 🇺🇦 UA|乌克兰|789991621|
+      - 🇮🇪 IE|爱尔兰|Dublin|894850214|
+      - 🇪🇺 EU|欧洲|998177711|
+      - 🇪🇺 EU|欧洲|296417218|
+      - 🇪🇺 EU|欧洲|492636554|
+      - 🇧🇪 BE|比利时|592950073|
+      - 🇧🇪 BE|比利时|684693570|
+      - 🇩🇪 DE|德国|法兰克福|法兰克福|698233863|
+      - 🇬🇧 GB|英国|399756313|
+      - 🇬🇧 GB|英国|Manchester|697722001|
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
