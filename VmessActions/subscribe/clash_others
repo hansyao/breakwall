@@ -5,391 +5,91 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
+  - {name: 🇳🇱 NL|荷兰|北荷兰|2|, server: 81.19.208.107, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
   - {name: 🇦🇹 AT|奥地利|2|, server: 37.120.221.5, port: 31944, type: ss, cipher: aes-256-gcm, password: aYNeKDMzYQYw4KbUbJA8Wszq}
-  - {name: 🇩🇰 DK|丹麦|哥本哈根|2|, server: 193.29.107.125, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
-  - {name: 🇱🇻 LV|拉脱维亚|Riga|2|, server: 188.92.78.145, port: 35294, type: ss, cipher: aes-256-gcm, password: J9Y2ncrdPEC38gwydNFFGBna}
-  - {name: 🇱🇻 LV|拉脱维亚|Riga|3|, server: 188.92.78.145, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
-  - {name: 🇩🇰 DK|丹麦|哥本哈根|3|, server: 193.29.107.99, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
-  - {name: 🇱🇻 LV|拉脱维亚|Riga|3| 2, server: 188.92.78.145, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
-  - {name: 🇺🇦 UA|乌克兰|4|, server: 37.19.211.24, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇩🇪 ES|西班牙|马德里|马德里|4|, server: 82.102.26.155, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇳🇱 NL|荷兰|Drenthe|Level3|4|, server: 185.252.222.115, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇺🇦 UA|乌克兰|5|, server: 37.19.211.137, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇺🇦 UA|乌克兰|5| 2, server: 37.19.211.27, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇪🇺 EU|欧洲|6|, server: 138.199.16.132, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇭🇷 HR|克罗地亚|6|, server: 176.222.34.113, port: 50024, type: ss, cipher: aes-256-gcm, password: b2jDPHUQxCNa2KmGHZjy7C4B}
-  - {name: 🇭🇷 HR|克罗地亚|6| 2, server: 176.222.34.113, port: 48794, type: ss, cipher: aes-256-gcm, password: r9Q3adc3ru9sfBDPEj4yp6U6}
-  - {name: 🇭🇷 HR|克罗地亚|6| 3, server: 176.222.34.113, port: 42816, type: ss, cipher: aes-256-gcm, password: tBKBf4pVzNCFKdbPgvwrNXq3}
-  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|7|, server: 89.36.76.67, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇬🇧 GB|英国|Manchester|8|, server: 81.92.205.123, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇦🇹 AT|奥地利|8|, server: 194.37.96.243, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇭🇷 HR|克罗地亚|9|, server: 176.222.34.113, port: 49126, type: ss, cipher: aes-256-gcm, password: wrCaGtrUbzeRqQLdc8Kmk3Nd}
-  - {name: 🇭🇷 HR|克罗地亚|9| 2, server: 176.222.34.113, port: 31764, type: ss, cipher: aes-256-gcm, password: YgusH2MWA8PWc3p2VDsR7AVv}
-  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|9|, server: 37.120.233.253, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇬🇧 GB|英国|Manchester|10|, server: 193.148.17.147, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|10|, server: 37.120.235.237, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇧🇪 BE|比利时|10|, server: 91.90.123.221, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇩🇪 DE|德国|法兰克福|法兰克福|10|, server: 193.29.106.75, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇬🇧 GB|英国|Manchester|11|, server: 91.90.121.251, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|12|, server: 139.28.176.163, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇧🇪 BE|比利时|12|, server: 91.90.123.123, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|12| 2, server: 139.28.176.133, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇩🇰 DK|丹麦|哥本哈根|13|, server: 193.29.107.213, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇬🇧 GB|英国|Manchester|13|, server: 81.92.205.115, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|14|, server: 37.120.236.147, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇩🇰 DK|丹麦|哥本哈根|14|, server: 193.29.107.211, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇬🇧 GB|英国|XX||XX|XX|14|, server: 217.138.220.189, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇭🇷 HR|克罗地亚|14|, server: 176.222.34.132, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|16|, server: 91.245.254.85, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇩🇪 DE|德国|法兰克福|法兰克福|17|, server: 45.87.212.181, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇬🇧 GB|英国|XX||XX|XX|17|, server: 217.138.211.235, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|18|, server: 194.5.215.117, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|19|, server: 194.5.215.115, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇷🇴 RO|罗马尼亚|布加勒斯特|20|, server: 139.28.176.53, port: 31572, type: ss, cipher: aes-256-gcm, password: n8w4StnbVD9dmXYn4Ajt87EA, udp: true}
-  - {name: 🇧🇪 BE|比利时|21|, server: 91.90.123.155, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇳🇱 NL|荷兰|21|, server: 45.134.224.15, port: 37588, type: ss, cipher: aes-256-gcm, password: kD9vkjnE6dsUzwQfvKkPkQAd}
-  - {name: 🇳🇱 NL|荷兰|21| 2, server: 45.134.224.15, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇧🇪 BE|比利时|23|, server: 91.90.123.115, port: 41676, type: ss, cipher: aes-256-gcm, password: z6pH3RyttkRWhJ5tpRyt6dYk}
-  - {name: 🇳🇱 NL|荷兰|23|, server: 45.134.224.15, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
-  - {name: 🇳🇱 NL|荷兰|24|, server: 45.134.224.15, port: 33148, type: ss, cipher: aes-256-gcm, password: CMduaFXddcQbwNAAs7xFDnc8}
-  - {name: 🇧🇪 BE|比利时|25|, server: 91.90.123.115, port: 48794, type: ss, cipher: aes-256-gcm, password: r9Q3adc3ru9sfBDPEj4yp6U6}
-  - {name: 🇧🇪 BE|比利时|25| 2, server: 91.90.123.115, port: 37588, type: ss, cipher: aes-256-gcm, password: kD9vkjnE6dsUzwQfvKkPkQAd}
-  - {name: 🇧🇪 BE|比利时|25| 3, server: 91.90.123.115, port: 40093, type: ss, cipher: aes-256-gcm, password: x23Z4LGkGDkThZ9Kaz4DURQp}
-  - {name: 🇧🇪 BE|比利时|25| 4, server: 91.90.123.115, port: 47027, type: ss, cipher: aes-256-gcm, password: Vt5pBJFwdtNB26cJbTXxm88Z}
-  - {name: 🇧🇪 BE|比利时|26|, server: 91.90.123.115, port: 44236, type: ss, cipher: aes-256-gcm, password: FWrXcxPZjJxAN89xLgqY3Acp}
-  - {name: 🇧🇪 BE|比利时|27|, server: 91.90.123.115, port: 46642, type: ss, cipher: aes-256-gcm, password: gYL83DQWXuDbxmZAVVtUTXaK}
-  - {name: 🇧🇪 BE|比利时|27| 2, server: 91.90.123.115, port: 47121, type: ss, cipher: aes-256-gcm, password: CTK8GXFQgKYQErrghPJfZ6tk}
-  - {name: 🇧🇪 BE|比利时|28|, server: 91.90.123.115, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
-  - {name: 🇧🇪 BE|比利时|27| 3, server: 91.90.123.115, port: 44820, type: ss, cipher: aes-256-gcm, password: jspgz9G3VmvBMCgMUWLBaZHu}
-  - {name: 🇧🇪 BE|比利时|28| 2, server: 91.90.123.115, port: 31944, type: ss, cipher: aes-256-gcm, password: aYNeKDMzYQYw4KbUbJA8Wszq}
-  - {name: 🇨🇭 CH|瑞士|Zurich|29|, server: 212.102.36.234, port: 40093, type: ss, cipher: aes-256-gcm, password: x23Z4LGkGDkThZ9Kaz4DURQp}
-  - {name: 🇨🇭 CH|瑞士|Zurich|29| 2, server: 212.102.36.234, port: 33998, type: ss, cipher: aes-256-gcm, password: NHwQTPLCfaTMSqTnU3mjcSxe}
-  - {name: 🇨🇭 CH|瑞士|Zurich|30|, server: 212.102.36.234, port: 46642, type: ss, cipher: aes-256-gcm, password: gYL83DQWXuDbxmZAVVtUTXaK}
-  - {name: 🇨🇭 CH|瑞士|Zurich|30| 2, server: 212.102.36.234, port: 45329, type: ss, cipher: aes-256-gcm, password: CXSjgD7u7Ar7GxkZ4CgTMUsj}
-  - {name: 🇨🇭 CH|瑞士|Zurich|31|, server: 212.102.36.234, port: 48938, type: ss, cipher: aes-256-gcm, password: 4ejJ8n5ddLuYDUHGXJre2ufJ}
-  - {name: 🇩🇰 DK|丹麦|32|, server: 185.108.105.75, port: 49126, type: ss, cipher: aes-256-gcm, password: wrCaGtrUbzeRqQLdc8Kmk3Nd}
-  - {name: 🇨🇭 CH|瑞士|Zurich|32|, server: 212.102.36.234, port: 31944, type: ss, cipher: aes-256-gcm, password: aYNeKDMzYQYw4KbUbJA8Wszq}
-  - {name: 🇩🇰 DK|丹麦|33|, server: 185.108.105.75, port: 38742, type: ss, cipher: aes-256-gcm, password: DKXfWwc4ebscpXTKpbt85rSH}
-  - {name: 🇨🇭 CH|瑞士|Zurich|33|, server: 212.102.36.234, port: 34687, type: ss, cipher: aes-256-gcm, password: txmK9WhwP6WPhP7hqSBLVxpN}
-  - {name: 🇨🇭 CH|瑞士|Zurich|34|, server: 212.102.36.234, port: 49396, type: ss, cipher: aes-256-gcm, password: BdRWC38L5JUDMTYNNxJGcUwB}
-  - {name: 🇩🇰 DK|丹麦|35|, server: 185.108.105.75, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
-  - {name: 🇨🇭 CH|瑞士|Zurich|35|, server: 212.102.36.234, port: 49126, type: ss, cipher: aes-256-gcm, password: wrCaGtrUbzeRqQLdc8Kmk3Nd}
-  - {name: 🇫🇷 FR|法国|35|, server: 185.166.84.73, port: 49396, type: ss, cipher: aes-256-gcm, password: BdRWC38L5JUDMTYNNxJGcUwB}
-  - {name: 🇧🇪 BE|比利时|36|, server: 185.232.21.51, port: 48938, type: ss, cipher: aes-256-gcm, password: 4ejJ8n5ddLuYDUHGXJre2ufJ}
-  - {name: 🇧🇪 BE|比利时|36| 2, server: 185.232.21.51, port: 43893, type: ss, cipher: aes-256-gcm, password: YyCBeDdYX4cadHpCkkmdJLq8}
-  - {name: 🇧🇪 BE|比利时|43|, server: 91.90.123.115, port: 38742, type: ss, cipher: aes-256-gcm, password: DKXfWwc4ebscpXTKpbt85rSH}
-  - {name: 🇫🇮 FI|芬兰|Uusimaa|47|, server: 196.244.191.45, port: 39556, type: ss, cipher: aes-256-gcm, password: g4AfpNELpdYEeLYhM8XCX9se}
-  - {name: 🇮🇪 IE|爱尔兰|Dublin|47|, server: 5.157.13.91, port: 49468, type: ss, cipher: aes-256-gcm, password: LsYSQDxmPj9AcWpSX5HrYfu6}
-  - {name: 🇮🇪 IE|爱尔兰|Dublin|48|, server: 5.157.13.91, port: 49514, type: ss, cipher: aes-256-gcm, password: dpGjA4GkzV28QPDYzEp94cTe}
-  - {name: 🇦🇹 AT|奥地利|48|, server: 194.37.96.211, port: 49468, type: ss, cipher: aes-256-gcm, password: LsYSQDxmPj9AcWpSX5HrYfu6}
-  - {name: 🇧🇷 BR|巴西|50|, server: 5.189.202.16, port: 50695, type: ss, cipher: aes-256-gcm, password: gqtwGu9bVreJqL3FTHSVKGzy}
-  - {name: 🇧🇪 BE|比利时|54|, server: 91.90.123.115, port: 35294, type: ss, cipher: aes-256-gcm, password: J9Y2ncrdPEC38gwydNFFGBna}
-  - {name: 🇨🇭 CH|瑞士|Zurich|55|, server: 212.102.36.234, port: 48794, type: ss, cipher: aes-256-gcm, password: r9Q3adc3ru9sfBDPEj4yp6U6}
-  - {name: 🇬🇧 GB|英国|57|, server: 78.129.253.9, port: 809, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
-  - {name: 🇳🇱 NL|荷兰|58|, server: 45.144.112.162, port: 809, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
-  - {name: 🇬🇧 GB|英国|伦敦|伦敦|亚马逊|58|, server: 3.9.171.2, port: 805, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
-  - {name: 🇫🇷 FR|法国|巴黎|59|, server: 163.172.110.53, port: 809, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
-  - {name: 🇬🇧 GB|英国|Manchester|59|, server: 195.12.49.82, port: 800, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
-  - {name: 🇬🇧 GB|英国|伦敦|伦敦|60|, server: 185.193.36.139, port: 805, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
-  - {name: 🇮🇷 IR|伊朗|60|, server: 89.34.96.59, port: 807, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
-  - {name: 🇮🇷 IR|伊朗|61|, server: 89.34.96.57, port: 807, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
-  - {name: 🇬🇧 GB|英国|Manchester|61|, server: 195.12.49.82, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
-  - {name: 🇮🇷 IR|伊朗|62|, server: 89.34.96.57, port: 805, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
-  - {name: 🇬🇧 GB|英国|伦敦|伦敦|63|, server: 5.183.102.142, port: 14420, type: vmess, uuid: 9984501d-e80a-4144-c6bd-2503fb49872d, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇮🇹 IT|意大利|米兰|米兰|64|, server: 158.58.173.54, port: 810, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: 🇭🇷 HR|克罗地亚|3|, server: 176.222.34.113, port: 42816, type: ss, cipher: aes-256-gcm, password: tBKBf4pVzNCFKdbPgvwrNXq3}
+  - {name: 🇭🇷 HR|克罗地亚|4|, server: 176.222.34.113, port: 50024, type: ss, cipher: aes-256-gcm, password: b2jDPHUQxCNa2KmGHZjy7C4B}
+  - {name: 🇭🇷 HR|克罗地亚|4| 2, server: 176.222.34.113, port: 48794, type: ss, cipher: aes-256-gcm, password: r9Q3adc3ru9sfBDPEj4yp6U6}
+  - {name: 🇭🇷 HR|克罗地亚|4| 3, server: 176.222.34.113, port: 31764, type: ss, cipher: aes-256-gcm, password: YgusH2MWA8PWc3p2VDsR7AVv}
+  - {name: 🇭🇷 HR|克罗地亚|4| 4, server: 176.222.34.113, port: 49126, type: ss, cipher: aes-256-gcm, password: wrCaGtrUbzeRqQLdc8Kmk3Nd}
+  - {name: 🇧🇪 BE|比利时|6|, server: 91.90.123.115, port: 40093, type: ss, cipher: aes-256-gcm, password: x23Z4LGkGDkThZ9Kaz4DURQp}
+  - {name: 🇧🇪 BE|比利时|6| 2, server: 91.90.123.115, port: 48794, type: ss, cipher: aes-256-gcm, password: r9Q3adc3ru9sfBDPEj4yp6U6}
+  - {name: 🇧🇪 BE|比利时|7|, server: 91.90.123.115, port: 44236, type: ss, cipher: aes-256-gcm, password: FWrXcxPZjJxAN89xLgqY3Acp}
+  - {name: 🇧🇪 BE|比利时|8|, server: 91.90.123.115, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇧🇪 BE|比利时|8| 2, server: 91.90.123.115, port: 47121, type: ss, cipher: aes-256-gcm, password: CTK8GXFQgKYQErrghPJfZ6tk}
+  - {name: 🇧🇪 BE|比利时|8| 3, server: 91.90.123.115, port: 31944, type: ss, cipher: aes-256-gcm, password: aYNeKDMzYQYw4KbUbJA8Wszq}
+  - {name: 🇧🇪 BE|比利时|8| 4, server: 91.90.123.115, port: 44820, type: ss, cipher: aes-256-gcm, password: jspgz9G3VmvBMCgMUWLBaZHu}
+  - {name: 🇧🇪 BE|比利时|9|, server: 185.232.21.51, port: 48938, type: ss, cipher: aes-256-gcm, password: 4ejJ8n5ddLuYDUHGXJre2ufJ}
+  - {name: 🇧🇪 BE|比利时|19|, server: 91.90.123.115, port: 38742, type: ss, cipher: aes-256-gcm, password: DKXfWwc4ebscpXTKpbt85rSH}
+  - {name: 🇫🇮 FI|芬兰|Uusimaa|20|, server: 196.244.191.45, port: 39556, type: ss, cipher: aes-256-gcm, password: g4AfpNELpdYEeLYhM8XCX9se}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 🇳🇱 NL|荷兰|北荷兰|2|
       - 🇦🇹 AT|奥地利|2|
-      - 🇩🇰 DK|丹麦|哥本哈根|2|
-      - 🇱🇻 LV|拉脱维亚|Riga|2|
-      - 🇱🇻 LV|拉脱维亚|Riga|3|
-      - 🇩🇰 DK|丹麦|哥本哈根|3|
-      - 🇱🇻 LV|拉脱维亚|Riga|3| 2
-      - 🇺🇦 UA|乌克兰|4|
-      - 🇩🇪 ES|西班牙|马德里|马德里|4|
-      - 🇳🇱 NL|荷兰|Drenthe|Level3|4|
-      - 🇺🇦 UA|乌克兰|5|
-      - 🇺🇦 UA|乌克兰|5| 2
-      - 🇪🇺 EU|欧洲|6|
-      - 🇭🇷 HR|克罗地亚|6|
-      - 🇭🇷 HR|克罗地亚|6| 2
-      - 🇭🇷 HR|克罗地亚|6| 3
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|7|
-      - 🇬🇧 GB|英国|Manchester|8|
-      - 🇦🇹 AT|奥地利|8|
-      - 🇭🇷 HR|克罗地亚|9|
-      - 🇭🇷 HR|克罗地亚|9| 2
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|9|
-      - 🇬🇧 GB|英国|Manchester|10|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|10|
-      - 🇧🇪 BE|比利时|10|
-      - 🇩🇪 DE|德国|法兰克福|法兰克福|10|
-      - 🇬🇧 GB|英国|Manchester|11|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|12|
-      - 🇧🇪 BE|比利时|12|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|12| 2
-      - 🇩🇰 DK|丹麦|哥本哈根|13|
-      - 🇬🇧 GB|英国|Manchester|13|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|14|
-      - 🇩🇰 DK|丹麦|哥本哈根|14|
-      - 🇬🇧 GB|英国|XX||XX|XX|14|
-      - 🇭🇷 HR|克罗地亚|14|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|16|
-      - 🇩🇪 DE|德国|法兰克福|法兰克福|17|
-      - 🇬🇧 GB|英国|XX||XX|XX|17|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|18|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|19|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|20|
-      - 🇧🇪 BE|比利时|21|
-      - 🇳🇱 NL|荷兰|21|
-      - 🇳🇱 NL|荷兰|21| 2
-      - 🇧🇪 BE|比利时|23|
-      - 🇳🇱 NL|荷兰|23|
-      - 🇳🇱 NL|荷兰|24|
-      - 🇧🇪 BE|比利时|25|
-      - 🇧🇪 BE|比利时|25| 2
-      - 🇧🇪 BE|比利时|25| 3
-      - 🇧🇪 BE|比利时|25| 4
-      - 🇧🇪 BE|比利时|26|
-      - 🇧🇪 BE|比利时|27|
-      - 🇧🇪 BE|比利时|27| 2
-      - 🇧🇪 BE|比利时|28|
-      - 🇧🇪 BE|比利时|27| 3
-      - 🇧🇪 BE|比利时|28| 2
-      - 🇨🇭 CH|瑞士|Zurich|29|
-      - 🇨🇭 CH|瑞士|Zurich|29| 2
-      - 🇨🇭 CH|瑞士|Zurich|30|
-      - 🇨🇭 CH|瑞士|Zurich|30| 2
-      - 🇨🇭 CH|瑞士|Zurich|31|
-      - 🇩🇰 DK|丹麦|32|
-      - 🇨🇭 CH|瑞士|Zurich|32|
-      - 🇩🇰 DK|丹麦|33|
-      - 🇨🇭 CH|瑞士|Zurich|33|
-      - 🇨🇭 CH|瑞士|Zurich|34|
-      - 🇩🇰 DK|丹麦|35|
-      - 🇨🇭 CH|瑞士|Zurich|35|
-      - 🇫🇷 FR|法国|35|
-      - 🇧🇪 BE|比利时|36|
-      - 🇧🇪 BE|比利时|36| 2
-      - 🇧🇪 BE|比利时|43|
-      - 🇫🇮 FI|芬兰|Uusimaa|47|
-      - 🇮🇪 IE|爱尔兰|Dublin|47|
-      - 🇮🇪 IE|爱尔兰|Dublin|48|
-      - 🇦🇹 AT|奥地利|48|
-      - 🇧🇷 BR|巴西|50|
-      - 🇧🇪 BE|比利时|54|
-      - 🇨🇭 CH|瑞士|Zurich|55|
-      - 🇬🇧 GB|英国|57|
-      - 🇳🇱 NL|荷兰|58|
-      - 🇬🇧 GB|英国|伦敦|伦敦|亚马逊|58|
-      - 🇫🇷 FR|法国|巴黎|59|
-      - 🇬🇧 GB|英国|Manchester|59|
-      - 🇬🇧 GB|英国|伦敦|伦敦|60|
-      - 🇮🇷 IR|伊朗|60|
-      - 🇮🇷 IR|伊朗|61|
-      - 🇬🇧 GB|英国|Manchester|61|
-      - 🇮🇷 IR|伊朗|62|
-      - 🇬🇧 GB|英国|伦敦|伦敦|63|
-      - 🇮🇹 IT|意大利|米兰|米兰|64|
+      - 🇭🇷 HR|克罗地亚|3|
+      - 🇭🇷 HR|克罗地亚|4|
+      - 🇭🇷 HR|克罗地亚|4| 2
+      - 🇭🇷 HR|克罗地亚|4| 3
+      - 🇭🇷 HR|克罗地亚|4| 4
+      - 🇧🇪 BE|比利时|6|
+      - 🇧🇪 BE|比利时|6| 2
+      - 🇧🇪 BE|比利时|7|
+      - 🇧🇪 BE|比利时|8|
+      - 🇧🇪 BE|比利时|8| 2
+      - 🇧🇪 BE|比利时|8| 3
+      - 🇧🇪 BE|比利时|8| 4
+      - 🇧🇪 BE|比利时|9|
+      - 🇧🇪 BE|比利时|19|
+      - 🇫🇮 FI|芬兰|Uusimaa|20|
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
+      - 🇳🇱 NL|荷兰|北荷兰|2|
       - 🇦🇹 AT|奥地利|2|
-      - 🇩🇰 DK|丹麦|哥本哈根|2|
-      - 🇱🇻 LV|拉脱维亚|Riga|2|
-      - 🇱🇻 LV|拉脱维亚|Riga|3|
-      - 🇩🇰 DK|丹麦|哥本哈根|3|
-      - 🇱🇻 LV|拉脱维亚|Riga|3| 2
-      - 🇺🇦 UA|乌克兰|4|
-      - 🇩🇪 ES|西班牙|马德里|马德里|4|
-      - 🇳🇱 NL|荷兰|Drenthe|Level3|4|
-      - 🇺🇦 UA|乌克兰|5|
-      - 🇺🇦 UA|乌克兰|5| 2
-      - 🇪🇺 EU|欧洲|6|
-      - 🇭🇷 HR|克罗地亚|6|
-      - 🇭🇷 HR|克罗地亚|6| 2
-      - 🇭🇷 HR|克罗地亚|6| 3
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|7|
-      - 🇬🇧 GB|英国|Manchester|8|
-      - 🇦🇹 AT|奥地利|8|
-      - 🇭🇷 HR|克罗地亚|9|
-      - 🇭🇷 HR|克罗地亚|9| 2
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|9|
-      - 🇬🇧 GB|英国|Manchester|10|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|10|
-      - 🇧🇪 BE|比利时|10|
-      - 🇩🇪 DE|德国|法兰克福|法兰克福|10|
-      - 🇬🇧 GB|英国|Manchester|11|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|12|
-      - 🇧🇪 BE|比利时|12|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|12| 2
-      - 🇩🇰 DK|丹麦|哥本哈根|13|
-      - 🇬🇧 GB|英国|Manchester|13|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|14|
-      - 🇩🇰 DK|丹麦|哥本哈根|14|
-      - 🇬🇧 GB|英国|XX||XX|XX|14|
-      - 🇭🇷 HR|克罗地亚|14|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|16|
-      - 🇩🇪 DE|德国|法兰克福|法兰克福|17|
-      - 🇬🇧 GB|英国|XX||XX|XX|17|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|18|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|19|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|20|
-      - 🇧🇪 BE|比利时|21|
-      - 🇳🇱 NL|荷兰|21|
-      - 🇳🇱 NL|荷兰|21| 2
-      - 🇧🇪 BE|比利时|23|
-      - 🇳🇱 NL|荷兰|23|
-      - 🇳🇱 NL|荷兰|24|
-      - 🇧🇪 BE|比利时|25|
-      - 🇧🇪 BE|比利时|25| 2
-      - 🇧🇪 BE|比利时|25| 3
-      - 🇧🇪 BE|比利时|25| 4
-      - 🇧🇪 BE|比利时|26|
-      - 🇧🇪 BE|比利时|27|
-      - 🇧🇪 BE|比利时|27| 2
-      - 🇧🇪 BE|比利时|28|
-      - 🇧🇪 BE|比利时|27| 3
-      - 🇧🇪 BE|比利时|28| 2
-      - 🇨🇭 CH|瑞士|Zurich|29|
-      - 🇨🇭 CH|瑞士|Zurich|29| 2
-      - 🇨🇭 CH|瑞士|Zurich|30|
-      - 🇨🇭 CH|瑞士|Zurich|30| 2
-      - 🇨🇭 CH|瑞士|Zurich|31|
-      - 🇩🇰 DK|丹麦|32|
-      - 🇨🇭 CH|瑞士|Zurich|32|
-      - 🇩🇰 DK|丹麦|33|
-      - 🇨🇭 CH|瑞士|Zurich|33|
-      - 🇨🇭 CH|瑞士|Zurich|34|
-      - 🇩🇰 DK|丹麦|35|
-      - 🇨🇭 CH|瑞士|Zurich|35|
-      - 🇫🇷 FR|法国|35|
-      - 🇧🇪 BE|比利时|36|
-      - 🇧🇪 BE|比利时|36| 2
-      - 🇧🇪 BE|比利时|43|
-      - 🇫🇮 FI|芬兰|Uusimaa|47|
-      - 🇮🇪 IE|爱尔兰|Dublin|47|
-      - 🇮🇪 IE|爱尔兰|Dublin|48|
-      - 🇦🇹 AT|奥地利|48|
-      - 🇧🇷 BR|巴西|50|
-      - 🇧🇪 BE|比利时|54|
-      - 🇨🇭 CH|瑞士|Zurich|55|
-      - 🇬🇧 GB|英国|57|
-      - 🇳🇱 NL|荷兰|58|
-      - 🇬🇧 GB|英国|伦敦|伦敦|亚马逊|58|
-      - 🇫🇷 FR|法国|巴黎|59|
-      - 🇬🇧 GB|英国|Manchester|59|
-      - 🇬🇧 GB|英国|伦敦|伦敦|60|
-      - 🇮🇷 IR|伊朗|60|
-      - 🇮🇷 IR|伊朗|61|
-      - 🇬🇧 GB|英国|Manchester|61|
-      - 🇮🇷 IR|伊朗|62|
-      - 🇬🇧 GB|英国|伦敦|伦敦|63|
-      - 🇮🇹 IT|意大利|米兰|米兰|64|
+      - 🇭🇷 HR|克罗地亚|3|
+      - 🇭🇷 HR|克罗地亚|4|
+      - 🇭🇷 HR|克罗地亚|4| 2
+      - 🇭🇷 HR|克罗地亚|4| 3
+      - 🇭🇷 HR|克罗地亚|4| 4
+      - 🇧🇪 BE|比利时|6|
+      - 🇧🇪 BE|比利时|6| 2
+      - 🇧🇪 BE|比利时|7|
+      - 🇧🇪 BE|比利时|8|
+      - 🇧🇪 BE|比利时|8| 2
+      - 🇧🇪 BE|比利时|8| 3
+      - 🇧🇪 BE|比利时|8| 4
+      - 🇧🇪 BE|比利时|9|
+      - 🇧🇪 BE|比利时|19|
+      - 🇫🇮 FI|芬兰|Uusimaa|20|
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 🇳🇱 NL|荷兰|北荷兰|2|
       - 🇦🇹 AT|奥地利|2|
-      - 🇩🇰 DK|丹麦|哥本哈根|2|
-      - 🇱🇻 LV|拉脱维亚|Riga|2|
-      - 🇱🇻 LV|拉脱维亚|Riga|3|
-      - 🇩🇰 DK|丹麦|哥本哈根|3|
-      - 🇱🇻 LV|拉脱维亚|Riga|3| 2
-      - 🇺🇦 UA|乌克兰|4|
-      - 🇩🇪 ES|西班牙|马德里|马德里|4|
-      - 🇳🇱 NL|荷兰|Drenthe|Level3|4|
-      - 🇺🇦 UA|乌克兰|5|
-      - 🇺🇦 UA|乌克兰|5| 2
-      - 🇪🇺 EU|欧洲|6|
-      - 🇭🇷 HR|克罗地亚|6|
-      - 🇭🇷 HR|克罗地亚|6| 2
-      - 🇭🇷 HR|克罗地亚|6| 3
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|7|
-      - 🇬🇧 GB|英国|Manchester|8|
-      - 🇦🇹 AT|奥地利|8|
-      - 🇭🇷 HR|克罗地亚|9|
-      - 🇭🇷 HR|克罗地亚|9| 2
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|9|
-      - 🇬🇧 GB|英国|Manchester|10|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|10|
-      - 🇧🇪 BE|比利时|10|
-      - 🇩🇪 DE|德国|法兰克福|法兰克福|10|
-      - 🇬🇧 GB|英国|Manchester|11|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|12|
-      - 🇧🇪 BE|比利时|12|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|12| 2
-      - 🇩🇰 DK|丹麦|哥本哈根|13|
-      - 🇬🇧 GB|英国|Manchester|13|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|14|
-      - 🇩🇰 DK|丹麦|哥本哈根|14|
-      - 🇬🇧 GB|英国|XX||XX|XX|14|
-      - 🇭🇷 HR|克罗地亚|14|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|16|
-      - 🇩🇪 DE|德国|法兰克福|法兰克福|17|
-      - 🇬🇧 GB|英国|XX||XX|XX|17|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|18|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|19|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|20|
-      - 🇧🇪 BE|比利时|21|
-      - 🇳🇱 NL|荷兰|21|
-      - 🇳🇱 NL|荷兰|21| 2
-      - 🇧🇪 BE|比利时|23|
-      - 🇳🇱 NL|荷兰|23|
-      - 🇳🇱 NL|荷兰|24|
-      - 🇧🇪 BE|比利时|25|
-      - 🇧🇪 BE|比利时|25| 2
-      - 🇧🇪 BE|比利时|25| 3
-      - 🇧🇪 BE|比利时|25| 4
-      - 🇧🇪 BE|比利时|26|
-      - 🇧🇪 BE|比利时|27|
-      - 🇧🇪 BE|比利时|27| 2
-      - 🇧🇪 BE|比利时|28|
-      - 🇧🇪 BE|比利时|27| 3
-      - 🇧🇪 BE|比利时|28| 2
-      - 🇨🇭 CH|瑞士|Zurich|29|
-      - 🇨🇭 CH|瑞士|Zurich|29| 2
-      - 🇨🇭 CH|瑞士|Zurich|30|
-      - 🇨🇭 CH|瑞士|Zurich|30| 2
-      - 🇨🇭 CH|瑞士|Zurich|31|
-      - 🇩🇰 DK|丹麦|32|
-      - 🇨🇭 CH|瑞士|Zurich|32|
-      - 🇩🇰 DK|丹麦|33|
-      - 🇨🇭 CH|瑞士|Zurich|33|
-      - 🇨🇭 CH|瑞士|Zurich|34|
-      - 🇩🇰 DK|丹麦|35|
-      - 🇨🇭 CH|瑞士|Zurich|35|
-      - 🇫🇷 FR|法国|35|
-      - 🇧🇪 BE|比利时|36|
-      - 🇧🇪 BE|比利时|36| 2
-      - 🇧🇪 BE|比利时|43|
-      - 🇫🇮 FI|芬兰|Uusimaa|47|
-      - 🇮🇪 IE|爱尔兰|Dublin|47|
-      - 🇮🇪 IE|爱尔兰|Dublin|48|
-      - 🇦🇹 AT|奥地利|48|
-      - 🇧🇷 BR|巴西|50|
-      - 🇧🇪 BE|比利时|54|
-      - 🇨🇭 CH|瑞士|Zurich|55|
-      - 🇬🇧 GB|英国|57|
-      - 🇳🇱 NL|荷兰|58|
-      - 🇬🇧 GB|英国|伦敦|伦敦|亚马逊|58|
-      - 🇫🇷 FR|法国|巴黎|59|
-      - 🇬🇧 GB|英国|Manchester|59|
-      - 🇬🇧 GB|英国|伦敦|伦敦|60|
-      - 🇮🇷 IR|伊朗|60|
-      - 🇮🇷 IR|伊朗|61|
-      - 🇬🇧 GB|英国|Manchester|61|
-      - 🇮🇷 IR|伊朗|62|
-      - 🇬🇧 GB|英国|伦敦|伦敦|63|
-      - 🇮🇹 IT|意大利|米兰|米兰|64|
+      - 🇭🇷 HR|克罗地亚|3|
+      - 🇭🇷 HR|克罗地亚|4|
+      - 🇭🇷 HR|克罗地亚|4| 2
+      - 🇭🇷 HR|克罗地亚|4| 3
+      - 🇭🇷 HR|克罗地亚|4| 4
+      - 🇧🇪 BE|比利时|6|
+      - 🇧🇪 BE|比利时|6| 2
+      - 🇧🇪 BE|比利时|7|
+      - 🇧🇪 BE|比利时|8|
+      - 🇧🇪 BE|比利时|8| 2
+      - 🇧🇪 BE|比利时|8| 3
+      - 🇧🇪 BE|比利时|8| 4
+      - 🇧🇪 BE|比利时|9|
+      - 🇧🇪 BE|比利时|19|
+      - 🇫🇮 FI|芬兰|Uusimaa|20|
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -400,293 +100,68 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
+      - 🇳🇱 NL|荷兰|北荷兰|2|
       - 🇦🇹 AT|奥地利|2|
-      - 🇩🇰 DK|丹麦|哥本哈根|2|
-      - 🇱🇻 LV|拉脱维亚|Riga|2|
-      - 🇱🇻 LV|拉脱维亚|Riga|3|
-      - 🇩🇰 DK|丹麦|哥本哈根|3|
-      - 🇱🇻 LV|拉脱维亚|Riga|3| 2
-      - 🇺🇦 UA|乌克兰|4|
-      - 🇩🇪 ES|西班牙|马德里|马德里|4|
-      - 🇳🇱 NL|荷兰|Drenthe|Level3|4|
-      - 🇺🇦 UA|乌克兰|5|
-      - 🇺🇦 UA|乌克兰|5| 2
-      - 🇪🇺 EU|欧洲|6|
-      - 🇭🇷 HR|克罗地亚|6|
-      - 🇭🇷 HR|克罗地亚|6| 2
-      - 🇭🇷 HR|克罗地亚|6| 3
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|7|
-      - 🇬🇧 GB|英国|Manchester|8|
-      - 🇦🇹 AT|奥地利|8|
-      - 🇭🇷 HR|克罗地亚|9|
-      - 🇭🇷 HR|克罗地亚|9| 2
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|9|
-      - 🇬🇧 GB|英国|Manchester|10|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|10|
-      - 🇧🇪 BE|比利时|10|
-      - 🇩🇪 DE|德国|法兰克福|法兰克福|10|
-      - 🇬🇧 GB|英国|Manchester|11|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|12|
-      - 🇧🇪 BE|比利时|12|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|12| 2
-      - 🇩🇰 DK|丹麦|哥本哈根|13|
-      - 🇬🇧 GB|英国|Manchester|13|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|14|
-      - 🇩🇰 DK|丹麦|哥本哈根|14|
-      - 🇬🇧 GB|英国|XX||XX|XX|14|
-      - 🇭🇷 HR|克罗地亚|14|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|16|
-      - 🇩🇪 DE|德国|法兰克福|法兰克福|17|
-      - 🇬🇧 GB|英国|XX||XX|XX|17|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|18|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|19|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|20|
-      - 🇧🇪 BE|比利时|21|
-      - 🇳🇱 NL|荷兰|21|
-      - 🇳🇱 NL|荷兰|21| 2
-      - 🇧🇪 BE|比利时|23|
-      - 🇳🇱 NL|荷兰|23|
-      - 🇳🇱 NL|荷兰|24|
-      - 🇧🇪 BE|比利时|25|
-      - 🇧🇪 BE|比利时|25| 2
-      - 🇧🇪 BE|比利时|25| 3
-      - 🇧🇪 BE|比利时|25| 4
-      - 🇧🇪 BE|比利时|26|
-      - 🇧🇪 BE|比利时|27|
-      - 🇧🇪 BE|比利时|27| 2
-      - 🇧🇪 BE|比利时|28|
-      - 🇧🇪 BE|比利时|27| 3
-      - 🇧🇪 BE|比利时|28| 2
-      - 🇨🇭 CH|瑞士|Zurich|29|
-      - 🇨🇭 CH|瑞士|Zurich|29| 2
-      - 🇨🇭 CH|瑞士|Zurich|30|
-      - 🇨🇭 CH|瑞士|Zurich|30| 2
-      - 🇨🇭 CH|瑞士|Zurich|31|
-      - 🇩🇰 DK|丹麦|32|
-      - 🇨🇭 CH|瑞士|Zurich|32|
-      - 🇩🇰 DK|丹麦|33|
-      - 🇨🇭 CH|瑞士|Zurich|33|
-      - 🇨🇭 CH|瑞士|Zurich|34|
-      - 🇩🇰 DK|丹麦|35|
-      - 🇨🇭 CH|瑞士|Zurich|35|
-      - 🇫🇷 FR|法国|35|
-      - 🇧🇪 BE|比利时|36|
-      - 🇧🇪 BE|比利时|36| 2
-      - 🇧🇪 BE|比利时|43|
-      - 🇫🇮 FI|芬兰|Uusimaa|47|
-      - 🇮🇪 IE|爱尔兰|Dublin|47|
-      - 🇮🇪 IE|爱尔兰|Dublin|48|
-      - 🇦🇹 AT|奥地利|48|
-      - 🇧🇷 BR|巴西|50|
-      - 🇧🇪 BE|比利时|54|
-      - 🇨🇭 CH|瑞士|Zurich|55|
-      - 🇬🇧 GB|英国|57|
-      - 🇳🇱 NL|荷兰|58|
-      - 🇬🇧 GB|英国|伦敦|伦敦|亚马逊|58|
-      - 🇫🇷 FR|法国|巴黎|59|
-      - 🇬🇧 GB|英国|Manchester|59|
-      - 🇬🇧 GB|英国|伦敦|伦敦|60|
-      - 🇮🇷 IR|伊朗|60|
-      - 🇮🇷 IR|伊朗|61|
-      - 🇬🇧 GB|英国|Manchester|61|
-      - 🇮🇷 IR|伊朗|62|
-      - 🇬🇧 GB|英国|伦敦|伦敦|63|
-      - 🇮🇹 IT|意大利|米兰|米兰|64|
+      - 🇭🇷 HR|克罗地亚|3|
+      - 🇭🇷 HR|克罗地亚|4|
+      - 🇭🇷 HR|克罗地亚|4| 2
+      - 🇭🇷 HR|克罗地亚|4| 3
+      - 🇭🇷 HR|克罗地亚|4| 4
+      - 🇧🇪 BE|比利时|6|
+      - 🇧🇪 BE|比利时|6| 2
+      - 🇧🇪 BE|比利时|7|
+      - 🇧🇪 BE|比利时|8|
+      - 🇧🇪 BE|比利时|8| 2
+      - 🇧🇪 BE|比利时|8| 3
+      - 🇧🇪 BE|比利时|8| 4
+      - 🇧🇪 BE|比利时|9|
+      - 🇧🇪 BE|比利时|19|
+      - 🇫🇮 FI|芬兰|Uusimaa|20|
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
+      - 🇳🇱 NL|荷兰|北荷兰|2|
       - 🇦🇹 AT|奥地利|2|
-      - 🇩🇰 DK|丹麦|哥本哈根|2|
-      - 🇱🇻 LV|拉脱维亚|Riga|2|
-      - 🇱🇻 LV|拉脱维亚|Riga|3|
-      - 🇩🇰 DK|丹麦|哥本哈根|3|
-      - 🇱🇻 LV|拉脱维亚|Riga|3| 2
-      - 🇺🇦 UA|乌克兰|4|
-      - 🇩🇪 ES|西班牙|马德里|马德里|4|
-      - 🇳🇱 NL|荷兰|Drenthe|Level3|4|
-      - 🇺🇦 UA|乌克兰|5|
-      - 🇺🇦 UA|乌克兰|5| 2
-      - 🇪🇺 EU|欧洲|6|
-      - 🇭🇷 HR|克罗地亚|6|
-      - 🇭🇷 HR|克罗地亚|6| 2
-      - 🇭🇷 HR|克罗地亚|6| 3
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|7|
-      - 🇬🇧 GB|英国|Manchester|8|
-      - 🇦🇹 AT|奥地利|8|
-      - 🇭🇷 HR|克罗地亚|9|
-      - 🇭🇷 HR|克罗地亚|9| 2
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|9|
-      - 🇬🇧 GB|英国|Manchester|10|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|10|
-      - 🇧🇪 BE|比利时|10|
-      - 🇩🇪 DE|德国|法兰克福|法兰克福|10|
-      - 🇬🇧 GB|英国|Manchester|11|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|12|
-      - 🇧🇪 BE|比利时|12|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|12| 2
-      - 🇩🇰 DK|丹麦|哥本哈根|13|
-      - 🇬🇧 GB|英国|Manchester|13|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|14|
-      - 🇩🇰 DK|丹麦|哥本哈根|14|
-      - 🇬🇧 GB|英国|XX||XX|XX|14|
-      - 🇭🇷 HR|克罗地亚|14|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|16|
-      - 🇩🇪 DE|德国|法兰克福|法兰克福|17|
-      - 🇬🇧 GB|英国|XX||XX|XX|17|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|18|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|19|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|20|
-      - 🇧🇪 BE|比利时|21|
-      - 🇳🇱 NL|荷兰|21|
-      - 🇳🇱 NL|荷兰|21| 2
-      - 🇧🇪 BE|比利时|23|
-      - 🇳🇱 NL|荷兰|23|
-      - 🇳🇱 NL|荷兰|24|
-      - 🇧🇪 BE|比利时|25|
-      - 🇧🇪 BE|比利时|25| 2
-      - 🇧🇪 BE|比利时|25| 3
-      - 🇧🇪 BE|比利时|25| 4
-      - 🇧🇪 BE|比利时|26|
-      - 🇧🇪 BE|比利时|27|
-      - 🇧🇪 BE|比利时|27| 2
-      - 🇧🇪 BE|比利时|28|
-      - 🇧🇪 BE|比利时|27| 3
-      - 🇧🇪 BE|比利时|28| 2
-      - 🇨🇭 CH|瑞士|Zurich|29|
-      - 🇨🇭 CH|瑞士|Zurich|29| 2
-      - 🇨🇭 CH|瑞士|Zurich|30|
-      - 🇨🇭 CH|瑞士|Zurich|30| 2
-      - 🇨🇭 CH|瑞士|Zurich|31|
-      - 🇩🇰 DK|丹麦|32|
-      - 🇨🇭 CH|瑞士|Zurich|32|
-      - 🇩🇰 DK|丹麦|33|
-      - 🇨🇭 CH|瑞士|Zurich|33|
-      - 🇨🇭 CH|瑞士|Zurich|34|
-      - 🇩🇰 DK|丹麦|35|
-      - 🇨🇭 CH|瑞士|Zurich|35|
-      - 🇫🇷 FR|法国|35|
-      - 🇧🇪 BE|比利时|36|
-      - 🇧🇪 BE|比利时|36| 2
-      - 🇧🇪 BE|比利时|43|
-      - 🇫🇮 FI|芬兰|Uusimaa|47|
-      - 🇮🇪 IE|爱尔兰|Dublin|47|
-      - 🇮🇪 IE|爱尔兰|Dublin|48|
-      - 🇦🇹 AT|奥地利|48|
-      - 🇧🇷 BR|巴西|50|
-      - 🇧🇪 BE|比利时|54|
-      - 🇨🇭 CH|瑞士|Zurich|55|
-      - 🇬🇧 GB|英国|57|
-      - 🇳🇱 NL|荷兰|58|
-      - 🇬🇧 GB|英国|伦敦|伦敦|亚马逊|58|
-      - 🇫🇷 FR|法国|巴黎|59|
-      - 🇬🇧 GB|英国|Manchester|59|
-      - 🇬🇧 GB|英国|伦敦|伦敦|60|
-      - 🇮🇷 IR|伊朗|60|
-      - 🇮🇷 IR|伊朗|61|
-      - 🇬🇧 GB|英国|Manchester|61|
-      - 🇮🇷 IR|伊朗|62|
-      - 🇬🇧 GB|英国|伦敦|伦敦|63|
-      - 🇮🇹 IT|意大利|米兰|米兰|64|
+      - 🇭🇷 HR|克罗地亚|3|
+      - 🇭🇷 HR|克罗地亚|4|
+      - 🇭🇷 HR|克罗地亚|4| 2
+      - 🇭🇷 HR|克罗地亚|4| 3
+      - 🇭🇷 HR|克罗地亚|4| 4
+      - 🇧🇪 BE|比利时|6|
+      - 🇧🇪 BE|比利时|6| 2
+      - 🇧🇪 BE|比利时|7|
+      - 🇧🇪 BE|比利时|8|
+      - 🇧🇪 BE|比利时|8| 2
+      - 🇧🇪 BE|比利时|8| 3
+      - 🇧🇪 BE|比利时|8| 4
+      - 🇧🇪 BE|比利时|9|
+      - 🇧🇪 BE|比利时|19|
+      - 🇫🇮 FI|芬兰|Uusimaa|20|
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 🇳🇱 NL|荷兰|北荷兰|2|
       - 🇦🇹 AT|奥地利|2|
-      - 🇩🇰 DK|丹麦|哥本哈根|2|
-      - 🇱🇻 LV|拉脱维亚|Riga|2|
-      - 🇱🇻 LV|拉脱维亚|Riga|3|
-      - 🇩🇰 DK|丹麦|哥本哈根|3|
-      - 🇱🇻 LV|拉脱维亚|Riga|3| 2
-      - 🇺🇦 UA|乌克兰|4|
-      - 🇩🇪 ES|西班牙|马德里|马德里|4|
-      - 🇳🇱 NL|荷兰|Drenthe|Level3|4|
-      - 🇺🇦 UA|乌克兰|5|
-      - 🇺🇦 UA|乌克兰|5| 2
-      - 🇪🇺 EU|欧洲|6|
-      - 🇭🇷 HR|克罗地亚|6|
-      - 🇭🇷 HR|克罗地亚|6| 2
-      - 🇭🇷 HR|克罗地亚|6| 3
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|7|
-      - 🇬🇧 GB|英国|Manchester|8|
-      - 🇦🇹 AT|奥地利|8|
-      - 🇭🇷 HR|克罗地亚|9|
-      - 🇭🇷 HR|克罗地亚|9| 2
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|9|
-      - 🇬🇧 GB|英国|Manchester|10|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|10|
-      - 🇧🇪 BE|比利时|10|
-      - 🇩🇪 DE|德国|法兰克福|法兰克福|10|
-      - 🇬🇧 GB|英国|Manchester|11|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|12|
-      - 🇧🇪 BE|比利时|12|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|12| 2
-      - 🇩🇰 DK|丹麦|哥本哈根|13|
-      - 🇬🇧 GB|英国|Manchester|13|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|14|
-      - 🇩🇰 DK|丹麦|哥本哈根|14|
-      - 🇬🇧 GB|英国|XX||XX|XX|14|
-      - 🇭🇷 HR|克罗地亚|14|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|16|
-      - 🇩🇪 DE|德国|法兰克福|法兰克福|17|
-      - 🇬🇧 GB|英国|XX||XX|XX|17|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|18|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|19|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|20|
-      - 🇧🇪 BE|比利时|21|
-      - 🇳🇱 NL|荷兰|21|
-      - 🇳🇱 NL|荷兰|21| 2
-      - 🇧🇪 BE|比利时|23|
-      - 🇳🇱 NL|荷兰|23|
-      - 🇳🇱 NL|荷兰|24|
-      - 🇧🇪 BE|比利时|25|
-      - 🇧🇪 BE|比利时|25| 2
-      - 🇧🇪 BE|比利时|25| 3
-      - 🇧🇪 BE|比利时|25| 4
-      - 🇧🇪 BE|比利时|26|
-      - 🇧🇪 BE|比利时|27|
-      - 🇧🇪 BE|比利时|27| 2
-      - 🇧🇪 BE|比利时|28|
-      - 🇧🇪 BE|比利时|27| 3
-      - 🇧🇪 BE|比利时|28| 2
-      - 🇨🇭 CH|瑞士|Zurich|29|
-      - 🇨🇭 CH|瑞士|Zurich|29| 2
-      - 🇨🇭 CH|瑞士|Zurich|30|
-      - 🇨🇭 CH|瑞士|Zurich|30| 2
-      - 🇨🇭 CH|瑞士|Zurich|31|
-      - 🇩🇰 DK|丹麦|32|
-      - 🇨🇭 CH|瑞士|Zurich|32|
-      - 🇩🇰 DK|丹麦|33|
-      - 🇨🇭 CH|瑞士|Zurich|33|
-      - 🇨🇭 CH|瑞士|Zurich|34|
-      - 🇩🇰 DK|丹麦|35|
-      - 🇨🇭 CH|瑞士|Zurich|35|
-      - 🇫🇷 FR|法国|35|
-      - 🇧🇪 BE|比利时|36|
-      - 🇧🇪 BE|比利时|36| 2
-      - 🇧🇪 BE|比利时|43|
-      - 🇫🇮 FI|芬兰|Uusimaa|47|
-      - 🇮🇪 IE|爱尔兰|Dublin|47|
-      - 🇮🇪 IE|爱尔兰|Dublin|48|
-      - 🇦🇹 AT|奥地利|48|
-      - 🇧🇷 BR|巴西|50|
-      - 🇧🇪 BE|比利时|54|
-      - 🇨🇭 CH|瑞士|Zurich|55|
-      - 🇬🇧 GB|英国|57|
-      - 🇳🇱 NL|荷兰|58|
-      - 🇬🇧 GB|英国|伦敦|伦敦|亚马逊|58|
-      - 🇫🇷 FR|法国|巴黎|59|
-      - 🇬🇧 GB|英国|Manchester|59|
-      - 🇬🇧 GB|英国|伦敦|伦敦|60|
-      - 🇮🇷 IR|伊朗|60|
-      - 🇮🇷 IR|伊朗|61|
-      - 🇬🇧 GB|英国|Manchester|61|
-      - 🇮🇷 IR|伊朗|62|
-      - 🇬🇧 GB|英国|伦敦|伦敦|63|
-      - 🇮🇹 IT|意大利|米兰|米兰|64|
+      - 🇭🇷 HR|克罗地亚|3|
+      - 🇭🇷 HR|克罗地亚|4|
+      - 🇭🇷 HR|克罗地亚|4| 2
+      - 🇭🇷 HR|克罗地亚|4| 3
+      - 🇭🇷 HR|克罗地亚|4| 4
+      - 🇧🇪 BE|比利时|6|
+      - 🇧🇪 BE|比利时|6| 2
+      - 🇧🇪 BE|比利时|7|
+      - 🇧🇪 BE|比利时|8|
+      - 🇧🇪 BE|比利时|8| 2
+      - 🇧🇪 BE|比利时|8| 3
+      - 🇧🇪 BE|比利时|8| 4
+      - 🇧🇪 BE|比利时|9|
+      - 🇧🇪 BE|比利时|19|
+      - 🇫🇮 FI|芬兰|Uusimaa|20|
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -702,98 +177,23 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 🇳🇱 NL|荷兰|北荷兰|2|
       - 🇦🇹 AT|奥地利|2|
-      - 🇩🇰 DK|丹麦|哥本哈根|2|
-      - 🇱🇻 LV|拉脱维亚|Riga|2|
-      - 🇱🇻 LV|拉脱维亚|Riga|3|
-      - 🇩🇰 DK|丹麦|哥本哈根|3|
-      - 🇱🇻 LV|拉脱维亚|Riga|3| 2
-      - 🇺🇦 UA|乌克兰|4|
-      - 🇩🇪 ES|西班牙|马德里|马德里|4|
-      - 🇳🇱 NL|荷兰|Drenthe|Level3|4|
-      - 🇺🇦 UA|乌克兰|5|
-      - 🇺🇦 UA|乌克兰|5| 2
-      - 🇪🇺 EU|欧洲|6|
-      - 🇭🇷 HR|克罗地亚|6|
-      - 🇭🇷 HR|克罗地亚|6| 2
-      - 🇭🇷 HR|克罗地亚|6| 3
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|7|
-      - 🇬🇧 GB|英国|Manchester|8|
-      - 🇦🇹 AT|奥地利|8|
-      - 🇭🇷 HR|克罗地亚|9|
-      - 🇭🇷 HR|克罗地亚|9| 2
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|9|
-      - 🇬🇧 GB|英国|Manchester|10|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|10|
-      - 🇧🇪 BE|比利时|10|
-      - 🇩🇪 DE|德国|法兰克福|法兰克福|10|
-      - 🇬🇧 GB|英国|Manchester|11|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|12|
-      - 🇧🇪 BE|比利时|12|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|12| 2
-      - 🇩🇰 DK|丹麦|哥本哈根|13|
-      - 🇬🇧 GB|英国|Manchester|13|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|14|
-      - 🇩🇰 DK|丹麦|哥本哈根|14|
-      - 🇬🇧 GB|英国|XX||XX|XX|14|
-      - 🇭🇷 HR|克罗地亚|14|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|16|
-      - 🇩🇪 DE|德国|法兰克福|法兰克福|17|
-      - 🇬🇧 GB|英国|XX||XX|XX|17|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|18|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|19|
-      - 🇷🇴 RO|罗马尼亚|布加勒斯特|20|
-      - 🇧🇪 BE|比利时|21|
-      - 🇳🇱 NL|荷兰|21|
-      - 🇳🇱 NL|荷兰|21| 2
-      - 🇧🇪 BE|比利时|23|
-      - 🇳🇱 NL|荷兰|23|
-      - 🇳🇱 NL|荷兰|24|
-      - 🇧🇪 BE|比利时|25|
-      - 🇧🇪 BE|比利时|25| 2
-      - 🇧🇪 BE|比利时|25| 3
-      - 🇧🇪 BE|比利时|25| 4
-      - 🇧🇪 BE|比利时|26|
-      - 🇧🇪 BE|比利时|27|
-      - 🇧🇪 BE|比利时|27| 2
-      - 🇧🇪 BE|比利时|28|
-      - 🇧🇪 BE|比利时|27| 3
-      - 🇧🇪 BE|比利时|28| 2
-      - 🇨🇭 CH|瑞士|Zurich|29|
-      - 🇨🇭 CH|瑞士|Zurich|29| 2
-      - 🇨🇭 CH|瑞士|Zurich|30|
-      - 🇨🇭 CH|瑞士|Zurich|30| 2
-      - 🇨🇭 CH|瑞士|Zurich|31|
-      - 🇩🇰 DK|丹麦|32|
-      - 🇨🇭 CH|瑞士|Zurich|32|
-      - 🇩🇰 DK|丹麦|33|
-      - 🇨🇭 CH|瑞士|Zurich|33|
-      - 🇨🇭 CH|瑞士|Zurich|34|
-      - 🇩🇰 DK|丹麦|35|
-      - 🇨🇭 CH|瑞士|Zurich|35|
-      - 🇫🇷 FR|法国|35|
-      - 🇧🇪 BE|比利时|36|
-      - 🇧🇪 BE|比利时|36| 2
-      - 🇧🇪 BE|比利时|43|
-      - 🇫🇮 FI|芬兰|Uusimaa|47|
-      - 🇮🇪 IE|爱尔兰|Dublin|47|
-      - 🇮🇪 IE|爱尔兰|Dublin|48|
-      - 🇦🇹 AT|奥地利|48|
-      - 🇧🇷 BR|巴西|50|
-      - 🇧🇪 BE|比利时|54|
-      - 🇨🇭 CH|瑞士|Zurich|55|
-      - 🇬🇧 GB|英国|57|
-      - 🇳🇱 NL|荷兰|58|
-      - 🇬🇧 GB|英国|伦敦|伦敦|亚马逊|58|
-      - 🇫🇷 FR|法国|巴黎|59|
-      - 🇬🇧 GB|英国|Manchester|59|
-      - 🇬🇧 GB|英国|伦敦|伦敦|60|
-      - 🇮🇷 IR|伊朗|60|
-      - 🇮🇷 IR|伊朗|61|
-      - 🇬🇧 GB|英国|Manchester|61|
-      - 🇮🇷 IR|伊朗|62|
-      - 🇬🇧 GB|英国|伦敦|伦敦|63|
-      - 🇮🇹 IT|意大利|米兰|米兰|64|
+      - 🇭🇷 HR|克罗地亚|3|
+      - 🇭🇷 HR|克罗地亚|4|
+      - 🇭🇷 HR|克罗地亚|4| 2
+      - 🇭🇷 HR|克罗地亚|4| 3
+      - 🇭🇷 HR|克罗地亚|4| 4
+      - 🇧🇪 BE|比利时|6|
+      - 🇧🇪 BE|比利时|6| 2
+      - 🇧🇪 BE|比利时|7|
+      - 🇧🇪 BE|比利时|8|
+      - 🇧🇪 BE|比利时|8| 2
+      - 🇧🇪 BE|比利时|8| 3
+      - 🇧🇪 BE|比利时|8| 4
+      - 🇧🇪 BE|比利时|9|
+      - 🇧🇪 BE|比利时|19|
+      - 🇫🇮 FI|芬兰|Uusimaa|20|
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
