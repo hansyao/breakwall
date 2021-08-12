@@ -5,60 +5,67 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇭🇰 HK|中国|香港|24|, server: 118.107.244.114, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
-  - {name: 🇭🇰 HK|中国|香港|25|, server: 118.107.244.113, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: 🇭🇰 HK|中国|香港|23|, server: 118.107.244.114, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: 🇭🇰 HK|中国|香港|23| 2, server: 118.107.244.113, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: 🇯🇵 JP|日本|大阪府|大阪|56|, server: 204.124.181.240, port: 10606, type: vmess, uuid: c474da00-e28b-40b0-8356-8f62e5eb71e2, alterId: 8, cipher: auto, tls: false, skip-cert-verify: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇭🇰 HK|中国|香港|24|
-      - 🇭🇰 HK|中国|香港|25|
+      - 🇭🇰 HK|中国|香港|23|
+      - 🇭🇰 HK|中国|香港|23| 2
+      - 🇯🇵 JP|日本|大阪府|大阪|56|
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇭🇰 HK|中国|香港|24|
-      - 🇭🇰 HK|中国|香港|25|
+      - 🇭🇰 HK|中国|香港|23|
+      - 🇭🇰 HK|中国|香港|23| 2
+      - 🇯🇵 JP|日本|大阪府|大阪|56|
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇭🇰 HK|中国|香港|24|
-      - 🇭🇰 HK|中国|香港|25|
+      - 🇭🇰 HK|中国|香港|23|
+      - 🇭🇰 HK|中国|香港|23| 2
+      - 🇯🇵 JP|日本|大阪府|大阪|56|
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 🇭🇰 HK|中国|香港|24|
-      - 🇭🇰 HK|中国|香港|25|
+      - 🇭🇰 HK|中国|香港|23|
+      - 🇭🇰 HK|中国|香港|23| 2
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 🇭🇰 HK|中国|香港|24|
-      - 🇭🇰 HK|中国|香港|25|
+      - 🇭🇰 HK|中国|香港|23|
+      - 🇭🇰 HK|中国|香港|23| 2
+      - 🇯🇵 JP|日本|大阪府|大阪|56|
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 🇭🇰 HK|中国|香港|24|
-      - 🇭🇰 HK|中国|香港|25|
+      - 🇭🇰 HK|中国|香港|23|
+      - 🇭🇰 HK|中国|香港|23| 2
+      - 🇯🇵 JP|日本|大阪府|大阪|56|
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇭🇰 HK|中国|香港|24|
-      - 🇭🇰 HK|中国|香港|25|
+      - 🇭🇰 HK|中国|香港|23|
+      - 🇭🇰 HK|中国|香港|23| 2
+      - 🇯🇵 JP|日本|大阪府|大阪|56|
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -74,8 +81,9 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇭🇰 HK|中国|香港|24|
-      - 🇭🇰 HK|中国|香港|25|
+      - 🇭🇰 HK|中国|香港|23|
+      - 🇭🇰 HK|中国|香港|23| 2
+      - 🇯🇵 JP|日本|大阪府|大阪|56|
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
