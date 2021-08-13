@@ -5,51 +5,27 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇺🇸 US|美国|亚马逊|841060907|, server: ss.uk.sshmax.net, port: 1443, type: ss, cipher: chacha20-ietf-poly1305, password: JSvsHhHYIuVG, udp: true}
-  - {name: 🇺🇸 US|美国|佛罗里达|842289830|, server: 198.147.22.87, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
-  - {name: 🇩🇪 US|美国|德克萨斯|休斯顿|850852695|, server: 199.10.64.133, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
-  - {name: 🇺🇸 US|美国|弗吉尼亚|743818587|, server: 207.244.67.149, port: 40093, type: ss, cipher: aes-256-gcm, password: x23Z4LGkGDkThZ9Kaz4DURQp, udp: true}
-  - {name: 🇺🇸 US|美国|亚马逊|834888526|, server: ss.de.sshmax.net, port: 21474, type: ss, cipher: chacha20-ietf-poly1305, password: HgCMlgbtQMxl, udp: true}
-  - {name: 🇺🇸 US|美国|亚马逊|939780605|, server: ss.uk.sshmax.net, port: 57478, type: ss, cipher: chacha20-ietf-poly1305, password: HgVDIN05O6bH, udp: true}
-  - {name: 🇺🇸 US|美国|弗吉尼亚|945078124|, server: ss.us.sshmax.net, port: 57478, type: ss, cipher: chacha20-ietf-poly1305, password: syCiJl3nb8OD, udp: true}
+  - {name: 🇩🇪 US|美国|德克萨斯|休斯顿|422358382|, server: 199.10.64.133, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇺🇸 US|美国|亚马逊|841060907|
-      - 🇺🇸 US|美国|佛罗里达|842289830|
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|850852695|
-      - 🇺🇸 US|美国|弗吉尼亚|743818587|
-      - 🇺🇸 US|美国|亚马逊|834888526|
-      - 🇺🇸 US|美国|亚马逊|939780605|
-      - 🇺🇸 US|美国|弗吉尼亚|945078124|
+      - 🇩🇪 US|美国|德克萨斯|休斯顿|422358382|
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇺🇸 US|美国|亚马逊|841060907|
-      - 🇺🇸 US|美国|佛罗里达|842289830|
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|850852695|
-      - 🇺🇸 US|美国|弗吉尼亚|743818587|
-      - 🇺🇸 US|美国|亚马逊|834888526|
-      - 🇺🇸 US|美国|亚马逊|939780605|
-      - 🇺🇸 US|美国|弗吉尼亚|945078124|
+      - 🇩🇪 US|美国|德克萨斯|休斯顿|422358382|
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇺🇸 US|美国|亚马逊|841060907|
-      - 🇺🇸 US|美国|佛罗里达|842289830|
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|850852695|
-      - 🇺🇸 US|美国|弗吉尼亚|743818587|
-      - 🇺🇸 US|美国|亚马逊|834888526|
-      - 🇺🇸 US|美国|亚马逊|939780605|
-      - 🇺🇸 US|美国|弗吉尼亚|945078124|
+      - 🇩🇪 US|美国|德克萨斯|休斯顿|422358382|
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -60,38 +36,20 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 🇺🇸 US|美国|亚马逊|841060907|
-      - 🇺🇸 US|美国|佛罗里达|842289830|
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|850852695|
-      - 🇺🇸 US|美国|弗吉尼亚|743818587|
-      - 🇺🇸 US|美国|亚马逊|834888526|
-      - 🇺🇸 US|美国|亚马逊|939780605|
-      - 🇺🇸 US|美国|弗吉尼亚|945078124|
+      - 🇩🇪 US|美国|德克萨斯|休斯顿|422358382|
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 🇺🇸 US|美国|亚马逊|841060907|
-      - 🇺🇸 US|美国|佛罗里达|842289830|
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|850852695|
-      - 🇺🇸 US|美国|弗吉尼亚|743818587|
-      - 🇺🇸 US|美国|亚马逊|834888526|
-      - 🇺🇸 US|美国|亚马逊|939780605|
-      - 🇺🇸 US|美国|弗吉尼亚|945078124|
+      - 🇩🇪 US|美国|德克萨斯|休斯顿|422358382|
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇺🇸 US|美国|亚马逊|841060907|
-      - 🇺🇸 US|美国|佛罗里达|842289830|
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|850852695|
-      - 🇺🇸 US|美国|弗吉尼亚|743818587|
-      - 🇺🇸 US|美国|亚马逊|834888526|
-      - 🇺🇸 US|美国|亚马逊|939780605|
-      - 🇺🇸 US|美国|弗吉尼亚|945078124|
+      - 🇩🇪 US|美国|德克萨斯|休斯顿|422358382|
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -107,13 +65,7 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇺🇸 US|美国|亚马逊|841060907|
-      - 🇺🇸 US|美国|佛罗里达|842289830|
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|850852695|
-      - 🇺🇸 US|美国|弗吉尼亚|743818587|
-      - 🇺🇸 US|美国|亚马逊|834888526|
-      - 🇺🇸 US|美国|亚马逊|939780605|
-      - 🇺🇸 US|美国|弗吉尼亚|945078124|
+      - 🇩🇪 US|美国|德克萨斯|休斯顿|422358382|
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
