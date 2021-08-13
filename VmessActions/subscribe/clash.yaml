@@ -5,466 +5,437 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇩🇪 US|美国|德克萨斯|休斯顿|429342116|, server: 199.10.64.133, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
-  - {name: 🇺🇸 US|美国|亚马逊|521712760|, server: ss.de.sshmax.net, port: 21474, type: ss, cipher: chacha20-ietf-poly1305, password: HgCMlgbtQMxl, udp: true}
-  - {name: 🇺🇸 US|美国|弗吉尼亚|428320407|, server: ss.us.sshmax.net, port: 57478, type: ss, cipher: chacha20-ietf-poly1305, password: syCiJl3nb8OD, udp: true}
-  - {name: 🇺🇸 US|美国|弗吉尼亚|731145531|, server: 207.244.67.149, port: 40093, type: ss, cipher: aes-256-gcm, password: x23Z4LGkGDkThZ9Kaz4DURQp, udp: true}
-  - {name: 🇺🇸 US|美国|弗吉尼亚|324847444|, server: 207.244.67.149, port: 35294, type: ss, cipher: aes-256-gcm, password: J9Y2ncrdPEC38gwydNFFGBna, udp: true}
-  - {name: 🇺🇸 US|美国|佐治亚|亚特兰大|516348828|, server: 198.8.92.84, port: 40220, type: ss, cipher: aes-256-gcm, password: ugyBkSEFxVEmUYSHyvxmWNj9}
-  - {name: 🇺🇸 US|美国|佐治亚|亚特兰大|518464189|, server: 198.8.92.84, port: 35294, type: ss, cipher: aes-256-gcm, password: J9Y2ncrdPEC38gwydNFFGBna}
-  - {name: 🇺🇸 US|美国|佐治亚|亚特兰大|733677035|, server: 198.8.92.84, port: 49396, type: ss, cipher: aes-256-gcm, password: BdRWC38L5JUDMTYNNxJGcUwB}
-  - {name: 🇨🇦 CA|加拿大|安大略|多伦多|316397832|, server: ss6.ssrsub.one, port: 9443, type: ss, cipher: aes-128-gcm, password: suo.yt/ssrsub, plugin: obfs, plugin-opts: {mode: tls, host: n46hm52773.wns.windows.com}, udp: true}
-  - {name: 🇺🇸 US|美国|佐治亚|亚特兰大|516357853|, server: 198.8.92.84, port: 44945, type: ss, cipher: aes-256-gcm, password: F5bKkb9ggkLx4JbQrbLn7LjZ}
-  - {name: 🇺🇸 US|美国|堪萨斯|426232958|, server: 143.244.57.99, port: 44539, type: ss, cipher: aes-256-gcm, password: r6hDrkP4Et6EENTS8Qy7Tcmg}
-  - {name: 🇺🇸 US|美国|堪萨斯|437060478|, server: 143.244.57.99, port: 42816, type: ss, cipher: aes-256-gcm, password: tBKBf4pVzNCFKdbPgvwrNXq3}
-  - {name: 🇨🇦 CA|加拿大|安大略|多伦多|916012432|, server: ss5.ssrsub.one, port: 9443, type: ss, cipher: aes-128-gcm, password: suo.yt/ssrsub, plugin: obfs, plugin-opts: {mode: tls, host: n46hm52773.wns.windows.com}, udp: true}
-  - {name: 🇺🇸 US|美国|密歇根|041337251|, server: 104.244.211.139, port: 48938, type: ss, cipher: aes-256-gcm, password: 4ejJ8n5ddLuYDUHGXJre2ufJ}
-  - {name: 🇺🇸 US|美国|密歇根|327612086|, server: 104.244.211.139, port: 49339, type: ss, cipher: aes-256-gcm, password: suucSeVLmt6PQKAP77NtGw9x}
-  - {name: 🇸🇬 US|美国|新泽西|423376149|, server: 156.146.62.36, port: 38742, type: ss, cipher: aes-256-gcm, password: DKXfWwc4ebscpXTKpbt85rSH}
-  - {name: 🇺🇸 US|美国|密歇根|439617370|, server: 104.244.211.139, port: 43893, type: ss, cipher: aes-256-gcm, password: YyCBeDdYX4cadHpCkkmdJLq8}
-  - {name: 🇺🇸 US|美国|密歇根|837886712|, server: 104.244.211.141, port: 49339, type: ss, cipher: aes-256-gcm, password: suucSeVLmt6PQKAP77NtGw9x}
-  - {name: 🇸🇬 US|美国|新泽西|116221991|, server: 156.146.62.36, port: 33998, type: ss, cipher: aes-256-gcm, password: NHwQTPLCfaTMSqTnU3mjcSxe}
-  - {name: 🇸🇬 US|美国|新泽西|332604480|, server: 156.146.62.36, port: 48938, type: ss, cipher: aes-256-gcm, password: 4ejJ8n5ddLuYDUHGXJre2ufJ}
-  - {name: 🇸🇬 US|美国|新泽西|339892222|, server: 156.146.62.36, port: 49468, type: ss, cipher: aes-256-gcm, password: LsYSQDxmPj9AcWpSX5HrYfu6}
-  - {name: 🇸🇬 US|美国|新泽西|429881016|, server: 156.146.62.36, port: 37588, type: ss, cipher: aes-256-gcm, password: kD9vkjnE6dsUzwQfvKkPkQAd}
-  - {name: 🇸🇬 US|美国|新泽西|017837228|, server: 156.146.62.36, port: 46642, type: ss, cipher: aes-256-gcm, password: gYL83DQWXuDbxmZAVVtUTXaK}
-  - {name: 🇸🇬 US|美国|新泽西|035210170|, server: 156.146.62.36, port: 44628, type: ss, cipher: aes-256-gcm, password: VASQbVcukHfdBGmeS9L7Z8TT}
-  - {name: 🇸🇬 US|美国|新泽西|331429549|, server: 156.146.62.36, port: 35294, type: ss, cipher: aes-256-gcm, password: J9Y2ncrdPEC38gwydNFFGBna}
-  - {name: 🇸🇬 US|美国|新泽西|425677747|, server: 156.146.62.36, port: 44236, type: ss, cipher: aes-256-gcm, password: FWrXcxPZjJxAN89xLgqY3Acp}
-  - {name: 🇸🇬 US|美国|新泽西|428456157|, server: 156.146.62.36, port: 49126, type: ss, cipher: aes-256-gcm, password: wrCaGtrUbzeRqQLdc8Kmk3Nd}
-  - {name: 🇸🇬 US|美国|新泽西|940425589|, server: 156.146.62.36, port: 31764, type: ss, cipher: aes-256-gcm, password: YgusH2MWA8PWc3p2VDsR7AVv}
-  - {name: 🇸🇬 US|美国|新泽西|131980608|, server: 156.146.62.36, port: 42816, type: ss, cipher: aes-256-gcm, password: tBKBf4pVzNCFKdbPgvwrNXq3}
-  - {name: 🇸🇬 US|美国|新泽西|337751394|, server: 156.146.62.36, port: 42166, type: ss, cipher: aes-256-gcm, password: H9Dbn3szZMqLR3NpgEFEPCKb}
-  - {name: 🇸🇬 US|美国|新泽西|520738698|, server: 156.146.62.36, port: 45329, type: ss, cipher: aes-256-gcm, password: CXSjgD7u7Ar7GxkZ4CgTMUsj}
-  - {name: 🇸🇬 US|美国|新泽西|037787361|, server: 156.146.62.36, port: 41738, type: ss, cipher: aes-256-gcm, password: X6yMGXnfUsuKTvEDYZSLPk4d}
-  - {name: 🇸🇬 US|美国|新泽西|139829693|, server: 156.146.62.36, port: 42304, type: ss, cipher: aes-256-gcm, password: p26v2JwhQVHDHsXk66fXt56r}
-  - {name: 🇸🇬 US|美国|新泽西|323966739|, server: 156.146.62.36, port: 33148, type: ss, cipher: aes-256-gcm, password: CMduaFXddcQbwNAAs7xFDnc8}
-  - {name: 🇨🇦 CA|加拿大|魁北克|蒙特利尔|234915912|, server: 86.106.90.27, port: 48938, type: ss, cipher: aes-256-gcm, password: 4ejJ8n5ddLuYDUHGXJre2ufJ}
-  - {name: 🇨🇦 CA|加拿大|魁北克|蒙特利尔|427973292|, server: 86.106.90.27, port: 43893, type: ss, cipher: aes-256-gcm, password: YyCBeDdYX4cadHpCkkmdJLq8}
-  - {name: 🇨🇦 CA|加拿大|魁北克|蒙特利尔|739811711|, server: 86.106.90.27, port: 49339, type: ss, cipher: aes-256-gcm, password: suucSeVLmt6PQKAP77NtGw9x}
-  - {name: 🇨🇦 CA|加拿大|不列颠哥伦比亚|温哥华|028480819|, server: 107.181.177.181, port: 43893, type: ss, cipher: aes-256-gcm, password: YyCBeDdYX4cadHpCkkmdJLq8}
-  - {name: 🇨🇦 CA|加拿大|不列颠哥伦比亚|温哥华|331381613|, server: 107.181.177.181, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
-  - {name: 🇺🇸 US|美国|佐治亚|亚特兰大|436559483|, server: 208.78.41.197, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
-  - {name: 🇯🇵 JP|日本|大阪府|大阪|638667021|, server: c39s4.jamjams.net, port: 10606, type: vmess, uuid: c474da00-e28b-40b0-8356-8f62e5eb71e2, alterId: 8, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇯🇵 JP|日本|大阪府|大阪|138246592|, server: 204.124.181.108, port: 10606, type: vmess, uuid: c474da00-e28b-40b0-8356-8f62e5eb71e2, alterId: 8, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇭🇰 HK|中国|香港|628907198|, server: 118.107.244.112, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
-  - {name: 🇭🇰 HK|中国|香港|微软|031761737|, server: 048.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 048.HK.AP.POP.BIGAIRPORT.NET}}
-  - {name: 🇭🇰 HK|中国|香港|微软|341601531|, server: 054.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 054.HK.AP.POP.BIGAIRPORT.NET}}
-  - {name: 🇭🇰 HK|中国|香港|微软|618378574|, server: 046.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 046.HK.AP.POP.BIGAIRPORT.NET}}
-  - {name: 🇭🇰 HK|中国|香港|微软|728591888|, server: 041.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 041.HK.AP.POP.BIGAIRPORT.NET}}
-  - {name: 🇭🇰 HK|中国|香港|微软|020738636|, server: 042.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 042.HK.AP.POP.BIGAIRPORT.NET}}
-  - {name: 🇭🇰 HK|中国|香港|微软|539720031|, server: 056.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 056.HK.AP.POP.BIGAIRPORT.NET}}
-  - {name: 🇭🇰 HK|中国|香港|微软|820268835|, server: 057.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 057.HK.AP.POP.BIGAIRPORT.NET}}
-  - {name: 🇭🇰 HK|中国|香港|微软|936480175|, server: 053.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 053.HK.AP.POP.BIGAIRPORT.NET}}
-  - {name: 🇭🇰 HK|中国|香港|微软|038418239|, server: 047.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 047.HK.AP.POP.BIGAIRPORT.NET}}
-  - {name: 🇭🇰 HK|中国|香港|微软|439516576|, server: 045.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 045.HK.AP.POP.BIGAIRPORT.NET}}
-  - {name: 🇭🇰 HK|中国|香港|微软|630378959|, server: 060.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 060.HK.AP.POP.BIGAIRPORT.NET}}
-  - {name: 🇭🇰 HK|中国|香港|微软|925191561|, server: 044.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 044.HK.AP.POP.BIGAIRPORT.NET}}
-  - {name: 🇭🇰 HK|中国|香港|微软|926023863|, server: 049.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 049.HK.AP.POP.BIGAIRPORT.NET}}
-  - {name: 🇭🇰 HK|中国|香港|微软|230434687|, server: 055.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 055.HK.AP.POP.BIGAIRPORT.NET}}
-  - {name: 🇭🇰 HK|中国|香港|微软|337916316|, server: 050.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 050.HK.AP.POP.BIGAIRPORT.NET}}
+  - {name: 🇸🇬 US|美国|新泽西|164021937|, server: 156.146.33.79, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
+  - {name: 🇺🇸 US|美国|佛罗里达|170781133|, server: 209.216.92.5, port: 37588, type: ss, cipher: aes-256-gcm, password: kD9vkjnE6dsUzwQfvKkPkQAd}
+  - {name: 🇩🇪 US|美国|德克萨斯|休斯顿|263159871|, server: 199.10.64.133, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
+  - {name: 🇺🇸 US|美国|弗吉尼亚|062113018|, server: 23.82.11.49, port: 37588, type: ss, cipher: aes-256-gcm, password: kD9vkjnE6dsUzwQfvKkPkQAd, udp: true}
+  - {name: 🇺🇸 US|美国|弗吉尼亚|163996729|, server: 23.82.11.49, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD, udp: true}
+  - {name: 🇸🇬 US|美国|新泽西|156213906|, server: 156.146.62.36, port: 33148, type: ss, cipher: aes-256-gcm, password: CMduaFXddcQbwNAAs7xFDnc8}
+  - {name: 🇸🇬 US|美国|新泽西|372180428|, server: 156.146.62.36, port: 41738, type: ss, cipher: aes-256-gcm, password: X6yMGXnfUsuKTvEDYZSLPk4d}
+  - {name: 🇸🇬 US|美国|新泽西|574201861|, server: 156.146.62.36, port: 42166, type: ss, cipher: aes-256-gcm, password: H9Dbn3szZMqLR3NpgEFEPCKb}
+  - {name: 🇸🇬 US|美国|新泽西|655760002|, server: 156.146.62.36, port: 42304, type: ss, cipher: aes-256-gcm, password: p26v2JwhQVHDHsXk66fXt56r}
+  - {name: 🇸🇬 US|美国|新泽西|563425951|, server: 156.146.62.36, port: 44236, type: ss, cipher: aes-256-gcm, password: FWrXcxPZjJxAN89xLgqY3Acp}
+  - {name: 🇸🇬 US|美国|新泽西|663010724|, server: 156.146.62.36, port: 45329, type: ss, cipher: aes-256-gcm, password: CXSjgD7u7Ar7GxkZ4CgTMUsj}
+  - {name: 🇸🇬 US|美国|新泽西|668656166|, server: 156.146.62.36, port: 42816, type: ss, cipher: aes-256-gcm, password: tBKBf4pVzNCFKdbPgvwrNXq3}
+  - {name: 🇨🇦 CA|加拿大|魁北克|蒙特利尔|372091500|, server: 139.28.218.93, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇸🇬 US|美国|新泽西|863594538|, server: 156.146.62.36, port: 31764, type: ss, cipher: aes-256-gcm, password: YgusH2MWA8PWc3p2VDsR7AVv}
+  - {name: 🇺🇸 US|美国|弗吉尼亚|160750054|, server: 207.244.86.33, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇺🇸 US|美国|马萨诸塞|波士顿|258365494|, server: 173.237.207.58, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇺🇸 US|美国|佛罗里达|迈阿密|372523071|, server: 91.219.214.13, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇺🇸 US|美国|弗吉尼亚|459373411|, server: 207.244.67.149, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇺🇸 US|美国|佛罗里达|迈阿密|568036186|, server: 193.27.12.245, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇺🇸 US|美国|加利福尼亚|圣何塞|872036537|, server: 23.19.255.164, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇺🇸 US|美国|加利福尼亚|057420465|, server: 79.110.53.203, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇺🇸 US|美国|马萨诸塞|波士顿|157753055|, server: 173.237.207.54, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇺🇸 US|美国|北卡罗来纳|夏洛特|761711634|, server: 192.158.224.112, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇺🇸 US|美国|纽约|纽约|465746069|, server: 84.17.35.118, port: 48794, type: ss, cipher: aes-256-gcm, password: r9Q3adc3ru9sfBDPEj4yp6U6}
+  - {name: 🇸🇬 US|美国|新泽西|256578855|, server: 156.146.62.36, port: 35294, type: ss, cipher: aes-256-gcm, password: J9Y2ncrdPEC38gwydNFFGBna}
+  - {name: 🇺🇸 US|美国|纽约|纽约|255255574|, server: 84.17.35.118, port: 49339, type: ss, cipher: aes-256-gcm, password: suucSeVLmt6PQKAP77NtGw9x}
+  - {name: 🇸🇬 US|美国|新泽西|864474281|, server: 156.146.62.36, port: 44628, type: ss, cipher: aes-256-gcm, password: VASQbVcukHfdBGmeS9L7Z8TT}
+  - {name: 🇺🇸 US|美国|密歇根|961600395|, server: 104.244.211.141, port: 49339, type: ss, cipher: aes-256-gcm, password: suucSeVLmt6PQKAP77NtGw9x}
+  - {name: 🇸🇬 US|美国|新泽西|056489847|, server: 156.146.62.36, port: 46642, type: ss, cipher: aes-256-gcm, password: gYL83DQWXuDbxmZAVVtUTXaK}
+  - {name: 🇺🇸 US|美国|密歇根|457177303|, server: 104.244.211.141, port: 43893, type: ss, cipher: aes-256-gcm, password: YyCBeDdYX4cadHpCkkmdJLq8}
+  - {name: 🇸🇬 US|美国|新泽西|558230977|, server: 156.146.62.36, port: 49126, type: ss, cipher: aes-256-gcm, password: wrCaGtrUbzeRqQLdc8Kmk3Nd}
+  - {name: 🇸🇬 US|美国|新泽西|571683179|, server: 156.146.62.36, port: 33998, type: ss, cipher: aes-256-gcm, password: NHwQTPLCfaTMSqTnU3mjcSxe}
+  - {name: 🇸🇬 US|美国|新泽西|763465752|, server: 156.146.62.36, port: 37588, type: ss, cipher: aes-256-gcm, password: kD9vkjnE6dsUzwQfvKkPkQAd}
+  - {name: 🇸🇬 US|美国|新泽西|760725588|, server: 156.146.62.36, port: 49468, type: ss, cipher: aes-256-gcm, password: LsYSQDxmPj9AcWpSX5HrYfu6}
+  - {name: 🇸🇬 US|美国|新泽西|164028462|, server: 156.146.62.36, port: 48938, type: ss, cipher: aes-256-gcm, password: 4ejJ8n5ddLuYDUHGXJre2ufJ}
+  - {name: 🇸🇬 US|美国|新泽西|359754811|, server: 156.146.62.36, port: 38742, type: ss, cipher: aes-256-gcm, password: DKXfWwc4ebscpXTKpbt85rSH}
+  - {name: 🇺🇸 US|美国|密歇根|366542705|, server: 104.244.211.139, port: 43893, type: ss, cipher: aes-256-gcm, password: YyCBeDdYX4cadHpCkkmdJLq8}
+  - {name: 🇺🇸 US|美国|密歇根|464440716|, server: 104.244.211.139, port: 48938, type: ss, cipher: aes-256-gcm, password: 4ejJ8n5ddLuYDUHGXJre2ufJ}
+  - {name: 🇺🇸 US|美国|密苏里|堪萨斯城|467850862|, server: 69.30.249.125, port: 49468, type: ss, cipher: aes-256-gcm, password: LsYSQDxmPj9AcWpSX5HrYfu6}
+  - {name: 🇺🇸 US|美国|弗吉尼亚|阿什本|768690354|, server: 45.43.14.75, port: 50695, type: ss, cipher: aes-256-gcm, password: gqtwGu9bVreJqL3FTHSVKGzy}
+  - {name: 🇸🇬 US|美国|新泽西|862289958|, server: 156.146.62.46, port: 38742, type: ss, cipher: aes-256-gcm, password: DKXfWwc4ebscpXTKpbt85rSH}
+  - {name: 🇸🇬 US|美国|新泽西|970865468|, server: 156.146.62.46, port: 44820, type: ss, cipher: aes-256-gcm, password: jspgz9G3VmvBMCgMUWLBaZHu}
+  - {name: 🇺🇸 US|美国|堪萨斯|665309534|, server: 143.244.57.99, port: 49396, type: ss, cipher: aes-256-gcm, password: BdRWC38L5JUDMTYNNxJGcUwB}
+  - {name: 🇨🇦 CA|加拿大|魁北克|蒙特利尔|257001905|, server: 86.106.90.43, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇺🇸 US|美国|堪萨斯|270416014|, server: 143.244.57.99, port: 41738, type: ss, cipher: aes-256-gcm, password: X6yMGXnfUsuKTvEDYZSLPk4d}
+  - {name: 🇺🇸 US|美国|堪萨斯|457734960|, server: 143.244.57.99, port: 40282, type: ss, cipher: aes-256-gcm, password: Pvvaw486867D2w4yctL2ULTQ}
+  - {name: 🇺🇸 US|美国|堪萨斯|460888648|, server: 143.244.57.99, port: 50695, type: ss, cipher: aes-256-gcm, password: gqtwGu9bVreJqL3FTHSVKGzy}
+  - {name: 🇺🇸 US|美国|堪萨斯|157342301|, server: 143.244.57.99, port: 44539, type: ss, cipher: aes-256-gcm, password: r6hDrkP4Et6EENTS8Qy7Tcmg}
+  - {name: 🇺🇸 US|美国|佛罗里达|867205015|, server: 198.147.22.87, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇺🇸 US|美国|亚利桑那|凤凰城|965763961|, server: 199.58.187.23, port: 49339, type: ss, cipher: aes-256-gcm, password: suucSeVLmt6PQKAP77NtGw9x}
+  - {name: 🇺🇸 US|美国|亚利桑那|凤凰城|574898011|, server: 199.58.187.23, port: 31764, type: ss, cipher: aes-256-gcm, password: YgusH2MWA8PWc3p2VDsR7AVv}
+  - {name: 🇺🇸 US|美国|华盛顿|西雅图|655756582|, server: 212.102.46.42, port: 33148, type: ss, cipher: aes-256-gcm, password: CMduaFXddcQbwNAAs7xFDnc8}
+  - {name: 🇺🇸 US|美国|佛罗里达|655819155|, server: 209.216.92.200, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT}
+  - {name: 🇺🇸 US|美国|佐治亚|亚特兰大|656715921|, server: 66.115.182.112, port: 42816, type: ss, cipher: aes-256-gcm, password: tBKBf4pVzNCFKdbPgvwrNXq3}
+  - {name: 🇯🇵 JP|日本|大阪府|大阪|362753720|, server: 204.124.181.108, port: 10606, type: vmess, uuid: c474da00-e28b-40b0-8356-8f62e5eb71e2, alterId: 8, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: 🇭🇰 HK|中国|香港|862599170|, server: 118.107.244.112, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|429342116|
-      - 🇺🇸 US|美国|亚马逊|521712760|
-      - 🇺🇸 US|美国|弗吉尼亚|428320407|
-      - 🇺🇸 US|美国|弗吉尼亚|731145531|
-      - 🇺🇸 US|美国|弗吉尼亚|324847444|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|516348828|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|518464189|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|733677035|
-      - 🇨🇦 CA|加拿大|安大略|多伦多|316397832|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|516357853|
-      - 🇺🇸 US|美国|堪萨斯|426232958|
-      - 🇺🇸 US|美国|堪萨斯|437060478|
-      - 🇨🇦 CA|加拿大|安大略|多伦多|916012432|
-      - 🇺🇸 US|美国|密歇根|041337251|
-      - 🇺🇸 US|美国|密歇根|327612086|
-      - 🇸🇬 US|美国|新泽西|423376149|
-      - 🇺🇸 US|美国|密歇根|439617370|
-      - 🇺🇸 US|美国|密歇根|837886712|
-      - 🇸🇬 US|美国|新泽西|116221991|
-      - 🇸🇬 US|美国|新泽西|332604480|
-      - 🇸🇬 US|美国|新泽西|339892222|
-      - 🇸🇬 US|美国|新泽西|429881016|
-      - 🇸🇬 US|美国|新泽西|017837228|
-      - 🇸🇬 US|美国|新泽西|035210170|
-      - 🇸🇬 US|美国|新泽西|331429549|
-      - 🇸🇬 US|美国|新泽西|425677747|
-      - 🇸🇬 US|美国|新泽西|428456157|
-      - 🇸🇬 US|美国|新泽西|940425589|
-      - 🇸🇬 US|美国|新泽西|131980608|
-      - 🇸🇬 US|美国|新泽西|337751394|
-      - 🇸🇬 US|美国|新泽西|520738698|
-      - 🇸🇬 US|美国|新泽西|037787361|
-      - 🇸🇬 US|美国|新泽西|139829693|
-      - 🇸🇬 US|美国|新泽西|323966739|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|234915912|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|427973292|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|739811711|
-      - 🇨🇦 CA|加拿大|不列颠哥伦比亚|温哥华|028480819|
-      - 🇨🇦 CA|加拿大|不列颠哥伦比亚|温哥华|331381613|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|436559483|
-      - 🇯🇵 JP|日本|大阪府|大阪|638667021|
-      - 🇯🇵 JP|日本|大阪府|大阪|138246592|
-      - 🇭🇰 HK|中国|香港|628907198|
-      - 🇭🇰 HK|中国|香港|微软|031761737|
-      - 🇭🇰 HK|中国|香港|微软|341601531|
-      - 🇭🇰 HK|中国|香港|微软|618378574|
-      - 🇭🇰 HK|中国|香港|微软|728591888|
-      - 🇭🇰 HK|中国|香港|微软|020738636|
-      - 🇭🇰 HK|中国|香港|微软|539720031|
-      - 🇭🇰 HK|中国|香港|微软|820268835|
-      - 🇭🇰 HK|中国|香港|微软|936480175|
-      - 🇭🇰 HK|中国|香港|微软|038418239|
-      - 🇭🇰 HK|中国|香港|微软|439516576|
-      - 🇭🇰 HK|中国|香港|微软|630378959|
-      - 🇭🇰 HK|中国|香港|微软|925191561|
-      - 🇭🇰 HK|中国|香港|微软|926023863|
-      - 🇭🇰 HK|中国|香港|微软|230434687|
-      - 🇭🇰 HK|中国|香港|微软|337916316|
+      - 🇸🇬 US|美国|新泽西|164021937|
+      - 🇺🇸 US|美国|佛罗里达|170781133|
+      - 🇩🇪 US|美国|德克萨斯|休斯顿|263159871|
+      - 🇺🇸 US|美国|弗吉尼亚|062113018|
+      - 🇺🇸 US|美国|弗吉尼亚|163996729|
+      - 🇸🇬 US|美国|新泽西|156213906|
+      - 🇸🇬 US|美国|新泽西|372180428|
+      - 🇸🇬 US|美国|新泽西|574201861|
+      - 🇸🇬 US|美国|新泽西|655760002|
+      - 🇸🇬 US|美国|新泽西|563425951|
+      - 🇸🇬 US|美国|新泽西|663010724|
+      - 🇸🇬 US|美国|新泽西|668656166|
+      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|372091500|
+      - 🇸🇬 US|美国|新泽西|863594538|
+      - 🇺🇸 US|美国|弗吉尼亚|160750054|
+      - 🇺🇸 US|美国|马萨诸塞|波士顿|258365494|
+      - 🇺🇸 US|美国|佛罗里达|迈阿密|372523071|
+      - 🇺🇸 US|美国|弗吉尼亚|459373411|
+      - 🇺🇸 US|美国|佛罗里达|迈阿密|568036186|
+      - 🇺🇸 US|美国|加利福尼亚|圣何塞|872036537|
+      - 🇺🇸 US|美国|加利福尼亚|057420465|
+      - 🇺🇸 US|美国|马萨诸塞|波士顿|157753055|
+      - 🇺🇸 US|美国|北卡罗来纳|夏洛特|761711634|
+      - 🇺🇸 US|美国|纽约|纽约|465746069|
+      - 🇸🇬 US|美国|新泽西|256578855|
+      - 🇺🇸 US|美国|纽约|纽约|255255574|
+      - 🇸🇬 US|美国|新泽西|864474281|
+      - 🇺🇸 US|美国|密歇根|961600395|
+      - 🇸🇬 US|美国|新泽西|056489847|
+      - 🇺🇸 US|美国|密歇根|457177303|
+      - 🇸🇬 US|美国|新泽西|558230977|
+      - 🇸🇬 US|美国|新泽西|571683179|
+      - 🇸🇬 US|美国|新泽西|763465752|
+      - 🇸🇬 US|美国|新泽西|760725588|
+      - 🇸🇬 US|美国|新泽西|164028462|
+      - 🇸🇬 US|美国|新泽西|359754811|
+      - 🇺🇸 US|美国|密歇根|366542705|
+      - 🇺🇸 US|美国|密歇根|464440716|
+      - 🇺🇸 US|美国|密苏里|堪萨斯城|467850862|
+      - 🇺🇸 US|美国|弗吉尼亚|阿什本|768690354|
+      - 🇸🇬 US|美国|新泽西|862289958|
+      - 🇸🇬 US|美国|新泽西|970865468|
+      - 🇺🇸 US|美国|堪萨斯|665309534|
+      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|257001905|
+      - 🇺🇸 US|美国|堪萨斯|270416014|
+      - 🇺🇸 US|美国|堪萨斯|457734960|
+      - 🇺🇸 US|美国|堪萨斯|460888648|
+      - 🇺🇸 US|美国|堪萨斯|157342301|
+      - 🇺🇸 US|美国|佛罗里达|867205015|
+      - 🇺🇸 US|美国|亚利桑那|凤凰城|965763961|
+      - 🇺🇸 US|美国|亚利桑那|凤凰城|574898011|
+      - 🇺🇸 US|美国|华盛顿|西雅图|655756582|
+      - 🇺🇸 US|美国|佛罗里达|655819155|
+      - 🇺🇸 US|美国|佐治亚|亚特兰大|656715921|
+      - 🇯🇵 JP|日本|大阪府|大阪|362753720|
+      - 🇭🇰 HK|中国|香港|862599170|
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|429342116|
-      - 🇺🇸 US|美国|亚马逊|521712760|
-      - 🇺🇸 US|美国|弗吉尼亚|428320407|
-      - 🇺🇸 US|美国|弗吉尼亚|731145531|
-      - 🇺🇸 US|美国|弗吉尼亚|324847444|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|516348828|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|518464189|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|733677035|
-      - 🇨🇦 CA|加拿大|安大略|多伦多|316397832|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|516357853|
-      - 🇺🇸 US|美国|堪萨斯|426232958|
-      - 🇺🇸 US|美国|堪萨斯|437060478|
-      - 🇨🇦 CA|加拿大|安大略|多伦多|916012432|
-      - 🇺🇸 US|美国|密歇根|041337251|
-      - 🇺🇸 US|美国|密歇根|327612086|
-      - 🇸🇬 US|美国|新泽西|423376149|
-      - 🇺🇸 US|美国|密歇根|439617370|
-      - 🇺🇸 US|美国|密歇根|837886712|
-      - 🇸🇬 US|美国|新泽西|116221991|
-      - 🇸🇬 US|美国|新泽西|332604480|
-      - 🇸🇬 US|美国|新泽西|339892222|
-      - 🇸🇬 US|美国|新泽西|429881016|
-      - 🇸🇬 US|美国|新泽西|017837228|
-      - 🇸🇬 US|美国|新泽西|035210170|
-      - 🇸🇬 US|美国|新泽西|331429549|
-      - 🇸🇬 US|美国|新泽西|425677747|
-      - 🇸🇬 US|美国|新泽西|428456157|
-      - 🇸🇬 US|美国|新泽西|940425589|
-      - 🇸🇬 US|美国|新泽西|131980608|
-      - 🇸🇬 US|美国|新泽西|337751394|
-      - 🇸🇬 US|美国|新泽西|520738698|
-      - 🇸🇬 US|美国|新泽西|037787361|
-      - 🇸🇬 US|美国|新泽西|139829693|
-      - 🇸🇬 US|美国|新泽西|323966739|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|234915912|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|427973292|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|739811711|
-      - 🇨🇦 CA|加拿大|不列颠哥伦比亚|温哥华|028480819|
-      - 🇨🇦 CA|加拿大|不列颠哥伦比亚|温哥华|331381613|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|436559483|
-      - 🇯🇵 JP|日本|大阪府|大阪|638667021|
-      - 🇯🇵 JP|日本|大阪府|大阪|138246592|
-      - 🇭🇰 HK|中国|香港|628907198|
-      - 🇭🇰 HK|中国|香港|微软|031761737|
-      - 🇭🇰 HK|中国|香港|微软|341601531|
-      - 🇭🇰 HK|中国|香港|微软|618378574|
-      - 🇭🇰 HK|中国|香港|微软|728591888|
-      - 🇭🇰 HK|中国|香港|微软|020738636|
-      - 🇭🇰 HK|中国|香港|微软|539720031|
-      - 🇭🇰 HK|中国|香港|微软|820268835|
-      - 🇭🇰 HK|中国|香港|微软|936480175|
-      - 🇭🇰 HK|中国|香港|微软|038418239|
-      - 🇭🇰 HK|中国|香港|微软|439516576|
-      - 🇭🇰 HK|中国|香港|微软|630378959|
-      - 🇭🇰 HK|中国|香港|微软|925191561|
-      - 🇭🇰 HK|中国|香港|微软|926023863|
-      - 🇭🇰 HK|中国|香港|微软|230434687|
-      - 🇭🇰 HK|中国|香港|微软|337916316|
+      - 🇸🇬 US|美国|新泽西|164021937|
+      - 🇺🇸 US|美国|佛罗里达|170781133|
+      - 🇩🇪 US|美国|德克萨斯|休斯顿|263159871|
+      - 🇺🇸 US|美国|弗吉尼亚|062113018|
+      - 🇺🇸 US|美国|弗吉尼亚|163996729|
+      - 🇸🇬 US|美国|新泽西|156213906|
+      - 🇸🇬 US|美国|新泽西|372180428|
+      - 🇸🇬 US|美国|新泽西|574201861|
+      - 🇸🇬 US|美国|新泽西|655760002|
+      - 🇸🇬 US|美国|新泽西|563425951|
+      - 🇸🇬 US|美国|新泽西|663010724|
+      - 🇸🇬 US|美国|新泽西|668656166|
+      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|372091500|
+      - 🇸🇬 US|美国|新泽西|863594538|
+      - 🇺🇸 US|美国|弗吉尼亚|160750054|
+      - 🇺🇸 US|美国|马萨诸塞|波士顿|258365494|
+      - 🇺🇸 US|美国|佛罗里达|迈阿密|372523071|
+      - 🇺🇸 US|美国|弗吉尼亚|459373411|
+      - 🇺🇸 US|美国|佛罗里达|迈阿密|568036186|
+      - 🇺🇸 US|美国|加利福尼亚|圣何塞|872036537|
+      - 🇺🇸 US|美国|加利福尼亚|057420465|
+      - 🇺🇸 US|美国|马萨诸塞|波士顿|157753055|
+      - 🇺🇸 US|美国|北卡罗来纳|夏洛特|761711634|
+      - 🇺🇸 US|美国|纽约|纽约|465746069|
+      - 🇸🇬 US|美国|新泽西|256578855|
+      - 🇺🇸 US|美国|纽约|纽约|255255574|
+      - 🇸🇬 US|美国|新泽西|864474281|
+      - 🇺🇸 US|美国|密歇根|961600395|
+      - 🇸🇬 US|美国|新泽西|056489847|
+      - 🇺🇸 US|美国|密歇根|457177303|
+      - 🇸🇬 US|美国|新泽西|558230977|
+      - 🇸🇬 US|美国|新泽西|571683179|
+      - 🇸🇬 US|美国|新泽西|763465752|
+      - 🇸🇬 US|美国|新泽西|760725588|
+      - 🇸🇬 US|美国|新泽西|164028462|
+      - 🇸🇬 US|美国|新泽西|359754811|
+      - 🇺🇸 US|美国|密歇根|366542705|
+      - 🇺🇸 US|美国|密歇根|464440716|
+      - 🇺🇸 US|美国|密苏里|堪萨斯城|467850862|
+      - 🇺🇸 US|美国|弗吉尼亚|阿什本|768690354|
+      - 🇸🇬 US|美国|新泽西|862289958|
+      - 🇸🇬 US|美国|新泽西|970865468|
+      - 🇺🇸 US|美国|堪萨斯|665309534|
+      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|257001905|
+      - 🇺🇸 US|美国|堪萨斯|270416014|
+      - 🇺🇸 US|美国|堪萨斯|457734960|
+      - 🇺🇸 US|美国|堪萨斯|460888648|
+      - 🇺🇸 US|美国|堪萨斯|157342301|
+      - 🇺🇸 US|美国|佛罗里达|867205015|
+      - 🇺🇸 US|美国|亚利桑那|凤凰城|965763961|
+      - 🇺🇸 US|美国|亚利桑那|凤凰城|574898011|
+      - 🇺🇸 US|美国|华盛顿|西雅图|655756582|
+      - 🇺🇸 US|美国|佛罗里达|655819155|
+      - 🇺🇸 US|美国|佐治亚|亚特兰大|656715921|
+      - 🇯🇵 JP|日本|大阪府|大阪|362753720|
+      - 🇭🇰 HK|中国|香港|862599170|
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|429342116|
-      - 🇺🇸 US|美国|亚马逊|521712760|
-      - 🇺🇸 US|美国|弗吉尼亚|428320407|
-      - 🇺🇸 US|美国|弗吉尼亚|731145531|
-      - 🇺🇸 US|美国|弗吉尼亚|324847444|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|516348828|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|518464189|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|733677035|
-      - 🇨🇦 CA|加拿大|安大略|多伦多|316397832|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|516357853|
-      - 🇺🇸 US|美国|堪萨斯|426232958|
-      - 🇺🇸 US|美国|堪萨斯|437060478|
-      - 🇨🇦 CA|加拿大|安大略|多伦多|916012432|
-      - 🇺🇸 US|美国|密歇根|041337251|
-      - 🇺🇸 US|美国|密歇根|327612086|
-      - 🇸🇬 US|美国|新泽西|423376149|
-      - 🇺🇸 US|美国|密歇根|439617370|
-      - 🇺🇸 US|美国|密歇根|837886712|
-      - 🇸🇬 US|美国|新泽西|116221991|
-      - 🇸🇬 US|美国|新泽西|332604480|
-      - 🇸🇬 US|美国|新泽西|339892222|
-      - 🇸🇬 US|美国|新泽西|429881016|
-      - 🇸🇬 US|美国|新泽西|017837228|
-      - 🇸🇬 US|美国|新泽西|035210170|
-      - 🇸🇬 US|美国|新泽西|331429549|
-      - 🇸🇬 US|美国|新泽西|425677747|
-      - 🇸🇬 US|美国|新泽西|428456157|
-      - 🇸🇬 US|美国|新泽西|940425589|
-      - 🇸🇬 US|美国|新泽西|131980608|
-      - 🇸🇬 US|美国|新泽西|337751394|
-      - 🇸🇬 US|美国|新泽西|520738698|
-      - 🇸🇬 US|美国|新泽西|037787361|
-      - 🇸🇬 US|美国|新泽西|139829693|
-      - 🇸🇬 US|美国|新泽西|323966739|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|234915912|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|427973292|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|739811711|
-      - 🇨🇦 CA|加拿大|不列颠哥伦比亚|温哥华|028480819|
-      - 🇨🇦 CA|加拿大|不列颠哥伦比亚|温哥华|331381613|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|436559483|
-      - 🇯🇵 JP|日本|大阪府|大阪|638667021|
-      - 🇯🇵 JP|日本|大阪府|大阪|138246592|
-      - 🇭🇰 HK|中国|香港|628907198|
-      - 🇭🇰 HK|中国|香港|微软|031761737|
-      - 🇭🇰 HK|中国|香港|微软|341601531|
-      - 🇭🇰 HK|中国|香港|微软|618378574|
-      - 🇭🇰 HK|中国|香港|微软|728591888|
-      - 🇭🇰 HK|中国|香港|微软|020738636|
-      - 🇭🇰 HK|中国|香港|微软|539720031|
-      - 🇭🇰 HK|中国|香港|微软|820268835|
-      - 🇭🇰 HK|中国|香港|微软|936480175|
-      - 🇭🇰 HK|中国|香港|微软|038418239|
-      - 🇭🇰 HK|中国|香港|微软|439516576|
-      - 🇭🇰 HK|中国|香港|微软|630378959|
-      - 🇭🇰 HK|中国|香港|微软|925191561|
-      - 🇭🇰 HK|中国|香港|微软|926023863|
-      - 🇭🇰 HK|中国|香港|微软|230434687|
-      - 🇭🇰 HK|中国|香港|微软|337916316|
+      - 🇸🇬 US|美国|新泽西|164021937|
+      - 🇺🇸 US|美国|佛罗里达|170781133|
+      - 🇩🇪 US|美国|德克萨斯|休斯顿|263159871|
+      - 🇺🇸 US|美国|弗吉尼亚|062113018|
+      - 🇺🇸 US|美国|弗吉尼亚|163996729|
+      - 🇸🇬 US|美国|新泽西|156213906|
+      - 🇸🇬 US|美国|新泽西|372180428|
+      - 🇸🇬 US|美国|新泽西|574201861|
+      - 🇸🇬 US|美国|新泽西|655760002|
+      - 🇸🇬 US|美国|新泽西|563425951|
+      - 🇸🇬 US|美国|新泽西|663010724|
+      - 🇸🇬 US|美国|新泽西|668656166|
+      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|372091500|
+      - 🇸🇬 US|美国|新泽西|863594538|
+      - 🇺🇸 US|美国|弗吉尼亚|160750054|
+      - 🇺🇸 US|美国|马萨诸塞|波士顿|258365494|
+      - 🇺🇸 US|美国|佛罗里达|迈阿密|372523071|
+      - 🇺🇸 US|美国|弗吉尼亚|459373411|
+      - 🇺🇸 US|美国|佛罗里达|迈阿密|568036186|
+      - 🇺🇸 US|美国|加利福尼亚|圣何塞|872036537|
+      - 🇺🇸 US|美国|加利福尼亚|057420465|
+      - 🇺🇸 US|美国|马萨诸塞|波士顿|157753055|
+      - 🇺🇸 US|美国|北卡罗来纳|夏洛特|761711634|
+      - 🇺🇸 US|美国|纽约|纽约|465746069|
+      - 🇸🇬 US|美国|新泽西|256578855|
+      - 🇺🇸 US|美国|纽约|纽约|255255574|
+      - 🇸🇬 US|美国|新泽西|864474281|
+      - 🇺🇸 US|美国|密歇根|961600395|
+      - 🇸🇬 US|美国|新泽西|056489847|
+      - 🇺🇸 US|美国|密歇根|457177303|
+      - 🇸🇬 US|美国|新泽西|558230977|
+      - 🇸🇬 US|美国|新泽西|571683179|
+      - 🇸🇬 US|美国|新泽西|763465752|
+      - 🇸🇬 US|美国|新泽西|760725588|
+      - 🇸🇬 US|美国|新泽西|164028462|
+      - 🇸🇬 US|美国|新泽西|359754811|
+      - 🇺🇸 US|美国|密歇根|366542705|
+      - 🇺🇸 US|美国|密歇根|464440716|
+      - 🇺🇸 US|美国|密苏里|堪萨斯城|467850862|
+      - 🇺🇸 US|美国|弗吉尼亚|阿什本|768690354|
+      - 🇸🇬 US|美国|新泽西|862289958|
+      - 🇸🇬 US|美国|新泽西|970865468|
+      - 🇺🇸 US|美国|堪萨斯|665309534|
+      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|257001905|
+      - 🇺🇸 US|美国|堪萨斯|270416014|
+      - 🇺🇸 US|美国|堪萨斯|457734960|
+      - 🇺🇸 US|美国|堪萨斯|460888648|
+      - 🇺🇸 US|美国|堪萨斯|157342301|
+      - 🇺🇸 US|美国|佛罗里达|867205015|
+      - 🇺🇸 US|美国|亚利桑那|凤凰城|965763961|
+      - 🇺🇸 US|美国|亚利桑那|凤凰城|574898011|
+      - 🇺🇸 US|美国|华盛顿|西雅图|655756582|
+      - 🇺🇸 US|美国|佛罗里达|655819155|
+      - 🇺🇸 US|美国|佐治亚|亚特兰大|656715921|
+      - 🇯🇵 JP|日本|大阪府|大阪|362753720|
+      - 🇭🇰 HK|中国|香港|862599170|
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 🇭🇰 HK|中国|香港|628907198|
-      - 🇭🇰 HK|中国|香港|微软|031761737|
-      - 🇭🇰 HK|中国|香港|微软|341601531|
-      - 🇭🇰 HK|中国|香港|微软|618378574|
-      - 🇭🇰 HK|中国|香港|微软|728591888|
-      - 🇭🇰 HK|中国|香港|微软|020738636|
-      - 🇭🇰 HK|中国|香港|微软|539720031|
-      - 🇭🇰 HK|中国|香港|微软|820268835|
-      - 🇭🇰 HK|中国|香港|微软|936480175|
-      - 🇭🇰 HK|中国|香港|微软|038418239|
-      - 🇭🇰 HK|中国|香港|微软|439516576|
-      - 🇭🇰 HK|中国|香港|微软|630378959|
-      - 🇭🇰 HK|中国|香港|微软|925191561|
-      - 🇭🇰 HK|中国|香港|微软|926023863|
-      - 🇭🇰 HK|中国|香港|微软|230434687|
-      - 🇭🇰 HK|中国|香港|微软|337916316|
+      - 🇭🇰 HK|中国|香港|862599170|
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|429342116|
-      - 🇺🇸 US|美国|亚马逊|521712760|
-      - 🇺🇸 US|美国|弗吉尼亚|428320407|
-      - 🇺🇸 US|美国|弗吉尼亚|731145531|
-      - 🇺🇸 US|美国|弗吉尼亚|324847444|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|516348828|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|518464189|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|733677035|
-      - 🇨🇦 CA|加拿大|安大略|多伦多|316397832|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|516357853|
-      - 🇺🇸 US|美国|堪萨斯|426232958|
-      - 🇺🇸 US|美国|堪萨斯|437060478|
-      - 🇨🇦 CA|加拿大|安大略|多伦多|916012432|
-      - 🇺🇸 US|美国|密歇根|041337251|
-      - 🇺🇸 US|美国|密歇根|327612086|
-      - 🇸🇬 US|美国|新泽西|423376149|
-      - 🇺🇸 US|美国|密歇根|439617370|
-      - 🇺🇸 US|美国|密歇根|837886712|
-      - 🇸🇬 US|美国|新泽西|116221991|
-      - 🇸🇬 US|美国|新泽西|332604480|
-      - 🇸🇬 US|美国|新泽西|339892222|
-      - 🇸🇬 US|美国|新泽西|429881016|
-      - 🇸🇬 US|美国|新泽西|017837228|
-      - 🇸🇬 US|美国|新泽西|035210170|
-      - 🇸🇬 US|美国|新泽西|331429549|
-      - 🇸🇬 US|美国|新泽西|425677747|
-      - 🇸🇬 US|美国|新泽西|428456157|
-      - 🇸🇬 US|美国|新泽西|940425589|
-      - 🇸🇬 US|美国|新泽西|131980608|
-      - 🇸🇬 US|美国|新泽西|337751394|
-      - 🇸🇬 US|美国|新泽西|520738698|
-      - 🇸🇬 US|美国|新泽西|037787361|
-      - 🇸🇬 US|美国|新泽西|139829693|
-      - 🇸🇬 US|美国|新泽西|323966739|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|234915912|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|427973292|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|739811711|
-      - 🇨🇦 CA|加拿大|不列颠哥伦比亚|温哥华|028480819|
-      - 🇨🇦 CA|加拿大|不列颠哥伦比亚|温哥华|331381613|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|436559483|
-      - 🇯🇵 JP|日本|大阪府|大阪|638667021|
-      - 🇯🇵 JP|日本|大阪府|大阪|138246592|
-      - 🇭🇰 HK|中国|香港|628907198|
-      - 🇭🇰 HK|中国|香港|微软|031761737|
-      - 🇭🇰 HK|中国|香港|微软|341601531|
-      - 🇭🇰 HK|中国|香港|微软|618378574|
-      - 🇭🇰 HK|中国|香港|微软|728591888|
-      - 🇭🇰 HK|中国|香港|微软|020738636|
-      - 🇭🇰 HK|中国|香港|微软|539720031|
-      - 🇭🇰 HK|中国|香港|微软|820268835|
-      - 🇭🇰 HK|中国|香港|微软|936480175|
-      - 🇭🇰 HK|中国|香港|微软|038418239|
-      - 🇭🇰 HK|中国|香港|微软|439516576|
-      - 🇭🇰 HK|中国|香港|微软|630378959|
-      - 🇭🇰 HK|中国|香港|微软|925191561|
-      - 🇭🇰 HK|中国|香港|微软|926023863|
-      - 🇭🇰 HK|中国|香港|微软|230434687|
-      - 🇭🇰 HK|中国|香港|微软|337916316|
+      - 🇸🇬 US|美国|新泽西|164021937|
+      - 🇺🇸 US|美国|佛罗里达|170781133|
+      - 🇩🇪 US|美国|德克萨斯|休斯顿|263159871|
+      - 🇺🇸 US|美国|弗吉尼亚|062113018|
+      - 🇺🇸 US|美国|弗吉尼亚|163996729|
+      - 🇸🇬 US|美国|新泽西|156213906|
+      - 🇸🇬 US|美国|新泽西|372180428|
+      - 🇸🇬 US|美国|新泽西|574201861|
+      - 🇸🇬 US|美国|新泽西|655760002|
+      - 🇸🇬 US|美国|新泽西|563425951|
+      - 🇸🇬 US|美国|新泽西|663010724|
+      - 🇸🇬 US|美国|新泽西|668656166|
+      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|372091500|
+      - 🇸🇬 US|美国|新泽西|863594538|
+      - 🇺🇸 US|美国|弗吉尼亚|160750054|
+      - 🇺🇸 US|美国|马萨诸塞|波士顿|258365494|
+      - 🇺🇸 US|美国|佛罗里达|迈阿密|372523071|
+      - 🇺🇸 US|美国|弗吉尼亚|459373411|
+      - 🇺🇸 US|美国|佛罗里达|迈阿密|568036186|
+      - 🇺🇸 US|美国|加利福尼亚|圣何塞|872036537|
+      - 🇺🇸 US|美国|加利福尼亚|057420465|
+      - 🇺🇸 US|美国|马萨诸塞|波士顿|157753055|
+      - 🇺🇸 US|美国|北卡罗来纳|夏洛特|761711634|
+      - 🇺🇸 US|美国|纽约|纽约|465746069|
+      - 🇸🇬 US|美国|新泽西|256578855|
+      - 🇺🇸 US|美国|纽约|纽约|255255574|
+      - 🇸🇬 US|美国|新泽西|864474281|
+      - 🇺🇸 US|美国|密歇根|961600395|
+      - 🇸🇬 US|美国|新泽西|056489847|
+      - 🇺🇸 US|美国|密歇根|457177303|
+      - 🇸🇬 US|美国|新泽西|558230977|
+      - 🇸🇬 US|美国|新泽西|571683179|
+      - 🇸🇬 US|美国|新泽西|763465752|
+      - 🇸🇬 US|美国|新泽西|760725588|
+      - 🇸🇬 US|美国|新泽西|164028462|
+      - 🇸🇬 US|美国|新泽西|359754811|
+      - 🇺🇸 US|美国|密歇根|366542705|
+      - 🇺🇸 US|美国|密歇根|464440716|
+      - 🇺🇸 US|美国|密苏里|堪萨斯城|467850862|
+      - 🇺🇸 US|美国|弗吉尼亚|阿什本|768690354|
+      - 🇸🇬 US|美国|新泽西|862289958|
+      - 🇸🇬 US|美国|新泽西|970865468|
+      - 🇺🇸 US|美国|堪萨斯|665309534|
+      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|257001905|
+      - 🇺🇸 US|美国|堪萨斯|270416014|
+      - 🇺🇸 US|美国|堪萨斯|457734960|
+      - 🇺🇸 US|美国|堪萨斯|460888648|
+      - 🇺🇸 US|美国|堪萨斯|157342301|
+      - 🇺🇸 US|美国|佛罗里达|867205015|
+      - 🇺🇸 US|美国|亚利桑那|凤凰城|965763961|
+      - 🇺🇸 US|美国|亚利桑那|凤凰城|574898011|
+      - 🇺🇸 US|美国|华盛顿|西雅图|655756582|
+      - 🇺🇸 US|美国|佛罗里达|655819155|
+      - 🇺🇸 US|美国|佐治亚|亚特兰大|656715921|
+      - 🇯🇵 JP|日本|大阪府|大阪|362753720|
+      - 🇭🇰 HK|中国|香港|862599170|
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|429342116|
-      - 🇺🇸 US|美国|亚马逊|521712760|
-      - 🇺🇸 US|美国|弗吉尼亚|428320407|
-      - 🇺🇸 US|美国|弗吉尼亚|731145531|
-      - 🇺🇸 US|美国|弗吉尼亚|324847444|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|516348828|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|518464189|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|733677035|
-      - 🇨🇦 CA|加拿大|安大略|多伦多|316397832|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|516357853|
-      - 🇺🇸 US|美国|堪萨斯|426232958|
-      - 🇺🇸 US|美国|堪萨斯|437060478|
-      - 🇨🇦 CA|加拿大|安大略|多伦多|916012432|
-      - 🇺🇸 US|美国|密歇根|041337251|
-      - 🇺🇸 US|美国|密歇根|327612086|
-      - 🇸🇬 US|美国|新泽西|423376149|
-      - 🇺🇸 US|美国|密歇根|439617370|
-      - 🇺🇸 US|美国|密歇根|837886712|
-      - 🇸🇬 US|美国|新泽西|116221991|
-      - 🇸🇬 US|美国|新泽西|332604480|
-      - 🇸🇬 US|美国|新泽西|339892222|
-      - 🇸🇬 US|美国|新泽西|429881016|
-      - 🇸🇬 US|美国|新泽西|017837228|
-      - 🇸🇬 US|美国|新泽西|035210170|
-      - 🇸🇬 US|美国|新泽西|331429549|
-      - 🇸🇬 US|美国|新泽西|425677747|
-      - 🇸🇬 US|美国|新泽西|428456157|
-      - 🇸🇬 US|美国|新泽西|940425589|
-      - 🇸🇬 US|美国|新泽西|131980608|
-      - 🇸🇬 US|美国|新泽西|337751394|
-      - 🇸🇬 US|美国|新泽西|520738698|
-      - 🇸🇬 US|美国|新泽西|037787361|
-      - 🇸🇬 US|美国|新泽西|139829693|
-      - 🇸🇬 US|美国|新泽西|323966739|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|234915912|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|427973292|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|739811711|
-      - 🇨🇦 CA|加拿大|不列颠哥伦比亚|温哥华|028480819|
-      - 🇨🇦 CA|加拿大|不列颠哥伦比亚|温哥华|331381613|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|436559483|
-      - 🇯🇵 JP|日本|大阪府|大阪|638667021|
-      - 🇯🇵 JP|日本|大阪府|大阪|138246592|
-      - 🇭🇰 HK|中国|香港|628907198|
-      - 🇭🇰 HK|中国|香港|微软|031761737|
-      - 🇭🇰 HK|中国|香港|微软|341601531|
-      - 🇭🇰 HK|中国|香港|微软|618378574|
-      - 🇭🇰 HK|中国|香港|微软|728591888|
-      - 🇭🇰 HK|中国|香港|微软|020738636|
-      - 🇭🇰 HK|中国|香港|微软|539720031|
-      - 🇭🇰 HK|中国|香港|微软|820268835|
-      - 🇭🇰 HK|中国|香港|微软|936480175|
-      - 🇭🇰 HK|中国|香港|微软|038418239|
-      - 🇭🇰 HK|中国|香港|微软|439516576|
-      - 🇭🇰 HK|中国|香港|微软|630378959|
-      - 🇭🇰 HK|中国|香港|微软|925191561|
-      - 🇭🇰 HK|中国|香港|微软|926023863|
-      - 🇭🇰 HK|中国|香港|微软|230434687|
-      - 🇭🇰 HK|中国|香港|微软|337916316|
+      - 🇸🇬 US|美国|新泽西|164021937|
+      - 🇺🇸 US|美国|佛罗里达|170781133|
+      - 🇩🇪 US|美国|德克萨斯|休斯顿|263159871|
+      - 🇺🇸 US|美国|弗吉尼亚|062113018|
+      - 🇺🇸 US|美国|弗吉尼亚|163996729|
+      - 🇸🇬 US|美国|新泽西|156213906|
+      - 🇸🇬 US|美国|新泽西|372180428|
+      - 🇸🇬 US|美国|新泽西|574201861|
+      - 🇸🇬 US|美国|新泽西|655760002|
+      - 🇸🇬 US|美国|新泽西|563425951|
+      - 🇸🇬 US|美国|新泽西|663010724|
+      - 🇸🇬 US|美国|新泽西|668656166|
+      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|372091500|
+      - 🇸🇬 US|美国|新泽西|863594538|
+      - 🇺🇸 US|美国|弗吉尼亚|160750054|
+      - 🇺🇸 US|美国|马萨诸塞|波士顿|258365494|
+      - 🇺🇸 US|美国|佛罗里达|迈阿密|372523071|
+      - 🇺🇸 US|美国|弗吉尼亚|459373411|
+      - 🇺🇸 US|美国|佛罗里达|迈阿密|568036186|
+      - 🇺🇸 US|美国|加利福尼亚|圣何塞|872036537|
+      - 🇺🇸 US|美国|加利福尼亚|057420465|
+      - 🇺🇸 US|美国|马萨诸塞|波士顿|157753055|
+      - 🇺🇸 US|美国|北卡罗来纳|夏洛特|761711634|
+      - 🇺🇸 US|美国|纽约|纽约|465746069|
+      - 🇸🇬 US|美国|新泽西|256578855|
+      - 🇺🇸 US|美国|纽约|纽约|255255574|
+      - 🇸🇬 US|美国|新泽西|864474281|
+      - 🇺🇸 US|美国|密歇根|961600395|
+      - 🇸🇬 US|美国|新泽西|056489847|
+      - 🇺🇸 US|美国|密歇根|457177303|
+      - 🇸🇬 US|美国|新泽西|558230977|
+      - 🇸🇬 US|美国|新泽西|571683179|
+      - 🇸🇬 US|美国|新泽西|763465752|
+      - 🇸🇬 US|美国|新泽西|760725588|
+      - 🇸🇬 US|美国|新泽西|164028462|
+      - 🇸🇬 US|美国|新泽西|359754811|
+      - 🇺🇸 US|美国|密歇根|366542705|
+      - 🇺🇸 US|美国|密歇根|464440716|
+      - 🇺🇸 US|美国|密苏里|堪萨斯城|467850862|
+      - 🇺🇸 US|美国|弗吉尼亚|阿什本|768690354|
+      - 🇸🇬 US|美国|新泽西|862289958|
+      - 🇸🇬 US|美国|新泽西|970865468|
+      - 🇺🇸 US|美国|堪萨斯|665309534|
+      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|257001905|
+      - 🇺🇸 US|美国|堪萨斯|270416014|
+      - 🇺🇸 US|美国|堪萨斯|457734960|
+      - 🇺🇸 US|美国|堪萨斯|460888648|
+      - 🇺🇸 US|美国|堪萨斯|157342301|
+      - 🇺🇸 US|美国|佛罗里达|867205015|
+      - 🇺🇸 US|美国|亚利桑那|凤凰城|965763961|
+      - 🇺🇸 US|美国|亚利桑那|凤凰城|574898011|
+      - 🇺🇸 US|美国|华盛顿|西雅图|655756582|
+      - 🇺🇸 US|美国|佛罗里达|655819155|
+      - 🇺🇸 US|美国|佐治亚|亚特兰大|656715921|
+      - 🇯🇵 JP|日本|大阪府|大阪|362753720|
+      - 🇭🇰 HK|中国|香港|862599170|
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|429342116|
-      - 🇺🇸 US|美国|亚马逊|521712760|
-      - 🇺🇸 US|美国|弗吉尼亚|428320407|
-      - 🇺🇸 US|美国|弗吉尼亚|731145531|
-      - 🇺🇸 US|美国|弗吉尼亚|324847444|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|516348828|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|518464189|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|733677035|
-      - 🇨🇦 CA|加拿大|安大略|多伦多|316397832|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|516357853|
-      - 🇺🇸 US|美国|堪萨斯|426232958|
-      - 🇺🇸 US|美国|堪萨斯|437060478|
-      - 🇨🇦 CA|加拿大|安大略|多伦多|916012432|
-      - 🇺🇸 US|美国|密歇根|041337251|
-      - 🇺🇸 US|美国|密歇根|327612086|
-      - 🇸🇬 US|美国|新泽西|423376149|
-      - 🇺🇸 US|美国|密歇根|439617370|
-      - 🇺🇸 US|美国|密歇根|837886712|
-      - 🇸🇬 US|美国|新泽西|116221991|
-      - 🇸🇬 US|美国|新泽西|332604480|
-      - 🇸🇬 US|美国|新泽西|339892222|
-      - 🇸🇬 US|美国|新泽西|429881016|
-      - 🇸🇬 US|美国|新泽西|017837228|
-      - 🇸🇬 US|美国|新泽西|035210170|
-      - 🇸🇬 US|美国|新泽西|331429549|
-      - 🇸🇬 US|美国|新泽西|425677747|
-      - 🇸🇬 US|美国|新泽西|428456157|
-      - 🇸🇬 US|美国|新泽西|940425589|
-      - 🇸🇬 US|美国|新泽西|131980608|
-      - 🇸🇬 US|美国|新泽西|337751394|
-      - 🇸🇬 US|美国|新泽西|520738698|
-      - 🇸🇬 US|美国|新泽西|037787361|
-      - 🇸🇬 US|美国|新泽西|139829693|
-      - 🇸🇬 US|美国|新泽西|323966739|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|234915912|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|427973292|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|739811711|
-      - 🇨🇦 CA|加拿大|不列颠哥伦比亚|温哥华|028480819|
-      - 🇨🇦 CA|加拿大|不列颠哥伦比亚|温哥华|331381613|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|436559483|
-      - 🇯🇵 JP|日本|大阪府|大阪|638667021|
-      - 🇯🇵 JP|日本|大阪府|大阪|138246592|
-      - 🇭🇰 HK|中国|香港|628907198|
-      - 🇭🇰 HK|中国|香港|微软|031761737|
-      - 🇭🇰 HK|中国|香港|微软|341601531|
-      - 🇭🇰 HK|中国|香港|微软|618378574|
-      - 🇭🇰 HK|中国|香港|微软|728591888|
-      - 🇭🇰 HK|中国|香港|微软|020738636|
-      - 🇭🇰 HK|中国|香港|微软|539720031|
-      - 🇭🇰 HK|中国|香港|微软|820268835|
-      - 🇭🇰 HK|中国|香港|微软|936480175|
-      - 🇭🇰 HK|中国|香港|微软|038418239|
-      - 🇭🇰 HK|中国|香港|微软|439516576|
-      - 🇭🇰 HK|中国|香港|微软|630378959|
-      - 🇭🇰 HK|中国|香港|微软|925191561|
-      - 🇭🇰 HK|中国|香港|微软|926023863|
-      - 🇭🇰 HK|中国|香港|微软|230434687|
-      - 🇭🇰 HK|中国|香港|微软|337916316|
+      - 🇸🇬 US|美国|新泽西|164021937|
+      - 🇺🇸 US|美国|佛罗里达|170781133|
+      - 🇩🇪 US|美国|德克萨斯|休斯顿|263159871|
+      - 🇺🇸 US|美国|弗吉尼亚|062113018|
+      - 🇺🇸 US|美国|弗吉尼亚|163996729|
+      - 🇸🇬 US|美国|新泽西|156213906|
+      - 🇸🇬 US|美国|新泽西|372180428|
+      - 🇸🇬 US|美国|新泽西|574201861|
+      - 🇸🇬 US|美国|新泽西|655760002|
+      - 🇸🇬 US|美国|新泽西|563425951|
+      - 🇸🇬 US|美国|新泽西|663010724|
+      - 🇸🇬 US|美国|新泽西|668656166|
+      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|372091500|
+      - 🇸🇬 US|美国|新泽西|863594538|
+      - 🇺🇸 US|美国|弗吉尼亚|160750054|
+      - 🇺🇸 US|美国|马萨诸塞|波士顿|258365494|
+      - 🇺🇸 US|美国|佛罗里达|迈阿密|372523071|
+      - 🇺🇸 US|美国|弗吉尼亚|459373411|
+      - 🇺🇸 US|美国|佛罗里达|迈阿密|568036186|
+      - 🇺🇸 US|美国|加利福尼亚|圣何塞|872036537|
+      - 🇺🇸 US|美国|加利福尼亚|057420465|
+      - 🇺🇸 US|美国|马萨诸塞|波士顿|157753055|
+      - 🇺🇸 US|美国|北卡罗来纳|夏洛特|761711634|
+      - 🇺🇸 US|美国|纽约|纽约|465746069|
+      - 🇸🇬 US|美国|新泽西|256578855|
+      - 🇺🇸 US|美国|纽约|纽约|255255574|
+      - 🇸🇬 US|美国|新泽西|864474281|
+      - 🇺🇸 US|美国|密歇根|961600395|
+      - 🇸🇬 US|美国|新泽西|056489847|
+      - 🇺🇸 US|美国|密歇根|457177303|
+      - 🇸🇬 US|美国|新泽西|558230977|
+      - 🇸🇬 US|美国|新泽西|571683179|
+      - 🇸🇬 US|美国|新泽西|763465752|
+      - 🇸🇬 US|美国|新泽西|760725588|
+      - 🇸🇬 US|美国|新泽西|164028462|
+      - 🇸🇬 US|美国|新泽西|359754811|
+      - 🇺🇸 US|美国|密歇根|366542705|
+      - 🇺🇸 US|美国|密歇根|464440716|
+      - 🇺🇸 US|美国|密苏里|堪萨斯城|467850862|
+      - 🇺🇸 US|美国|弗吉尼亚|阿什本|768690354|
+      - 🇸🇬 US|美国|新泽西|862289958|
+      - 🇸🇬 US|美国|新泽西|970865468|
+      - 🇺🇸 US|美国|堪萨斯|665309534|
+      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|257001905|
+      - 🇺🇸 US|美国|堪萨斯|270416014|
+      - 🇺🇸 US|美国|堪萨斯|457734960|
+      - 🇺🇸 US|美国|堪萨斯|460888648|
+      - 🇺🇸 US|美国|堪萨斯|157342301|
+      - 🇺🇸 US|美国|佛罗里达|867205015|
+      - 🇺🇸 US|美国|亚利桑那|凤凰城|965763961|
+      - 🇺🇸 US|美国|亚利桑那|凤凰城|574898011|
+      - 🇺🇸 US|美国|华盛顿|西雅图|655756582|
+      - 🇺🇸 US|美国|佛罗里达|655819155|
+      - 🇺🇸 US|美国|佐治亚|亚特兰大|656715921|
+      - 🇯🇵 JP|日本|大阪府|大阪|362753720|
+      - 🇭🇰 HK|中国|香港|862599170|
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -480,64 +451,62 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇩🇪 US|美国|德克萨斯|休斯顿|429342116|
-      - 🇺🇸 US|美国|亚马逊|521712760|
-      - 🇺🇸 US|美国|弗吉尼亚|428320407|
-      - 🇺🇸 US|美国|弗吉尼亚|731145531|
-      - 🇺🇸 US|美国|弗吉尼亚|324847444|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|516348828|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|518464189|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|733677035|
-      - 🇨🇦 CA|加拿大|安大略|多伦多|316397832|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|516357853|
-      - 🇺🇸 US|美国|堪萨斯|426232958|
-      - 🇺🇸 US|美国|堪萨斯|437060478|
-      - 🇨🇦 CA|加拿大|安大略|多伦多|916012432|
-      - 🇺🇸 US|美国|密歇根|041337251|
-      - 🇺🇸 US|美国|密歇根|327612086|
-      - 🇸🇬 US|美国|新泽西|423376149|
-      - 🇺🇸 US|美国|密歇根|439617370|
-      - 🇺🇸 US|美国|密歇根|837886712|
-      - 🇸🇬 US|美国|新泽西|116221991|
-      - 🇸🇬 US|美国|新泽西|332604480|
-      - 🇸🇬 US|美国|新泽西|339892222|
-      - 🇸🇬 US|美国|新泽西|429881016|
-      - 🇸🇬 US|美国|新泽西|017837228|
-      - 🇸🇬 US|美国|新泽西|035210170|
-      - 🇸🇬 US|美国|新泽西|331429549|
-      - 🇸🇬 US|美国|新泽西|425677747|
-      - 🇸🇬 US|美国|新泽西|428456157|
-      - 🇸🇬 US|美国|新泽西|940425589|
-      - 🇸🇬 US|美国|新泽西|131980608|
-      - 🇸🇬 US|美国|新泽西|337751394|
-      - 🇸🇬 US|美国|新泽西|520738698|
-      - 🇸🇬 US|美国|新泽西|037787361|
-      - 🇸🇬 US|美国|新泽西|139829693|
-      - 🇸🇬 US|美国|新泽西|323966739|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|234915912|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|427973292|
-      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|739811711|
-      - 🇨🇦 CA|加拿大|不列颠哥伦比亚|温哥华|028480819|
-      - 🇨🇦 CA|加拿大|不列颠哥伦比亚|温哥华|331381613|
-      - 🇺🇸 US|美国|佐治亚|亚特兰大|436559483|
-      - 🇯🇵 JP|日本|大阪府|大阪|638667021|
-      - 🇯🇵 JP|日本|大阪府|大阪|138246592|
-      - 🇭🇰 HK|中国|香港|628907198|
-      - 🇭🇰 HK|中国|香港|微软|031761737|
-      - 🇭🇰 HK|中国|香港|微软|341601531|
-      - 🇭🇰 HK|中国|香港|微软|618378574|
-      - 🇭🇰 HK|中国|香港|微软|728591888|
-      - 🇭🇰 HK|中国|香港|微软|020738636|
-      - 🇭🇰 HK|中国|香港|微软|539720031|
-      - 🇭🇰 HK|中国|香港|微软|820268835|
-      - 🇭🇰 HK|中国|香港|微软|936480175|
-      - 🇭🇰 HK|中国|香港|微软|038418239|
-      - 🇭🇰 HK|中国|香港|微软|439516576|
-      - 🇭🇰 HK|中国|香港|微软|630378959|
-      - 🇭🇰 HK|中国|香港|微软|925191561|
-      - 🇭🇰 HK|中国|香港|微软|926023863|
-      - 🇭🇰 HK|中国|香港|微软|230434687|
-      - 🇭🇰 HK|中国|香港|微软|337916316|
+      - 🇸🇬 US|美国|新泽西|164021937|
+      - 🇺🇸 US|美国|佛罗里达|170781133|
+      - 🇩🇪 US|美国|德克萨斯|休斯顿|263159871|
+      - 🇺🇸 US|美国|弗吉尼亚|062113018|
+      - 🇺🇸 US|美国|弗吉尼亚|163996729|
+      - 🇸🇬 US|美国|新泽西|156213906|
+      - 🇸🇬 US|美国|新泽西|372180428|
+      - 🇸🇬 US|美国|新泽西|574201861|
+      - 🇸🇬 US|美国|新泽西|655760002|
+      - 🇸🇬 US|美国|新泽西|563425951|
+      - 🇸🇬 US|美国|新泽西|663010724|
+      - 🇸🇬 US|美国|新泽西|668656166|
+      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|372091500|
+      - 🇸🇬 US|美国|新泽西|863594538|
+      - 🇺🇸 US|美国|弗吉尼亚|160750054|
+      - 🇺🇸 US|美国|马萨诸塞|波士顿|258365494|
+      - 🇺🇸 US|美国|佛罗里达|迈阿密|372523071|
+      - 🇺🇸 US|美国|弗吉尼亚|459373411|
+      - 🇺🇸 US|美国|佛罗里达|迈阿密|568036186|
+      - 🇺🇸 US|美国|加利福尼亚|圣何塞|872036537|
+      - 🇺🇸 US|美国|加利福尼亚|057420465|
+      - 🇺🇸 US|美国|马萨诸塞|波士顿|157753055|
+      - 🇺🇸 US|美国|北卡罗来纳|夏洛特|761711634|
+      - 🇺🇸 US|美国|纽约|纽约|465746069|
+      - 🇸🇬 US|美国|新泽西|256578855|
+      - 🇺🇸 US|美国|纽约|纽约|255255574|
+      - 🇸🇬 US|美国|新泽西|864474281|
+      - 🇺🇸 US|美国|密歇根|961600395|
+      - 🇸🇬 US|美国|新泽西|056489847|
+      - 🇺🇸 US|美国|密歇根|457177303|
+      - 🇸🇬 US|美国|新泽西|558230977|
+      - 🇸🇬 US|美国|新泽西|571683179|
+      - 🇸🇬 US|美国|新泽西|763465752|
+      - 🇸🇬 US|美国|新泽西|760725588|
+      - 🇸🇬 US|美国|新泽西|164028462|
+      - 🇸🇬 US|美国|新泽西|359754811|
+      - 🇺🇸 US|美国|密歇根|366542705|
+      - 🇺🇸 US|美国|密歇根|464440716|
+      - 🇺🇸 US|美国|密苏里|堪萨斯城|467850862|
+      - 🇺🇸 US|美国|弗吉尼亚|阿什本|768690354|
+      - 🇸🇬 US|美国|新泽西|862289958|
+      - 🇸🇬 US|美国|新泽西|970865468|
+      - 🇺🇸 US|美国|堪萨斯|665309534|
+      - 🇨🇦 CA|加拿大|魁北克|蒙特利尔|257001905|
+      - 🇺🇸 US|美国|堪萨斯|270416014|
+      - 🇺🇸 US|美国|堪萨斯|457734960|
+      - 🇺🇸 US|美国|堪萨斯|460888648|
+      - 🇺🇸 US|美国|堪萨斯|157342301|
+      - 🇺🇸 US|美国|佛罗里达|867205015|
+      - 🇺🇸 US|美国|亚利桑那|凤凰城|965763961|
+      - 🇺🇸 US|美国|亚利桑那|凤凰城|574898011|
+      - 🇺🇸 US|美国|华盛顿|西雅图|655756582|
+      - 🇺🇸 US|美国|佛罗里达|655819155|
+      - 🇺🇸 US|美国|佐治亚|亚特兰大|656715921|
+      - 🇯🇵 JP|日本|大阪府|大阪|362753720|
+      - 🇭🇰 HK|中国|香港|862599170|
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
