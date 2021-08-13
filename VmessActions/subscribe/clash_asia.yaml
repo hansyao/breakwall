@@ -5,458 +5,489 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇦🇺 AU|澳大利亚|791806380|, server: www.freetouchor.xyz, port: 443, type: trojan, password: mima0.0.000, skip-cert-verify: true, udp: true}
-  - {name: 🇯🇵 JP|日本|大阪府|大阪|606093700|, server: c39s4.jamjams.net, port: 10606, type: vmess, uuid: c474da00-e28b-40b0-8356-8f62e5eb71e2, alterId: 8, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇯🇵 JP|日本|大阪府|大阪|694015490|, server: 204.124.181.108, port: 10606, type: vmess, uuid: c474da00-e28b-40b0-8356-8f62e5eb71e2, alterId: 8, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇯🇵 JP|日本|东京都|东京|992826567|, server: 137.220.161.216, port: 35654, type: ss, cipher: chacha20-ietf-poly1305, password: 96a15b984cd95acc}
-  - {name: 🇯🇵 JP|日本|东京都|东京|102201715|, server: v2-rba-v3.cl123.xyz, port: 80, type: vmess, uuid: 6d3faf56-93b6-33ca-a57d-673bb6ab696f, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /hls/cctv5phd.m3u8, ws-headers: {Host: v2-rba-v3.cl123.xyz}}
-  - {name: 🇰🇷 KR|韩国|首尔|首尔|391638027|, server: 103.249.31.24, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
-  - {name: 🇰🇷 KR|韩国|首尔|首尔|405540643|, server: 61.14.210.242, port: 34815, type: ss, cipher: aes-256-gcm, password: LkFAzkzXkSCRYa2CsRdL8cGb}
-  - {name: 🇰🇷 KR|韩国|首尔|首尔|802530236|, server: 61.14.210.232, port: 37473, type: ss, cipher: aes-256-gcm, password: enctdKyJfSu76VqznKwTt6Ap}
-  - {name: 🇰🇷 KR|韩国|首尔|首尔|011217062|, server: 140.238.2.102, port: 443, type: vmess, uuid: 61e03601-b658-4b26-dd5f-1fd04273f6a6, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 140.238.2.102}}
-  - {name: 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|811995041|, server: 66.203.112.53, port: 809, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
-  - {name: 🇭🇰 HK|中国|香港|微软|903789095|, server: 049.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 049.HK.AP.POP.BIGAIRPORT.NET}}
-  - {name: 🇭🇰 HK|中国|香港|微软|009423806|, server: 046.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 046.HK.AP.POP.BIGAIRPORT.NET}}
-  - {name: 🇭🇰 HK|中国|香港|微软|406719232|, server: 060.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 060.HK.AP.POP.BIGAIRPORT.NET}}
-  - {name: 🇭🇰 HK|中国|香港|微软|808758636|, server: 056.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 056.HK.AP.POP.BIGAIRPORT.NET}}
-  - {name: 🇭🇰 HK|中国|香港|微软|910368698|, server: 055.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 055.HK.AP.POP.BIGAIRPORT.NET}}
-  - {name: 🇭🇰 HK|中国|香港|微软|405477032|, server: 054.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 054.HK.AP.POP.BIGAIRPORT.NET}}
-  - {name: 🇭🇰 HK|中国|香港|微软|999091371|, server: 041.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 041.HK.AP.POP.BIGAIRPORT.NET}}
-  - {name: 🇭🇰 HK|中国|香港|微软|195093615|, server: 047.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 047.HK.AP.POP.BIGAIRPORT.NET}}
-  - {name: 🇭🇰 HK|中国|香港|微软|110153605|, server: 045.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 045.HK.AP.POP.BIGAIRPORT.NET}}
-  - {name: 🇭🇰 HK|中国|香港|微软|391848734|, server: 053.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 053.HK.AP.POP.BIGAIRPORT.NET}}
-  - {name: 🇭🇰 HK|中国|香港|微软|411021741|, server: 050.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 050.HK.AP.POP.BIGAIRPORT.NET}}
-  - {name: 🇭🇰 HK|中国|香港|微软|108539356|, server: 042.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 042.HK.AP.POP.BIGAIRPORT.NET}}
-  - {name: 🇭🇰 HK|中国|香港|微软|205241445|, server: 057.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 057.HK.AP.POP.BIGAIRPORT.NET}}
-  - {name: 🇭🇰 HK|中国|香港|微软|301862267|, server: 044.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 044.HK.AP.POP.BIGAIRPORT.NET}}
-  - {name: 🇭🇰 HK|中国|香港|微软|412246448|, server: 048.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 048.HK.AP.POP.BIGAIRPORT.NET}}
-  - {name: 🇭🇰 HK|中国|香港|微软|199904098|, server: 23.101.0.234, port: 80, type: vmess, uuid: 6b5e97d9-e3b0-4b12-8145-a052942803d5, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /phkt, ws-headers: {Host: 23.101.0.234}}
-  - {name: 🇭🇰 HK|中国|香港|113224995|, server: 212.102.42.89, port: 33148, type: ss, cipher: aes-256-gcm, password: CMduaFXddcQbwNAAs7xFDnc8}
-  - {name: 🇭🇰 HK|中国|香港|203395066|, server: 148.66.56.98, port: 809, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
-  - {name: 🇭🇰 HK|中国|香港|208845095|, server: 118.107.244.111, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
-  - {name: 🇭🇰 HK|中国|香港|微软|915876687|, server: 23.98.32.183, port: 80, type: vmess, uuid: 140fcbf2-6376-406b-ad68-3eaabf9dd4a4, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 23.98.32.183}}
-  - {name: 🇭🇰 HK|中国|香港|微软|107146708|, server: 207.46.148.207, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 207.46.148.207}}
-  - {name: 🇭🇰 HK|中国|香港|微软|215000529|, server: 23.97.75.56, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 23.97.75.56}}
-  - {name: 🇭🇰 HK|中国|香港|微软|397706973|, server: 52.184.36.211, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 52.184.36.211}}
-  - {name: 🇭🇰 HK|中国|香港|微软|398986463|, server: 65.52.169.231, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 65.52.169.231}}
-  - {name: 🇭🇰 HK|中国|香港|微软|098445310|, server: 13.75.49.2, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 13.75.49.2}}
-  - {name: 🇭🇰 HK|中国|香港|微软|309133864|, server: relay.xxl123.fun, port: 10010, type: vmess, uuid: 994cdc6f-b018-4a72-a069-384c12e349ac, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /path, ws-headers: {Host: relay.xxl123.fun}}
-  - {name: 🇭🇰 HK|中国|香港|微软|293656720|, server: 40.83.91.226, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 40.83.91.226}}
-  - {name: 🇭🇰 HK|中国|香港|微软|592295044|, server: hk-02.yinriver.top, port: 80, type: vmess, uuid: e1aa83ff-b8b5-41b8-a854-fdcd3faa8875, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: hk-02.yinriver.top}}
-  - {name: 🇭🇰 HK|中国|香港|微软|713002028|, server: transit-azure-f4s-hk.speedtestcustom.tk, port: 32244, type: vmess, uuid: a1eaa929-a5e2-4f12-f6ac-ec9f451f0fbe, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: transit-azure-f4s-hk.speedtestcustom.tk}}
-  - {name: 🇭🇰 HK|中国|香港|微软|103138731|, server: 52.175.50.169, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 52.175.50.169}}
-  - {name: 🇭🇰 HK|中国|香港|微软|211173505|, server: 23.98.43.160, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 23.98.43.160}}
-  - {name: 🇭🇰 HK|中国|香港|微软|408370265|, server: 23.98.32.183, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 23.98.32.183}}
-  - {name: 🇭🇰 HK|中国|香港|微软|704034148|, server: 40.83.77.18, port: 80, type: vmess, uuid: 140fcbf2-6376-406b-ad68-3eaabf9dd4a4, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 40.83.77.18}}
-  - {name: 🇭🇰 HK|中国|香港|微软|891543666|, server: 40.83.94.143, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 40.83.94.143}}
-  - {name: 🇭🇰 HK|中国|香港|微软|296764217|, server: 207.46.153.239, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 207.46.153.239}}
-  - {name: 🇭🇰 HK|中国|香港|微软|297734664|, server: 40.83.88.104, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 40.83.88.104}}
-  - {name: 🇭🇰 HK|中国|香港|微软|812588293|, server: 40.83.98.75, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 40.83.98.75}}
-  - {name: 🇭🇰 HK|中国|香港|微软|010933362|, server: ddns.1.mjtcloud.com, port: 65065, type: vmess, uuid: a03a7b1e-e414-4282-acad-dd94555a6dc7, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: ddns.1.mjtcloud.com}}
-  - {name: 🇭🇰 HK|中国|香港|微软|403992409|, server: 65.52.177.145, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 65.52.177.145}}
-  - {name: 🇭🇰 HK|中国|香港|微软|314141418|, server: 13.75.54.159, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 13.75.54.159}}
-  - {name: 🇭🇰 HK|中国|香港|微软|414338353|, server: kaizen-hk-4.cn0.me, port: 443, type: trojan, password: 18e513fe-f7f4-353d-84ca-bc9646fb2528mielink, skip-cert-verify: true, udp: true}
-  - {name: 🇭🇰 HK|中国|香港|微软|900046943|, server: kaizen-hk-2.cn0.me, port: 443, type: trojan, password: 18e513fe-f7f4-353d-84ca-bc9646fb2528mielink, skip-cert-verify: true, udp: true}
-  - {name: 🇨🇳 TW|中国|台湾|中华电信|507504426|, server: 211.23.132.124, port: 9233, type: vmess, uuid: be58f4e4-894a-47ee-8836-cf75e74fa9c9, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 211.23.132.124}}
+  - {name: 🇦🇺 AU|澳大利亚|691959624|, server: www.freetouchor.xyz, port: 443, type: trojan, password: mima0.0.000, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 JP|日本|大阪府|大阪|593958022|, server: 204.124.181.108, port: 10606, type: vmess, uuid: c474da00-e28b-40b0-8356-8f62e5eb71e2, alterId: 8, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: 🇯🇵 JP|日本|大阪府|大阪|689252334|, server: c39s4.jamjams.net, port: 10606, type: vmess, uuid: c474da00-e28b-40b0-8356-8f62e5eb71e2, alterId: 8, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: 🇰🇷 KR|韩国|首尔|首尔|亚马逊|883855596|, server: 15.165.74.109, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: b32a4369-86bb-472b-8a25-b29c88e8992b}
+  - {name: 🇰🇷 KR|韩国|首尔|首尔|985250738|, server: 27.255.77.197, port: 38620, type: ss, cipher: aes-256-gcm, password: Kquv5UhvZXNMemAQy8DxZ7qn}
+  - {name: 🇰🇷 KR|韩国|首尔|首尔|079917399|, server: 61.14.210.242, port: 31572, type: ss, cipher: aes-256-gcm, password: n8w4StnbVD9dmXYn4Ajt87EA}
+  - {name: 🇰🇷 KR|韩国|首尔|首尔|488857808|, server: 61.14.210.232, port: 37473, type: ss, cipher: aes-256-gcm, password: enctdKyJfSu76VqznKwTt6Ap}
+  - {name: 🇰🇷 KR|韩国|首尔|首尔|678947647|, server: 61.14.210.242, port: 35200, type: ss, cipher: aes-256-gcm, password: WBLAbN6AwtV5avBx73hFRLB3}
+  - {name: 🇰🇷 KR|韩国|首尔|首尔|795165717|, server: 61.14.210.232, port: 37588, type: ss, cipher: aes-256-gcm, password: kD9vkjnE6dsUzwQfvKkPkQAd}
+  - {name: 🇰🇷 KR|韩国|首尔|首尔|995214007|, server: 27.255.77.197, port: 49719, type: ss, cipher: aes-256-gcm, password: 42SjT9vBF6ma9eFF3URaJpQ4}
+  - {name: 🇰🇷 KR|韩国|首尔|首尔|078459167|, server: 140.238.2.102, port: 443, type: vmess, uuid: 61e03601-b658-4b26-dd5f-1fd04273f6a6, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 140.238.2.102}}
+  - {name: 🇭🇰 HK|中国|香港|492072027|, server: 118.107.244.113, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: 🇭🇰 HK|中国|香港|594811769|, server: 118.107.244.114, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: 🇭🇰 HK|中国|香港|微软|081259666|, server: 056.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 056.HK.AP.POP.BIGAIRPORT.NET}}
+  - {name: 🇭🇰 HK|中国|香港|微软|190738830|, server: 049.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 049.HK.AP.POP.BIGAIRPORT.NET}}
+  - {name: 🇭🇰 HK|中国|香港|微软|377249539|, server: 045.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 045.HK.AP.POP.BIGAIRPORT.NET}}
+  - {name: 🇭🇰 HK|中国|香港|微软|888322699|, server: 055.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 055.HK.AP.POP.BIGAIRPORT.NET}}
+  - {name: 🇭🇰 HK|中国|香港|微软|188490618|, server: 057.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 057.HK.AP.POP.BIGAIRPORT.NET}}
+  - {name: 🇭🇰 HK|中国|香港|微软|381102441|, server: 048.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 048.HK.AP.POP.BIGAIRPORT.NET}}
+  - {name: 🇭🇰 HK|中国|香港|微软|299715610|, server: 060.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 060.HK.AP.POP.BIGAIRPORT.NET}}
+  - {name: 🇭🇰 HK|中国|香港|微软|981886302|, server: 044.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 044.HK.AP.POP.BIGAIRPORT.NET}}
+  - {name: 🇭🇰 HK|中国|香港|微软|994519621|, server: 047.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 047.HK.AP.POP.BIGAIRPORT.NET}}
+  - {name: 🇭🇰 HK|中国|香港|微软|193890862|, server: 050.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 050.HK.AP.POP.BIGAIRPORT.NET}}
+  - {name: 🇭🇰 HK|中国|香港|微软|282086649|, server: 053.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 053.HK.AP.POP.BIGAIRPORT.NET}}
+  - {name: 🇭🇰 HK|中国|香港|微软|289262215|, server: 041.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 041.HK.AP.POP.BIGAIRPORT.NET}}
+  - {name: 🇭🇰 HK|中国|香港|微软|791477663|, server: 046.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 046.HK.AP.POP.BIGAIRPORT.NET}}
+  - {name: 🇭🇰 HK|中国|香港|微软|987011428|, server: 054.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 054.HK.AP.POP.BIGAIRPORT.NET}}
+  - {name: 🇭🇰 HK|中国|香港|微软|186227929|, server: 042.HK.AP.POP.BIGAIRPORT.NET, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 042.HK.AP.POP.BIGAIRPORT.NET}}
+  - {name: 🇭🇰 HK|中国|香港|185858964|, server: 118.107.244.111, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: 🇭🇰 HK|中国|香港|680033655|, server: 118.107.244.114, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
+  - {name: 🇭🇰 HK|中国|香港|676719412|, server: 148.66.56.98, port: 809, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: 🇭🇰 HK|中国|香港|微软|878671482|, server: transit-azure-f4s-hk.speedtestcustom.tk, port: 32244, type: vmess, uuid: a1eaa929-a5e2-4f12-f6ac-ec9f451f0fbe, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: transit-azure-f4s-hk.speedtestcustom.tk}}
+  - {name: 🇭🇰 HK|中国|香港|微软|883930300|, server: ddns.1.mjtcloud.com, port: 65065, type: vmess, uuid: a03a7b1e-e414-4282-acad-dd94555a6dc7, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: ddns.1.mjtcloud.com}}
+  - {name: 🇭🇰 HK|中国|香港|微软|183004615|, server: 207.46.153.239, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 207.46.153.239}}
+  - {name: 🇭🇰 HK|中国|香港|微软|587605518|, server: 40.83.94.143, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 40.83.94.143}}
+  - {name: 🇭🇰 HK|中国|香港|微软|879597335|, server: 23.98.32.183, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 23.98.32.183}}
+  - {name: 🇭🇰 HK|中国|香港|微软|880354073|, server: 40.83.98.75, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 40.83.98.75}}
+  - {name: 🇭🇰 HK|中国|香港|微软|495844822|, server: 40.83.77.18, port: 80, type: vmess, uuid: 140fcbf2-6376-406b-ad68-3eaabf9dd4a4, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 40.83.77.18}}
+  - {name: 🇭🇰 HK|中国|香港|微软|493146064|, server: 23.101.0.234, port: 80, type: vmess, uuid: 6b5e97d9-e3b0-4b12-8145-a052942803d5, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /phkt, ws-headers: {Host: 23.101.0.234}}
+  - {name: 🇭🇰 HK|中国|香港|微软|787978813|, server: 13.75.54.159, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 13.75.54.159}}
+  - {name: 🇭🇰 HK|中国|香港|微软|800329550|, server: 65.52.169.231, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 65.52.169.231}}
+  - {name: 🇭🇰 HK|中国|香港|微软|094954512|, server: 40.83.88.104, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 40.83.88.104}}
+  - {name: 🇭🇰 HK|中国|香港|微软|575760055|, server: 65.52.177.145, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 65.52.177.145}}
+  - {name: 🇭🇰 HK|中国|香港|微软|574461742|, server: 52.175.61.176, port: 80, type: vmess, uuid: e1aa83ff-b8b5-41b8-a854-fdcd3faa8875, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 52.175.61.176}}
+  - {name: 🇭🇰 HK|中国|香港|微软|775465538|, server: hk-02.yinriver.top, port: 80, type: vmess, uuid: e1aa83ff-b8b5-41b8-a854-fdcd3faa8875, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: hk-02.yinriver.top}}
+  - {name: 🇭🇰 HK|中国|香港|微软|687567931|, server: 207.46.148.207, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 207.46.148.207}}
+  - {name: 🇭🇰 HK|中国|香港|微软|177317943|, server: relay.xxl123.fun, port: 10010, type: vmess, uuid: 994cdc6f-b018-4a72-a069-384c12e349ac, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /path, ws-headers: {Host: relay.xxl123.fun}}
+  - {name: 🇭🇰 HK|中国|香港|微软|678751561|, server: 13.75.49.2, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 13.75.49.2}}
+  - {name: 🇭🇰 HK|中国|香港|微软|677629514|, server: 40.83.91.226, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 40.83.91.226}}
+  - {name: 🇭🇰 HK|中国|香港|微软|676250171|, server: 52.184.36.211, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 52.184.36.211}}
+  - {name: 🇭🇰 HK|中国|香港|微软|680285220|, server: 23.97.75.56, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 23.97.75.56}}
+  - {name: 🇭🇰 HK|中国|香港|微软|082426391|, server: kaizen-hk-2.cn0.me, port: 443, type: trojan, password: 18e513fe-f7f4-353d-84ca-bc9646fb2528mielink, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 HK|中国|香港|微软|483707233|, server: 23.98.32.183, port: 80, type: vmess, uuid: 140fcbf2-6376-406b-ad68-3eaabf9dd4a4, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 23.98.32.183}}
+  - {name: 🇭🇰 HK|中国|香港|微软|577855151|, server: kaizen-hk-4.cn0.me, port: 443, type: trojan, password: 18e513fe-f7f4-353d-84ca-bc9646fb2528mielink, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 HK|中国|香港|微软|595181385|, server: 23.98.43.160, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 23.98.43.160}}
+  - {name: 🇭🇰 HK|中国|香港|微软|699052987|, server: 52.175.50.169, port: 80, type: vmess, uuid: 5efe4474-ed12-442a-82d5-5e31f2e4bbf2, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 52.175.50.169}}
+  - {name: 🇭🇰 HK|中国|香港|787468428|, server: 180.215.218.223, port: 443, type: vmess, uuid: 702e0b48-e2cd-4286-ae37-d5275a65ed54, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /footers, ws-headers: {Host: 180.215.218.223}}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇦🇺 AU|澳大利亚|791806380|
-      - 🇯🇵 JP|日本|大阪府|大阪|606093700|
-      - 🇯🇵 JP|日本|大阪府|大阪|694015490|
-      - 🇯🇵 JP|日本|东京都|东京|992826567|
-      - 🇯🇵 JP|日本|东京都|东京|102201715|
-      - 🇰🇷 KR|韩国|首尔|首尔|391638027|
-      - 🇰🇷 KR|韩国|首尔|首尔|405540643|
-      - 🇰🇷 KR|韩国|首尔|首尔|802530236|
-      - 🇰🇷 KR|韩国|首尔|首尔|011217062|
-      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|811995041|
-      - 🇭🇰 HK|中国|香港|微软|903789095|
-      - 🇭🇰 HK|中国|香港|微软|009423806|
-      - 🇭🇰 HK|中国|香港|微软|406719232|
-      - 🇭🇰 HK|中国|香港|微软|808758636|
-      - 🇭🇰 HK|中国|香港|微软|910368698|
-      - 🇭🇰 HK|中国|香港|微软|405477032|
-      - 🇭🇰 HK|中国|香港|微软|999091371|
-      - 🇭🇰 HK|中国|香港|微软|195093615|
-      - 🇭🇰 HK|中国|香港|微软|110153605|
-      - 🇭🇰 HK|中国|香港|微软|391848734|
-      - 🇭🇰 HK|中国|香港|微软|411021741|
-      - 🇭🇰 HK|中国|香港|微软|108539356|
-      - 🇭🇰 HK|中国|香港|微软|205241445|
-      - 🇭🇰 HK|中国|香港|微软|301862267|
-      - 🇭🇰 HK|中国|香港|微软|412246448|
-      - 🇭🇰 HK|中国|香港|微软|199904098|
-      - 🇭🇰 HK|中国|香港|113224995|
-      - 🇭🇰 HK|中国|香港|203395066|
-      - 🇭🇰 HK|中国|香港|208845095|
-      - 🇭🇰 HK|中国|香港|微软|915876687|
-      - 🇭🇰 HK|中国|香港|微软|107146708|
-      - 🇭🇰 HK|中国|香港|微软|215000529|
-      - 🇭🇰 HK|中国|香港|微软|397706973|
-      - 🇭🇰 HK|中国|香港|微软|398986463|
-      - 🇭🇰 HK|中国|香港|微软|098445310|
-      - 🇭🇰 HK|中国|香港|微软|309133864|
-      - 🇭🇰 HK|中国|香港|微软|293656720|
-      - 🇭🇰 HK|中国|香港|微软|592295044|
-      - 🇭🇰 HK|中国|香港|微软|713002028|
-      - 🇭🇰 HK|中国|香港|微软|103138731|
-      - 🇭🇰 HK|中国|香港|微软|211173505|
-      - 🇭🇰 HK|中国|香港|微软|408370265|
-      - 🇭🇰 HK|中国|香港|微软|704034148|
-      - 🇭🇰 HK|中国|香港|微软|891543666|
-      - 🇭🇰 HK|中国|香港|微软|296764217|
-      - 🇭🇰 HK|中国|香港|微软|297734664|
-      - 🇭🇰 HK|中国|香港|微软|812588293|
-      - 🇭🇰 HK|中国|香港|微软|010933362|
-      - 🇭🇰 HK|中国|香港|微软|403992409|
-      - 🇭🇰 HK|中国|香港|微软|314141418|
-      - 🇭🇰 HK|中国|香港|微软|414338353|
-      - 🇭🇰 HK|中国|香港|微软|900046943|
-      - 🇨🇳 TW|中国|台湾|中华电信|507504426|
+      - 🇦🇺 AU|澳大利亚|691959624|
+      - 🇯🇵 JP|日本|大阪府|大阪|593958022|
+      - 🇯🇵 JP|日本|大阪府|大阪|689252334|
+      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|883855596|
+      - 🇰🇷 KR|韩国|首尔|首尔|985250738|
+      - 🇰🇷 KR|韩国|首尔|首尔|079917399|
+      - 🇰🇷 KR|韩国|首尔|首尔|488857808|
+      - 🇰🇷 KR|韩国|首尔|首尔|678947647|
+      - 🇰🇷 KR|韩国|首尔|首尔|795165717|
+      - 🇰🇷 KR|韩国|首尔|首尔|995214007|
+      - 🇰🇷 KR|韩国|首尔|首尔|078459167|
+      - 🇭🇰 HK|中国|香港|492072027|
+      - 🇭🇰 HK|中国|香港|594811769|
+      - 🇭🇰 HK|中国|香港|微软|081259666|
+      - 🇭🇰 HK|中国|香港|微软|190738830|
+      - 🇭🇰 HK|中国|香港|微软|377249539|
+      - 🇭🇰 HK|中国|香港|微软|888322699|
+      - 🇭🇰 HK|中国|香港|微软|188490618|
+      - 🇭🇰 HK|中国|香港|微软|381102441|
+      - 🇭🇰 HK|中国|香港|微软|299715610|
+      - 🇭🇰 HK|中国|香港|微软|981886302|
+      - 🇭🇰 HK|中国|香港|微软|994519621|
+      - 🇭🇰 HK|中国|香港|微软|193890862|
+      - 🇭🇰 HK|中国|香港|微软|282086649|
+      - 🇭🇰 HK|中国|香港|微软|289262215|
+      - 🇭🇰 HK|中国|香港|微软|791477663|
+      - 🇭🇰 HK|中国|香港|微软|987011428|
+      - 🇭🇰 HK|中国|香港|微软|186227929|
+      - 🇭🇰 HK|中国|香港|185858964|
+      - 🇭🇰 HK|中国|香港|680033655|
+      - 🇭🇰 HK|中国|香港|676719412|
+      - 🇭🇰 HK|中国|香港|微软|878671482|
+      - 🇭🇰 HK|中国|香港|微软|883930300|
+      - 🇭🇰 HK|中国|香港|微软|183004615|
+      - 🇭🇰 HK|中国|香港|微软|587605518|
+      - 🇭🇰 HK|中国|香港|微软|879597335|
+      - 🇭🇰 HK|中国|香港|微软|880354073|
+      - 🇭🇰 HK|中国|香港|微软|495844822|
+      - 🇭🇰 HK|中国|香港|微软|493146064|
+      - 🇭🇰 HK|中国|香港|微软|787978813|
+      - 🇭🇰 HK|中国|香港|微软|800329550|
+      - 🇭🇰 HK|中国|香港|微软|094954512|
+      - 🇭🇰 HK|中国|香港|微软|575760055|
+      - 🇭🇰 HK|中国|香港|微软|574461742|
+      - 🇭🇰 HK|中国|香港|微软|775465538|
+      - 🇭🇰 HK|中国|香港|微软|687567931|
+      - 🇭🇰 HK|中国|香港|微软|177317943|
+      - 🇭🇰 HK|中国|香港|微软|678751561|
+      - 🇭🇰 HK|中国|香港|微软|677629514|
+      - 🇭🇰 HK|中国|香港|微软|676250171|
+      - 🇭🇰 HK|中国|香港|微软|680285220|
+      - 🇭🇰 HK|中国|香港|微软|082426391|
+      - 🇭🇰 HK|中国|香港|微软|483707233|
+      - 🇭🇰 HK|中国|香港|微软|577855151|
+      - 🇭🇰 HK|中国|香港|微软|595181385|
+      - 🇭🇰 HK|中国|香港|微软|699052987|
+      - 🇭🇰 HK|中国|香港|787468428|
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇦🇺 AU|澳大利亚|791806380|
-      - 🇯🇵 JP|日本|大阪府|大阪|606093700|
-      - 🇯🇵 JP|日本|大阪府|大阪|694015490|
-      - 🇯🇵 JP|日本|东京都|东京|992826567|
-      - 🇯🇵 JP|日本|东京都|东京|102201715|
-      - 🇰🇷 KR|韩国|首尔|首尔|391638027|
-      - 🇰🇷 KR|韩国|首尔|首尔|405540643|
-      - 🇰🇷 KR|韩国|首尔|首尔|802530236|
-      - 🇰🇷 KR|韩国|首尔|首尔|011217062|
-      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|811995041|
-      - 🇭🇰 HK|中国|香港|微软|903789095|
-      - 🇭🇰 HK|中国|香港|微软|009423806|
-      - 🇭🇰 HK|中国|香港|微软|406719232|
-      - 🇭🇰 HK|中国|香港|微软|808758636|
-      - 🇭🇰 HK|中国|香港|微软|910368698|
-      - 🇭🇰 HK|中国|香港|微软|405477032|
-      - 🇭🇰 HK|中国|香港|微软|999091371|
-      - 🇭🇰 HK|中国|香港|微软|195093615|
-      - 🇭🇰 HK|中国|香港|微软|110153605|
-      - 🇭🇰 HK|中国|香港|微软|391848734|
-      - 🇭🇰 HK|中国|香港|微软|411021741|
-      - 🇭🇰 HK|中国|香港|微软|108539356|
-      - 🇭🇰 HK|中国|香港|微软|205241445|
-      - 🇭🇰 HK|中国|香港|微软|301862267|
-      - 🇭🇰 HK|中国|香港|微软|412246448|
-      - 🇭🇰 HK|中国|香港|微软|199904098|
-      - 🇭🇰 HK|中国|香港|113224995|
-      - 🇭🇰 HK|中国|香港|203395066|
-      - 🇭🇰 HK|中国|香港|208845095|
-      - 🇭🇰 HK|中国|香港|微软|915876687|
-      - 🇭🇰 HK|中国|香港|微软|107146708|
-      - 🇭🇰 HK|中国|香港|微软|215000529|
-      - 🇭🇰 HK|中国|香港|微软|397706973|
-      - 🇭🇰 HK|中国|香港|微软|398986463|
-      - 🇭🇰 HK|中国|香港|微软|098445310|
-      - 🇭🇰 HK|中国|香港|微软|309133864|
-      - 🇭🇰 HK|中国|香港|微软|293656720|
-      - 🇭🇰 HK|中国|香港|微软|592295044|
-      - 🇭🇰 HK|中国|香港|微软|713002028|
-      - 🇭🇰 HK|中国|香港|微软|103138731|
-      - 🇭🇰 HK|中国|香港|微软|211173505|
-      - 🇭🇰 HK|中国|香港|微软|408370265|
-      - 🇭🇰 HK|中国|香港|微软|704034148|
-      - 🇭🇰 HK|中国|香港|微软|891543666|
-      - 🇭🇰 HK|中国|香港|微软|296764217|
-      - 🇭🇰 HK|中国|香港|微软|297734664|
-      - 🇭🇰 HK|中国|香港|微软|812588293|
-      - 🇭🇰 HK|中国|香港|微软|010933362|
-      - 🇭🇰 HK|中国|香港|微软|403992409|
-      - 🇭🇰 HK|中国|香港|微软|314141418|
-      - 🇭🇰 HK|中国|香港|微软|414338353|
-      - 🇭🇰 HK|中国|香港|微软|900046943|
-      - 🇨🇳 TW|中国|台湾|中华电信|507504426|
+      - 🇦🇺 AU|澳大利亚|691959624|
+      - 🇯🇵 JP|日本|大阪府|大阪|593958022|
+      - 🇯🇵 JP|日本|大阪府|大阪|689252334|
+      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|883855596|
+      - 🇰🇷 KR|韩国|首尔|首尔|985250738|
+      - 🇰🇷 KR|韩国|首尔|首尔|079917399|
+      - 🇰🇷 KR|韩国|首尔|首尔|488857808|
+      - 🇰🇷 KR|韩国|首尔|首尔|678947647|
+      - 🇰🇷 KR|韩国|首尔|首尔|795165717|
+      - 🇰🇷 KR|韩国|首尔|首尔|995214007|
+      - 🇰🇷 KR|韩国|首尔|首尔|078459167|
+      - 🇭🇰 HK|中国|香港|492072027|
+      - 🇭🇰 HK|中国|香港|594811769|
+      - 🇭🇰 HK|中国|香港|微软|081259666|
+      - 🇭🇰 HK|中国|香港|微软|190738830|
+      - 🇭🇰 HK|中国|香港|微软|377249539|
+      - 🇭🇰 HK|中国|香港|微软|888322699|
+      - 🇭🇰 HK|中国|香港|微软|188490618|
+      - 🇭🇰 HK|中国|香港|微软|381102441|
+      - 🇭🇰 HK|中国|香港|微软|299715610|
+      - 🇭🇰 HK|中国|香港|微软|981886302|
+      - 🇭🇰 HK|中国|香港|微软|994519621|
+      - 🇭🇰 HK|中国|香港|微软|193890862|
+      - 🇭🇰 HK|中国|香港|微软|282086649|
+      - 🇭🇰 HK|中国|香港|微软|289262215|
+      - 🇭🇰 HK|中国|香港|微软|791477663|
+      - 🇭🇰 HK|中国|香港|微软|987011428|
+      - 🇭🇰 HK|中国|香港|微软|186227929|
+      - 🇭🇰 HK|中国|香港|185858964|
+      - 🇭🇰 HK|中国|香港|680033655|
+      - 🇭🇰 HK|中国|香港|676719412|
+      - 🇭🇰 HK|中国|香港|微软|878671482|
+      - 🇭🇰 HK|中国|香港|微软|883930300|
+      - 🇭🇰 HK|中国|香港|微软|183004615|
+      - 🇭🇰 HK|中国|香港|微软|587605518|
+      - 🇭🇰 HK|中国|香港|微软|879597335|
+      - 🇭🇰 HK|中国|香港|微软|880354073|
+      - 🇭🇰 HK|中国|香港|微软|495844822|
+      - 🇭🇰 HK|中国|香港|微软|493146064|
+      - 🇭🇰 HK|中国|香港|微软|787978813|
+      - 🇭🇰 HK|中国|香港|微软|800329550|
+      - 🇭🇰 HK|中国|香港|微软|094954512|
+      - 🇭🇰 HK|中国|香港|微软|575760055|
+      - 🇭🇰 HK|中国|香港|微软|574461742|
+      - 🇭🇰 HK|中国|香港|微软|775465538|
+      - 🇭🇰 HK|中国|香港|微软|687567931|
+      - 🇭🇰 HK|中国|香港|微软|177317943|
+      - 🇭🇰 HK|中国|香港|微软|678751561|
+      - 🇭🇰 HK|中国|香港|微软|677629514|
+      - 🇭🇰 HK|中国|香港|微软|676250171|
+      - 🇭🇰 HK|中国|香港|微软|680285220|
+      - 🇭🇰 HK|中国|香港|微软|082426391|
+      - 🇭🇰 HK|中国|香港|微软|483707233|
+      - 🇭🇰 HK|中国|香港|微软|577855151|
+      - 🇭🇰 HK|中国|香港|微软|595181385|
+      - 🇭🇰 HK|中国|香港|微软|699052987|
+      - 🇭🇰 HK|中国|香港|787468428|
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇦🇺 AU|澳大利亚|791806380|
-      - 🇯🇵 JP|日本|大阪府|大阪|606093700|
-      - 🇯🇵 JP|日本|大阪府|大阪|694015490|
-      - 🇯🇵 JP|日本|东京都|东京|992826567|
-      - 🇯🇵 JP|日本|东京都|东京|102201715|
-      - 🇰🇷 KR|韩国|首尔|首尔|391638027|
-      - 🇰🇷 KR|韩国|首尔|首尔|405540643|
-      - 🇰🇷 KR|韩国|首尔|首尔|802530236|
-      - 🇰🇷 KR|韩国|首尔|首尔|011217062|
-      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|811995041|
-      - 🇭🇰 HK|中国|香港|微软|903789095|
-      - 🇭🇰 HK|中国|香港|微软|009423806|
-      - 🇭🇰 HK|中国|香港|微软|406719232|
-      - 🇭🇰 HK|中国|香港|微软|808758636|
-      - 🇭🇰 HK|中国|香港|微软|910368698|
-      - 🇭🇰 HK|中国|香港|微软|405477032|
-      - 🇭🇰 HK|中国|香港|微软|999091371|
-      - 🇭🇰 HK|中国|香港|微软|195093615|
-      - 🇭🇰 HK|中国|香港|微软|110153605|
-      - 🇭🇰 HK|中国|香港|微软|391848734|
-      - 🇭🇰 HK|中国|香港|微软|411021741|
-      - 🇭🇰 HK|中国|香港|微软|108539356|
-      - 🇭🇰 HK|中国|香港|微软|205241445|
-      - 🇭🇰 HK|中国|香港|微软|301862267|
-      - 🇭🇰 HK|中国|香港|微软|412246448|
-      - 🇭🇰 HK|中国|香港|微软|199904098|
-      - 🇭🇰 HK|中国|香港|113224995|
-      - 🇭🇰 HK|中国|香港|203395066|
-      - 🇭🇰 HK|中国|香港|208845095|
-      - 🇭🇰 HK|中国|香港|微软|915876687|
-      - 🇭🇰 HK|中国|香港|微软|107146708|
-      - 🇭🇰 HK|中国|香港|微软|215000529|
-      - 🇭🇰 HK|中国|香港|微软|397706973|
-      - 🇭🇰 HK|中国|香港|微软|398986463|
-      - 🇭🇰 HK|中国|香港|微软|098445310|
-      - 🇭🇰 HK|中国|香港|微软|309133864|
-      - 🇭🇰 HK|中国|香港|微软|293656720|
-      - 🇭🇰 HK|中国|香港|微软|592295044|
-      - 🇭🇰 HK|中国|香港|微软|713002028|
-      - 🇭🇰 HK|中国|香港|微软|103138731|
-      - 🇭🇰 HK|中国|香港|微软|211173505|
-      - 🇭🇰 HK|中国|香港|微软|408370265|
-      - 🇭🇰 HK|中国|香港|微软|704034148|
-      - 🇭🇰 HK|中国|香港|微软|891543666|
-      - 🇭🇰 HK|中国|香港|微软|296764217|
-      - 🇭🇰 HK|中国|香港|微软|297734664|
-      - 🇭🇰 HK|中国|香港|微软|812588293|
-      - 🇭🇰 HK|中国|香港|微软|010933362|
-      - 🇭🇰 HK|中国|香港|微软|403992409|
-      - 🇭🇰 HK|中国|香港|微软|314141418|
-      - 🇭🇰 HK|中国|香港|微软|414338353|
-      - 🇭🇰 HK|中国|香港|微软|900046943|
-      - 🇨🇳 TW|中国|台湾|中华电信|507504426|
+      - 🇦🇺 AU|澳大利亚|691959624|
+      - 🇯🇵 JP|日本|大阪府|大阪|593958022|
+      - 🇯🇵 JP|日本|大阪府|大阪|689252334|
+      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|883855596|
+      - 🇰🇷 KR|韩国|首尔|首尔|985250738|
+      - 🇰🇷 KR|韩国|首尔|首尔|079917399|
+      - 🇰🇷 KR|韩国|首尔|首尔|488857808|
+      - 🇰🇷 KR|韩国|首尔|首尔|678947647|
+      - 🇰🇷 KR|韩国|首尔|首尔|795165717|
+      - 🇰🇷 KR|韩国|首尔|首尔|995214007|
+      - 🇰🇷 KR|韩国|首尔|首尔|078459167|
+      - 🇭🇰 HK|中国|香港|492072027|
+      - 🇭🇰 HK|中国|香港|594811769|
+      - 🇭🇰 HK|中国|香港|微软|081259666|
+      - 🇭🇰 HK|中国|香港|微软|190738830|
+      - 🇭🇰 HK|中国|香港|微软|377249539|
+      - 🇭🇰 HK|中国|香港|微软|888322699|
+      - 🇭🇰 HK|中国|香港|微软|188490618|
+      - 🇭🇰 HK|中国|香港|微软|381102441|
+      - 🇭🇰 HK|中国|香港|微软|299715610|
+      - 🇭🇰 HK|中国|香港|微软|981886302|
+      - 🇭🇰 HK|中国|香港|微软|994519621|
+      - 🇭🇰 HK|中国|香港|微软|193890862|
+      - 🇭🇰 HK|中国|香港|微软|282086649|
+      - 🇭🇰 HK|中国|香港|微软|289262215|
+      - 🇭🇰 HK|中国|香港|微软|791477663|
+      - 🇭🇰 HK|中国|香港|微软|987011428|
+      - 🇭🇰 HK|中国|香港|微软|186227929|
+      - 🇭🇰 HK|中国|香港|185858964|
+      - 🇭🇰 HK|中国|香港|680033655|
+      - 🇭🇰 HK|中国|香港|676719412|
+      - 🇭🇰 HK|中国|香港|微软|878671482|
+      - 🇭🇰 HK|中国|香港|微软|883930300|
+      - 🇭🇰 HK|中国|香港|微软|183004615|
+      - 🇭🇰 HK|中国|香港|微软|587605518|
+      - 🇭🇰 HK|中国|香港|微软|879597335|
+      - 🇭🇰 HK|中国|香港|微软|880354073|
+      - 🇭🇰 HK|中国|香港|微软|495844822|
+      - 🇭🇰 HK|中国|香港|微软|493146064|
+      - 🇭🇰 HK|中国|香港|微软|787978813|
+      - 🇭🇰 HK|中国|香港|微软|800329550|
+      - 🇭🇰 HK|中国|香港|微软|094954512|
+      - 🇭🇰 HK|中国|香港|微软|575760055|
+      - 🇭🇰 HK|中国|香港|微软|574461742|
+      - 🇭🇰 HK|中国|香港|微软|775465538|
+      - 🇭🇰 HK|中国|香港|微软|687567931|
+      - 🇭🇰 HK|中国|香港|微软|177317943|
+      - 🇭🇰 HK|中国|香港|微软|678751561|
+      - 🇭🇰 HK|中国|香港|微软|677629514|
+      - 🇭🇰 HK|中国|香港|微软|676250171|
+      - 🇭🇰 HK|中国|香港|微软|680285220|
+      - 🇭🇰 HK|中国|香港|微软|082426391|
+      - 🇭🇰 HK|中国|香港|微软|483707233|
+      - 🇭🇰 HK|中国|香港|微软|577855151|
+      - 🇭🇰 HK|中国|香港|微软|595181385|
+      - 🇭🇰 HK|中国|香港|微软|699052987|
+      - 🇭🇰 HK|中国|香港|787468428|
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 🇭🇰 HK|中国|香港|微软|903789095|
-      - 🇭🇰 HK|中国|香港|微软|009423806|
-      - 🇭🇰 HK|中国|香港|微软|406719232|
-      - 🇭🇰 HK|中国|香港|微软|808758636|
-      - 🇭🇰 HK|中国|香港|微软|910368698|
-      - 🇭🇰 HK|中国|香港|微软|405477032|
-      - 🇭🇰 HK|中国|香港|微软|999091371|
-      - 🇭🇰 HK|中国|香港|微软|195093615|
-      - 🇭🇰 HK|中国|香港|微软|110153605|
-      - 🇭🇰 HK|中国|香港|微软|391848734|
-      - 🇭🇰 HK|中国|香港|微软|411021741|
-      - 🇭🇰 HK|中国|香港|微软|108539356|
-      - 🇭🇰 HK|中国|香港|微软|205241445|
-      - 🇭🇰 HK|中国|香港|微软|301862267|
-      - 🇭🇰 HK|中国|香港|微软|412246448|
-      - 🇭🇰 HK|中国|香港|微软|199904098|
-      - 🇭🇰 HK|中国|香港|113224995|
-      - 🇭🇰 HK|中国|香港|203395066|
-      - 🇭🇰 HK|中国|香港|208845095|
-      - 🇭🇰 HK|中国|香港|微软|915876687|
-      - 🇭🇰 HK|中国|香港|微软|107146708|
-      - 🇭🇰 HK|中国|香港|微软|215000529|
-      - 🇭🇰 HK|中国|香港|微软|397706973|
-      - 🇭🇰 HK|中国|香港|微软|398986463|
-      - 🇭🇰 HK|中国|香港|微软|098445310|
-      - 🇭🇰 HK|中国|香港|微软|309133864|
-      - 🇭🇰 HK|中国|香港|微软|293656720|
-      - 🇭🇰 HK|中国|香港|微软|592295044|
-      - 🇭🇰 HK|中国|香港|微软|713002028|
-      - 🇭🇰 HK|中国|香港|微软|103138731|
-      - 🇭🇰 HK|中国|香港|微软|211173505|
-      - 🇭🇰 HK|中国|香港|微软|408370265|
-      - 🇭🇰 HK|中国|香港|微软|704034148|
-      - 🇭🇰 HK|中国|香港|微软|891543666|
-      - 🇭🇰 HK|中国|香港|微软|296764217|
-      - 🇭🇰 HK|中国|香港|微软|297734664|
-      - 🇭🇰 HK|中国|香港|微软|812588293|
-      - 🇭🇰 HK|中国|香港|微软|010933362|
-      - 🇭🇰 HK|中国|香港|微软|403992409|
-      - 🇭🇰 HK|中国|香港|微软|314141418|
-      - 🇭🇰 HK|中国|香港|微软|414338353|
-      - 🇭🇰 HK|中国|香港|微软|900046943|
-      - 🇨🇳 TW|中国|台湾|中华电信|507504426|
+      - 🇭🇰 HK|中国|香港|492072027|
+      - 🇭🇰 HK|中国|香港|594811769|
+      - 🇭🇰 HK|中国|香港|微软|081259666|
+      - 🇭🇰 HK|中国|香港|微软|190738830|
+      - 🇭🇰 HK|中国|香港|微软|377249539|
+      - 🇭🇰 HK|中国|香港|微软|888322699|
+      - 🇭🇰 HK|中国|香港|微软|188490618|
+      - 🇭🇰 HK|中国|香港|微软|381102441|
+      - 🇭🇰 HK|中国|香港|微软|299715610|
+      - 🇭🇰 HK|中国|香港|微软|981886302|
+      - 🇭🇰 HK|中国|香港|微软|994519621|
+      - 🇭🇰 HK|中国|香港|微软|193890862|
+      - 🇭🇰 HK|中国|香港|微软|282086649|
+      - 🇭🇰 HK|中国|香港|微软|289262215|
+      - 🇭🇰 HK|中国|香港|微软|791477663|
+      - 🇭🇰 HK|中国|香港|微软|987011428|
+      - 🇭🇰 HK|中国|香港|微软|186227929|
+      - 🇭🇰 HK|中国|香港|185858964|
+      - 🇭🇰 HK|中国|香港|680033655|
+      - 🇭🇰 HK|中国|香港|676719412|
+      - 🇭🇰 HK|中国|香港|微软|878671482|
+      - 🇭🇰 HK|中国|香港|微软|883930300|
+      - 🇭🇰 HK|中国|香港|微软|183004615|
+      - 🇭🇰 HK|中国|香港|微软|587605518|
+      - 🇭🇰 HK|中国|香港|微软|879597335|
+      - 🇭🇰 HK|中国|香港|微软|880354073|
+      - 🇭🇰 HK|中国|香港|微软|495844822|
+      - 🇭🇰 HK|中国|香港|微软|493146064|
+      - 🇭🇰 HK|中国|香港|微软|787978813|
+      - 🇭🇰 HK|中国|香港|微软|800329550|
+      - 🇭🇰 HK|中国|香港|微软|094954512|
+      - 🇭🇰 HK|中国|香港|微软|575760055|
+      - 🇭🇰 HK|中国|香港|微软|574461742|
+      - 🇭🇰 HK|中国|香港|微软|775465538|
+      - 🇭🇰 HK|中国|香港|微软|687567931|
+      - 🇭🇰 HK|中国|香港|微软|177317943|
+      - 🇭🇰 HK|中国|香港|微软|678751561|
+      - 🇭🇰 HK|中国|香港|微软|677629514|
+      - 🇭🇰 HK|中国|香港|微软|676250171|
+      - 🇭🇰 HK|中国|香港|微软|680285220|
+      - 🇭🇰 HK|中国|香港|微软|082426391|
+      - 🇭🇰 HK|中国|香港|微软|483707233|
+      - 🇭🇰 HK|中国|香港|微软|577855151|
+      - 🇭🇰 HK|中国|香港|微软|595181385|
+      - 🇭🇰 HK|中国|香港|微软|699052987|
+      - 🇭🇰 HK|中国|香港|787468428|
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 🇦🇺 AU|澳大利亚|791806380|
-      - 🇯🇵 JP|日本|大阪府|大阪|606093700|
-      - 🇯🇵 JP|日本|大阪府|大阪|694015490|
-      - 🇯🇵 JP|日本|东京都|东京|992826567|
-      - 🇯🇵 JP|日本|东京都|东京|102201715|
-      - 🇰🇷 KR|韩国|首尔|首尔|391638027|
-      - 🇰🇷 KR|韩国|首尔|首尔|405540643|
-      - 🇰🇷 KR|韩国|首尔|首尔|802530236|
-      - 🇰🇷 KR|韩国|首尔|首尔|011217062|
-      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|811995041|
-      - 🇭🇰 HK|中国|香港|微软|903789095|
-      - 🇭🇰 HK|中国|香港|微软|009423806|
-      - 🇭🇰 HK|中国|香港|微软|406719232|
-      - 🇭🇰 HK|中国|香港|微软|808758636|
-      - 🇭🇰 HK|中国|香港|微软|910368698|
-      - 🇭🇰 HK|中国|香港|微软|405477032|
-      - 🇭🇰 HK|中国|香港|微软|999091371|
-      - 🇭🇰 HK|中国|香港|微软|195093615|
-      - 🇭🇰 HK|中国|香港|微软|110153605|
-      - 🇭🇰 HK|中国|香港|微软|391848734|
-      - 🇭🇰 HK|中国|香港|微软|411021741|
-      - 🇭🇰 HK|中国|香港|微软|108539356|
-      - 🇭🇰 HK|中国|香港|微软|205241445|
-      - 🇭🇰 HK|中国|香港|微软|301862267|
-      - 🇭🇰 HK|中国|香港|微软|412246448|
-      - 🇭🇰 HK|中国|香港|微软|199904098|
-      - 🇭🇰 HK|中国|香港|113224995|
-      - 🇭🇰 HK|中国|香港|203395066|
-      - 🇭🇰 HK|中国|香港|208845095|
-      - 🇭🇰 HK|中国|香港|微软|915876687|
-      - 🇭🇰 HK|中国|香港|微软|107146708|
-      - 🇭🇰 HK|中国|香港|微软|215000529|
-      - 🇭🇰 HK|中国|香港|微软|397706973|
-      - 🇭🇰 HK|中国|香港|微软|398986463|
-      - 🇭🇰 HK|中国|香港|微软|098445310|
-      - 🇭🇰 HK|中国|香港|微软|309133864|
-      - 🇭🇰 HK|中国|香港|微软|293656720|
-      - 🇭🇰 HK|中国|香港|微软|592295044|
-      - 🇭🇰 HK|中国|香港|微软|713002028|
-      - 🇭🇰 HK|中国|香港|微软|103138731|
-      - 🇭🇰 HK|中国|香港|微软|211173505|
-      - 🇭🇰 HK|中国|香港|微软|408370265|
-      - 🇭🇰 HK|中国|香港|微软|704034148|
-      - 🇭🇰 HK|中国|香港|微软|891543666|
-      - 🇭🇰 HK|中国|香港|微软|296764217|
-      - 🇭🇰 HK|中国|香港|微软|297734664|
-      - 🇭🇰 HK|中国|香港|微软|812588293|
-      - 🇭🇰 HK|中国|香港|微软|010933362|
-      - 🇭🇰 HK|中国|香港|微软|403992409|
-      - 🇭🇰 HK|中国|香港|微软|314141418|
-      - 🇭🇰 HK|中国|香港|微软|414338353|
-      - 🇭🇰 HK|中国|香港|微软|900046943|
-      - 🇨🇳 TW|中国|台湾|中华电信|507504426|
+      - 🇦🇺 AU|澳大利亚|691959624|
+      - 🇯🇵 JP|日本|大阪府|大阪|593958022|
+      - 🇯🇵 JP|日本|大阪府|大阪|689252334|
+      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|883855596|
+      - 🇰🇷 KR|韩国|首尔|首尔|985250738|
+      - 🇰🇷 KR|韩国|首尔|首尔|079917399|
+      - 🇰🇷 KR|韩国|首尔|首尔|488857808|
+      - 🇰🇷 KR|韩国|首尔|首尔|678947647|
+      - 🇰🇷 KR|韩国|首尔|首尔|795165717|
+      - 🇰🇷 KR|韩国|首尔|首尔|995214007|
+      - 🇰🇷 KR|韩国|首尔|首尔|078459167|
+      - 🇭🇰 HK|中国|香港|492072027|
+      - 🇭🇰 HK|中国|香港|594811769|
+      - 🇭🇰 HK|中国|香港|微软|081259666|
+      - 🇭🇰 HK|中国|香港|微软|190738830|
+      - 🇭🇰 HK|中国|香港|微软|377249539|
+      - 🇭🇰 HK|中国|香港|微软|888322699|
+      - 🇭🇰 HK|中国|香港|微软|188490618|
+      - 🇭🇰 HK|中国|香港|微软|381102441|
+      - 🇭🇰 HK|中国|香港|微软|299715610|
+      - 🇭🇰 HK|中国|香港|微软|981886302|
+      - 🇭🇰 HK|中国|香港|微软|994519621|
+      - 🇭🇰 HK|中国|香港|微软|193890862|
+      - 🇭🇰 HK|中国|香港|微软|282086649|
+      - 🇭🇰 HK|中国|香港|微软|289262215|
+      - 🇭🇰 HK|中国|香港|微软|791477663|
+      - 🇭🇰 HK|中国|香港|微软|987011428|
+      - 🇭🇰 HK|中国|香港|微软|186227929|
+      - 🇭🇰 HK|中国|香港|185858964|
+      - 🇭🇰 HK|中国|香港|680033655|
+      - 🇭🇰 HK|中国|香港|676719412|
+      - 🇭🇰 HK|中国|香港|微软|878671482|
+      - 🇭🇰 HK|中国|香港|微软|883930300|
+      - 🇭🇰 HK|中国|香港|微软|183004615|
+      - 🇭🇰 HK|中国|香港|微软|587605518|
+      - 🇭🇰 HK|中国|香港|微软|879597335|
+      - 🇭🇰 HK|中国|香港|微软|880354073|
+      - 🇭🇰 HK|中国|香港|微软|495844822|
+      - 🇭🇰 HK|中国|香港|微软|493146064|
+      - 🇭🇰 HK|中国|香港|微软|787978813|
+      - 🇭🇰 HK|中国|香港|微软|800329550|
+      - 🇭🇰 HK|中国|香港|微软|094954512|
+      - 🇭🇰 HK|中国|香港|微软|575760055|
+      - 🇭🇰 HK|中国|香港|微软|574461742|
+      - 🇭🇰 HK|中国|香港|微软|775465538|
+      - 🇭🇰 HK|中国|香港|微软|687567931|
+      - 🇭🇰 HK|中国|香港|微软|177317943|
+      - 🇭🇰 HK|中国|香港|微软|678751561|
+      - 🇭🇰 HK|中国|香港|微软|677629514|
+      - 🇭🇰 HK|中国|香港|微软|676250171|
+      - 🇭🇰 HK|中国|香港|微软|680285220|
+      - 🇭🇰 HK|中国|香港|微软|082426391|
+      - 🇭🇰 HK|中国|香港|微软|483707233|
+      - 🇭🇰 HK|中国|香港|微软|577855151|
+      - 🇭🇰 HK|中国|香港|微软|595181385|
+      - 🇭🇰 HK|中国|香港|微软|699052987|
+      - 🇭🇰 HK|中国|香港|787468428|
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 🇦🇺 AU|澳大利亚|791806380|
-      - 🇯🇵 JP|日本|大阪府|大阪|606093700|
-      - 🇯🇵 JP|日本|大阪府|大阪|694015490|
-      - 🇯🇵 JP|日本|东京都|东京|992826567|
-      - 🇯🇵 JP|日本|东京都|东京|102201715|
-      - 🇰🇷 KR|韩国|首尔|首尔|391638027|
-      - 🇰🇷 KR|韩国|首尔|首尔|405540643|
-      - 🇰🇷 KR|韩国|首尔|首尔|802530236|
-      - 🇰🇷 KR|韩国|首尔|首尔|011217062|
-      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|811995041|
-      - 🇭🇰 HK|中国|香港|微软|903789095|
-      - 🇭🇰 HK|中国|香港|微软|009423806|
-      - 🇭🇰 HK|中国|香港|微软|406719232|
-      - 🇭🇰 HK|中国|香港|微软|808758636|
-      - 🇭🇰 HK|中国|香港|微软|910368698|
-      - 🇭🇰 HK|中国|香港|微软|405477032|
-      - 🇭🇰 HK|中国|香港|微软|999091371|
-      - 🇭🇰 HK|中国|香港|微软|195093615|
-      - 🇭🇰 HK|中国|香港|微软|110153605|
-      - 🇭🇰 HK|中国|香港|微软|391848734|
-      - 🇭🇰 HK|中国|香港|微软|411021741|
-      - 🇭🇰 HK|中国|香港|微软|108539356|
-      - 🇭🇰 HK|中国|香港|微软|205241445|
-      - 🇭🇰 HK|中国|香港|微软|301862267|
-      - 🇭🇰 HK|中国|香港|微软|412246448|
-      - 🇭🇰 HK|中国|香港|微软|199904098|
-      - 🇭🇰 HK|中国|香港|113224995|
-      - 🇭🇰 HK|中国|香港|203395066|
-      - 🇭🇰 HK|中国|香港|208845095|
-      - 🇭🇰 HK|中国|香港|微软|915876687|
-      - 🇭🇰 HK|中国|香港|微软|107146708|
-      - 🇭🇰 HK|中国|香港|微软|215000529|
-      - 🇭🇰 HK|中国|香港|微软|397706973|
-      - 🇭🇰 HK|中国|香港|微软|398986463|
-      - 🇭🇰 HK|中国|香港|微软|098445310|
-      - 🇭🇰 HK|中国|香港|微软|309133864|
-      - 🇭🇰 HK|中国|香港|微软|293656720|
-      - 🇭🇰 HK|中国|香港|微软|592295044|
-      - 🇭🇰 HK|中国|香港|微软|713002028|
-      - 🇭🇰 HK|中国|香港|微软|103138731|
-      - 🇭🇰 HK|中国|香港|微软|211173505|
-      - 🇭🇰 HK|中国|香港|微软|408370265|
-      - 🇭🇰 HK|中国|香港|微软|704034148|
-      - 🇭🇰 HK|中国|香港|微软|891543666|
-      - 🇭🇰 HK|中国|香港|微软|296764217|
-      - 🇭🇰 HK|中国|香港|微软|297734664|
-      - 🇭🇰 HK|中国|香港|微软|812588293|
-      - 🇭🇰 HK|中国|香港|微软|010933362|
-      - 🇭🇰 HK|中国|香港|微软|403992409|
-      - 🇭🇰 HK|中国|香港|微软|314141418|
-      - 🇭🇰 HK|中国|香港|微软|414338353|
-      - 🇭🇰 HK|中国|香港|微软|900046943|
-      - 🇨🇳 TW|中国|台湾|中华电信|507504426|
+      - 🇦🇺 AU|澳大利亚|691959624|
+      - 🇯🇵 JP|日本|大阪府|大阪|593958022|
+      - 🇯🇵 JP|日本|大阪府|大阪|689252334|
+      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|883855596|
+      - 🇰🇷 KR|韩国|首尔|首尔|985250738|
+      - 🇰🇷 KR|韩国|首尔|首尔|079917399|
+      - 🇰🇷 KR|韩国|首尔|首尔|488857808|
+      - 🇰🇷 KR|韩国|首尔|首尔|678947647|
+      - 🇰🇷 KR|韩国|首尔|首尔|795165717|
+      - 🇰🇷 KR|韩国|首尔|首尔|995214007|
+      - 🇰🇷 KR|韩国|首尔|首尔|078459167|
+      - 🇭🇰 HK|中国|香港|492072027|
+      - 🇭🇰 HK|中国|香港|594811769|
+      - 🇭🇰 HK|中国|香港|微软|081259666|
+      - 🇭🇰 HK|中国|香港|微软|190738830|
+      - 🇭🇰 HK|中国|香港|微软|377249539|
+      - 🇭🇰 HK|中国|香港|微软|888322699|
+      - 🇭🇰 HK|中国|香港|微软|188490618|
+      - 🇭🇰 HK|中国|香港|微软|381102441|
+      - 🇭🇰 HK|中国|香港|微软|299715610|
+      - 🇭🇰 HK|中国|香港|微软|981886302|
+      - 🇭🇰 HK|中国|香港|微软|994519621|
+      - 🇭🇰 HK|中国|香港|微软|193890862|
+      - 🇭🇰 HK|中国|香港|微软|282086649|
+      - 🇭🇰 HK|中国|香港|微软|289262215|
+      - 🇭🇰 HK|中国|香港|微软|791477663|
+      - 🇭🇰 HK|中国|香港|微软|987011428|
+      - 🇭🇰 HK|中国|香港|微软|186227929|
+      - 🇭🇰 HK|中国|香港|185858964|
+      - 🇭🇰 HK|中国|香港|680033655|
+      - 🇭🇰 HK|中国|香港|676719412|
+      - 🇭🇰 HK|中国|香港|微软|878671482|
+      - 🇭🇰 HK|中国|香港|微软|883930300|
+      - 🇭🇰 HK|中国|香港|微软|183004615|
+      - 🇭🇰 HK|中国|香港|微软|587605518|
+      - 🇭🇰 HK|中国|香港|微软|879597335|
+      - 🇭🇰 HK|中国|香港|微软|880354073|
+      - 🇭🇰 HK|中国|香港|微软|495844822|
+      - 🇭🇰 HK|中国|香港|微软|493146064|
+      - 🇭🇰 HK|中国|香港|微软|787978813|
+      - 🇭🇰 HK|中国|香港|微软|800329550|
+      - 🇭🇰 HK|中国|香港|微软|094954512|
+      - 🇭🇰 HK|中国|香港|微软|575760055|
+      - 🇭🇰 HK|中国|香港|微软|574461742|
+      - 🇭🇰 HK|中国|香港|微软|775465538|
+      - 🇭🇰 HK|中国|香港|微软|687567931|
+      - 🇭🇰 HK|中国|香港|微软|177317943|
+      - 🇭🇰 HK|中国|香港|微软|678751561|
+      - 🇭🇰 HK|中国|香港|微软|677629514|
+      - 🇭🇰 HK|中国|香港|微软|676250171|
+      - 🇭🇰 HK|中国|香港|微软|680285220|
+      - 🇭🇰 HK|中国|香港|微软|082426391|
+      - 🇭🇰 HK|中国|香港|微软|483707233|
+      - 🇭🇰 HK|中国|香港|微软|577855151|
+      - 🇭🇰 HK|中国|香港|微软|595181385|
+      - 🇭🇰 HK|中国|香港|微软|699052987|
+      - 🇭🇰 HK|中国|香港|787468428|
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇦🇺 AU|澳大利亚|791806380|
-      - 🇯🇵 JP|日本|大阪府|大阪|606093700|
-      - 🇯🇵 JP|日本|大阪府|大阪|694015490|
-      - 🇯🇵 JP|日本|东京都|东京|992826567|
-      - 🇯🇵 JP|日本|东京都|东京|102201715|
-      - 🇰🇷 KR|韩国|首尔|首尔|391638027|
-      - 🇰🇷 KR|韩国|首尔|首尔|405540643|
-      - 🇰🇷 KR|韩国|首尔|首尔|802530236|
-      - 🇰🇷 KR|韩国|首尔|首尔|011217062|
-      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|811995041|
-      - 🇭🇰 HK|中国|香港|微软|903789095|
-      - 🇭🇰 HK|中国|香港|微软|009423806|
-      - 🇭🇰 HK|中国|香港|微软|406719232|
-      - 🇭🇰 HK|中国|香港|微软|808758636|
-      - 🇭🇰 HK|中国|香港|微软|910368698|
-      - 🇭🇰 HK|中国|香港|微软|405477032|
-      - 🇭🇰 HK|中国|香港|微软|999091371|
-      - 🇭🇰 HK|中国|香港|微软|195093615|
-      - 🇭🇰 HK|中国|香港|微软|110153605|
-      - 🇭🇰 HK|中国|香港|微软|391848734|
-      - 🇭🇰 HK|中国|香港|微软|411021741|
-      - 🇭🇰 HK|中国|香港|微软|108539356|
-      - 🇭🇰 HK|中国|香港|微软|205241445|
-      - 🇭🇰 HK|中国|香港|微软|301862267|
-      - 🇭🇰 HK|中国|香港|微软|412246448|
-      - 🇭🇰 HK|中国|香港|微软|199904098|
-      - 🇭🇰 HK|中国|香港|113224995|
-      - 🇭🇰 HK|中国|香港|203395066|
-      - 🇭🇰 HK|中国|香港|208845095|
-      - 🇭🇰 HK|中国|香港|微软|915876687|
-      - 🇭🇰 HK|中国|香港|微软|107146708|
-      - 🇭🇰 HK|中国|香港|微软|215000529|
-      - 🇭🇰 HK|中国|香港|微软|397706973|
-      - 🇭🇰 HK|中国|香港|微软|398986463|
-      - 🇭🇰 HK|中国|香港|微软|098445310|
-      - 🇭🇰 HK|中国|香港|微软|309133864|
-      - 🇭🇰 HK|中国|香港|微软|293656720|
-      - 🇭🇰 HK|中国|香港|微软|592295044|
-      - 🇭🇰 HK|中国|香港|微软|713002028|
-      - 🇭🇰 HK|中国|香港|微软|103138731|
-      - 🇭🇰 HK|中国|香港|微软|211173505|
-      - 🇭🇰 HK|中国|香港|微软|408370265|
-      - 🇭🇰 HK|中国|香港|微软|704034148|
-      - 🇭🇰 HK|中国|香港|微软|891543666|
-      - 🇭🇰 HK|中国|香港|微软|296764217|
-      - 🇭🇰 HK|中国|香港|微软|297734664|
-      - 🇭🇰 HK|中国|香港|微软|812588293|
-      - 🇭🇰 HK|中国|香港|微软|010933362|
-      - 🇭🇰 HK|中国|香港|微软|403992409|
-      - 🇭🇰 HK|中国|香港|微软|314141418|
-      - 🇭🇰 HK|中国|香港|微软|414338353|
-      - 🇭🇰 HK|中国|香港|微软|900046943|
-      - 🇨🇳 TW|中国|台湾|中华电信|507504426|
+      - 🇦🇺 AU|澳大利亚|691959624|
+      - 🇯🇵 JP|日本|大阪府|大阪|593958022|
+      - 🇯🇵 JP|日本|大阪府|大阪|689252334|
+      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|883855596|
+      - 🇰🇷 KR|韩国|首尔|首尔|985250738|
+      - 🇰🇷 KR|韩国|首尔|首尔|079917399|
+      - 🇰🇷 KR|韩国|首尔|首尔|488857808|
+      - 🇰🇷 KR|韩国|首尔|首尔|678947647|
+      - 🇰🇷 KR|韩国|首尔|首尔|795165717|
+      - 🇰🇷 KR|韩国|首尔|首尔|995214007|
+      - 🇰🇷 KR|韩国|首尔|首尔|078459167|
+      - 🇭🇰 HK|中国|香港|492072027|
+      - 🇭🇰 HK|中国|香港|594811769|
+      - 🇭🇰 HK|中国|香港|微软|081259666|
+      - 🇭🇰 HK|中国|香港|微软|190738830|
+      - 🇭🇰 HK|中国|香港|微软|377249539|
+      - 🇭🇰 HK|中国|香港|微软|888322699|
+      - 🇭🇰 HK|中国|香港|微软|188490618|
+      - 🇭🇰 HK|中国|香港|微软|381102441|
+      - 🇭🇰 HK|中国|香港|微软|299715610|
+      - 🇭🇰 HK|中国|香港|微软|981886302|
+      - 🇭🇰 HK|中国|香港|微软|994519621|
+      - 🇭🇰 HK|中国|香港|微软|193890862|
+      - 🇭🇰 HK|中国|香港|微软|282086649|
+      - 🇭🇰 HK|中国|香港|微软|289262215|
+      - 🇭🇰 HK|中国|香港|微软|791477663|
+      - 🇭🇰 HK|中国|香港|微软|987011428|
+      - 🇭🇰 HK|中国|香港|微软|186227929|
+      - 🇭🇰 HK|中国|香港|185858964|
+      - 🇭🇰 HK|中国|香港|680033655|
+      - 🇭🇰 HK|中国|香港|676719412|
+      - 🇭🇰 HK|中国|香港|微软|878671482|
+      - 🇭🇰 HK|中国|香港|微软|883930300|
+      - 🇭🇰 HK|中国|香港|微软|183004615|
+      - 🇭🇰 HK|中国|香港|微软|587605518|
+      - 🇭🇰 HK|中国|香港|微软|879597335|
+      - 🇭🇰 HK|中国|香港|微软|880354073|
+      - 🇭🇰 HK|中国|香港|微软|495844822|
+      - 🇭🇰 HK|中国|香港|微软|493146064|
+      - 🇭🇰 HK|中国|香港|微软|787978813|
+      - 🇭🇰 HK|中国|香港|微软|800329550|
+      - 🇭🇰 HK|中国|香港|微软|094954512|
+      - 🇭🇰 HK|中国|香港|微软|575760055|
+      - 🇭🇰 HK|中国|香港|微软|574461742|
+      - 🇭🇰 HK|中国|香港|微软|775465538|
+      - 🇭🇰 HK|中国|香港|微软|687567931|
+      - 🇭🇰 HK|中国|香港|微软|177317943|
+      - 🇭🇰 HK|中国|香港|微软|678751561|
+      - 🇭🇰 HK|中国|香港|微软|677629514|
+      - 🇭🇰 HK|中国|香港|微软|676250171|
+      - 🇭🇰 HK|中国|香港|微软|680285220|
+      - 🇭🇰 HK|中国|香港|微软|082426391|
+      - 🇭🇰 HK|中国|香港|微软|483707233|
+      - 🇭🇰 HK|中国|香港|微软|577855151|
+      - 🇭🇰 HK|中国|香港|微软|595181385|
+      - 🇭🇰 HK|中国|香港|微软|699052987|
+      - 🇭🇰 HK|中国|香港|787468428|
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -472,59 +503,63 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇦🇺 AU|澳大利亚|791806380|
-      - 🇯🇵 JP|日本|大阪府|大阪|606093700|
-      - 🇯🇵 JP|日本|大阪府|大阪|694015490|
-      - 🇯🇵 JP|日本|东京都|东京|992826567|
-      - 🇯🇵 JP|日本|东京都|东京|102201715|
-      - 🇰🇷 KR|韩国|首尔|首尔|391638027|
-      - 🇰🇷 KR|韩国|首尔|首尔|405540643|
-      - 🇰🇷 KR|韩国|首尔|首尔|802530236|
-      - 🇰🇷 KR|韩国|首尔|首尔|011217062|
-      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|811995041|
-      - 🇭🇰 HK|中国|香港|微软|903789095|
-      - 🇭🇰 HK|中国|香港|微软|009423806|
-      - 🇭🇰 HK|中国|香港|微软|406719232|
-      - 🇭🇰 HK|中国|香港|微软|808758636|
-      - 🇭🇰 HK|中国|香港|微软|910368698|
-      - 🇭🇰 HK|中国|香港|微软|405477032|
-      - 🇭🇰 HK|中国|香港|微软|999091371|
-      - 🇭🇰 HK|中国|香港|微软|195093615|
-      - 🇭🇰 HK|中国|香港|微软|110153605|
-      - 🇭🇰 HK|中国|香港|微软|391848734|
-      - 🇭🇰 HK|中国|香港|微软|411021741|
-      - 🇭🇰 HK|中国|香港|微软|108539356|
-      - 🇭🇰 HK|中国|香港|微软|205241445|
-      - 🇭🇰 HK|中国|香港|微软|301862267|
-      - 🇭🇰 HK|中国|香港|微软|412246448|
-      - 🇭🇰 HK|中国|香港|微软|199904098|
-      - 🇭🇰 HK|中国|香港|113224995|
-      - 🇭🇰 HK|中国|香港|203395066|
-      - 🇭🇰 HK|中国|香港|208845095|
-      - 🇭🇰 HK|中国|香港|微软|915876687|
-      - 🇭🇰 HK|中国|香港|微软|107146708|
-      - 🇭🇰 HK|中国|香港|微软|215000529|
-      - 🇭🇰 HK|中国|香港|微软|397706973|
-      - 🇭🇰 HK|中国|香港|微软|398986463|
-      - 🇭🇰 HK|中国|香港|微软|098445310|
-      - 🇭🇰 HK|中国|香港|微软|309133864|
-      - 🇭🇰 HK|中国|香港|微软|293656720|
-      - 🇭🇰 HK|中国|香港|微软|592295044|
-      - 🇭🇰 HK|中国|香港|微软|713002028|
-      - 🇭🇰 HK|中国|香港|微软|103138731|
-      - 🇭🇰 HK|中国|香港|微软|211173505|
-      - 🇭🇰 HK|中国|香港|微软|408370265|
-      - 🇭🇰 HK|中国|香港|微软|704034148|
-      - 🇭🇰 HK|中国|香港|微软|891543666|
-      - 🇭🇰 HK|中国|香港|微软|296764217|
-      - 🇭🇰 HK|中国|香港|微软|297734664|
-      - 🇭🇰 HK|中国|香港|微软|812588293|
-      - 🇭🇰 HK|中国|香港|微软|010933362|
-      - 🇭🇰 HK|中国|香港|微软|403992409|
-      - 🇭🇰 HK|中国|香港|微软|314141418|
-      - 🇭🇰 HK|中国|香港|微软|414338353|
-      - 🇭🇰 HK|中国|香港|微软|900046943|
-      - 🇨🇳 TW|中国|台湾|中华电信|507504426|
+      - 🇦🇺 AU|澳大利亚|691959624|
+      - 🇯🇵 JP|日本|大阪府|大阪|593958022|
+      - 🇯🇵 JP|日本|大阪府|大阪|689252334|
+      - 🇰🇷 KR|韩国|首尔|首尔|亚马逊|883855596|
+      - 🇰🇷 KR|韩国|首尔|首尔|985250738|
+      - 🇰🇷 KR|韩国|首尔|首尔|079917399|
+      - 🇰🇷 KR|韩国|首尔|首尔|488857808|
+      - 🇰🇷 KR|韩国|首尔|首尔|678947647|
+      - 🇰🇷 KR|韩国|首尔|首尔|795165717|
+      - 🇰🇷 KR|韩国|首尔|首尔|995214007|
+      - 🇰🇷 KR|韩国|首尔|首尔|078459167|
+      - 🇭🇰 HK|中国|香港|492072027|
+      - 🇭🇰 HK|中国|香港|594811769|
+      - 🇭🇰 HK|中国|香港|微软|081259666|
+      - 🇭🇰 HK|中国|香港|微软|190738830|
+      - 🇭🇰 HK|中国|香港|微软|377249539|
+      - 🇭🇰 HK|中国|香港|微软|888322699|
+      - 🇭🇰 HK|中国|香港|微软|188490618|
+      - 🇭🇰 HK|中国|香港|微软|381102441|
+      - 🇭🇰 HK|中国|香港|微软|299715610|
+      - 🇭🇰 HK|中国|香港|微软|981886302|
+      - 🇭🇰 HK|中国|香港|微软|994519621|
+      - 🇭🇰 HK|中国|香港|微软|193890862|
+      - 🇭🇰 HK|中国|香港|微软|282086649|
+      - 🇭🇰 HK|中国|香港|微软|289262215|
+      - 🇭🇰 HK|中国|香港|微软|791477663|
+      - 🇭🇰 HK|中国|香港|微软|987011428|
+      - 🇭🇰 HK|中国|香港|微软|186227929|
+      - 🇭🇰 HK|中国|香港|185858964|
+      - 🇭🇰 HK|中国|香港|680033655|
+      - 🇭🇰 HK|中国|香港|676719412|
+      - 🇭🇰 HK|中国|香港|微软|878671482|
+      - 🇭🇰 HK|中国|香港|微软|883930300|
+      - 🇭🇰 HK|中国|香港|微软|183004615|
+      - 🇭🇰 HK|中国|香港|微软|587605518|
+      - 🇭🇰 HK|中国|香港|微软|879597335|
+      - 🇭🇰 HK|中国|香港|微软|880354073|
+      - 🇭🇰 HK|中国|香港|微软|495844822|
+      - 🇭🇰 HK|中国|香港|微软|493146064|
+      - 🇭🇰 HK|中国|香港|微软|787978813|
+      - 🇭🇰 HK|中国|香港|微软|800329550|
+      - 🇭🇰 HK|中国|香港|微软|094954512|
+      - 🇭🇰 HK|中国|香港|微软|575760055|
+      - 🇭🇰 HK|中国|香港|微软|574461742|
+      - 🇭🇰 HK|中国|香港|微软|775465538|
+      - 🇭🇰 HK|中国|香港|微软|687567931|
+      - 🇭🇰 HK|中国|香港|微软|177317943|
+      - 🇭🇰 HK|中国|香港|微软|678751561|
+      - 🇭🇰 HK|中国|香港|微软|677629514|
+      - 🇭🇰 HK|中国|香港|微软|676250171|
+      - 🇭🇰 HK|中国|香港|微软|680285220|
+      - 🇭🇰 HK|中国|香港|微软|082426391|
+      - 🇭🇰 HK|中国|香港|微软|483707233|
+      - 🇭🇰 HK|中国|香港|微软|577855151|
+      - 🇭🇰 HK|中国|香港|微软|595181385|
+      - 🇭🇰 HK|中国|香港|微软|699052987|
+      - 🇭🇰 HK|中国|香港|787468428|
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
