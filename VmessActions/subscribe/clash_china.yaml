@@ -5,51 +5,43 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇨🇳 CN|中国|陕西|西安|电信|911112927|, server: 117.34.14.30, port: 80, type: vmess, uuid: d51b0f1b-cf5a-454c-bc4c-171491ff5e74, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 003.cdn.8x.cx.hit.edu.cn}}
-  - {name: 🇨🇳 CN|中国|上海|上海|阿里云|529986020|, server: music.desperadoj.com, port: 30003, type: ss, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_d39m}
-  - {name: 🇨🇳 CN|中国|上海|上海|阿里云|622093170|, server: 101.132.192.212, port: 30003, type: ss, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_d39m}
-  - {name: 🇨🇳 CN|中国|福建|泉州|电信|718882611|, server: 117.28.243.187, port: 8333, type: ssr, cipher: rc4-md5, password: passfw2xs4e!, protocol: origin, obfs: plain, protocol-param: t.me/SSRSUB, obfs-param: ""}
-  - {name: 🇨🇳 CN|中国|福建|泉州|电信|208705718|, server: p5.22332e.com, port: 8333, type: ssr, cipher: rc4-md5, password: passfw2xs4e!, protocol: origin, obfs: plain, protocol-param: "", obfs-param: ""}
-  - {name: 🇨🇳 CN|中国|福建|泉州|电信|327408727|, server: p5.22332e.com, port: 8333, type: ssr, cipher: rc4-md5, password: passfw2xs4e!, protocol: origin, obfs: plain, protocol-param: t.me/SSRSUB, obfs-param: ""}
-  - {name: 🇨🇳 CN|中国|福建|泉州|电信|529723049|, server: 117.28.243.187, port: 8333, type: ssr, cipher: rc4-md5, password: passfw2xs4e!, protocol: origin, obfs: plain, protocol-param: WWW.YOUNEED.WIN, obfs-param: WWW.YOUNEED.WIN}
+  - {name: 🇨🇳 CN|中国|上海|上海|阿里云|931848752|, server: 101.132.192.212, port: 30003, type: ss, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_d39m}
+  - {name: 🇨🇳 CN|中国|福建|泉州|电信|216695822|, server: 117.28.243.187, port: 8333, type: ssr, cipher: rc4-md5, password: passfw2xs4e!, protocol: origin, obfs: plain, protocol-param: t.me/SSRSUB, obfs-param: ""}
+  - {name: 🇨🇳 CN|中国|上海|上海|阿里云|218473229|, server: music.desperadoj.com, port: 30003, type: ss, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_d39m}
+  - {name: 🇨🇳 CN|中国|福建|泉州|电信|437527286|, server: 117.28.243.187, port: 8333, type: ssr, cipher: rc4-md5, password: passfw2xs4e!, protocol: origin, obfs: plain, protocol-param: "", obfs-param: ""}
+  - {name: 🇨🇳 CN|中国|福建|泉州|电信|923300114|, server: 117.28.243.187, port: 8333, type: ssr, cipher: rc4-md5, password: passfw2xs4e!, protocol: origin, obfs: plain, protocol-param: WWW.YOUNEED.WIN, obfs-param: WWW.YOUNEED.WIN}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇨🇳 CN|中国|陕西|西安|电信|911112927|
-      - 🇨🇳 CN|中国|上海|上海|阿里云|529986020|
-      - 🇨🇳 CN|中国|上海|上海|阿里云|622093170|
-      - 🇨🇳 CN|中国|福建|泉州|电信|718882611|
-      - 🇨🇳 CN|中国|福建|泉州|电信|208705718|
-      - 🇨🇳 CN|中国|福建|泉州|电信|327408727|
-      - 🇨🇳 CN|中国|福建|泉州|电信|529723049|
+      - 🇨🇳 CN|中国|上海|上海|阿里云|931848752|
+      - 🇨🇳 CN|中国|福建|泉州|电信|216695822|
+      - 🇨🇳 CN|中国|上海|上海|阿里云|218473229|
+      - 🇨🇳 CN|中国|福建|泉州|电信|437527286|
+      - 🇨🇳 CN|中国|福建|泉州|电信|923300114|
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇨🇳 CN|中国|陕西|西安|电信|911112927|
-      - 🇨🇳 CN|中国|上海|上海|阿里云|529986020|
-      - 🇨🇳 CN|中国|上海|上海|阿里云|622093170|
-      - 🇨🇳 CN|中国|福建|泉州|电信|718882611|
-      - 🇨🇳 CN|中国|福建|泉州|电信|208705718|
-      - 🇨🇳 CN|中国|福建|泉州|电信|327408727|
-      - 🇨🇳 CN|中国|福建|泉州|电信|529723049|
+      - 🇨🇳 CN|中国|上海|上海|阿里云|931848752|
+      - 🇨🇳 CN|中国|福建|泉州|电信|216695822|
+      - 🇨🇳 CN|中国|上海|上海|阿里云|218473229|
+      - 🇨🇳 CN|中国|福建|泉州|电信|437527286|
+      - 🇨🇳 CN|中国|福建|泉州|电信|923300114|
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇨🇳 CN|中国|陕西|西安|电信|911112927|
-      - 🇨🇳 CN|中国|上海|上海|阿里云|529986020|
-      - 🇨🇳 CN|中国|上海|上海|阿里云|622093170|
-      - 🇨🇳 CN|中国|福建|泉州|电信|718882611|
-      - 🇨🇳 CN|中国|福建|泉州|电信|208705718|
-      - 🇨🇳 CN|中国|福建|泉州|电信|327408727|
-      - 🇨🇳 CN|中国|福建|泉州|电信|529723049|
+      - 🇨🇳 CN|中国|上海|上海|阿里云|931848752|
+      - 🇨🇳 CN|中国|福建|泉州|电信|216695822|
+      - 🇨🇳 CN|中国|上海|上海|阿里云|218473229|
+      - 🇨🇳 CN|中国|福建|泉州|电信|437527286|
+      - 🇨🇳 CN|中国|福建|泉州|电信|923300114|
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -60,38 +52,32 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 🇨🇳 CN|中国|陕西|西安|电信|911112927|
-      - 🇨🇳 CN|中国|上海|上海|阿里云|529986020|
-      - 🇨🇳 CN|中国|上海|上海|阿里云|622093170|
-      - 🇨🇳 CN|中国|福建|泉州|电信|718882611|
-      - 🇨🇳 CN|中国|福建|泉州|电信|208705718|
-      - 🇨🇳 CN|中国|福建|泉州|电信|327408727|
-      - 🇨🇳 CN|中国|福建|泉州|电信|529723049|
+      - 🇨🇳 CN|中国|上海|上海|阿里云|931848752|
+      - 🇨🇳 CN|中国|福建|泉州|电信|216695822|
+      - 🇨🇳 CN|中国|上海|上海|阿里云|218473229|
+      - 🇨🇳 CN|中国|福建|泉州|电信|437527286|
+      - 🇨🇳 CN|中国|福建|泉州|电信|923300114|
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 🇨🇳 CN|中国|陕西|西安|电信|911112927|
-      - 🇨🇳 CN|中国|上海|上海|阿里云|529986020|
-      - 🇨🇳 CN|中国|上海|上海|阿里云|622093170|
-      - 🇨🇳 CN|中国|福建|泉州|电信|718882611|
-      - 🇨🇳 CN|中国|福建|泉州|电信|208705718|
-      - 🇨🇳 CN|中国|福建|泉州|电信|327408727|
-      - 🇨🇳 CN|中国|福建|泉州|电信|529723049|
+      - 🇨🇳 CN|中国|上海|上海|阿里云|931848752|
+      - 🇨🇳 CN|中国|福建|泉州|电信|216695822|
+      - 🇨🇳 CN|中国|上海|上海|阿里云|218473229|
+      - 🇨🇳 CN|中国|福建|泉州|电信|437527286|
+      - 🇨🇳 CN|中国|福建|泉州|电信|923300114|
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇨🇳 CN|中国|陕西|西安|电信|911112927|
-      - 🇨🇳 CN|中国|上海|上海|阿里云|529986020|
-      - 🇨🇳 CN|中国|上海|上海|阿里云|622093170|
-      - 🇨🇳 CN|中国|福建|泉州|电信|718882611|
-      - 🇨🇳 CN|中国|福建|泉州|电信|208705718|
-      - 🇨🇳 CN|中国|福建|泉州|电信|327408727|
-      - 🇨🇳 CN|中国|福建|泉州|电信|529723049|
+      - 🇨🇳 CN|中国|上海|上海|阿里云|931848752|
+      - 🇨🇳 CN|中国|福建|泉州|电信|216695822|
+      - 🇨🇳 CN|中国|上海|上海|阿里云|218473229|
+      - 🇨🇳 CN|中国|福建|泉州|电信|437527286|
+      - 🇨🇳 CN|中国|福建|泉州|电信|923300114|
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -107,13 +93,11 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇨🇳 CN|中国|陕西|西安|电信|911112927|
-      - 🇨🇳 CN|中国|上海|上海|阿里云|529986020|
-      - 🇨🇳 CN|中国|上海|上海|阿里云|622093170|
-      - 🇨🇳 CN|中国|福建|泉州|电信|718882611|
-      - 🇨🇳 CN|中国|福建|泉州|电信|208705718|
-      - 🇨🇳 CN|中国|福建|泉州|电信|327408727|
-      - 🇨🇳 CN|中国|福建|泉州|电信|529723049|
+      - 🇨🇳 CN|中国|上海|上海|阿里云|931848752|
+      - 🇨🇳 CN|中国|福建|泉州|电信|216695822|
+      - 🇨🇳 CN|中国|上海|上海|阿里云|218473229|
+      - 🇨🇳 CN|中国|福建|泉州|电信|437527286|
+      - 🇨🇳 CN|中国|福建|泉州|电信|923300114|
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
