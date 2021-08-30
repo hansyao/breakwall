@@ -5,83 +5,74 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇦🇺 AU|澳大利亚|051463751|, server: www.freetouchor.xyz, port: 443, type: trojan, password: mima0.0.000, skip-cert-verify: true, udp: true}
-  - {name: 🇭🇰 HK|中国|香港|448125412|, server: 118.107.244.114, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
-  - {name: 🇭🇰 HK|中国|香港|479555131|, server: 148.66.56.98, port: 809, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
-  - {name: 🇭🇰 HK|中国|香港|微软|467940152|, server: kaizen-hk-2.cn0.me, port: 443, type: trojan, password: 18e513fe-f7f4-353d-84ca-bc9646fb2528mielink, skip-cert-verify: true, udp: true}
-  - {name: 🇭🇰 HK|中国|香港|微软|352781317|, server: kaizen-hk-4.cn0.me, port: 443, type: trojan, password: 18e513fe-f7f4-353d-84ca-bc9646fb2528mielink, skip-cert-verify: true, udp: true}
+  - {name: 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|949615377|, server: 139.99.201.56, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: MjUyMmU1, udp: true}
+  - {name: 🇦🇺 AU|澳大利亚|347236083|, server: www.freetouchor.xyz, port: 443, type: trojan, password: mima0.0.000, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 HK|中国|香港|436686677|, server: 118.107.244.112, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
+  - {name: 🇭🇰 HK|中国|香港|251546718|, server: 118.107.244.114, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇦🇺 AU|澳大利亚|051463751|
-      - 🇭🇰 HK|中国|香港|448125412|
-      - 🇭🇰 HK|中国|香港|479555131|
-      - 🇭🇰 HK|中国|香港|微软|467940152|
-      - 🇭🇰 HK|中国|香港|微软|352781317|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|949615377|
+      - 🇦🇺 AU|澳大利亚|347236083|
+      - 🇭🇰 HK|中国|香港|436686677|
+      - 🇭🇰 HK|中国|香港|251546718|
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇦🇺 AU|澳大利亚|051463751|
-      - 🇭🇰 HK|中国|香港|448125412|
-      - 🇭🇰 HK|中国|香港|479555131|
-      - 🇭🇰 HK|中国|香港|微软|467940152|
-      - 🇭🇰 HK|中国|香港|微软|352781317|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|949615377|
+      - 🇦🇺 AU|澳大利亚|347236083|
+      - 🇭🇰 HK|中国|香港|436686677|
+      - 🇭🇰 HK|中国|香港|251546718|
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇦🇺 AU|澳大利亚|051463751|
-      - 🇭🇰 HK|中国|香港|448125412|
-      - 🇭🇰 HK|中国|香港|479555131|
-      - 🇭🇰 HK|中国|香港|微软|467940152|
-      - 🇭🇰 HK|中国|香港|微软|352781317|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|949615377|
+      - 🇦🇺 AU|澳大利亚|347236083|
+      - 🇭🇰 HK|中国|香港|436686677|
+      - 🇭🇰 HK|中国|香港|251546718|
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 🇭🇰 HK|中国|香港|448125412|
-      - 🇭🇰 HK|中国|香港|479555131|
-      - 🇭🇰 HK|中国|香港|微软|467940152|
-      - 🇭🇰 HK|中国|香港|微软|352781317|
+      - 🇭🇰 HK|中国|香港|436686677|
+      - 🇭🇰 HK|中国|香港|251546718|
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 🇦🇺 AU|澳大利亚|051463751|
-      - 🇭🇰 HK|中国|香港|448125412|
-      - 🇭🇰 HK|中国|香港|479555131|
-      - 🇭🇰 HK|中国|香港|微软|467940152|
-      - 🇭🇰 HK|中国|香港|微软|352781317|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|949615377|
+      - 🇦🇺 AU|澳大利亚|347236083|
+      - 🇭🇰 HK|中国|香港|436686677|
+      - 🇭🇰 HK|中国|香港|251546718|
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 🇦🇺 AU|澳大利亚|051463751|
-      - 🇭🇰 HK|中国|香港|448125412|
-      - 🇭🇰 HK|中国|香港|479555131|
-      - 🇭🇰 HK|中国|香港|微软|467940152|
-      - 🇭🇰 HK|中国|香港|微软|352781317|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|949615377|
+      - 🇦🇺 AU|澳大利亚|347236083|
+      - 🇭🇰 HK|中国|香港|436686677|
+      - 🇭🇰 HK|中国|香港|251546718|
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇦🇺 AU|澳大利亚|051463751|
-      - 🇭🇰 HK|中国|香港|448125412|
-      - 🇭🇰 HK|中国|香港|479555131|
-      - 🇭🇰 HK|中国|香港|微软|467940152|
-      - 🇭🇰 HK|中国|香港|微软|352781317|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|949615377|
+      - 🇦🇺 AU|澳大利亚|347236083|
+      - 🇭🇰 HK|中国|香港|436686677|
+      - 🇭🇰 HK|中国|香港|251546718|
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -97,11 +88,10 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇦🇺 AU|澳大利亚|051463751|
-      - 🇭🇰 HK|中国|香港|448125412|
-      - 🇭🇰 HK|中国|香港|479555131|
-      - 🇭🇰 HK|中国|香港|微软|467940152|
-      - 🇭🇰 HK|中国|香港|微软|352781317|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|949615377|
+      - 🇦🇺 AU|澳大利亚|347236083|
+      - 🇭🇰 HK|中国|香港|436686677|
+      - 🇭🇰 HK|中国|香港|251546718|
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
