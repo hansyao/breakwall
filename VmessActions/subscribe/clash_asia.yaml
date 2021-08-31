@@ -5,75 +5,76 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇦🇺 AU|澳大利亚|773672464|, server: www.freetouchor.xyz, port: 443, type: trojan, password: mima0.0.000, skip-cert-verify: true, udp: true}
-  - {name: 🇭🇰 HK|中国|香港|856774153|, server: 118.107.244.114, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
-  - {name: 🇭🇰 HK|中国|香港|857137330|, server: 103.115.67.145, port: 27235, type: ss, cipher: aes-256-cfb, password: BR9ubV}
-  - {name: 🇭🇰 HK|中国|香港|652468118|, server: 103.115.67.128, port: 27235, type: ss, cipher: aes-256-cfb, password: BR9ubV}
+  - {name: 🇭🇰 HK|中国|香港|471551604|, server: 103.115.67.145, port: 27235, type: ss, cipher: aes-256-cfb, password: BR9ubV}
+  - {name: 🇭🇰 HK|中国|香港|388681417|, server: 103.115.67.128, port: 27235, type: ss, cipher: aes-256-cfb, password: BR9ubV}
+  - {name: 🇭🇰 HK|中国|香港|微软|783481423|, server: kaizen-hk-4.cn0.me, port: 443, type: trojan, password: 18e513fe-f7f4-353d-84ca-bc9646fb2528mielink, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 HK|中国|香港|微软|572829736|, server: kaizen-hk-2.cn0.me, port: 443, type: trojan, password: 18e513fe-f7f4-353d-84ca-bc9646fb2528mielink, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇦🇺 AU|澳大利亚|773672464|
-      - 🇭🇰 HK|中国|香港|856774153|
-      - 🇭🇰 HK|中国|香港|857137330|
-      - 🇭🇰 HK|中国|香港|652468118|
+      - 🇭🇰 HK|中国|香港|471551604|
+      - 🇭🇰 HK|中国|香港|388681417|
+      - 🇭🇰 HK|中国|香港|微软|783481423|
+      - 🇭🇰 HK|中国|香港|微软|572829736|
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇦🇺 AU|澳大利亚|773672464|
-      - 🇭🇰 HK|中国|香港|856774153|
-      - 🇭🇰 HK|中国|香港|857137330|
-      - 🇭🇰 HK|中国|香港|652468118|
+      - 🇭🇰 HK|中国|香港|471551604|
+      - 🇭🇰 HK|中国|香港|388681417|
+      - 🇭🇰 HK|中国|香港|微软|783481423|
+      - 🇭🇰 HK|中国|香港|微软|572829736|
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇦🇺 AU|澳大利亚|773672464|
-      - 🇭🇰 HK|中国|香港|856774153|
-      - 🇭🇰 HK|中国|香港|857137330|
-      - 🇭🇰 HK|中国|香港|652468118|
+      - 🇭🇰 HK|中国|香港|471551604|
+      - 🇭🇰 HK|中国|香港|388681417|
+      - 🇭🇰 HK|中国|香港|微软|783481423|
+      - 🇭🇰 HK|中国|香港|微软|572829736|
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 🇭🇰 HK|中国|香港|856774153|
-      - 🇭🇰 HK|中国|香港|857137330|
-      - 🇭🇰 HK|中国|香港|652468118|
+      - 🇭🇰 HK|中国|香港|471551604|
+      - 🇭🇰 HK|中国|香港|388681417|
+      - 🇭🇰 HK|中国|香港|微软|783481423|
+      - 🇭🇰 HK|中国|香港|微软|572829736|
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 🇦🇺 AU|澳大利亚|773672464|
-      - 🇭🇰 HK|中国|香港|856774153|
-      - 🇭🇰 HK|中国|香港|857137330|
-      - 🇭🇰 HK|中国|香港|652468118|
+      - 🇭🇰 HK|中国|香港|471551604|
+      - 🇭🇰 HK|中国|香港|388681417|
+      - 🇭🇰 HK|中国|香港|微软|783481423|
+      - 🇭🇰 HK|中国|香港|微软|572829736|
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 🇦🇺 AU|澳大利亚|773672464|
-      - 🇭🇰 HK|中国|香港|856774153|
-      - 🇭🇰 HK|中国|香港|857137330|
-      - 🇭🇰 HK|中国|香港|652468118|
+      - 🇭🇰 HK|中国|香港|471551604|
+      - 🇭🇰 HK|中国|香港|388681417|
+      - 🇭🇰 HK|中国|香港|微软|783481423|
+      - 🇭🇰 HK|中国|香港|微软|572829736|
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇦🇺 AU|澳大利亚|773672464|
-      - 🇭🇰 HK|中国|香港|856774153|
-      - 🇭🇰 HK|中国|香港|857137330|
-      - 🇭🇰 HK|中国|香港|652468118|
+      - 🇭🇰 HK|中国|香港|471551604|
+      - 🇭🇰 HK|中国|香港|388681417|
+      - 🇭🇰 HK|中国|香港|微软|783481423|
+      - 🇭🇰 HK|中国|香港|微软|572829736|
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -89,10 +90,10 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇦🇺 AU|澳大利亚|773672464|
-      - 🇭🇰 HK|中国|香港|856774153|
-      - 🇭🇰 HK|中国|香港|857137330|
-      - 🇭🇰 HK|中国|香港|652468118|
+      - 🇭🇰 HK|中国|香港|471551604|
+      - 🇭🇰 HK|中国|香港|388681417|
+      - 🇭🇰 HK|中国|香港|微软|783481423|
+      - 🇭🇰 HK|中国|香港|微软|572829736|
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
