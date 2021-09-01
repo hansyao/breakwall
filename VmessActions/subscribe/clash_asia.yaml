@@ -5,60 +5,90 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇭🇰 HK|中国|香港|239564800|, server: 103.85.20.176, port: 27235, type: ss, cipher: aes-256-cfb, password: BR9ubV}
-  - {name: 🇭🇰 HK|中国|香港|742059198|, server: 103.85.20.74, port: 27235, type: ss, cipher: aes-256-cfb, password: BR9ubV}
+  - {name: 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|903940636|, server: 45.77.48.44, port: 8099, type: ssr, cipher: aes-256-cfb, password: eIW0Dnk69454e6nSwuspv9DmS201tQ0D, protocol: origin, obfs: plain, protocol-param: WWW.YOUNEED.WIN, obfs-param: WWW.YOUNEED.WIN}
+  - {name: 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|411221095|, server: 45.77.48.44, port: 8099, type: ssr, cipher: aes-256-cfb, password: eIW0Dnk69454e6nSwuspv9DmS201tQ0D, protocol: origin, obfs: plain, protocol-param: "", obfs-param: ""}
+  - {name: 🇭🇰 HK|中国|香港|305569613|, server: 118.107.244.114, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: 🇭🇰 HK|中国|香港|394190489|, server: 118.107.244.112, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
+  - {name: 🇭🇰 HK|中国|香港|902845366|, server: 103.85.20.176, port: 27235, type: ss, cipher: aes-256-cfb, password: BR9ubV}
+  - {name: 🇭🇰 HK|中国|香港|893948665|, server: 103.115.67.145, port: 27235, type: ss, cipher: aes-256-cfb, password: BR9ubV}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇭🇰 HK|中国|香港|239564800|
-      - 🇭🇰 HK|中国|香港|742059198|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|903940636|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|411221095|
+      - 🇭🇰 HK|中国|香港|305569613|
+      - 🇭🇰 HK|中国|香港|394190489|
+      - 🇭🇰 HK|中国|香港|902845366|
+      - 🇭🇰 HK|中国|香港|893948665|
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇭🇰 HK|中国|香港|239564800|
-      - 🇭🇰 HK|中国|香港|742059198|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|903940636|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|411221095|
+      - 🇭🇰 HK|中国|香港|305569613|
+      - 🇭🇰 HK|中国|香港|394190489|
+      - 🇭🇰 HK|中国|香港|902845366|
+      - 🇭🇰 HK|中国|香港|893948665|
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇭🇰 HK|中国|香港|239564800|
-      - 🇭🇰 HK|中国|香港|742059198|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|903940636|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|411221095|
+      - 🇭🇰 HK|中国|香港|305569613|
+      - 🇭🇰 HK|中国|香港|394190489|
+      - 🇭🇰 HK|中国|香港|902845366|
+      - 🇭🇰 HK|中国|香港|893948665|
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 🇭🇰 HK|中国|香港|239564800|
-      - 🇭🇰 HK|中国|香港|742059198|
+      - 🇭🇰 HK|中国|香港|305569613|
+      - 🇭🇰 HK|中国|香港|394190489|
+      - 🇭🇰 HK|中国|香港|902845366|
+      - 🇭🇰 HK|中国|香港|893948665|
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 🇭🇰 HK|中国|香港|239564800|
-      - 🇭🇰 HK|中国|香港|742059198|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|903940636|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|411221095|
+      - 🇭🇰 HK|中国|香港|305569613|
+      - 🇭🇰 HK|中国|香港|394190489|
+      - 🇭🇰 HK|中国|香港|902845366|
+      - 🇭🇰 HK|中国|香港|893948665|
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 🇭🇰 HK|中国|香港|239564800|
-      - 🇭🇰 HK|中国|香港|742059198|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|903940636|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|411221095|
+      - 🇭🇰 HK|中国|香港|305569613|
+      - 🇭🇰 HK|中国|香港|394190489|
+      - 🇭🇰 HK|中国|香港|902845366|
+      - 🇭🇰 HK|中国|香港|893948665|
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇭🇰 HK|中国|香港|239564800|
-      - 🇭🇰 HK|中国|香港|742059198|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|903940636|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|411221095|
+      - 🇭🇰 HK|中国|香港|305569613|
+      - 🇭🇰 HK|中国|香港|394190489|
+      - 🇭🇰 HK|中国|香港|902845366|
+      - 🇭🇰 HK|中国|香港|893948665|
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -74,8 +104,12 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇭🇰 HK|中国|香港|239564800|
-      - 🇭🇰 HK|中国|香港|742059198|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|903940636|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|411221095|
+      - 🇭🇰 HK|中国|香港|305569613|
+      - 🇭🇰 HK|中国|香港|394190489|
+      - 🇭🇰 HK|中国|香港|902845366|
+      - 🇭🇰 HK|中国|香港|893948665|
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
