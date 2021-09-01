@@ -5,68 +5,67 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇭🇰 HK|中国|香港|041866333|, server: 103.85.20.74, port: 27235, type: ss, cipher: aes-256-cfb, password: BR9ubV}
-  - {name: 🇭🇰 HK|中国|香港|044363101|, server: 103.85.20.176, port: 27235, type: ss, cipher: aes-256-cfb, password: BR9ubV}
-  - {name: 🇭🇰 HK|中国|香港|648889956|, server: 103.115.67.145, port: 27235, type: ss, cipher: aes-256-cfb, password: BR9ubV}
+  - {name: 🇦🇺 AU|澳大利亚|981792174|, server: www.freetouchor.xyz, port: 443, type: trojan, password: mima0.0.000, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 HK|中国|香港|569859168|, server: 103.85.20.74, port: 27235, type: ss, cipher: aes-256-cfb, password: BR9ubV}
+  - {name: 🇭🇰 HK|中国|香港|768181531|, server: 103.115.67.145, port: 27235, type: ss, cipher: aes-256-cfb, password: BR9ubV}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇭🇰 HK|中国|香港|041866333|
-      - 🇭🇰 HK|中国|香港|044363101|
-      - 🇭🇰 HK|中国|香港|648889956|
+      - 🇦🇺 AU|澳大利亚|981792174|
+      - 🇭🇰 HK|中国|香港|569859168|
+      - 🇭🇰 HK|中国|香港|768181531|
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇭🇰 HK|中国|香港|041866333|
-      - 🇭🇰 HK|中国|香港|044363101|
-      - 🇭🇰 HK|中国|香港|648889956|
+      - 🇦🇺 AU|澳大利亚|981792174|
+      - 🇭🇰 HK|中国|香港|569859168|
+      - 🇭🇰 HK|中国|香港|768181531|
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇭🇰 HK|中国|香港|041866333|
-      - 🇭🇰 HK|中国|香港|044363101|
-      - 🇭🇰 HK|中国|香港|648889956|
+      - 🇦🇺 AU|澳大利亚|981792174|
+      - 🇭🇰 HK|中国|香港|569859168|
+      - 🇭🇰 HK|中国|香港|768181531|
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 🇭🇰 HK|中国|香港|041866333|
-      - 🇭🇰 HK|中国|香港|044363101|
-      - 🇭🇰 HK|中国|香港|648889956|
+      - 🇭🇰 HK|中国|香港|569859168|
+      - 🇭🇰 HK|中国|香港|768181531|
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 🇭🇰 HK|中国|香港|041866333|
-      - 🇭🇰 HK|中国|香港|044363101|
-      - 🇭🇰 HK|中国|香港|648889956|
+      - 🇦🇺 AU|澳大利亚|981792174|
+      - 🇭🇰 HK|中国|香港|569859168|
+      - 🇭🇰 HK|中国|香港|768181531|
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 🇭🇰 HK|中国|香港|041866333|
-      - 🇭🇰 HK|中国|香港|044363101|
-      - 🇭🇰 HK|中国|香港|648889956|
+      - 🇦🇺 AU|澳大利亚|981792174|
+      - 🇭🇰 HK|中国|香港|569859168|
+      - 🇭🇰 HK|中国|香港|768181531|
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇭🇰 HK|中国|香港|041866333|
-      - 🇭🇰 HK|中国|香港|044363101|
-      - 🇭🇰 HK|中国|香港|648889956|
+      - 🇦🇺 AU|澳大利亚|981792174|
+      - 🇭🇰 HK|中国|香港|569859168|
+      - 🇭🇰 HK|中国|香港|768181531|
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -82,9 +81,9 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇭🇰 HK|中国|香港|041866333|
-      - 🇭🇰 HK|中国|香港|044363101|
-      - 🇭🇰 HK|中国|香港|648889956|
+      - 🇦🇺 AU|澳大利亚|981792174|
+      - 🇭🇰 HK|中国|香港|569859168|
+      - 🇭🇰 HK|中国|香港|768181531|
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
