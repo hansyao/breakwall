@@ -5,75 +5,89 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|366694900|, server: 45.77.48.44, port: 8099, type: ssr, cipher: aes-256-cfb, password: eIW0Dnk69454e6nSwuspv9DmS201tQ0D, protocol: origin, obfs: plain, protocol-param: "", obfs-param: ""}
-  - {name: 🇭🇰 HK|中国|香港|481683645|, server: 103.85.20.74, port: 27235, type: ss, cipher: aes-256-cfb, password: BR9ubV}
-  - {name: 🇭🇰 HK|中国|香港|578273384|, server: 103.85.20.176, port: 27235, type: ss, cipher: aes-256-cfb, password: BR9ubV}
-  - {name: 🇭🇰 HK|中国|香港|275588273|, server: 103.115.67.145, port: 27235, type: ss, cipher: aes-256-cfb, password: BR9ubV}
+  - {name: 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|176194859|, server: 45.77.48.44, port: 8099, type: ssr, cipher: aes-256-cfb, password: eIW0Dnk69454e6nSwuspv9DmS201tQ0D, protocol: origin, obfs: plain, protocol-param: WWW.YOUNEED.WIN, obfs-param: WWW.YOUNEED.WIN}
+  - {name: 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|879641965|, server: 45.77.48.44, port: 8099, type: ssr, cipher: aes-256-cfb, password: eIW0Dnk69454e6nSwuspv9DmS201tQ0D, protocol: origin, obfs: plain, protocol-param: "", obfs-param: ""}
+  - {name: 🇦🇺 AU|澳大利亚|884458620|, server: www.freetouchor.xyz, port: 443, type: trojan, password: mima0.0.000, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 HK|中国|香港|584145192|, server: 103.85.20.176, port: 27235, type: ss, cipher: aes-256-cfb, password: BR9ubV}
+  - {name: 🇭🇰 HK|中国|香港|369123079|, server: 103.115.67.145, port: 27235, type: ss, cipher: aes-256-cfb, password: BR9ubV}
+  - {name: 🇭🇰 HK|中国|香港|484263115|, server: 103.85.20.74, port: 27235, type: ss, cipher: aes-256-cfb, password: BR9ubV}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|366694900|
-      - 🇭🇰 HK|中国|香港|481683645|
-      - 🇭🇰 HK|中国|香港|578273384|
-      - 🇭🇰 HK|中国|香港|275588273|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|176194859|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|879641965|
+      - 🇦🇺 AU|澳大利亚|884458620|
+      - 🇭🇰 HK|中国|香港|584145192|
+      - 🇭🇰 HK|中国|香港|369123079|
+      - 🇭🇰 HK|中国|香港|484263115|
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|366694900|
-      - 🇭🇰 HK|中国|香港|481683645|
-      - 🇭🇰 HK|中国|香港|578273384|
-      - 🇭🇰 HK|中国|香港|275588273|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|176194859|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|879641965|
+      - 🇦🇺 AU|澳大利亚|884458620|
+      - 🇭🇰 HK|中国|香港|584145192|
+      - 🇭🇰 HK|中国|香港|369123079|
+      - 🇭🇰 HK|中国|香港|484263115|
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|366694900|
-      - 🇭🇰 HK|中国|香港|481683645|
-      - 🇭🇰 HK|中国|香港|578273384|
-      - 🇭🇰 HK|中国|香港|275588273|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|176194859|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|879641965|
+      - 🇦🇺 AU|澳大利亚|884458620|
+      - 🇭🇰 HK|中国|香港|584145192|
+      - 🇭🇰 HK|中国|香港|369123079|
+      - 🇭🇰 HK|中国|香港|484263115|
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 🇭🇰 HK|中国|香港|481683645|
-      - 🇭🇰 HK|中国|香港|578273384|
-      - 🇭🇰 HK|中国|香港|275588273|
+      - 🇭🇰 HK|中国|香港|584145192|
+      - 🇭🇰 HK|中国|香港|369123079|
+      - 🇭🇰 HK|中国|香港|484263115|
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|366694900|
-      - 🇭🇰 HK|中国|香港|481683645|
-      - 🇭🇰 HK|中国|香港|578273384|
-      - 🇭🇰 HK|中国|香港|275588273|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|176194859|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|879641965|
+      - 🇦🇺 AU|澳大利亚|884458620|
+      - 🇭🇰 HK|中国|香港|584145192|
+      - 🇭🇰 HK|中国|香港|369123079|
+      - 🇭🇰 HK|中国|香港|484263115|
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|366694900|
-      - 🇭🇰 HK|中国|香港|481683645|
-      - 🇭🇰 HK|中国|香港|578273384|
-      - 🇭🇰 HK|中国|香港|275588273|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|176194859|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|879641965|
+      - 🇦🇺 AU|澳大利亚|884458620|
+      - 🇭🇰 HK|中国|香港|584145192|
+      - 🇭🇰 HK|中国|香港|369123079|
+      - 🇭🇰 HK|中国|香港|484263115|
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|366694900|
-      - 🇭🇰 HK|中国|香港|481683645|
-      - 🇭🇰 HK|中国|香港|578273384|
-      - 🇭🇰 HK|中国|香港|275588273|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|176194859|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|879641965|
+      - 🇦🇺 AU|澳大利亚|884458620|
+      - 🇭🇰 HK|中国|香港|584145192|
+      - 🇭🇰 HK|中国|香港|369123079|
+      - 🇭🇰 HK|中国|香港|484263115|
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -89,10 +103,12 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|366694900|
-      - 🇭🇰 HK|中国|香港|481683645|
-      - 🇭🇰 HK|中国|香港|578273384|
-      - 🇭🇰 HK|中国|香港|275588273|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|176194859|
+      - 🇦🇺 AU|澳大利亚|新南威尔士|悉尼|879641965|
+      - 🇦🇺 AU|澳大利亚|884458620|
+      - 🇭🇰 HK|中国|香港|584145192|
+      - 🇭🇰 HK|中国|香港|369123079|
+      - 🇭🇰 HK|中国|香港|484263115|
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
