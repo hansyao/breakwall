@@ -42,12 +42,12 @@ jobs:
         bash VmessActions/pool.sh
     - name: 提交更改
       run: |                 
-         git config --local user.email "hansyow@gmail.com"
-         git config --local user.name "hansyao"
-         rm -rf subconverter
-         git pull
-         git add -f VmessActions/subscribe/
-         if [[ $(git status | grep 'Changes to be committed') ]]; then git commit -m "更新订阅链接"; else echo '代理池没有变化'; fi
+        git config --global user.email '<>'
+        git config --global user.name ${GITHUB_ACTOR} 
+        rm -rf subconverter
+        git pull
+        git add -f VmessActions/subscribe/
+        if [[ $(git status | grep 'Changes to be committed') ]]; then git commit -m "更新订阅链接"; else echo '代理池没有变化'; fi
     - name: 推送更改
       uses:  ad-m/github-push-action@master
       with:
