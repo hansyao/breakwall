@@ -80,7 +80,7 @@ do
                             curl --ipv4 --resolve speed.cloudflare.com:443:$resolveip --retry 3 -v https://speed.cloudflare.com/__down >meta.txt 2>&1
                         else
                             asn=$(cat meta.txt | grep cf-meta-asn: | tr '\r' '\n' | awk '{print $3}')
-                            city=$(cat meta.txt | grep cf-meta-city: | tr '\r' '\n' | awk '{print $3}')
+                            city=$(cat meta.txt | grep cf-meta-city: | tr '\r' '\n' | awk -F ": " '{print $2}')
                             latitude=$(cat meta.txt | grep cf-meta-latitude: | tr '\r' '\n' | awk '{print $3}')
                             longitude=$(cat meta.txt | grep cf-meta-longitude: | tr '\r' '\n' | awk '{print $3}')
                             curl --ipv4 --resolve service.udpfile.com:443:$resolveip --retry 3 "https://service.udpfile.com?asn="$asn"&city="$city"" -o data.txt -#
@@ -96,7 +96,7 @@ do
                             curl --ipv4 --retry 3 -v https://speed.cloudflare.com/__down >meta.txt 2>&1
                         else
                             asn=$(cat meta.txt | grep cf-meta-asn: | tr '\r' '\n' | awk '{print $3}')
-                            city=$(cat meta.txt | grep cf-meta-city: | tr '\r' '\n' | awk '{print $3}')
+                            city=$(cat meta.txt | grep cf-meta-city: | tr '\r' '\n' | awk -F ": " '{print $2}')
                             latitude=$(cat meta.txt | grep cf-meta-latitude: | tr '\r' '\n' | awk '{print $3}')
                             longitude=$(cat meta.txt | grep cf-meta-longitude: | tr '\r' '\n' | awk '{print $3}')
                             curl --ipv4 --retry 3 "https://service.udpfile.com?asn="$asn"&city="$city"" -o data.txt -#
