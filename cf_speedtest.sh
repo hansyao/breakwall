@@ -22,7 +22,7 @@ REMOTE_NAME='clash_cloudflare.yaml'			#上传到gist上的文件名,按需更改
 DESC_JSON='/tmp/gist.json'				#提交给gist的请求结构体,无需更改
 RESPONSE='/tmp/gist_response.json'			#gist返回的状态结构体,无需更改
 
-# 代理池，改称自己的，如有多个代理一个配置一行按照格式填写即可
+# 代理池，改称自己的，如有多个代理每个配置一行按照格式填写即可
 function pool_generate() {
 	local SERVER=$1
 	local ID=$2
