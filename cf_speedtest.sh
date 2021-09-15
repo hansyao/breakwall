@@ -525,6 +525,7 @@ if [[ "${PLATFORM}" == 'openwrt' ]]; then
 	if [[ "${CLASH_ENABLE}" == 'yes' ]]; then
 		echo -e "开始写入clash配置"
 		cp -f  ${CLASH_CONFIG} /etc/openclash/config/
+		/etc/init.d/openclash restart
 		echo -e "clash配置写入完成"
 	fi
 	if [[ "${PASSWALL_ENABLE}" == 'yes' ]]; then
@@ -533,6 +534,8 @@ if [[ "${PLATFORM}" == 'openwrt' ]]; then
 		if [[ $? -eq 0 ]]; then
 			echo -e "passwall配置写入完成"
 			uci show passwall | grep address=
+			/etc/init.d/haproxy restart
+			/etc/init.d/passwall restart
 		else
 			echo -e "passwall配置写入失败"
 		fi
