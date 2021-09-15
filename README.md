@@ -4,8 +4,11 @@
 
 主要改进功能：
 >重构了所有代码，linux下全平台兼容。包括不限于OpenWRT, Merlin固件， VPS等， window下可在wsl子系统运行。
+
 >支持生成规则转换后的clash配置文件并提交到你自己的[gist.github.com](https://gist.github.com)私密链接，这样就可以有你自己的专用远程订阅，其他设备可以很方便随时调用既可用。
+
 >多组不同配置的节点支持, 自动为passwall建立负载均衡，并按照不同的节点和丢包率和ping延迟情况进行分组和权重设置
+
 >clash: 新增负载均衡规则
 
 <br>
