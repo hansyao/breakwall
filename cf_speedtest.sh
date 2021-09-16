@@ -476,7 +476,8 @@ if [[ "${CLASH_ENABLE}" == 'yes' ]]; then
 	START_TIME2=$(date +%s)
 	echo -e "开始加入clash规则并转换 $(date -R -d @${END_TIME})"
 	if [[ -n "${PREF_INI_URL}" ]]; then
-		curl -L -s "${PREF_INI_URL}" -o "${PREF_INI}"
+		curl -L -s "${PREF_INI_URL}" | sed "s/https:\/\/raw.githubusercontent/https:\/\/ghproxy.com\/https:\/\/raw.githubusercontent/g" \
+		> "${PREF_INI}"
 	fi
 	clash_config "${PREF_INI}"
 
