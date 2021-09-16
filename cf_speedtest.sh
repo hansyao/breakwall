@@ -12,8 +12,8 @@ PREF_INI='/tmp/cloudflare.ini'				#本地规则文件，如PREF_INI_URL未定义
 POOL='/tmp/clash_cloudflare.yaml'			#脚本自动生成的转换规则前的代理池文件路径
 CLASH_CONFIG='/tmp/clash_cloudflare_final.yaml'		#脚本自动规则转换后的的代理池文件路径
 WWW_PATH='/var/www/html/'				#VPS服务器上的web路径，如需要外网访问需要将其路径填写在这里
-CLASH_ENABLE=yes						#是否应用clash(yes/no), 填no不进行规则转换, opewrt填no同时不应用到配置文件
-PASSWALL_ENABLE=yes						#是否应用passwall(yes/no), openwrt适用，填no不用passwall
+CLASH_ENABLE=yes					#是否应用clash(yes/no), 填no不进行规则转换, opewrt填no同时不应用到配置文件
+PASSWALL_ENABLE=yes					#是否应用passwall(yes/no), openwrt适用，填no不用passwall
 
 # 上传Github gist用到的全局变量
 GIST_TOKEN=						#github密钥，需要授予gist权限，如不上传留空即可
