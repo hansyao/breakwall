@@ -4,7 +4,7 @@ PLATFORM=$1	#可选平台： merlin, openwrt, vps
 
 # 一般配置常量， 可按需更改
 PING_COUNT=100	#单个ping检测次数, 缺省100次
-TARGET_IPS=20	#目标IP数:缺省20，单一代理20个CDN IP足够, 太多了也没意义
+TARGET_IPS=10	#目标IP数:缺省20，单一代理20个CDN IP足够, 太多了也没意义
 SCHEDULE="30 */6 * * *"	#计划任务 (由于crontab版本不同，各个平台计划任务的格式可能会稍有差异，按实际情况填写)
 GHPROXY='https://ghproxy.com/'				#github代理网址
 PREF_INI_URL="${GHPROXY}https://gist.githubusercontent.com/hansyao/e00678003f4eea63b219217638582414/raw/cloudflare.ini"	#远程规则文件
@@ -14,10 +14,11 @@ CLASH_CONFIG='/tmp/clash_cloudflare_final.yaml'		#脚本自动规则转换后的
 WWW_PATH='/var/www/html/'				#VPS服务器上的web路径，如需要外网访问需要将其路径填写在这里
 CLASH_ENABLE=yes					#是否应用clash(yes/no), 填no不进行规则转换, opewrt填no同时不应用到配置文件
 PASSWALL_ENABLE=yes					#是否应用passwall(yes/no), openwrt适用，填no不用passwall
+SPEED_TEST=yes						#是否启用带宽测速(yes/no), 带宽测速耗时较长，可以先测试下启用后的效果差异，差异不大建议不启用
 
 # 上传Github gist用到的全局变量
-GIST_TOKEN=						#github密钥，需要授予gist权限，如不上传留空即可
-GIST_ID=						#运行后会自动生成，无需更改
+GIST_TOKEN=	#github密钥，需要授予gist权限，如不上传留空即可
+GIST_ID=		#运行后会自动生成，无需更改
 REMOTE_NAME='clash_cloudflare.yaml'			#上传到gist上的文件名,按需更改
 DESC_JSON='/tmp/gist.json'				#提交给gist的请求结构体,无需更改
 RESPONSE='/tmp/gist_response.json'			#gist返回的状态结构体,无需更改
@@ -26,9 +27,24 @@ RESPONSE='/tmp/gist_response.json'			#gist返回的状态结构体,无需更改
 function pool_generate() {
 	local SERVER=$1
 	local ID=$2
+	
 	echo -e  "  - {name: VPS1_美国_CF加速(${ID}), server: ${SERVER}, port: 443, type: vmess, uuid: xxxx-xxxx-xxxx-xxxx-0000xxxx, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /PrVbmadf, ws-headers: {Host: your.cloudflare.workers.dev}}"
-	# echo -e  "  - {name: VPS2_美国_CF加速(${ID}), server: ${SERVER}, port: 4362, type: vmess, uuid: xxxxx-4084-xxxx-xxxx, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /PrVbmadfad, ws-headers: {Host: your.cloudflare.workers.dev}}"
+	echo -e  "  - {name: VPS2_美国_CF加速(${ID}), server: ${SERVER}, port: 4362, type: vmess, uuid: xxxxx-4084-xxxx-xxxx, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /PrVbmadfad, ws-headers: {Host: your.cloudflare.workers.dev}}"
 }
+
+
+urlencode() {
+   local data
+   if [ "$#" -eq 1 ]; then
+      data=$(curl -s -o /dev/null -w %{url_effective} --get --data-urlencode "$1" "")
+      if [ ! -z "$data" ]; then
+         echo "$(echo ${data##/?} |sed 's/\//%2f/g' |sed 's/:/%3a/g' |sed 's/?/%3f/g' \
+		|sed 's/(/%28/g' |sed 's/)/%29/g' |sed 's/\^/%5e/g' |sed 's/=/%3d/g' \
+		|sed 's/|/%7c/g' |sed 's/+/%20/g')"
+      fi
+   fi
+}
+
 
 function passwall_config() {
 	echo -e "删除现有UUID重复的配置"
@@ -223,10 +239,7 @@ function get_cf_ip_list() {
 	# 获取udpfile配置文件
 	local UDPFILE_CONF=$(curl -s --ipv4 --retry 3 https://service.udpfile.com\?asn\="${ASN}"\&city="${CITY}")
 
-	local DOMAIN=$(echo -e "${UDPFILE_CONF}" | grep domain= | cut -d '=' -f2-)
-	local UPLOAD_FILE=$(echo -e "${UDPFILE_CONF}" | grep file= | cut -d '=' -f2-)
-	local URL=$(echo -e "${UDPFILE_CONF}"  | grep url= | cut -d '=' -f2-)
-	local APP=$(echo -e "${UDPFILE_CONF}"  | grep app= | cut -d '=' -f2-)
+	echo -e "${UDPFILE_CONF}" >/tmp/udpfile.txt
 
 	# 获取cloudflare CDN IP列表
 	echo -e "${UDPFILE_CONF}" | sed '1,4d'
@@ -353,6 +366,30 @@ EOF
 }
 
 
+speed_test() {
+	local IP_LIST=$(echo -e "$1" | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' \
+		| sort -n | head -n $((${TARGET_IPS} * 2)))
+	local DOMAIN=$(cat /tmp/udpfile.txt | grep domain= | cut -d '=' -f2-)
+	local DL_FILE=$(cat /tmp/udpfile.txt | grep file= | cut -d '=' -f2-)
+
+	rm -f /tmp/speedtest_result.txt
+	echo "实测下载速度	实测带宽	丢包率	延迟率	CF节点"
+	echo -e "${IP_LIST}" | while read LINE && [[ -n "${LINE}" ]]
+	do
+		local IP=$(echo -e ${LINE} | awk '{print $(NF)}')
+		local PACK_LOSS=$(echo -e ${LINE} | awk '{print $1}' | cut -d "(" -f1)
+		local DELAY=$(echo -e ${LINE} | awk '{print $2}' | cut -d "(" -f1)
+		local SPEED=$(curl -s -L -w "%{speed_download}" --resolve ${DOMAIN}:443:"${IP}" \
+			https://${DOMAIN}/${DL_FILE} -o /dev/null --connect-timeout 5 --max-time 10)
+		local DL_SPEED="$(awk 'BEGIN{print "'${SPEED}'" / 1024 /1024 }') Mb/s"
+		local BANDWIDTH="$(awk 'BEGIN{print "'${SPEED}'" * 8 / 1000000}') Mbps"
+		echo "${DL_SPEED}	${BANDWIDTH}	${PACK_LOSS}	${DELAY}	${IP}"
+		echo "${SPEED}	${DL_SPEED}	${BANDWIDTH}	${PACK_LOSS}	${DELAY}	${IP}" \
+		>>/tmp/speedtest_result.txt
+	done
+	unset LINE
+}
+
 function request_body_create() {
   # 生成请求结构体 - 新建
   cat > "${DESC_JSON}" <<EOF
@@ -447,15 +484,38 @@ function cron_job() {
 
 BASEPATH=$(cd `dirname $0`; pwd)
 START_TIME=$(date +%s)
-echo -e "预计耗时2-3分钟，请耐心等待"
+DURATION=$(( 3 + $(if [[ "${SPEED_TEST}" == 'yes' ]]; then echo ${TARGET_IPS}*10*2/60; else echo 0;fi) ))
+echo -e "预估耗时 ${DURATION} 分钟，请耐心等待"
 echo -e "开始测试丢包率	$(date -R -d @${START_TIME})"
 CF_IP_LIST=$(get_cf_ip_list)
 RESULT_LIST=$(pack_loss_test "${CF_IP_LIST}")
 echo -e "${RESULT_LIST}" | sort -n
-echo -e "丢包率测试完成!"
+END_TIME=$(date +%s)
+echo -e "丢包率测试完成, 耗时 $((${END_TIME} - ${START_TIME})) 秒	$(date -R -d @${END_TIME})"
 
-echo -e "开始根据丢包率为零的IP生成clash配置文件"
-RESULT_LIST=$(echo -e "${RESULT_LIST}" | sort -n | head -n ${TARGET_IPS} | awk '{print ($NF)}')
+# 进行下载测速
+if [[ ${SPEED_TEST} == 'yes' ]]; then
+	echo -e "开始进行带宽测速"
+	START_TIME2=$(date +%s)
+
+	if [[ "${PLATFORM}" == 'merlin' ]]; then
+		sh /koolshare/merlinclash/clashconfig.sh stop
+	fi
+
+	speed_test "${RESULT_LIST}"
+	RESULT_LIST=$(cat /tmp/speedtest_result.txt | sort -n -r | head -n ${TARGET_IPS} | awk '{print ($NF)}')
+	END_TIME=$(date +%s)
+	echo -e "带宽测速任务完成, 耗时 $((${END_TIME} - ${START_TIME2})) 秒	$(date -R -d @${END_TIME})"
+	echo -e "优选 ${TARGET_IPS}个 CF节点如下:"
+	cat /tmp/speedtest_result.txt | sort -n -r | head -n ${TARGET_IPS}
+
+else
+	RESULT_LIST=$(echo -e "${RESULT_LIST}" | sort -n | head -n ${TARGET_IPS} | awk '{print ($NF)}')
+	echo -e "优选 ${TARGET_IPS}个 CF节点如下:"
+	echo -e "${RESULT_LIST}" | sort -n | head -n ${TARGET_IPS}
+fi
+
+echo -e "开始根据测试结果生成clash配置文件"
 echo "proxies:" >"${POOL}"
 i=1
 echo -e "${RESULT_LIST}" | while read LINE && [[ -n "${RESULT_LIST}" ]]
@@ -467,7 +527,7 @@ unset i
 END_TIME=$(date +%s)
 echo -e "根据公网IP $(cat /tmp/public_ip.txt) 解析出cloudflare CDN加速IP池" && rm -f /tmp/public_ip.txt
 echo -e "按要求筛选出 $(($(cat ${POOL} | wc -l) -1)) 个优选IP, 生成的代理池文件保存在： ${POOL}"
-echo -e "按照丢包率筛选CF优选IP任务完成, 耗时 $(( ${END_TIME} - ${START_TIME} )) 秒\
+echo -e "筛选CF优选IP任务完成, 耗时 $(( ${END_TIME} - ${START_TIME} )) 秒\
 	$(date -R -d @${END_TIME})"
 
 
@@ -476,7 +536,8 @@ if [[ "${CLASH_ENABLE}" == 'yes' ]]; then
 	START_TIME2=$(date +%s)
 	echo -e "开始加入clash规则并转换 $(date -R -d @${END_TIME})"
 	if [[ -n "${PREF_INI_URL}" ]]; then
-		curl -L -s "${PREF_INI_URL}" | sed "s/https:\/\/raw.githubusercontent/https:\/\/ghproxy.com\/https:\/\/raw.githubusercontent/g" \
+		curl -L -s "${PREF_INI_URL}" \
+		| sed "s/https:\/\/raw.githubusercontent/https:\/\/ghproxy.com\/https:\/\/raw.githubusercontent/g" \
 		> "${PREF_INI}"
 	fi
 	clash_config "${PREF_INI}"
@@ -525,6 +586,7 @@ if [[ "${PLATFORM}" == 'merlin' ]]; then
 	sync
 	echo 1 > /proc/sys/vm/drop_caches
 	sleep 1s
+	dbus set merlinclash_enable="1"
 	sh /koolshare/merlinclash/clashconfig.sh restart >/dev/null 2>&1 &
     	cat $LOG_FILE
 fi
