@@ -17,8 +17,8 @@ PASSWALL_ENABLE=yes					#是否应用passwall(yes/no), openwrt适用，填no不�
 SPEED_TEST=yes						#是否启用带宽测速(yes/no), 带宽测速耗时较长，可以先测试下启用后的效果差异，差异不大建议不启用
 
 # 上传Github gist用到的全局变量
-GIST_TOKEN=	#github密钥，需要授予gist权限，如不上传留空即可
-GIST_ID=		#运行后会自动生成，无需更改
+GIST_TOKEN=						#github密钥，需要授予gist权限，如不上传留空即可
+GIST_ID=						#运行后会自动生成，无需更改
 REMOTE_NAME='clash_cloudflare.yaml'			#上传到gist上的文件名,按需更改
 DESC_JSON='/tmp/gist.json'				#提交给gist的请求结构体,无需更改
 RESPONSE='/tmp/gist_response.json'			#gist返回的状态结构体,无需更改
@@ -27,7 +27,7 @@ RESPONSE='/tmp/gist_response.json'			#gist返回的状态结构体,无需更改
 function pool_generate() {
 	local SERVER=$1
 	local ID=$2
-	
+
 	echo -e  "  - {name: VPS1_美国_CF加速(${ID}), server: ${SERVER}, port: 443, type: vmess, uuid: xxxx-xxxx-xxxx-xxxx-0000xxxx, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /PrVbmadf, ws-headers: {Host: your.cloudflare.workers.dev}}"
 	echo -e  "  - {name: VPS2_美国_CF加速(${ID}), server: ${SERVER}, port: 4362, type: vmess, uuid: xxxxx-4084-xxxx-xxxx, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /PrVbmadfad, ws-headers: {Host: your.cloudflare.workers.dev}}"
 }
