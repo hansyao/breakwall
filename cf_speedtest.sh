@@ -517,8 +517,16 @@ if [[ "${PLATFORM}" == 'merlin' ]]; then
 	cp -f  ${CLASH_CONFIG} /tmp/upload/
 	merlinclash_uploadfilename="$(echo -e "${CLASH_CONFIG}" | awk -F "/" '{print $(NF)}')"
 	move_config
-
+	echo "==========================="
 	cat $LOG_FILE | tail -n 11
+
+	echo "==========================="
+	echo "开始重启 Clash 进程并显示日志"
+	sync
+	echo 1 > /proc/sys/vm/drop_caches
+	sleep 1s
+	sh /koolshare/merlinclash/clashconfig.sh restart >/dev/null 2>&1 &
+    	cat $LOG_FILE
 fi
 
 ################ OpenWRT路由器 ##############
