@@ -28,7 +28,7 @@ curl -L -O https://ghproxy.com/https://raw.githubusercontent.com/hansyao/breakwa
 
 3. 修改节点信息
 
-    按照格式将[节点信息](../../blob/4947fb0a10f6bf7613633529460706acdf9fa722/cf_speedtest.sh#L26-L31)改成你自己的
+    按照格式将[节点信息](../../blob/master/cf_speedtest.sh#L26-L31)改成你自己的
 
 4. 修改基本参数
 
@@ -43,7 +43,7 @@ GIST_TOKEN=						#github密钥，需要授予gist权限，如不上传留空即�
 
 ```
 
-更多参数配置参见[这里](../../blob/4947fb0a10f6bf7613633529460706acdf9fa722/cf_speedtest.sh#L5-L23)。
+更多参数配置参见[这里](../../blob/master/cf_speedtest.sh#L5-L23)。
 
 5. 运行代码
 ./cf_speedtest.sh后接一个参数即可, 本机测试无需加参数
