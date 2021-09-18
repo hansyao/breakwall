@@ -8,20 +8,48 @@ TARGET_IPS=10	#目标IP数:缺省20，单一代理20个CDN IP足够, 太多了�
 SCHEDULE="30 */6 * * *"	#计划任务 (由于crontab版本不同，各个平台计划任务的格式可能会稍有差异，按实际情况填写)
 GHPROXY='https://ghproxy.com/'				#github代理网址
 PREF_INI_URL="${GHPROXY}https://gist.githubusercontent.com/hansyao/e00678003f4eea63b219217638582414/raw/cloudflare.ini"	#远程规则文件
-PREF_INI='/tmp/cloudflare.ini'				#本地规则文件，如PREF_INI_URL未定义，则抓取PREF_INI本地规则
-POOL='/tmp/clash_cloudflare.yaml'			#脚本自动生成的转换规则前的代理池文件路径
-CLASH_CONFIG='/tmp/clash_cloudflare_final.yaml'		#脚本自动规则转换后的的代理池文件路径
+TMP_DIR='/tmp/mytemp'					#临时文件路径
+PREF_INI="${TMP_DIR}/cloudflare.ini"			#本地规则文件，如PREF_INI_URL未定义，则抓取PREF_INI本地规则
+POOL="${TMP_DIR}/main_cloudflare.yaml"			#脚本自动生成的转换规则前的代理池文件路径
+CLASH_CONFIG="${TMP_DIR}/clash_cloudflare_final.yaml"	#脚本自动规则转换后的的代理池文件路径
 WWW_PATH='/var/www/html/'				#VPS服务器上的web路径，如需要外网访问需要将其路径填写在这里
 CLASH_ENABLE=yes					#是否应用clash(yes/no), 填no不进行规则转换, opewrt填no同时不应用到配置文件
 PASSWALL_ENABLE=yes					#是否应用passwall(yes/no), openwrt适用，填no不用passwall
 SPEED_TEST=yes						#是否启用带宽测速(yes/no), 带宽测速耗时较长，可以先测试下启用后的效果差异，差异不大建议不启用
+CONVERTER_ENABLE=yes					#是否进行规则转换并生成订阅链接(必须开启gist)
+GIST_TOKEN=	#github密钥，需要授予gist权限，如不上传留空即可
+REMOTE_NAME='cloudflare'				#上传到gist上的文件名,按需更改
 
-# 上传Github gist用到的全局变量
-GIST_TOKEN=						#github密钥，需要授予gist权限，如不上传留空即可
-GIST_ID=						#运行后会自动生成，无需更改
-REMOTE_NAME='clash_cloudflare.yaml'			#上传到gist上的文件名,按需更改
-DESC_JSON='/tmp/gist.json'				#提交给gist的请求结构体,无需更改
-RESPONSE='/tmp/gist_response.json'			#gist返回的状态结构体,无需更改
+# 不同客户端规则转换(yes/no， 必须开启gist)
+CONVERT_clash=yes
+CONVERT_clashr=yes
+CONVERT_quan=yes
+CONVERT_quanx=yes
+CONVERT_loon=yes
+CONVERT_mellow=yes
+CONVERT_surfboard=yes
+CONVERT_surge2=yes
+CONVERT_surge3=yes
+CONVERT_surge4=yes
+CONVERT_v2ray=yes
+CONVERT_mixed=yes
+
+# 上传Github gist用到的全局变量, 脚本自动生成无需更改
+DESC_JSON="${TMP_DIR}/gist.json"				#提交给gist的请求结构体,无需更改
+RESPONSE="${TMP_DIR}/gist_response.json"			#gist返回的状态结构体,无需更改
+GIST_ID_main=
+GIST_ID_clash=
+GIST_ID_clashr=
+GIST_ID_quan=
+GIST_ID_quanx=
+GIST_ID_loon=
+GIST_ID_mellow=
+GIST_ID_surfboard=
+GIST_ID_surge2=
+GIST_ID_surge3=
+GIST_ID_surge4=
+GIST_ID_v2ray=
+GIST_ID_mixed=
 
 # 代理池，改称自己的，如有多个代理每个配置一行按照格式填写即可
 function pool_generate() {
@@ -45,6 +73,20 @@ urlencode() {
    fi
 }
 
+function openwrt_env() {
+
+	which uci
+	if [[ $? -eq 0 ]]; then return; fi
+
+	echo -e "未找到uci工具， 开始安装源依赖"
+	opkg install ca-certificates wget
+	opkg update
+	opkg install uci 
+	if [[ $? -gt 0 ]]; then
+		echo "uci安装失败, 请手工安装后继续！"
+		return 1
+	fi
+}
 
 function passwall_config() {
 	echo -e "删除现有UUID重复的配置"
@@ -139,7 +181,7 @@ function passwall_config() {
 		uci set passwall.${NODE_ID}.address=127.0.0.1
 
 		echo -e "$SERVER_NAME"	"${PORT}"
-		echo -e "$SERVER_NAME\`${PORT}" >>/tmp/main_server.txt
+		echo -e "$SERVER_NAME\`${PORT}" >>"${TMP_DIR}/main_server.txt"
 
 		local PORT=$(( ${PORT} + 1))
 	done
@@ -205,7 +247,7 @@ function passwall_config() {
 		uci set passwall.${NODE_ID}.address="${SERVER_IP}"
 
 		local SERVER_NAME=$(echo -e "${SERVER_NAME}" | sed "s/(.*$//g")
-		local HAPROXY_PORT=$(cat /tmp/main_server.txt | grep -E "^${SERVER_NAME}\`" | awk -F "\`" '{print $2}')
+		local HAPROXY_PORT=$(cat "${TMP_DIR}/main_server.txt" | grep -E "^${SERVER_NAME}\`" | awk -F "\`" '{print $2}')
 		local HAPROXY_NODE=$(uci add passwall haproxy_config)
 		if [[ ${i} -le 6 ]]; then 
 			local LBWEIGHT=20
@@ -225,7 +267,7 @@ function passwall_config() {
 		let i++
 	done
 	uci commit passwall
-	rm -f /tmp/main_server.txt
+	rm -f "${TMP_DIR}/main_server.txt"
 	unset i
 }
 
@@ -234,12 +276,15 @@ function get_cf_ip_list() {
 	local ASN=$(echo -e "${IP_LOCATION}" | grep cf-meta-asn: | tr '\r' '\n' | awk '{print $(NF)}')
 	local CITY=$(echo -e "${IP_LOCATION}" | grep cf-meta-city: | tr '\r' '\n' | awk '{print $(NF)}')
 	local PUBLIC_IP=$(echo -e "${IP_LOCATION}" | grep cf-meta-ip: | tr '\r' '\n' | awk '{print $(NF)}')
-	echo -e "${PUBLIC_IP}" >/tmp/public_ip.txt
+	echo -e "${PUBLIC_IP}" >"${TMP_DIR}/public_ip.txt"
 
 	# 获取udpfile配置文件
 	local UDPFILE_CONF=$(curl -s --ipv4 --retry 3 https://service.udpfile.com\?asn\="${ASN}"\&city="${CITY}")
-
-	echo -e "${UDPFILE_CONF}" >/tmp/udpfile.txt
+	if [[ -z "${UDPFILE_CONF}" ]]; then
+		echo -e "CF解析节点获取失败， 退出任务"
+		exit 1
+	fi
+	echo -e "${UDPFILE_CONF}" >"${TMP_DIR}/udpfile.txt"
 
 	# 获取cloudflare CDN IP列表
 	echo -e "${UDPFILE_CONF}" | sed '1,4d'
@@ -277,7 +322,7 @@ function pack_loss_test() {
 function clash_config() {
 	local PREF_INI=$1
 	# 生成基本配置
-	local HEADER_CONF='/tmp/header.yaml'
+	local HEADER_CONF="${TMP_DIR}/header.yaml"
 	cat > ${HEADER_CONF} <<EOF
 port: 7890
 socks-port: 7891
@@ -288,7 +333,7 @@ external-controller: 0.0.0.0:9090
 EOF
 
 	# 生成代理组proxy_groups
-	local PROXY_GROUPS='/tmp/proxy_groups.yaml'
+	local PROXY_GROUPS="${TMP_DIR}/proxy_groups.yaml"
 	echo "proxy-groups:" >${PROXY_GROUPS}
 	cat "${PREF_INI}" | grep "^custom_proxy_group=" | while read LINE && [[ -n "${LINE}" ]]
 	do
@@ -328,8 +373,8 @@ EOF
 	done
 
 	# 生成规则表
-	local RULES=/tmp/tmp_rules.yaml
-	local FINAL_RULES=/tmp/final_rules.yaml
+	local RULES="${TMP_DIR}/tmp_rules.yaml"
+	local FINAL_RULES="${TMP_DIR}/final_rules.yaml"
 	echo >${RULES}
 	cat "${PREF_INI}" | grep "^ruleset=" | while read LINE && [[ -n "${LINE}" ]]
 	do
@@ -365,14 +410,13 @@ $(cat ${FINAL_RULES})
 EOF
 }
 
-
 speed_test() {
 	local IP_LIST=$(echo -e "$1" | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' \
 		| sort -n | head -n $((${TARGET_IPS} * 2)))
-	local DOMAIN=$(cat /tmp/udpfile.txt | grep domain= | cut -d '=' -f2-)
-	local DL_FILE=$(cat /tmp/udpfile.txt | grep file= | cut -d '=' -f2-)
+	local DOMAIN=$(cat ${TMP_DIR}/udpfile.txt | grep domain= | cut -d '=' -f2-)
+	local DL_FILE=$(cat ${TMP_DIR}/udpfile.txt | grep file= | cut -d '=' -f2-)
 
-	rm -f /tmp/speedtest_result.txt
+	rm -f "${TMP_DIR}/speedtest_result.txt"
 	echo "实测下载速度	实测带宽	丢包率	延迟率	CF节点"
 	echo -e "${IP_LIST}" | while read LINE && [[ -n "${LINE}" ]]
 	do
@@ -385,20 +429,23 @@ speed_test() {
 		local BANDWIDTH="$(awk 'BEGIN{print "'${SPEED}'" * 8 / 1000000}') Mbps"
 		echo "${DL_SPEED}	${BANDWIDTH}	${PACK_LOSS}	${DELAY}	${IP}"
 		echo "${SPEED}	${DL_SPEED}	${BANDWIDTH}	${PACK_LOSS}	${DELAY}	${IP}" \
-		>>/tmp/speedtest_result.txt
+		>>"${TMP_DIR}/speedtest_result.txt"
 	done
 	unset LINE
 }
 
 function request_body_create() {
   # 生成请求结构体 - 新建
+  local REMOTE_NAME=$1
+  local CONFIG=$2
+
   cat > "${DESC_JSON}" <<EOF
 {
  "description":"clash config by cloudflare speedtest",
  "public": false,
  "files": {
    "${REMOTE_NAME}": {
-     "content":"${CONTENT}"
+     "content":"$(sed -e 's/\\/\\\\/g' -e 's/"/\\"/g'  -e 's/$/\\n/' <${CONFIG})"
     }
   }
 }
@@ -407,6 +454,10 @@ EOF
 
 function request_body_update() {
   # 生成请求结构体 - 更新
+  local REMOTE_NAME=$1
+  local GIST_ID=$2
+  local CONFIG=$3
+
   cat > "${DESC_JSON}" <<EOF
 {
  "description":"clash config by cloudflare speedtest",
@@ -414,7 +465,7 @@ function request_body_update() {
  "gist_id": "${GIST_ID}",
  "files": {
    "${REMOTE_NAME}": {
-     "content":"${CONTENT}"
+     "content":"$(sed -e 's/\\/\\\\/g' -e 's/"/\\"/g'  -e 's/$/\\n/' <${CONFIG})"
     }
   }
 }
@@ -423,19 +474,22 @@ EOF
 
 function gist() {
 	local ACTION=$1
-
-	if [[ "$ACTION" == 'create' || "$ACTION" == 'update'  ]]; then
-		CONTENT=$(cat ${CLASH_CONFIG} | awk '{print $0"\\n"}')
-	fi
+	local GIST_ID=$2
+	local REMOTE_NAME=$3
+	local CONFIG=$4
 
 	if [[ "$ACTION" == 'create' ]]; then
-		request_body_create
+		local REMOTE_NAME="$2"
+		local CONFIG="$3"
+
+		request_body_create "${REMOTE_NAME}" "${CONFIG}"
 		curl -s -H "Accept: application/vnd.github.v3+json" \
 		-H "Authorization: token ${GIST_TOKEN}" \
 		-d @"${DESC_JSON}" \
 		-X POST https://api.github.com/gists >${RESPONSE} 2>&1
 	elif [[ "$ACTION" == 'update' ]]; then
-		request_body_update
+
+		request_body_update "${REMOTE_NAME}" "${GIST_ID}" "${CONFIG}"
 		curl -s -H "Accept: application/vnd.github.v3+json" \
 		-H "Authorization: token ${GIST_TOKEN}" \
 		-d @"${DESC_JSON}" \
@@ -450,25 +504,112 @@ function gist() {
 }
 
 function get_gist_url() {
-	local RAW_URL=$(cat "${RESPONSE}" | grep raw_url | awk -F"\"" '{print $4}')
+	local RAW_URL=$(cat "${RESPONSE}" | grep raw_url)
+	if [[ -z "${RAW_URL}" ]]; then
+		return 1
+	fi
+
+	local RAW_URL=$(echo -e "${RAW_URL}" | awk -F"\"" '{print $4}' | head -n 1)
 	local COMMIT_ID=$(echo -e ${RAW_URL} | awk -F"/" '{print $(NF-1)}')
 	echo -e "${RAW_URL}" | sed "s/${COMMIT_ID}\///g"
 }
 
 function update_status() {
+	local OPTION=$1
+	local GIST_ID=$2
 	local GIST_URL="$(get_gist_url)"
 	if [[ -n "${GIST_URL}" ]]; then
 		echo -e "gist上传成功： ${GIST_URL}"
-		GIST_NEW_ID=$(echo -e "${GIST_URL}" | awk -F "/" '{print $(NF-2)}')
+		local GIST_NEW_ID=$(echo -e "${GIST_URL}" | awk -F "/" '{print $(NF-2)}')
 		if [[ "${GIST_ID}" != "${GIST_NEW_ID}" ]]; then
-			echo -e "更新GIST_ID${GIST_ID}为： ${GIST_NEW_ID} 下次运行生效"
-			sed -i "s/GIST_ID\=${GIST_ID}.*/GIST_ID\=${GIST_NEW_ID}/g" "${BASEPATH}"/$(basename $0)
+			echo -e "更新GIST_ID_${OPTION}: ${GIST_ID}为： ${GIST_NEW_ID} 下次运行生效"
+			sed -i "s/GIST_ID_${OPTION}\=.*$/GIST_ID_${OPTION}\=${GIST_NEW_ID}/g" "${BASEPATH}"/$(basename $0)
 		fi
 
 	else
 		echo -e "未收到正确的返回信息，gist可能上传失败"
 		echo -e $(cat "${RESPONSE}")
 	fi
+}
+
+function upload_gist() {
+	local REMOTE_NAME=$1
+	local OPTION=$2
+	local CONFIG=$3
+
+	local GIST_ID=$(cat ${BASEPATH}/$(basename $0)| grep -E "GIST_ID_${OPTION}\=" | awk -F "=" '{print $2}')
+	if [[ -n "${GIST_TOKEN}" ]]; then
+		if [[ -n "${GIST_ID}" ]]; then
+			gist 'info' "${GIST_ID}"
+			local GIST_URL=$(get_gist_url)
+			if [[ -n "${GIST_URL}" ]]; then
+				echo -e "发现gist远程文件,准备提交更新"
+				gist update "${GIST_ID}" "${REMOTE_NAME}" "${CONFIG}"
+				update_status "${OPTION}" "${GIST_ID}"
+			else
+				echo -e "gist远程文件不存在,准备全新提交"
+				gist create "${REMOTE_NAME}" "${CONFIG}"
+				update_status "${OPTION}" "${GIST_ID}"
+			fi
+		else
+			echo -e "gist远程文件不存在,准备全新提交"
+			gist create "${REMOTE_NAME}" "${CONFIG}"
+			update_status "${OPTION}" "${GIST_ID}"
+		fi
+	else
+		echo -e "GIST_TOKEN 不存在，请先填入GIST_TOKEN"
+	fi
+}
+
+remote_config_convert() {
+	local TARGET=$1
+	local GIST_CONF_URL=$2
+	local VERSION=$3
+
+
+	local CONVERTER_DOMAIN=https://oneplus-solution.com/convert/sub\?
+	local EXTERNAL_CONFIG=$(urlencode "${PREF_INI_URL}")
+	local GIST_CONF_URL=$(urlencode "${GIST_CONF_URL}")
+	curl -s ${CONVERTER_DOMAIN}target\=${TARGET}\&ver\=${VERSION}\&config\=${EXTERNAL_CONFIG}\&url\=${GIST_CONF_URL}
+
+}
+
+remote_config_convert_all() {
+	local GIST_CONF_URL=$1
+	cat ${BASEPATH}/$(basename $0) | grep -E "^CONVERT_.*=yes" \
+		| awk -F "=" '{print $1}' | cut -d "_" -f2 \
+		>${TMP_DIR}/rules_list.txt
+
+	echo -e "开始规则转换"
+	while read LINE && [[ -n "${LINE}" ]]
+	do
+		
+		if [[ -n "$(echo -e "${LINE}" | grep surge)" ]]; then
+			local TARGET=$(echo -e "${LINE}" | sed 's/.$//g')
+			local VERSION=$(echo -e "${LINE}" | sed 's/surge//g')
+		else
+			local TARGET="${LINE}"
+			local VERSION=""
+		fi
+		if [[ -n "$(echo -e "${LINE}" | grep clash)" ]]; then
+			local EXT_NAME='.yaml'
+		else
+			local EXT_NAME='.conf'
+		fi
+		remote_config_convert "${TARGET}" "${GIST_CONF_URL}" "${VERSION}"  >${TMP_DIR}/${LINE}_${REMOTE_NAME}${EXT_NAME}
+
+		local status=$(cat ${TMP_DIR}/${LINE}_${REMOTE_NAME}${EXT_NAME} | head -n 1 \
+			| grep -E '(Invalid target|The following link|No nodes were found)')
+		if [[ -n "${status}" ]]; then
+			echo -e "${LINE} 配置转换失败: $(cat ${TMP_DIR}/${LINE}_${REMOTE_NAME}${EXT_NAME} | head -n 1)"
+			continue
+		fi
+		
+		echo -e "转换 ${LINE} 配置完成"
+		echo -e "上传 ${LINE}_${REMOTE_NAME}${EXT_NAME} 到gist"
+		upload_gist "${LINE}_${REMOTE_NAME}${EXT_NAME}" "${LINE}" "${TMP_DIR}/${LINE}_${REMOTE_NAME}${EXT_NAME}"
+
+	done < ${TMP_DIR}/rules_list.txt
 }
 
 function cron_job() {
@@ -484,6 +625,7 @@ function cron_job() {
 
 BASEPATH=$(cd `dirname $0`; pwd)
 START_TIME=$(date +%s)
+if [[ ! -d "${TMP_DIR}" ]]; then mkdir -p "${TMP_DIR}"; fi
 DURATION=$(( 3 + $(if [[ "${SPEED_TEST}" == 'yes' ]]; then echo ${TARGET_IPS}*10*2/60; else echo 0;fi) ))
 echo -e "预估耗时 ${DURATION} 分钟，请耐心等待"
 echo -e "开始测试丢包率	$(date -R -d @${START_TIME})"
@@ -503,16 +645,16 @@ if [[ ${SPEED_TEST} == 'yes' ]]; then
 	fi
 
 	speed_test "${RESULT_LIST}"
-	RESULT_LIST=$(cat /tmp/speedtest_result.txt | sort -n -r | head -n ${TARGET_IPS} | awk '{print ($NF)}')
+	RESULT_LIST=$(cat "${TMP_DIR}/speedtest_result.txt" | sort -n -r | head -n ${TARGET_IPS} | awk '{print ($NF)}')
 	END_TIME=$(date +%s)
 	echo -e "带宽测速任务完成, 耗时 $((${END_TIME} - ${START_TIME2})) 秒	$(date -R -d @${END_TIME})"
 	echo -e "优选 ${TARGET_IPS}个 CF节点如下:"
-	cat /tmp/speedtest_result.txt | sort -n -r | head -n ${TARGET_IPS}
+	cat "${TMP_DIR}/speedtest_result.txt" | sort -n -r | head -n ${TARGET_IPS}
 
 else
-	RESULT_LIST=$(echo -e "${RESULT_LIST}" | sort -n | head -n ${TARGET_IPS} | awk '{print ($NF)}')
 	echo -e "优选 ${TARGET_IPS}个 CF节点如下:"
 	echo -e "${RESULT_LIST}" | sort -n | head -n ${TARGET_IPS}
+	RESULT_LIST=$(echo -e "${RESULT_LIST}" | sort -n | head -n ${TARGET_IPS} | awk '{print ($NF)}')
 fi
 
 echo -e "开始根据测试结果生成clash配置文件"
@@ -525,11 +667,10 @@ do
 done
 unset i
 END_TIME=$(date +%s)
-echo -e "根据公网IP $(cat /tmp/public_ip.txt) 解析出cloudflare CDN加速IP池" && rm -f /tmp/public_ip.txt
+echo -e "根据公网IP $(cat "${TMP_DIR}/public_ip.txt") 解析出cloudflare CDN加速IP池" && rm -f "${TMP_DIR}/public_ip.txt"
 echo -e "按要求筛选出 $(($(cat ${POOL} | wc -l) -1)) 个优选IP, 生成的代理池文件保存在： ${POOL}"
 echo -e "筛选CF优选IP任务完成, 耗时 $(( ${END_TIME} - ${START_TIME} )) 秒\
 	$(date -R -d @${END_TIME})"
-
 
 ################ 转换clash规则开始 ####################
 if [[ "${CLASH_ENABLE}" == 'yes' ]]; then
@@ -549,26 +690,6 @@ if [[ "${CLASH_ENABLE}" == 'yes' ]]; then
 fi
 ################ 转换clash规则完成 ####################
 
-################ 上传到 gist 开始 ####################
-if [[ -n "${GIST_TOKEN}" ]]; then
-	if [[ -n "${GIST_ID}" ]]; then
-		gist 'info'
-		GIST_URL=$(get_gist_url)
-		if [[ -n "${GIST_URL}" ]]; then
-			echo -e "gist远程文件已经存在： ${GIST_URL}"
-			echo -e "准备提交更新"
-			gist update
-			update_status
-		fi
-	else
-		echo -e "gist远程文件不存在"
-		echo -e "准备全新提交"
-		gist create
-		update_status
-	fi
-fi
-################ 上传到 gist 完成 ####################
-
 ################ 梅林Merlin路由器  ############
 if [[ "${PLATFORM}" == 'merlin' ]]; then
 	clashconfig=/jffs/.koolshare/merlinclash/clashconfig.sh
@@ -579,7 +700,7 @@ if [[ "${PLATFORM}" == 'merlin' ]]; then
 	merlinclash_uploadfilename="$(echo -e "${CLASH_CONFIG}" | awk -F "/" '{print $(NF)}')"
 	move_config
 	echo "==========================="
-	cat $LOG_FILE | tail -n 11
+	# cat $LOG_FILE | tail -n 11
 
 	echo "==========================="
 	echo "开始重启 Clash 进程并显示日志"
@@ -588,7 +709,7 @@ if [[ "${PLATFORM}" == 'merlin' ]]; then
 	sleep 1s
 	dbus set merlinclash_enable="1"
 	sh /koolshare/merlinclash/clashconfig.sh restart >/dev/null 2>&1 &
-    	cat $LOG_FILE
+    	cat $LOG_FILE | tail -n 17
 fi
 
 ################ OpenWRT路由器 ##############
@@ -600,15 +721,22 @@ if [[ "${PLATFORM}" == 'openwrt' ]]; then
 		echo -e "clash配置写入完成"
 	fi
 	if [[ "${PASSWALL_ENABLE}" == 'yes' ]]; then
-		echo -e "开始写入passwall配置"
-		passwall_config
+		echo -e "开始检查依赖项"
+		openwrt_env
 		if [[ $? -eq 0 ]]; then
-			echo -e "passwall配置写入完成"
-			uci show passwall | grep address=
-			/etc/init.d/haproxy restart
-			/etc/init.d/passwall restart
-		else
-			echo -e "passwall配置写入失败"
+			echo -e "开始写入passwall配置"
+			passwall_config
+			if [[ $? -eq 0 ]]; then
+				echo -e "passwall配置写入完成"
+				uci show passwall | grep address=
+				echo -e "请稍后，正在重启passwall和haproxy"
+				/etc/init.d/haproxy restart
+				/etc/init.d/passwall restart
+				
+				echo -e "重启成功并结束任务"
+			else
+				echo -e "passwall配置写入失败"
+			fi
 		fi
 	fi
 fi
@@ -623,13 +751,30 @@ cron_job
 echo "计划任务更新完成 ${SCHEDULE}"
 crontab -l | grep $(basename $0)
 
+
+################ 上传到 gist 开始 ####################
+
+if [[ "${CONVERTER_ENABLE}" == 'yes' ]]; then
+	echo -e "准备进行规则转换并上传gist"
+	sleep 5
+	# 上传代理池文件到gist
+	# REMOTE_NAME=$(cat "${POOL}" | awk -F "/" '{print $(NF)}')
+	upload_gist "main_${REMOTE_NAME}.yaml" 'main' "${POOL}"
+	GIST_CONF_URL=$(get_gist_url)
+	# echo GIST_CONF_URL: $GIST_CONF_URL
+	# 远程转换规则并创建远程订阅链接
+	remote_config_convert_all "${GIST_CONF_URL}"
+	# 删除远程代理池
+fi
+################ 上传到 gist 完成 ####################
+
+
 # 清空临时文件
 if [[ -n "${PLATFORM}" ]]; then
-	rm -f "${PREF_INI}"
-	rm -f "${POOL}"
-	rm -f "${CLASH_CONFIG}"
-	rm -f "${DESC_JSON}"
-	rm -f "${RESPONSE}"
+	rm -rf "${TMP_DIR}" 
 fi
+
+END_TIME=$(date +%s)
+echo -e "运行总耗时 $((${END_TIME} - ${START_TIME})) 秒"
 
 exit 0
