@@ -413,8 +413,9 @@ EOF
 speed_test() {
 	local IP_LIST=$(echo -e "$1" | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' \
 		| sort -n | head -n $((${TARGET_IPS} * 2)))
-	local DOMAIN=$(cat ${TMP_DIR}/udpfile.txt | grep domain= | cut -d '=' -f2-)
-	local DL_FILE=$(cat ${TMP_DIR}/udpfile.txt | grep file= | cut -d '=' -f2-)
+	local DOMAIN='speed.cloudflare.com'
+	local DL_FILE='__down'
+	local DL_SIZE=$((500 * 1024 * 1024))
 
 	rm -f "${TMP_DIR}/speedtest_result.txt"
 	echo "实测下载速度	实测带宽	丢包率	延迟率	CF节点"
@@ -423,8 +424,10 @@ speed_test() {
 		local IP=$(echo -e ${LINE} | awk '{print $(NF)}')
 		local PACK_LOSS=$(echo -e ${LINE} | awk '{print $1}' | cut -d "(" -f1)
 		local DELAY=$(echo -e ${LINE} | awk '{print $2}' | cut -d "(" -f1)
+		local MEAS_ID=$(date +%s%N)
 		local SPEED=$(curl -s -L -w "%{speed_download}" --resolve ${DOMAIN}:443:"${IP}" \
-			https://${DOMAIN}/${DL_FILE} -o /dev/null --connect-timeout 5 --max-time 10)
+			https://${DOMAIN}/${DL_FILE} -G -d "measId=${MEAS_ID}"  -d "bytes=${DL_SIZE}"\
+			-o /dev/null --connect-timeout 5 --max-time 10)
 		local DL_SPEED="$(awk 'BEGIN{print "'${SPEED}'" / 1024 /1024 }') Mb/s"
 		local BANDWIDTH="$(awk 'BEGIN{print "'${SPEED}'" * 8 / 1000000}') Mbps"
 		echo "${DL_SPEED}	${BANDWIDTH}	${PACK_LOSS}	${DELAY}	${IP}"
