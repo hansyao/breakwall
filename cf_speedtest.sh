@@ -8,10 +8,10 @@ TARGET_IPS=10	#目标IP数:缺省20，单一代理20个CDN IP足够, 太多了�
 SCHEDULE="30 */6 * * *"	#计划任务 (由于crontab版本不同，各个平台计划任务的格式可能会稍有差异，按实际情况填写)
 GHPROXY='https://ghproxy.com/'				#github代理网址
 PREF_INI_URL="${GHPROXY}https://gist.githubusercontent.com/hansyao/e00678003f4eea63b219217638582414/raw/cloudflare.ini"	#远程规则文件
-TMP_DIR='/tmp/mytemp'					#临时文件路径
-PREF_INI="${TMP_DIR}/cloudflare.ini"			#本地规则文件，如PREF_INI_URL未定义，则抓取PREF_INI本地规则
-POOL="${TMP_DIR}/main_cloudflare.yaml"			#脚本自动生成的转换规则前的代理池文件路径
-CLASH_CONFIG="${TMP_DIR}/clash_cloudflare_final.yaml"	#脚本自动规则转换后的的代理池文件路径
+TEMP_DIR='/tmp/mytemp'					#临时文件路径
+PREF_INI="${TEMP_DIR}/cloudflare.ini"			#本地规则文件，如PREF_INI_URL未定义，则抓取PREF_INI本地规则
+POOL="${TEMP_DIR}/main_cloudflare.yaml"			#脚本自动生成的转换规则前的代理池文件路径
+CLASH_CONFIG="${TEMP_DIR}/clash_cloudflare_final.yaml"	#脚本自动规则转换后的的代理池文件路径
 WWW_PATH='/var/www/html/'				#VPS服务器上的web路径，如需要外网访问需要将其路径填写在这里
 CLASH_ENABLE=yes					#是否应用clash(yes/no), 填no不进行规则转换, opewrt填no同时不应用到配置文件
 PASSWALL_ENABLE=yes					#是否应用passwall(yes/no), openwrt适用，填no不用passwall
@@ -35,8 +35,8 @@ CONVERT_v2ray=yes
 CONVERT_mixed=yes
 
 # 上传Github gist用到的全局变量, 脚本自动生成无需更改
-DESC_JSON="${TMP_DIR}/gist.json"				#提交给gist的请求结构体,无需更改
-RESPONSE="${TMP_DIR}/gist_response.json"			#gist返回的状态结构体,无需更改
+DESC_JSON="${TEMP_DIR}/gist.json"				#提交给gist的请求结构体,无需更改
+RESPONSE="${TEMP_DIR}/gist_response.json"			#gist返回的状态结构体,无需更改
 GIST_ID_main=
 GIST_ID_clash=
 GIST_ID_clashr=
@@ -181,7 +181,7 @@ function passwall_config() {
 		uci set passwall.${NODE_ID}.address=127.0.0.1
 
 		echo -e "$SERVER_NAME"	"${PORT}"
-		echo -e "$SERVER_NAME\`${PORT}" >>"${TMP_DIR}/main_server.txt"
+		echo -e "$SERVER_NAME\`${PORT}" >>"${TEMP_DIR}/main_server.txt"
 
 		local PORT=$(( ${PORT} + 1))
 	done
@@ -247,7 +247,7 @@ function passwall_config() {
 		uci set passwall.${NODE_ID}.address="${SERVER_IP}"
 
 		local SERVER_NAME=$(echo -e "${SERVER_NAME}" | sed "s/(.*$//g")
-		local HAPROXY_PORT=$(cat "${TMP_DIR}/main_server.txt" | grep -E "^${SERVER_NAME}\`" | awk -F "\`" '{print $2}')
+		local HAPROXY_PORT=$(cat "${TEMP_DIR}/main_server.txt" | grep -E "^${SERVER_NAME}\`" | awk -F "\`" '{print $2}')
 		local HAPROXY_NODE=$(uci add passwall haproxy_config)
 		if [[ ${i} -le 6 ]]; then 
 			local LBWEIGHT=20
@@ -267,7 +267,7 @@ function passwall_config() {
 		let i++
 	done
 	uci commit passwall
-	rm -f "${TMP_DIR}/main_server.txt"
+	rm -f "${TEMP_DIR}/main_server.txt"
 	unset i
 }
 
@@ -276,7 +276,7 @@ function get_cf_ip_list() {
 	local ASN=$(echo -e "${IP_LOCATION}" | grep cf-meta-asn: | tr '\r' '\n' | awk '{print $(NF)}')
 	local CITY=$(echo -e "${IP_LOCATION}" | grep cf-meta-city: | tr '\r' '\n' | awk '{print $(NF)}')
 	local PUBLIC_IP=$(echo -e "${IP_LOCATION}" | grep cf-meta-ip: | tr '\r' '\n' | awk '{print $(NF)}')
-	echo -e "${PUBLIC_IP}" >"${TMP_DIR}/public_ip.txt"
+	echo -e "${PUBLIC_IP}" >"${TEMP_DIR}/public_ip.txt"
 
 	# 获取udpfile配置文件
 	local UDPFILE_CONF=$(curl -s --ipv4 --retry 3 https://service.udpfile.com\?asn\="${ASN}"\&city="${CITY}")
@@ -284,7 +284,7 @@ function get_cf_ip_list() {
 		echo -e "CF解析节点获取失败， 退出任务"
 		exit 1
 	fi
-	echo -e "${UDPFILE_CONF}" >"${TMP_DIR}/udpfile.txt"
+	echo -e "${UDPFILE_CONF}" >"${TEMP_DIR}/udpfile.txt"
 
 	# 获取cloudflare CDN IP列表
 	echo -e "${UDPFILE_CONF}" | sed '1,4d'
@@ -322,7 +322,7 @@ function pack_loss_test() {
 function clash_config() {
 	local PREF_INI=$1
 	# 生成基本配置
-	local HEADER_CONF="${TMP_DIR}/header.yaml"
+	local HEADER_CONF="${TEMP_DIR}/header.yaml"
 	cat > ${HEADER_CONF} <<EOF
 port: 7890
 socks-port: 7891
@@ -333,7 +333,7 @@ external-controller: 0.0.0.0:9090
 EOF
 
 	# 生成代理组proxy_groups
-	local PROXY_GROUPS="${TMP_DIR}/proxy_groups.yaml"
+	local PROXY_GROUPS="${TEMP_DIR}/proxy_groups.yaml"
 	echo "proxy-groups:" >${PROXY_GROUPS}
 	cat "${PREF_INI}" | grep "^custom_proxy_group=" | while read LINE && [[ -n "${LINE}" ]]
 	do
@@ -373,8 +373,8 @@ EOF
 	done
 
 	# 生成规则表
-	local RULES="${TMP_DIR}/tmp_rules.yaml"
-	local FINAL_RULES="${TMP_DIR}/final_rules.yaml"
+	local RULES="${TEMP_DIR}/tmp_rules.yaml"
+	local FINAL_RULES="${TEMP_DIR}/final_rules.yaml"
 	echo >${RULES}
 	cat "${PREF_INI}" | grep "^ruleset=" | while read LINE && [[ -n "${LINE}" ]]
 	do
@@ -417,7 +417,7 @@ speed_test() {
 	local DL_FILE='__down'
 	local DL_SIZE=$((500 * 1024 * 1024))
 
-	rm -f "${TMP_DIR}/speedtest_result.txt"
+	rm -f "${TEMP_DIR}/speedtest_result.txt"
 	echo "实测下载速度	实测带宽	丢包率	延迟率	CF节点"
 	echo -e "${IP_LIST}" | while read LINE && [[ -n "${LINE}" ]]
 	do
@@ -432,7 +432,7 @@ speed_test() {
 		local BANDWIDTH="$(awk 'BEGIN{print "'${SPEED}'" * 8 / 1000000}') Mbps"
 		echo "${DL_SPEED}	${BANDWIDTH}	${PACK_LOSS}	${DELAY}	${IP}"
 		echo "${SPEED}	${DL_SPEED}	${BANDWIDTH}	${PACK_LOSS}	${DELAY}	${IP}" \
-		>>"${TMP_DIR}/speedtest_result.txt"
+		>>"${TEMP_DIR}/speedtest_result.txt"
 	done
 	unset LINE
 }
@@ -581,7 +581,7 @@ remote_config_convert_all() {
 	local GIST_CONF_URL=$1
 	cat ${BASEPATH}/$(basename $0) | grep -E "^CONVERT_.*=yes" \
 		| awk -F "=" '{print $1}' | cut -d "_" -f2 \
-		>${TMP_DIR}/rules_list.txt
+		>${TEMP_DIR}/rules_list.txt
 
 	echo -e "开始规则转换"
 	while read LINE && [[ -n "${LINE}" ]]
@@ -599,20 +599,20 @@ remote_config_convert_all() {
 		else
 			local EXT_NAME='.conf'
 		fi
-		remote_config_convert "${TARGET}" "${GIST_CONF_URL}" "${VERSION}"  >${TMP_DIR}/${LINE}_${REMOTE_NAME}${EXT_NAME}
+		remote_config_convert "${TARGET}" "${GIST_CONF_URL}" "${VERSION}"  >${TEMP_DIR}/${LINE}_${REMOTE_NAME}${EXT_NAME}
 
-		local status=$(cat ${TMP_DIR}/${LINE}_${REMOTE_NAME}${EXT_NAME} | head -n 1 \
+		local status=$(cat ${TEMP_DIR}/${LINE}_${REMOTE_NAME}${EXT_NAME} | head -n 1 \
 			| grep -E '(Invalid target|The following link|No nodes were found)')
 		if [[ -n "${status}" ]]; then
-			echo -e "${LINE} 配置转换失败: $(cat ${TMP_DIR}/${LINE}_${REMOTE_NAME}${EXT_NAME} | head -n 1)"
+			echo -e "${LINE} 配置转换失败: $(cat ${TEMP_DIR}/${LINE}_${REMOTE_NAME}${EXT_NAME} | head -n 1)"
 			continue
 		fi
 		
 		echo -e "转换 ${LINE} 配置完成"
 		echo -e "上传 ${LINE}_${REMOTE_NAME}${EXT_NAME} 到gist"
-		upload_gist "${LINE}_${REMOTE_NAME}${EXT_NAME}" "${LINE}" "${TMP_DIR}/${LINE}_${REMOTE_NAME}${EXT_NAME}"
+		upload_gist "${LINE}_${REMOTE_NAME}${EXT_NAME}" "${LINE}" "${TEMP_DIR}/${LINE}_${REMOTE_NAME}${EXT_NAME}"
 
-	done < ${TMP_DIR}/rules_list.txt
+	done < ${TEMP_DIR}/rules_list.txt
 }
 
 function cron_job() {
@@ -628,7 +628,7 @@ function cron_job() {
 
 BASEPATH=$(cd `dirname $0`; pwd)
 START_TIME=$(date +%s)
-if [[ ! -d "${TMP_DIR}" ]]; then mkdir -p "${TMP_DIR}"; fi
+if [[ ! -d "${TEMP_DIR}" ]]; then mkdir -p "${TEMP_DIR}"; fi
 DURATION=$(( 3 + $(if [[ "${SPEED_TEST}" == 'yes' ]]; then echo ${TARGET_IPS}*10*2/60; else echo 0;fi) ))
 echo -e "预估耗时 ${DURATION} 分钟，请耐心等待"
 echo -e "开始测试丢包率	$(date -R -d @${START_TIME})"
@@ -648,11 +648,11 @@ if [[ ${SPEED_TEST} == 'yes' ]]; then
 	fi
 
 	speed_test "${RESULT_LIST}"
-	RESULT_LIST=$(cat "${TMP_DIR}/speedtest_result.txt" | sort -n -r | head -n ${TARGET_IPS} | awk '{print ($NF)}')
+	RESULT_LIST=$(cat "${TEMP_DIR}/speedtest_result.txt" | sort -n -r | head -n ${TARGET_IPS} | awk '{print ($NF)}')
 	END_TIME=$(date +%s)
 	echo -e "带宽测速任务完成, 耗时 $((${END_TIME} - ${START_TIME2})) 秒	$(date -R -d @${END_TIME})"
 	echo -e "优选 ${TARGET_IPS}个 CF节点如下:"
-	cat "${TMP_DIR}/speedtest_result.txt" | sort -n -r | head -n ${TARGET_IPS}
+	cat "${TEMP_DIR}/speedtest_result.txt" | sort -n -r | head -n ${TARGET_IPS}
 
 else
 	echo -e "优选 ${TARGET_IPS}个 CF节点如下:"
@@ -670,7 +670,7 @@ do
 done
 unset i
 END_TIME=$(date +%s)
-echo -e "根据公网IP $(cat "${TMP_DIR}/public_ip.txt") 解析出cloudflare CDN加速IP池" && rm -f "${TMP_DIR}/public_ip.txt"
+echo -e "根据公网IP $(cat "${TEMP_DIR}/public_ip.txt") 解析出cloudflare CDN加速IP池" && rm -f "${TEMP_DIR}/public_ip.txt"
 echo -e "按要求筛选出 $(($(cat ${POOL} | wc -l) -1)) 个优选IP, 生成的代理池文件保存在： ${POOL}"
 echo -e "筛选CF优选IP任务完成, 耗时 $(( ${END_TIME} - ${START_TIME} )) 秒\
 	$(date -R -d @${END_TIME})"
@@ -774,7 +774,7 @@ fi
 
 # 清空临时文件
 if [[ -n "${PLATFORM}" ]]; then
-	rm -rf "${TMP_DIR}" 
+	rm -rf "${TEMP_DIR}" 
 fi
 
 END_TIME=$(date +%s)
