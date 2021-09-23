@@ -62,7 +62,7 @@ GIST_ID_surge4=
 GIST_ID_v2ray=
 GIST_ID_mixed=
 
-# 代理池，改称自己的，如有多个代理每个配置一行按照格式填写即可
+# 代理池，改称自己的，如有多个代理每个配置一行按照格式填写即可（注：命名规则: VPS1_美国_CF加速 >>>CF加速字样和分组规则相对应，'vp1'为你的vps名称, '美国'为其他关键字，括号内的'${ID}'不要改）
 function pool_generate() {
 	local SERVER=$1
 	local ID=$2
