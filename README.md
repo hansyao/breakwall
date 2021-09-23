@@ -5,7 +5,7 @@
 主要改进功能：
 >重构了所有代码，linux下全平台兼容。包括不限于OpenWRT, Merlin固件， VPS等， window下可在wsl子系统运行。
 
->支持多种获取cloudflare节点IP库的算法，可不再依赖udpfile.com提供过滤过的IP库，所有节点直接从cloudflare官方获取
+>支持多种获取cloudflare节点IP库的算法，可不再依赖udpfile.com提供过滤过的IP库，所有节点直接从cloudflare官方获取， 再也不怕第三方提供的服务抽风了
 
 >支持与现有订阅代理池进行合并
 
