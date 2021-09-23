@@ -734,6 +734,7 @@ function get_cf_ip_list_official() {
 		| grep -E "(error|not available)")" ]]; then
 
 		echo -e "cloudflare IP库下载失败，开始从cloudflare官网拉取CIDR规则文件进行本地转换"
+		echo -e "(转换结果会缓存为临时文件，除非设备重启，下次不会再重新转换)"
 		echo -e "本地转换耗时较长，请耐心等待......"
 		rm -f ${IP_LIST_FILE}
 		curl -s https://www.cloudflare.com/ips-v4 >${TEMP_DIR}/cf_cidr_list.txt
