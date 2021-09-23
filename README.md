@@ -33,7 +33,7 @@
 # 国内用户建议前缀加代理网址https://ghproxy.com/
 curl -L -O https://ghproxy.com/https://raw.githubusercontent.com/hansyao/breakwall/master/cf_speedtest.sh
 ```
->注：拉取代码后最好什么都不要改，可先按照步骤5运行一下看看是否出错，如果出错可能不兼容你的平台，需要解决冲突后才能用。
+>注：拉取代码后最好什么都不要改，根据不同的平台可先按照步骤5运行一下看看是否出错，如果出错可能不兼容你的设备，需要解决冲突后才能用。
 
 3. 修改节点信息
 
