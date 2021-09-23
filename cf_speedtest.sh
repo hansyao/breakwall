@@ -763,7 +763,7 @@ function pack_loss_test() {
 	fi
 	local START_LINE=1
 	local END_LINE=$((${START_LINE} + ${THREAD_NUMBER} -1))
-
+	local PACK_RESULT_IPS=0
 	while [[ ${i} -le ${j} ]]
 	do
 		echo -e "${CF_IP_LIST}" | sed -n "${START_LINE},${END_LINE}p" \
