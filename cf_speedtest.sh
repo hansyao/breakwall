@@ -1055,7 +1055,7 @@ function speed_test() {
 			local STATUS=$(curl -s -L -w "%{http_code}\\t%{time_total}" --connect-timeout 2 \
 				--resolve speed.cloudflare.com:443:${IP} \
 				-o /dev/null https://speed.cloudflare.com/__down)
-			local HTTP_CODE=$(echo -e "${STATUS}" | awk '{print $1}')
+			local HTTP_CODE=$(echo -e "${STATUS}" | awk '{print $1}' | awk '{print int($0)}')
 			local TIME_TOTAL=$(echo -e "${STATUS}" | awk '{print $2}')
 			
 			if [[ ${HTTP_CODE} -eq 200 ]]; then
@@ -1144,7 +1144,7 @@ function speed_test() {
 				-G -d "measId=$(date -u +%s)"  -d "bytes=${DL_SIZE}" \
 				-o /dev/null --connect-timeout 3 --max-time 10 2>&1)
 
-			local SPEED=$(echo -e "${STATUS}" | tail -n 1 | awk '{print $1}')
+			local SPEED=$(echo -e "${STATUS}" | tail -n 1 | awk '{print $1}' | awk '{print int($0)}')
 			local TIME_CONNECT=$(echo -e "${STATUS}" | tail -n 1 | awk '{print $(NF)}')
 
 			if [[ ${SPEED} -eq 0 ]]; then
