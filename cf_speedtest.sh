@@ -285,7 +285,7 @@ function passwall_config() {
 		uci set passwall.${NODE_ID}.address="${SERVER_IP}"
 
 		local SERVER_NAME=$(echo -e "${SERVER_NAME}" | sed "s/(.*$//g")
-		local HAPROXY_PORT=$(cat "${TEMP_DIR}/main_server.txt" | grep -E "^${SERVER_NAME}\`" | awk -F "\`" '{print $2}')
+		local HAPROXY_PORT=$(cat "${TEMP_DIR}/main_server.txt" | grep -E "^${SERVER_NAME}\`" | awk -F '`' '{print $2}')
 		local HAPROXY_NODE=$(uci add passwall haproxy_config)
 		if [[ ${i} -le 6 ]]; then 
 			local LBWEIGHT=20
