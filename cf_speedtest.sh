@@ -1145,6 +1145,7 @@ function speed_test() {
 				-o /dev/null --connect-timeout 3 --max-time 10 2>&1)
 
 			local SPEED=$(echo -e "${STATUS}" | tail -n 1 | awk '{print $1}' | awk '{print int($0)}')
+			local SPEED=$(printf "%.f" "${SPEED}")
 			local TIME_CONNECT=$(echo -e "${STATUS}" | tail -n 1 | awk '{print $(NF)}')
 
 			if [[ ${SPEED} -eq 0 ]]; then
@@ -1161,6 +1162,7 @@ function speed_test() {
 					local MAX_SPEED=$(awk 'BEGIN{print "'${MAX_SPEED}'" * 1024 * 1024 }')
 				fi
 			fi
+			local MAX_SPEED=$(printf "%.f" "${MAX_SPEED}")
 			if [[ ${SPEED} -gt ${MAX_SPEED} ]]; then
 				local MAX_SPEED=${SPEED}
 			fi
