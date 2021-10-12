@@ -898,7 +898,7 @@ EOF
 	echo -e "规则去重并移除不支持的规则格式"
 	sed -i "s/,$//g" ${RULES}
 	echo "rules:" >${FINAL_RULES}
-	local INCL="(DOMAIN\|DOMAIN\-KEYWORD\|DOMAIN\-SUFFIX\|GEOIP\|IP-CIDR\|IP-CIDR6\|MATCH\|PROCESS-NAME)"
+	local INCL="(DOMAIN\|DOMAIN\-KEYWORD\|DOMAIN\-SUFFIX\|GEOIP\|IP-CIDR\|IP-CIDR6\|FINAL\|PROCESS-NAME)"
 	cat ${RULES} | grep "${INCL}" | sed "s/FINAL,/MATCH,/g" \
 		| sort -n | uniq | awk '{print "  - "$0}' >>${FINAL_RULES}
 
